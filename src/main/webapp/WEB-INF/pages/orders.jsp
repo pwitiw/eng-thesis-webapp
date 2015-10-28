@@ -34,8 +34,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href='<spring:url value="/" />'>Strona Glówna</a></li>
-                <li><a href="<spring:url value="/orders" />">Zamówienia</a></li>
+                <li><a href='<spring:url value="/" />'>Strona Glówna</a></li>
+                <li class="active"><a href="<spring:url value="/orders" />">Zamówienia</a></li>
                 <li><a href="#statistics">Statystyki pracowników</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
