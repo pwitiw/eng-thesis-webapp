@@ -33,24 +33,4 @@
 
 	<display-name>Archetype Created Web Application</display-name>
 
-	<error-page>
-		<error-code>401</error-code>
-		<location>/error/401</location>
-	</error-page>
-	<error-page>
-		<error-code>404</error-code>
-		<location>/error/404</location>
-	</error-page>
-	<error-page>
-		<error-code>500</error-code>
-		<location>/error/500</location>
-	</error-page>
-	<error-page>
-		<error-code>504</error-code>
-		<location>/error/504</location>
-	</error-page>
-	<error-page>
-		<exception-type>java.lang.Throwable</exception-type>
-		<location>/error/500</location>
-	</error-page>
 </web-app>
