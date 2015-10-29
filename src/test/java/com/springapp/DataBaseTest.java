@@ -1,40 +1,33 @@
 package com.springapp;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.webapp.dao.Impl.OrderRepositoryDAO;
-import org.webapp.dao.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.webapp.repository.OrderRepository;
 import org.webapp.models.OrderEntity;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 
-import javax.annotation.Resource;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:META-INF/spring-data-config.xml")
+@ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml",
+        "classpath:jpaContext.xml"})
 @TestExecutionListeners({DependencyInjectionTestExecutionListener.class, DirtiesContextTestExecutionListener.class})
 public class DataBaseTest {
 
 
     @Autowired
     OrderRepository orderRepository;
-
-    @Resource
-    OrderRepositoryDAO orderRepositoryDAO;
 
     @Test
     public void test() {
@@ -54,7 +47,7 @@ public class DataBaseTest {
     public void getOrderListTest() {
 
         List<OrderEntity> orders = new ArrayList<OrderEntity>();
-        orders = orderRepositoryDAO.getOrderList();
+        orders = orderRepository.findAll();
         assertEquals(orderRepository.findAll().size(), orders.size());
     }
 
