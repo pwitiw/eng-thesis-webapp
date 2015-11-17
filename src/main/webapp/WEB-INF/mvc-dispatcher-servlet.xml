@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
     <mvc:annotation-driven/>
-    <context:component-scan base-package="org.webapp.controllers"/>
+    <context:component-scan base-package="org.webapp"/>
 
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
         <property name="definitions" value="/WEB-INF/tile-defs/general.xml"/>

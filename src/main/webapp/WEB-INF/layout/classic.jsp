@@ -49,7 +49,7 @@
 
                     <li class="${current == 'users' ? 'active' : ''}"><a href="<spring:url value="/orders/list" />">Zamówienia</a>
                     </li>
-                    <li class="${current == 'register' ? 'active' : ''}"><a href="<spring:url value="/workers/list" />">Statystyki</a>
+                    <li class="${current == 'register' ? 'active' : ''}"><a href="<spring:url value="/workers/statistics" />">Statystyki</a>
                     </li>
                     <%-- <li class="${current == 'login' ? 'active' : ''}"><a
                              href="<spring:url value="/login.html" />">Login</a></li>

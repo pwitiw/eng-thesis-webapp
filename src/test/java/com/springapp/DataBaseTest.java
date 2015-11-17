@@ -36,7 +36,7 @@ public class DataBaseTest {
         order.setAmount(24);
         order.setStage(1);
         order.setCustomer("Przemzi");
-        order.setOrderId("20TW");
+        //order.setOrderId("20TW");
         orderRepository.save(order);
 
         OrderEntity dbOrder = orderRepository.getOne(order.getId());

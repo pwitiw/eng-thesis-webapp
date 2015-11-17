@@ -25,10 +25,11 @@ public class OrdersController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String printOrderList(Model model) {
 
-          List<OrderEntity> orders = orderService.getAllOrders();
-          model.addAttribute("listOfOrders", orders);
+        List<OrderEntity> orders = orderService.getAllOrders();
+        model.addAttribute("orders", orders);
         return "orders";
     }
 
 
 }
+

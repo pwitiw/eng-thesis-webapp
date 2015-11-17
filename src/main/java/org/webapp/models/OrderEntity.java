@@ -1,9 +1,11 @@
 package org.webapp.models;
 
 
-import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.sql.Timestamp;
+
 
 /**
  * Created by Patryk on 2015-10-28.
@@ -23,19 +25,25 @@ public class OrderEntity {
 
     private int stage;
 
+    private short missing;
+
+    private short express;
+
+    private Timestamp last_update;
+
+    public long getId() {
+        return id;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
 
-    public long getId() {
-        return this.id;
-    }
-
-    public String getOrderId() {
+    public String getOrder_id() {
         return order_id;
     }
 
-    public void setOrderId(String order_id) {
+    public void setOrder_id(String order_id) {
         this.order_id = order_id;
     }
 
@@ -47,13 +55,12 @@ public class OrderEntity {
         this.customer = customer;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public int getAmount() {
+        return amount;
     }
 
-    public int getAmount() {
-
-        return this.amount;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public int getStage() {
@@ -64,4 +71,27 @@ public class OrderEntity {
         this.stage = stage;
     }
 
+    public short getMissing() {
+        return missing;
+    }
+
+    public void setMissing(short missing) {
+        this.missing = missing;
+    }
+
+    public short getExpress() {
+        return express;
+    }
+
+    public void setExpress(short express) {
+        this.express = express;
+    }
+
+    public Timestamp getLast_update() {
+        return last_update;
+    }
+
+    public void setLast_update(Timestamp last_update) {
+        this.last_update = last_update;
+    }
 }

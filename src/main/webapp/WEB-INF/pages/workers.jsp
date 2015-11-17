@@ -22,34 +22,22 @@
 <div class="row">
     <div class="panel panel-success filterable">
         <div class="panel-heading">
-            <h3 class="panel-title">Lista zamówień</h3>
-
-            <div class="pull-right">
-                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
-                    Filter
-                </button>
-            </div>
+            <h3 class="panel-title">Pracownicy</h3>
         </div>
         <table class="table">
             <thead>
             <tr class="filters">
-                <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Nazwa Klienta" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Ilość Sztuk" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Etap Produkcji" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Express" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Ostatnia operacja" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Imie" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Nazwisko" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Pozycja" disabled></th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${orders}" var="order">
+            <c:forEach items="${workers}" var="worker">
                 <tr>
-                    <td>${order.order_id}</td>
-                    <td>${order.customer}</td>
-                    <td>${order.amount}</td>
-                    <td>${order.stage}</td>
-                    <td>${order.express == 1 ? 'TAK': ''}</td>
-                    <td>${order.last_update}</td>
+                    <td>${worker.name}</td>
+                    <td>${worker.surname}</td>
+                    <td>${worker.position}</td>
                 </tr>
             </c:forEach>
             </tbody>

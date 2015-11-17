@@ -15,12 +15,12 @@
     <definition name="orders" extends="common">
         <put-attribute name="title" value="Zamowienia" />
         <put-attribute name="body" value="/WEB-INF/pages/orders.jsp"/>
-        <put-attribute name="current" value="home" />
+        <put-attribute name="current" value="orders" />
     </definition>
     <definition name="workers" extends="common">
         <put-attribute name="title" value="Pracownicy" />
-        <put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
-        <put-attribute name="current" value="home" />
+        <put-attribute name="body" value="/WEB-INF/pages/workers.jsp"/>
+        <put-attribute name="current" value="workers" />
     </definition>
 
 </tiles-definitions>
