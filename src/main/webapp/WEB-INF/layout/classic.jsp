@@ -4,31 +4,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-
+    <link rel="icon" type="image/gif" href="/resources/static/icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+    <link rel="stylesheet" href="css/angular-bootstrap.css">
     <link rel="stylesheet"
           href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
     <link rel="stylesheet"
           href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-    <script type="text/javascript"
-            src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-
-    <script
-            src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="/resources/css/table.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><tiles:getAsString name="title"/></title>
 </head>
 <body>
 
 <%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<div class="container">
+<tilesx:useAttribute name="current"/>
+<div class="center-children">
+    </centered><img src="/resources/static/logo.jpg"/>
+</div>
+
+<div >
 
     <!-- Static navbar -->
     <div class="navbar navbar-inverse" role="navigation">
@@ -40,16 +40,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<spring:url value="/" />">JBA</a>
+                <a class="navbar-brand" href="<spring:url value="/" />">FRONTWIT</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="${current == 'index' ? 'active' : ''}"><a href='<spring:url value="/" />'>FrontWit</a>
+                    <li class="${current == 'home' ? 'active' : ''}"><a href='<spring:url value="/" />'>Strona Główna</a>
                     </li>
 
-                    <li class="${current == 'users' ? 'active' : ''}"><a href="<spring:url value="/orders/list" />">Zamówienia</a>
+                    <li class="${current == 'orders' ? 'active' : ''}"><a href="<spring:url value="/orders/list" />">Zamówienia</a>
                     </li>
-                    <li class="${current == 'register' ? 'active' : ''}"><a href="<spring:url value="/workers/statistics" />">Statystyki</a>
+                    <li class="${current == 'workers' ? 'active' : ''}"><a
+                            href="<spring:url value="/workers/statistics" />">Pracownicy</a>
                     </li>
                     <%-- <li class="${current == 'login' ? 'active' : ''}"><a
                              href="<spring:url value="/login.html" />">Login</a></li>
@@ -62,9 +63,9 @@
         <!--/.container-fluid -->
     </div>
 
-
+<div class="container">
     <tiles:insertAttribute name="body"/>
-
+</div>
     <br>
     <br>
     <center>
@@ -72,6 +73,16 @@
     </center>
 
 </div>
+
+<script src="<c:url value="/resources/js/table.js" />"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script
+        src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>

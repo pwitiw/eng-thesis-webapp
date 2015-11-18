@@ -4,23 +4,30 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
     <definition name="common" template="/WEB-INF/layout/classic.jsp">
-        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+        <put-attribute name="title" value="Zamówienia"/>
     </definition>
 
     <definition name="home" extends="common">
-        <put-attribute name="title" value="Strona Domowa" />
+        <!--<put-attribute name="title" value="Strona Domowa" />-->
         <put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
-        <put-attribute name="current" value="home" />
+        <put-attribute name="current" value="home"/>
     </definition>
     <definition name="orders" extends="common">
-        <put-attribute name="title" value="Zamowienia" />
+        <!--<put-attribute name="title" value="Zamowienia"/>-->
         <put-attribute name="body" value="/WEB-INF/pages/orders.jsp"/>
-        <put-attribute name="current" value="orders" />
+        <put-attribute name="current" value="orders"/>
     </definition>
     <definition name="workers" extends="common">
-        <put-attribute name="title" value="Pracownicy" />
+        <!--<put-attribute name="title" value="Pracownicy"/>-->
         <put-attribute name="body" value="/WEB-INF/pages/workers.jsp"/>
-        <put-attribute name="current" value="workers" />
+        <put-attribute name="current" value="workers"/>
     </definition>
+    <definition name="workers_edit" extends="common">
+        <!--<put-attribute name="title" value="Pracownicy"/>-->
+        <put-attribute name="body" value="/WEB-INF/pages/workers_edit.jsp"/>
+        <put-attribute name="current" value="workers"/>
+    </definition>
+
 
 </tiles-definitions>

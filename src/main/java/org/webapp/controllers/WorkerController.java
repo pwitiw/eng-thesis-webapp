@@ -29,4 +29,16 @@ public class WorkerController {
         return "workers";
 
     }
+
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public String editWorkers(Model model) {
+
+        List<WorkerEntity> workers = workerService.getAllWorkers();
+        model.addAttribute("workers", workers);
+
+        return "workers_edit";
+
+    }
+
+
 }
