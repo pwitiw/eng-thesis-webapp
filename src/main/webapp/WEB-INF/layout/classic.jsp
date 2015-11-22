@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx" %>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="icon" type="image/gif" href="/resources/static/icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-        <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-    <link rel="stylesheet" href="css/angular-bootstrap.css">
+    <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
     <link rel="stylesheet"
           href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -19,9 +21,6 @@
     <title><tiles:getAsString name="title"/></title>
 </head>
 <body>
-
-<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <tilesx:useAttribute name="current"/>
 <div class="center-children">
@@ -50,7 +49,10 @@
                     <li class="${current == 'orders' ? 'active' : ''}"><a href="<spring:url value="/orders/list" />">Zamówienia</a>
                     </li>
                     <li class="${current == 'workers' ? 'active' : ''}"><a
-                            href="<spring:url value="/workers/statistics" />">Pracownicy</a>
+                            href="<spring:url value="/workers/all" />">Pracownicy</a>
+                    </li>
+                    <li class="${current == 'worker_statistic' ? 'active' : ''}"><a
+                            href="<spring:url value="/workers/statistic" />">Statystyki Pracowników</a>
                     </li>
                     <%-- <li class="${current == 'login' ? 'active' : ''}"><a
                              href="<spring:url value="/login.html" />">Login</a></li>
@@ -58,9 +60,7 @@
                        <li><a href="<spring:url value="/logout" />">Logout</a></li>--%>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
         </div>
-        <!--/.container-fluid -->
     </div>
 
 <div class="container">

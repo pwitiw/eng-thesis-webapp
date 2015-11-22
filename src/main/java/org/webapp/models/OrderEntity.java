@@ -1,7 +1,6 @@
 package org.webapp.models;
 
 
-
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -19,6 +18,8 @@ public class OrderEntity {
 
     private String order_id;
 
+    private String color;
+
     private String customer;
 
     private int amount;
@@ -28,6 +29,7 @@ public class OrderEntity {
     private short missing;
 
     private short express;
+
 
     private Timestamp last_update;
 
@@ -45,6 +47,14 @@ public class OrderEntity {
 
     public void setOrder_id(String order_id) {
         this.order_id = order_id;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getCustomer() {
@@ -94,4 +104,5 @@ public class OrderEntity {
     public void setLast_update(Timestamp last_update) {
         this.last_update = last_update;
     }
+
 }

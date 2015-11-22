@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.webapp.models.WorkerEntity;
 import org.webapp.repository.WorkerRepository;
 
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -15,6 +16,7 @@ import java.util.List;
 public class WorkerService {
 
     @Autowired
+    @OneToMany
     WorkerRepository workerRepository;
 
     @Transactional

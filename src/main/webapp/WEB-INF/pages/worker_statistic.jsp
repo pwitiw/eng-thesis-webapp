@@ -31,25 +31,21 @@
         <table class="table">
             <thead>
             <tr class="filters">
-                <th><input type="text" class="form-control" placeholder="Nr Zamówienia" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Nazwa Klienta" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Kolor" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Ilość Sztuk" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Etap Produkcji" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Express" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Ostatnia operacja" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Nr zamówienia" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Etap" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Pracownik" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Brakujące elementy" disabled></th>
+                <th><input type="text" class="form-control" placeholder="Data wykonania" disabled></th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${orders}" var="order">
+            <c:forEach items="${events}" var="event">
                 <tr>
-                    <td>${order.order_id}</td>
-                    <td>${order.customer}</td>
-                    <td>${order.color}</td>
-                    <td>${order.amount}</td>
-                    <td>${order.stage}</td>
-                    <td>${order.express == 1 ? 'TAK': '-'}</td>
-                    <td>${order.last_update}</td>
+                    <td>${event.prim.order_id}</td>
+                    <td>${event.prim.stage}</td>
+                    <td>${event.worker}</td>
+                    <td>${event.missing}</td>
+                    <td>${event.date}</td>
                 </tr>
             </c:forEach>
             </tbody>

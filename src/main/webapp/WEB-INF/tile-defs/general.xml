@@ -28,6 +28,11 @@
         <put-attribute name="body" value="/WEB-INF/pages/workers_edit.jsp"/>
         <put-attribute name="current" value="workers"/>
     </definition>
+    <definition name="workers_statistic" extends="common">
+        <!--<put-attribute name="title" value="Pracownicy"/>-->
+        <put-attribute name="body" value="/WEB-INF/pages/worker_statistic.jsp"/>
+        <put-attribute name="current" value="worker_statistic"/>
+    </definition>
 
 
 </tiles-definitions>

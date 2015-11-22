@@ -13,16 +13,17 @@
 <head>
 </head>
 <body>
-
+<div class="pull-right">
+    <button type="button" ng-click="ctrl.add(u.id)" class="btn btn-primary custom-width">Dodaj
+        Pracownika
+    </button>
+</div>
+<br><br>
 <div class="row">
+
     <div class="panel panel-default filterable">
         <div class="panel-heading">
             <h3 class="panel-title panel-default custom-element">Pracownicy</h3>
-            <div class="pull-right">
-                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-plus"></span>
-                    Dodaj Pracownika
-                </button>
-            </div>
         </div>
         <table class="table test">
             <thead>
@@ -38,6 +39,12 @@
                     <td>${worker.name}</td>
                     <td>${worker.surname}</td>
                     <td>${worker.position}</td>
+                    <td>
+                        <button type="button" ng-click="ctrl.edit(u.id)" class="btn btn-success custom-width">Edytuj
+                        </button>
+                        <button type="button" ng-click="ctrl.remove(u.id)" class="btn btn-danger custom-width">Usuń
+                        </button>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -45,7 +52,9 @@
     </div>
 </div>
 </div>
-<script src="/resources/js/table.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/resources/js/table.js"></script>
+
+
 </body>

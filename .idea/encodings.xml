@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/WorkerController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/webapp/repository/WorkerRepository.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/worker_statistic.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workers.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workers_edit.jsp" charset="UTF-8" />
   </component>

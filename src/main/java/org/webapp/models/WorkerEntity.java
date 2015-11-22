@@ -1,9 +1,5 @@
 package org.webapp.models;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +13,8 @@ public class WorkerEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private short code;
+
     private int id;
 
     private String name;
@@ -24,6 +22,10 @@ public class WorkerEntity {
     private String surname;
 
     private int position;
+
+    public int getCode() {
+        return code;
+    }
 
     public int getId() {
         return id;
