@@ -4,17 +4,14 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx" %>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="icon" type="image/gif" href="/resources/static/icon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
-    <link rel="stylesheet"
-          href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-    <link rel="stylesheet"
-          href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" type="text/css" href="/resources/css/table.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,7 +43,7 @@
                     <li class="${current == 'home' ? 'active' : ''}"><a href='<spring:url value="/" />'>Strona Główna</a>
                     </li>
 
-                    <li class="${current == 'orders' ? 'active' : ''}"><a href="<spring:url value="/orders/list" />">Zamówienia</a>
+                    <li class="${current == 'orders' ? 'active' : ''}"><a href="<spring:url value="/orders/all" />">Zamówienia</a>
                     </li>
                     <li class="${current == 'workers' ? 'active' : ''}"><a
                             href="<spring:url value="/workers/all" />">Pracownicy</a>
@@ -74,15 +71,12 @@
 
 </div>
 
+<!-- jQuery library -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="<c:url value="/resources/js/table.js" />"></script>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-<script type="text/javascript"
-        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-
-<script
-        src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
+<script src="<c:url value="/resources/js/modal.js" />"></script>
 </body>
 </html>

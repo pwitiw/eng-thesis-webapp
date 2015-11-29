@@ -7,31 +7,41 @@
         <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
         <put-attribute name="title" value="Zamówienia"/>
     </definition>
-
+    <!--HOME-->
     <definition name="home" extends="common">
         <!--<put-attribute name="title" value="Strona Domowa" />-->
         <put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
         <put-attribute name="current" value="home"/>
     </definition>
+    <!-- ORDERS-->
     <definition name="orders" extends="common">
         <!--<put-attribute name="title" value="Zamowienia"/>-->
         <put-attribute name="body" value="/WEB-INF/pages/orders.jsp"/>
         <put-attribute name="current" value="orders"/>
     </definition>
+    <definition name="new_order" extends="common">
+        <!--<put-attribute name="title" value="Zamowienia"/>-->
+        <put-attribute name="body" value="/WEB-INF/pages/new_order.jsp"/>
+        <put-attribute name="current" value="orders"/>
+    </definition>
+    <!-- WORKERS-->
     <definition name="workers" extends="common">
         <!--<put-attribute name="title" value="Pracownicy"/>-->
         <put-attribute name="body" value="/WEB-INF/pages/workers.jsp"/>
-        <put-attribute name="current" value="workers"/>
-    </definition>
-    <definition name="workers_edit" extends="common">
-        <!--<put-attribute name="title" value="Pracownicy"/>-->
-        <put-attribute name="body" value="/WEB-INF/pages/workers_edit.jsp"/>
         <put-attribute name="current" value="workers"/>
     </definition>
     <definition name="workers_statistic" extends="common">
         <!--<put-attribute name="title" value="Pracownicy"/>-->
         <put-attribute name="body" value="/WEB-INF/pages/worker_statistic.jsp"/>
         <put-attribute name="current" value="worker_statistic"/>
+    </definition>
+    <definition name="new_worker" extends="common">
+        <put-attribute name="body" value="/WEB-INF/pages/new_worker.jsp"/>
+        <put-attribute name="current" value="workers"/>
+    </definition>
+    <definition name="edit_worker" extends="common">
+        <put-attribute name="body" value="/WEB-INF/pages/edit_worker.jsp"/>
+        <put-attribute name="current" value="workers"/>
     </definition>
 
 

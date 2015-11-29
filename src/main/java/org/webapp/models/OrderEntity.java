@@ -30,7 +30,6 @@ public class OrderEntity {
 
     private short express;
 
-
     private Timestamp last_update;
 
     public long getId() {

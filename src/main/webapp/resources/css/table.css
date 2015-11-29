@@ -28,7 +28,7 @@
 }
 
 .custom-element {
-    font-weight: 900 !important;
+    font-weight: 700 !important;
 }
 
 .center-children {
@@ -42,4 +42,8 @@
 
 .vcenter{
     vertical-align: middle;
+}
+
+.custom-font-weight {
+    font-weight: 900 !important;
 }

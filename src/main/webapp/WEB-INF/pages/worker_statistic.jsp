@@ -11,31 +11,27 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <head>
-
-    <script>
-        var myApp = angular.module('myApp', [require('angular-ui-router')]);
-    </script>
 </head>
 <body>
 
 <div class="row">
     <div class="panel panel-default filterable">
         <div class="panel-heading ">
-            <h3 class="panel-title custom-element">Lista zamówień</h3>
+            <h3 class="panel-title custom-font-weight">Lista zamówień</h3>
             <div class="pull-right">
                 <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
                     Filter
                 </button>
             </div>
         </div>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
             <tr class="filters">
-                <th><input type="text" class="form-control" placeholder="Nr zamówienia" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Etap" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Pracownik" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Brakujące elementy" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Data wykonania" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Nr zamówienia" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Etap" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Kod pracownika" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Brakujące elementy" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Data wykonania" disabled></th>
             </tr>
             </thead>
             <tbody>
@@ -53,6 +49,4 @@
     </div>
 </div>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 </body>

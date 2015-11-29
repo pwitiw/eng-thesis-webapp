@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="java.util.List" %>
-<!DOCTYPE html ng-app>
+<!DOCTYPE html>
 <body lang="en">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,35 +14,41 @@
 </head>
 <body>
 <div class="pull-right">
-    <button type="button" ng-click="ctrl.add(u.id)" class="btn btn-primary custom-width">Dodaj
+    <button type="button" class="btn btn-primary custom-width" onclick="window.location.href='new'">Dodaj
         Pracownika
     </button>
 </div>
 <br><br>
+
 <div class="row">
 
     <div class="panel panel-default filterable">
         <div class="panel-heading">
-            <h3 class="panel-title panel-default custom-element">Pracownicy</h3>
+            <h3 class="panel-title panel-default custom-font-weight">Pracownicy</h3>
         </div>
-        <table class="table test">
+        <table class="table table-striped test">
             <thead>
-            <tr class="filters">
-                <th><input type="text" class="form-control" placeholder="Imie" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Nazwisko" disabled></th>
-                <th><input type="text" class="form-control" placeholder="Pozycja" disabled></th>
+            <tr class="filters ">
+                <th><input type="text" class="form-control custom-element" placeholder="Kod pracownika" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Imie" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Nazwisko" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Pozycja" disabled></th>
+                <th><input type="text" class="form-control custom-element" placeholder="Identyfikator" disabled></th>
             </tr>
             </thead>
             <tbody>
             <c:forEach items="${workers}" var="worker">
-                <tr>
+                <tr class="workers">
+                    <td class="code">${worker.code}</td>
                     <td>${worker.name}</td>
                     <td>${worker.surname}</td>
                     <td>${worker.position}</td>
+                    <td>${worker.id}</td>
                     <td>
-                        <button type="button" ng-click="ctrl.edit(u.id)" class="btn btn-success custom-width">Edytuj
-                        </button>
-                        <button type="button" ng-click="ctrl.remove(u.id)" class="btn btn-danger custom-width">Usuń
+
+                        <a href="edit?code=${worker.code}" class="btn btn-success">Edytuj</a>
+                        <button role="button" class="btn btn-danger custom-width" name="remove-worker"
+                                onclick="deleteWorker(${worker.code})">Usuń
                         </button>
                     </td>
                 </tr>
@@ -52,9 +58,4 @@
     </div>
 </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="/resources/js/table.js"></script>
-
-
 </body>
