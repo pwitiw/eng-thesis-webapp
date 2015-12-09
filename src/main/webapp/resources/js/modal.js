@@ -15,11 +15,11 @@ $('#edit-modal').on('show.bs.modal', function (e) {
 
 
 var deleteWorker = function (code) {
-
+    var url      = window.location.href;
     $.ajax({
         cache: false,
         type: 'POST',
-        url: '/workers/delete',
+        url: window.location.pathname+'/delete',
         data: 'code=' + code,
         success: function (data) {
             location.reload();
@@ -52,7 +52,7 @@ var position = function (number) {
             result = "CZYSZCZENIE"
             break;
         case 3:
-            result = "PODK£ADOWNIA";
+            result = "PODKï¿½ADOWNIA";
             break;
         case 4:
             result = "SZLIFIERNIA"
@@ -67,4 +67,8 @@ var position = function (number) {
 
     return result;
 
+}
+
+var activate =function(number){
+    document.getElementById('stage').innerHTML=5*6;
 }

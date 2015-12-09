@@ -1,12 +1,10 @@
 package org.webapp.services;
 
-import javafx.concurrent.Worker;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.webapp.models.WorkerEntity;
-import org.webapp.repository.WorkerRepository;
+import org.webapp.dao.WorkerRepository;
 
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -21,6 +19,7 @@ public class WorkerService {
     @OneToMany
     WorkerRepository workerRepository;
 
+    @Transactional
     public List<WorkerEntity> getAllWorkers() {
         List<WorkerEntity> workers = workerRepository.findAll();
 
@@ -58,12 +57,21 @@ public class WorkerService {
         if (oldWorker.equals(newWorker)) {
             return false;
         } else if (!(newWorker.getName().trim().equals("") || newWorker.getSurname().trim().equals(""))) {
-            workerRepository.updateWorker(newWorker.getId(), newWorker.getName(), newWorker.getSurname(),
-                    newWorker.getPosition(), newWorker.getCode());
+            copyFromOneToAnother(newWorker,oldWorker);
+            workerRepository.save(oldWorker);
             return true;
         }
 
         return false;
     }
+
+    private void copyFromOneToAnother(WorkerEntity worker , WorkerEntity copy) {
+
+        copy.setId(worker.getId());
+        copy.setName(worker.getName());
+        copy.setSurname(worker.getSurname());
+        copy.setPosition(worker.getPosition());
+    }
+
 
 }

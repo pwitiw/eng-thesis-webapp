@@ -7,15 +7,20 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link href="<c:url value="/resources/css/table.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/app.css" />" rel="stylesheet">
+<link rel="icon" type="image/gif" href="resources/static/icon.png">
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><tiles:getAsString name="title"/></title>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" type="image/gif" href="/resources/static/icon.png">
 
-    <link rel="stylesheet" type="text/css" href="/resources/css/table.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><tiles:getAsString name="title"/></title>
+
+
 </head>
 <body>
 
@@ -51,10 +56,6 @@
                     <li class="${current == 'worker_statistic' ? 'active' : ''}"><a
                             href="<spring:url value="/workers/statistic" />">Statystyki Pracowników</a>
                     </li>
-                    <%-- <li class="${current == 'login' ? 'active' : ''}"><a
-                             href="<spring:url value="/login.html" />">Login</a></li>
-                       <li class="${current == 'account' ? 'active' : ''}"><a href="<spring:url value="/account.html" />">My account</a></li>
-                       <li><a href="<spring:url value="/logout" />">Logout</a></li>--%>
                 </ul>
             </div>
         </div>

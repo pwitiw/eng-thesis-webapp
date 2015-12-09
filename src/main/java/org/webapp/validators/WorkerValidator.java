@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 import org.webapp.models.WorkerEntity;
-import org.webapp.repository.WorkerRepository;
+import org.webapp.dao.WorkerRepository;
 
 /**
  * Created by Patryk on 2015-11-23.

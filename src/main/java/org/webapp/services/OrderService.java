@@ -4,13 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
-import org.webapp.models.WorkerEntity;
-import org.webapp.repository.OrderRepository;
+import org.webapp.dao.OrderRepository;
 import org.webapp.models.OrderEntity;
 
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service("orderService")
@@ -31,10 +28,10 @@ public class OrderService {
 
         if ((!(order.getOrder_id().trim().equals("") || order.getCustomer().trim().equals("") || order.getColor().trim().equals("")))) {
             order.setLast_update(getActualTimestamp());
+            order.setStage(1);
             orderRepository.save(order);
         }
     }
-
 
     public Timestamp getActualTimestamp() {
 

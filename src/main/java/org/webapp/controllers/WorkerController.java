@@ -67,7 +67,7 @@ public class WorkerController {
         return "redirect:/workers/all";
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "all/delete", method = RequestMethod.POST)
     public String deleteWorker(@ModelAttribute("code") short code, BindingResult result, SessionStatus status) {
 
         workerService.delete(code);

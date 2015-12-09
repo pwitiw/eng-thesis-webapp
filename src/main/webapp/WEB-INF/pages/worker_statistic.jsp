@@ -2,6 +2,7 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <body lang="en">
@@ -41,7 +42,7 @@
                     <td>${event.prim.stage}</td>
                     <td>${event.worker}</td>
                     <td>${event.missing}</td>
-                    <td>${event.date}</td>
+                    <td>${fn:substring((event.date),0 , 16)}</td>
                 </tr>
             </c:forEach>
             </tbody>

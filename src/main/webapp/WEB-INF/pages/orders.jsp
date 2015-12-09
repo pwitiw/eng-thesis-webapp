@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="pull-right">
-    <button type="button" class="btn btn-primary custom-width" onclick="window.location.href='new'">Dodaj
+    <button type="button" class="btn btn-primary " onclick="window.location.href='new'">Dodaj
         Zamówienie
     </button>
 </div>

@@ -1,4 +1,4 @@
-package org.webapp.repository;
+package org.webapp.dao;
 
 import org.springframework.stereotype.Repository;
 import org.webapp.models.OrderEntity;

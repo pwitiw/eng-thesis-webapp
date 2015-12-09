@@ -7,7 +7,7 @@
 
 <h3>WPROWADŹ DANE PRACOWNIKA:</h3><br>
 
-<form data-toggle="validator" action="/workers/addChanges" method="POST" role="form" id="signInForm"
+<form data-toggle="validator" action="addChanges" method="POST" role="form" id="signInForm"
       class="form-horizontal" accept-charset="UTF-8"
       data-remote="true">
 

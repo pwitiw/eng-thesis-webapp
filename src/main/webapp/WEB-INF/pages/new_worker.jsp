@@ -7,7 +7,7 @@
 
 <h3>WPROWADŹ DANE PRACOWNIKA:</h3><br>
 
-<form data-toggle="validator" action="/workers/add" method="POST" role="form" id="signInForm" class="form-horizontal" accept-charset="UTF-8"
+<form data-toggle="validator" action="add" method="POST" role="form" id="signInForm" class="form-horizontal" accept-charset="UTF-8"
       data-remote="true">
     <div class="form-group">
         <label class="control-label col-xs-1">Imie</label>

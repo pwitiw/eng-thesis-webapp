@@ -7,7 +7,7 @@
 
 <h3>WPROWADŹ INFORMACJE O ZAMÓWIENIU:</h3><br>
 
-<form data-toggle="validator" action="/orders/add" method="POST" role="form" id="signInForm" class="form-horizontal"
+<form data-toggle="validator" action="add" method="POST" role="form" id="signInForm" class="form-horizontal"
       accept-charset="UTF-8"
       data-remote="true">
     <div class="form-group">

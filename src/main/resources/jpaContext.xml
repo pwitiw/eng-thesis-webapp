@@ -11,7 +11,7 @@
 
     <context:annotation-config />
 
-    <jpa:repositories base-package="org.webapp.repository" />
+    <jpa:repositories base-package="org.webapp.dao" />
     <bean id="orderService" class="org.webapp.services.OrderService"></bean>
   <!--  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location">
