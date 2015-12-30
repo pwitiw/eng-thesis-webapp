@@ -49,7 +49,11 @@
             <artifactId>spring-data-jpa</artifactId>
             <version>${spring-data.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.hateoas</groupId>
+            <artifactId>spring-hateoas</artifactId>
+            <version>0.19.0.RELEASE</version>
+        </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -119,6 +123,22 @@
             <artifactId>tiles-jsp</artifactId>
             <version>${tiles.version}</version>
         </dependency>
+       <dependency>
+           <groupId>com.fasterxml.jackson.core</groupId>
+           <artifactId>jackson-databind</artifactId>
+           <version>2.4.1.3</version>
+       </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>javafx</artifactId>
@@ -157,11 +177,11 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
-                    <webResources>
+                    <!--<webResources>
                         <resource>
                             <directory>src/main/webapp/resources</directory>
                         </resource>
-                    </webResources>
+                    </webResources>-->
                     <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>

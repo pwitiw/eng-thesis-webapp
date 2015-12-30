@@ -2,17 +2,18 @@ package org.webapp.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import org.webapp.models.OrderEntity;
 import org.webapp.models.WorkerEntity;
 import org.webapp.services.OrderService;
 
+import javax.persistence.criteria.Order;
 import java.util.List;
 
 
@@ -26,12 +27,12 @@ public class OrdersController {
     @Autowired
     private OrderService orderService;
 
+
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public String printOrderList(Model model) {
+    public ResponseEntity<List<OrderEntity>> allOrders() {
 
         List<OrderEntity> orders = orderService.getAllOrders();
-        model.addAttribute("orders", orders);
-        return "orders";
+        return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/new", method = RequestMethod.GET)

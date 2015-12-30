@@ -1,6 +1,8 @@
 package org.webapp.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -27,16 +29,13 @@ public class WorkerController {
     @Autowired
     EventService eventService;
 
-    @Autowired
-    WorkerValidator workerValidator;
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public String printWorkerList(Model model) {
+    public ResponseEntity<List<WorkerEntity>> printWorkerList() {
 
         List<WorkerEntity> workers = workerService.getAllWorkers();
-        model.addAttribute("workers", workers);
 
-        return "workers";
+        return new ResponseEntity<List<WorkerEntity>>(workers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/statistic", method = RequestMethod.GET)

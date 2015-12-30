@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link href="<c:url value="/resources/css/table.css" />" rel="stylesheet">
-<link href="<c:url value="/resources/css/app.css" />" rel="stylesheet">
-<link rel="icon" type="image/gif" href="resources/static/icon.png">
+<link href="<c:url value="/css/table.css" />" rel="stylesheet">
+<link href="<c:url value="/css/app.css" />" rel="stylesheet">
+<link rel="icon" type="image/gif" href="static/icon.png">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 
