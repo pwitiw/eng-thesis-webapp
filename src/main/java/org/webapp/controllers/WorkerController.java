@@ -33,7 +33,7 @@ public class WorkerController {
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public ResponseEntity<List<WorkerEntity>> printWorkerList() {
 
-        List<WorkerEntity> workers = workerService.getAllWorkers();
+        List<WorkerEntity> workers = workerService.getActiveWorkers();
 
         return new ResponseEntity<List<WorkerEntity>>(workers, HttpStatus.OK);
     }
@@ -66,27 +66,20 @@ public class WorkerController {
         return "redirect:/workers/all";
     }
 
-    @RequestMapping(value = "all/delete", method = RequestMethod.POST)
-    public String deleteWorker(@ModelAttribute("code") short code, BindingResult result, SessionStatus status) {
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public ResponseEntity<String> deleteWorker(@RequestBody WorkerEntity worker) {
 
-        workerService.delete(code);
-        return "redirect:/workers/all";
+        workerService.deleteWorker(worker);
+        return new ResponseEntity<String>("", HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.GET)
-    public String editWorkerButton(@ModelAttribute("code") short code,
-                                   Model model, BindingResult result, SessionStatus status) {
-
-        WorkerEntity worker = workerService.getWorker(code);
-
-        model.addAttribute("worker", worker);
-        return "edit_worker";
-    }
 
     @RequestMapping(value = "/addChanges", method = RequestMethod.POST)
-    public String edi(@ModelAttribute("worker") WorkerEntity worker, BindingResult result, SessionStatus status) {
-        workerService.addChangesIfExists(worker);
-        return "redirect:/workers/all";
+    public ResponseEntity<String> editWorker(@RequestBody WorkerEntity worker) {
+
+        workerService.confirmChangesIfExists(worker);
+
+        return new ResponseEntity<String>("", HttpStatus.OK);
     }
 
 }

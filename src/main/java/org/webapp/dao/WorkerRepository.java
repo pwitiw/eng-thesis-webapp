@@ -4,7 +4,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.webapp.models.WorkerEntity;
+
+import java.util.List;
 
 /**
  * Created by Patryk on 2015-10-28.
@@ -14,8 +17,9 @@ import org.webapp.models.WorkerEntity;
 public interface WorkerRepository extends JpaRepository<WorkerEntity, Long> {
 
     @Modifying
+    @Transactional
     @Query("delete from workers w where w.code = ?1")
-    void deleteWorkerForCode(int code);
+    void deleteWorkerForCode(short code);
 
     @Query
     WorkerEntity findByNameAndSurname(String name, String surname);
@@ -23,4 +27,11 @@ public interface WorkerRepository extends JpaRepository<WorkerEntity, Long> {
     @Query
     WorkerEntity findByCode(short code);
 
+    @Modifying
+    @Transactional
+    @Query("update workers w set w.active = 0 where w.code = ?1")
+    void inactivateWorker(short code);
+
+    @Query
+    List<WorkerEntity> findByActive(short active);
 }

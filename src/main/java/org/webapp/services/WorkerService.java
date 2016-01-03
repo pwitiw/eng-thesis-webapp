@@ -3,6 +3,7 @@ package org.webapp.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.webapp.dao.EventRepository;
 import org.webapp.models.WorkerEntity;
 import org.webapp.dao.WorkerRepository;
 
@@ -19,12 +20,19 @@ public class WorkerService {
     @OneToMany
     WorkerRepository workerRepository;
 
+    @Autowired
+    EventRepository eventRepository;
+
     @Transactional
     public List<WorkerEntity> getAllWorkers() {
-        List<WorkerEntity> workers = workerRepository.findAll();
-
-        return workers;
+        return workerRepository.findAll();
     }
+
+    @Transactional
+    public List<WorkerEntity> getActiveWorkers() {
+        return workerRepository.findByActive((short) 1);
+    }
+
 
     @Transactional
     public void add(WorkerEntity worker) {
@@ -34,15 +42,12 @@ public class WorkerService {
     }
 
     @Transactional
-    public void delete(WorkerEntity workerEntity) {
-        workerRepository.delete(workerEntity);
-    }
+    public void deleteWorker(WorkerEntity workerEntity) {
 
-    @Transactional
-    public void delete(short code) {
-
-        WorkerEntity worker = workerRepository.findByCode(code);
-        delete(worker);
+        if (eventRepository.findByWorker(workerEntity.getCode()).size() > 0)
+            workerRepository.inactivateWorker(workerEntity.getCode());
+        else
+            workerRepository.deleteWorkerForCode(workerEntity.getCode());
     }
 
     @Transactional
@@ -51,13 +56,13 @@ public class WorkerService {
     }
 
     @Transactional
-    public boolean addChangesIfExists(WorkerEntity newWorker) {
+    public boolean confirmChangesIfExists(WorkerEntity newWorker) {
 
         WorkerEntity oldWorker = workerRepository.findByCode(newWorker.getCode());
         if (oldWorker.equals(newWorker)) {
             return false;
         } else if (!(newWorker.getName().trim().equals("") || newWorker.getSurname().trim().equals(""))) {
-            copyFromOneToAnother(newWorker,oldWorker);
+            copyFromOneToAnother(newWorker, oldWorker);
             workerRepository.save(oldWorker);
             return true;
         }
@@ -65,7 +70,7 @@ public class WorkerService {
         return false;
     }
 
-    private void copyFromOneToAnother(WorkerEntity worker , WorkerEntity copy) {
+    private void copyFromOneToAnother(WorkerEntity worker, WorkerEntity copy) {
 
         copy.setId(worker.getId());
         copy.setName(worker.getName());

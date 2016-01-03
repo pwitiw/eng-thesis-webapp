@@ -4,12 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created by Patryk on 2015-11-01.
  */
 @Entity(name = "workers")
-public class WorkerEntity {
+public class WorkerEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,6 +23,9 @@ public class WorkerEntity {
     private String surname;
 
     private int position;
+
+    private short active;
+
 
     public short getCode() {
         return code;
@@ -63,6 +67,13 @@ public class WorkerEntity {
         this.position = position;
     }
 
+    public short active() {
+        return active;
+    }
+
+    public void setActive(short active) {
+        this.active = active;
+    }
 
     @Override
     public boolean equals(Object o) {

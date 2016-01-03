@@ -20,6 +20,10 @@ app.config(function ($routeProvider) {
             templateUrl: 'html/worker_statistic.html',
             controller: ""
         })
+        .when('/workers/edit/:param1',{
+          templateUrl: 'html/edit_worker.html',
+            controller: ""
+        })
         .otherwise({
             redirectTo : '/'
         });

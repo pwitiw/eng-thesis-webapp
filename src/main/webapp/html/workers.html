@@ -1,46 +1,121 @@
-
-<div class="pull-right">
-    <button type="button" class="btn btn-primary" onclick="window.location.href='new'">Dodaj
-        Pracownika
-    </button>
-</div>
-<br><br>
-
-<div class="row">
-
-    <div class="panel panel-default filterable">
-        <div class="panel-heading">
-            <h3 class="panel-title panel-default custom-font-weight">Pracownicy</h3>
+<div class="container">
+    <div class="row">
+        <div class="form-group col-sm-4">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <input type="text" class="form-control " placeholder="Szukaj" ng-model="searchFilter">
+            </div>
         </div>
-        <table class="table table-striped test">
-            <thead>
-            <tr class="filters ">
-                <th><input type="text" class="form-control custom-element" placeholder="Kod pracownika" disabled></th>
-                <th><input type="text" class="form-control custom-element" placeholder="Imie" disabled></th>
-                <th><input type="text" class="form-control custom-element" placeholder="Nazwisko" disabled></th>
-                <th><input type="text" class="form-control custom-element" placeholder="Pozycja" disabled></th>
-                <th><input type="text" class="form-control custom-element" placeholder="Identyfikator" disabled></th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="worker in workers">
-                    <td class="code">{{worker.code}}</td>
-                    <td>{{worker.name}}</td>
-                    <td>{{worker.surname}}</td>
-                    <td>{{worker.position}}</td>
-                    <td>{{worker.id}}</td>
-                    <td>
-
-                        <a href="edit?code=${worker.code}" class="btn btn-success">Edytuj</a>
-                        <button role="button" class="btn btn-danger custom-width" name="remove-worker"
-                                onclick="deleteWorker(${worker.code})">Usuń
-                        </button>
-                    </td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+        <div class="pull-right col-sm-2">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='new'">Dodaj
+                Pracownika
+            </button>
+        </div>
     </div>
 </div>
-</div>
 
+<div class="panel-heading">
+    <h3 class="panel-title panel-default custom-font-weight">Pracownicy</h3>
+</div>
+<div class="container">
+    <table ng-table="workersTable" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th class="custom-element col-sm-2">
+                <a href="" ng-click="sortType = 'name';sortReverse = !sortReverse">
+                    Imię
+                    <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+            </th>
+            <th class="custom-element col-sm-2">
+                <a href="" ng-click="sortType = 'surname';sortReverse = !sortReverse">
+                    Nazwisko
+                    <span ng-show="sortType == 'surname' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'surname' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+            </th>
+            <th class="custom-element col-sm-2">
+                <a href="" ng-click="sortType = 'position';sortReverse = !sortReverse">
+                    Pozycja
+                    <span ng-show="sortType == 'position' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'position' && sortReverse" class="fa fa-caret-up"></span>
+                </a></th>
+            <th class="custom-element col-sm-2">
+                <a href="" ng-click="sortType = 'id';sortReverse = !sortReverse">
+                    Identyfikator
+                    <span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+            </th>
+            <th class="custom-element col-sm-3"></th>
+        </tr>
+        </thead>
+        <!-- BODY OF TABLE-->
+        <tbody>
+        <tr ng-repeat="worker in workers | orderBy:sortType:sortReverse | filter:searchFilter">
+            <td>
+                <span data-ng-hide="editing">{{worker.name}}</span>
+                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.name"
+                       ng-init="entry.name = worker.name; entry.code = worker.code" data-ng-required/>
+            </td>
+            <td>
+                <span data-ng-hide="editing">{{worker.surname}}</span>
+                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.surname"
+                       ng-init="entry.surname = worker.surname" data-ng-required/>
+            </td>
+            <td>
+                <span data-ng-hide="editing">{{posName(worker.position)}}</span>
+                <select data-ng-show="editing" class="form-control" ng-model="entry.position"
+                        ng-init="entry.position = positions[worker.position - 1]"
+                        ng-options=" option as option for option in positions">
+                </select>
+            </td>
+            <td>
+                <span data-ng-hide="editing">{{worker.id}}</span>
+                <input type="text" data-ng-show="editing" class="form-control" ng-init="entry.id = worker.id"
+                       ng-model="entry.id"
+                       data-ng-required/>
+            </td>
+            <td>
+                <button class="btn btn-info custom-width"
+                        ng-click="" ng-disabled="editing">Statystyki
+                </button>
+                <button ng-hide="editing" class="btn btn-success custom-width" ng-click="editing=true">Edytuj
+                </button>
+                <button ng-hide="editing" class="btn btn-danger custom-width"
+                       ng-click="setWorkerToDelete(worker)"  data-toggle="modal" data-target="#confirm-delete">Usuń
+                </button>
+                <button ng-show="editing" class="btn btn-success custom-width"
+                        ng-click="changesConfirmed(entry)">Zatwierdź
+                </button>
+                <button ng-show="editing" class="btn btn-danger custom-width"
+                        ng-click="editing=false">Anuluj
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Usuwanie</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>Jesteś pewien, że chcesz usunąć danego pracownika z listy?</p>
+                <p class="debug-url"></p>
+            </div>
+
+            <div class="modal-footer">
+                <a class="btn btn-danger btn-ok" ng-click="deleteWorker()" data-dismiss="modal">Usuń</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Powrót</button>
+            </div>
+        </div>
+    </div>
+</div>
