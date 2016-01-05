@@ -23,15 +23,14 @@ public class EventService {
         return eventRepositoryDAO.getAllEvents();
     }
 
-    @Transactional
-    public List<EventEntity> getEventsForActiveWorkers() {
-        return eventRepositoryDAO.getEventsForActiveWorkers();
-    }
+//    @Transactional
+//    public List<EventEntity> getEventsForActiveWorkers() {
+//        return eventRepositoryDAO.getEventsForActiveWorkers();
+//    }
 
     @Transactional
-    public List<EventEntity> getEventsForWorker(int code) {
-
-        return eventRepositoryDAO.getAllEvents();
+    public List<EventEntity> getEventsForWorker(short code) {
+        return eventRepositoryDAO.getEventsForWorker(code);
     }
 
 

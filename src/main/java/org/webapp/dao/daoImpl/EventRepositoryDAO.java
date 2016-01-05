@@ -17,17 +17,16 @@ public class EventRepositoryDAO {
     @Autowired
     EventRepository eventRepository;
 
-    public List<EventEntity> getEventsForActiveWorkers(){
-        return eventRepository.findBy
-    }
+//    public List<EventEntity> getEventsForActiveWorkers(){
+//        return eventRepository. DOKONCZYC
+//    }
 
     public List<EventEntity> getAllEvents() {
         return eventRepository.findAll();
     }
 
-    public List<EventEntity> getEventsForWorker(WorkerEntity worker) {
-        return eventRepository.findByWorker(worker.getCode());
+    public List<EventEntity> getEventsForWorker(short code) {
+        return eventRepository.findByWorker(code);
     }
-
 
 }

@@ -19,6 +19,6 @@ public interface EventRepository extends JpaRepository<EventEntity, Long> {
 
 //    @Query
 //    List<EventEntity> findEventsByActiveWorkers(){
-//     //todo DOKONCZYC TUTAJ INNER JOINEM   
+//     //todo DOKONCZYC TUTAJ INNER JOINEM
 //    }
 }
