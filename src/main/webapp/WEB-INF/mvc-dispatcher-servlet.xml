@@ -13,7 +13,7 @@
 
     <context:component-scan base-package="org.webapp.controllers"/>
     <context:component-scan base-package="org.webapp.services"/>
-
+    <context:component-scan base-package="org.webapp.dao"/>
 
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
