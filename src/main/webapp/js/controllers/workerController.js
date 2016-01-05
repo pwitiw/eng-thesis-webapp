@@ -47,4 +47,8 @@ app.controller('workerController', function ($scope, $http, $route) {
         $scope.workerToDelete = worker;
     }
 
+    $scope.showStats = function() {
+  //      $state.go("/events");
+    }
+
 });

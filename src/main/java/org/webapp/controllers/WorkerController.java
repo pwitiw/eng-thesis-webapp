@@ -41,7 +41,7 @@ public class WorkerController {
     @RequestMapping(value = "/statistic", method = RequestMethod.GET)
     public String workerStatistic(Model model) {
 
-        List<EventEntity> events = eventService.getEventsForWorker(1);
+        List<EventEntity> events = eventService.getEventsForWorker((short) 1);
         model.addAttribute("events", events);
 
         return "workers_statistic";
@@ -67,19 +67,18 @@ public class WorkerController {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public ResponseEntity<String> deleteWorker(@RequestBody WorkerEntity worker) {
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteWorker(@RequestBody WorkerEntity worker) {
 
         workerService.deleteWorker(worker);
-        return new ResponseEntity<String>("", HttpStatus.OK);
     }
 
 
     @RequestMapping(value = "/addChanges", method = RequestMethod.POST)
-    public ResponseEntity<String> editWorker(@RequestBody WorkerEntity worker) {
+    @ResponseStatus(HttpStatus.OK)
+    public void editWorker(@RequestBody WorkerEntity worker) {
 
         workerService.confirmChangesIfExists(worker);
-
-        return new ResponseEntity<String>("", HttpStatus.OK);
     }
 
 }

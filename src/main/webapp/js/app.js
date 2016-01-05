@@ -16,13 +16,9 @@ app.config(function ($routeProvider) {
             templateUrl: 'html/workers.html',
             controller: "workerController"
         })
-        .when('/workers/statistics',{
-            templateUrl: 'html/worker_statistic.html',
-            controller: ""
-        })
-        .when('/workers/edit/:param1',{
-          templateUrl: 'html/edit_worker.html',
-            controller: ""
+        .when('/events/:workerCode',{
+            templateUrl: 'html/events.html',
+            controller: "eventController"
         })
         .otherwise({
             redirectTo : '/'

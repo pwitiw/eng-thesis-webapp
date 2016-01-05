@@ -30,7 +30,7 @@ public class EventController {
         return new ResponseEntity<List<EventEntity>>(events, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/stats/{code}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{code}", method = RequestMethod.GET)
     public ResponseEntity<List<EventEntity>> printWorkerList(@PathVariable("code") short code) {
 
         List<EventEntity> events = eventService.getEventsForWorker(code);

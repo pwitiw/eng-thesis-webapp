@@ -48,7 +48,7 @@ public class WorkerService {
     @Transactional
     public void deleteWorker(WorkerEntity workerEntity) {
 
-        if (eventRepositoryDAO.getEventsForWorker(workerEntity).size() > 0) {
+        if (eventRepositoryDAO.getEventsForWorker(workerEntity.getCode()).size() > 0) {
             workerRepositoryDAO.setInactiveForCode(workerEntity.getCode());
         } else {
             workerRepositoryDAO.deleteWorkerForCode(workerEntity.getCode());
