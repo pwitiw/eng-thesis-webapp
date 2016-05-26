@@ -12,13 +12,12 @@ import java.util.List;
  */
 
 @Repository("events")
-public interface EventRepository extends JpaRepository<EventEntity, Long> {
-
+public interface EventRepository extends JpaRepository<EventEntity, Long>  {
+int a =4;
     @Query
-    List<EventEntity> findByWorker(short code);
+    List<EventEntity> findByWorkerCode(short code);
 
-//    @Query
-//    List<EventEntity> findEventsByActiveWorkers(){
-//     //todo DOKONCZYC TUTAJ INNER JOINEM
-//    }
+    EventEntity findByPrimOrderIdAndPrimStage(long orderId, int stage);
+
+    List<EventEntity> findByPrimOrderId(long orderId);
 }

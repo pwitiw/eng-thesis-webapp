@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">
         <div class="form-group col-sm-4">
@@ -8,10 +9,9 @@
         </div>
     </div>
 </div>
+<h3 class="panel-heading" ng-show="workerStats">Statystyki pracownika: {{workerName}} {{workerSurname}}</h3>
+<h3 class="panel-heading" ng-hide="workerStats">Statystyki</h3>
 
-<div class="panel-heading">
-    <h3 class="panel-title panel-default custom-font-weight">Statystyki</h3>
-</div>
 <div class="container">
     <table ng-table="eventsTable" class="table table-bordered table-striped">
         <thead>
@@ -22,30 +22,30 @@
                 </a>
             </th>
             <th class="custom-element col-sm-2">
-                <a href="" ng-click="sortType = 'name';sortReverse = !sortReverse">
+                <a href="" ng-click="sortType = 'order_local';sortReverse = !sortReverse">
                     Nr Zamówienia
-                    <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortType == 'order_local' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'order_local' && sortReverse" class="fa fa-caret-up"></span>
                 </a>
             </th>
             <th class="custom-element col-sm-2">
-                <a href="" ng-click="sortType = 'surname';sortReverse = !sortReverse">
+                <a href="" ng-click="sortType = 'prim.stage';sortReverse = !sortReverse">
                     Etap Produkcji
-                    <span ng-show="sortType == 'surname' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'surname' && sortReverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortType == 'prim.stage' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'prim.stage' && sortReverse" class="fa fa-caret-up"></span>
                 </a>
             </th>
             <th class="custom-element col-sm-2">
-                <a href="" ng-click="sortType = 'position';sortReverse = !sortReverse">
+                <a href="" ng-click="sortType = 'missing';sortReverse = !sortReverse">
                     Brakujące elementy [szt.]
-                    <span ng-show="sortType == 'position' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'position' && sortReverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortType == 'missing' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'missing' && sortReverse" class="fa fa-caret-up"></span>
                 </a></th>
             <th class="custom-element col-sm-2">
-                <a href="" ng-click="sortType = 'id';sortReverse = !sortReverse">
+                <a href="" ng-click="sortType = 'date';sortReverse = !sortReverse">
                     Data Wykonania
-                    <span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
                 </a>
             </th>
             <th class="custom-element col-sm-3"></th>
@@ -56,12 +56,12 @@
         <tr ng-repeat="event in events | orderBy:sortType:sortReverse | filter:searchFilter">
             <td>{{$index+1}}.</td>
             <td>
-                <span data-ng-hide="editing">{{event.prim.order_id}}</span>
+                <span data-ng-hide="editing">{{event.order_local}}</span>
                 <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.name"
                        ng-init="entry.name = worker.name; entry.code = worker.code" data-ng-required/>
             </td>
             <td>
-                <span data-ng-hide="editing">{{event.prim.stage}}</span>
+                <span data-ng-hide="editing">{{posName(event.prim.stage)}}</span>
                 <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.surname"
                        ng-init="entry.surname = worker.surname" data-ng-required/>
             </td>
@@ -79,25 +79,19 @@
                        data-ng-required/>
             </td>
             <td>
-                <button class="btn btn-info custom-width"
-                        ng-click="" ng-disabled="editing">Statystyki
-                </button>
-                <button ng-hide="editing" class="btn btn-success custom-width" ng-click="editing=true">Edytuj
-                </button>
                 <button ng-hide="editing" class="btn btn-danger custom-width"
-                        ng-click="setWorkerToDelete(worker)"  data-toggle="modal" data-target="#confirm-delete">Usuń
-                </button>
-                <button ng-show="editing" class="btn btn-success custom-width"
-                        ng-click="changesConfirmed(entry)">Zatwierdź
-                </button>
-                <button ng-show="editing" class="btn btn-danger custom-width"
-                        ng-click="editing=false">Anuluj
+                        ng-click="setEventToDelete(event)"  data-toggle="modal" data-target="#confirm-delete">Usuń
                 </button>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
+</div>
+<div class="pull-left col-sm-2" ng-show="workerStats">
+    <a href="#/workers/all" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-arrow-left"></span> Powrót
+    </a>
 </div>
 
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -110,12 +104,12 @@
             </div>
 
             <div class="modal-body">
-                <p>Jesteś pewien, że chcesz usunąć danego pracownika z listy?</p>
+                <p>Jesteś pewien, że chcesz usunąć ten rekord?</p>
                 <p class="debug-url"></p>
             </div>
 
             <div class="modal-footer">
-                <a class="btn btn-danger btn-ok" ng-click="deleteWorker()" data-dismiss="modal">Usuń</a>
+                <a class="btn btn-danger btn-ok" ng-click="deleteEvent()" data-dismiss="modal">Usuń</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Powrót</button>
             </div>
         </div>

@@ -5,10 +5,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.webapp.dao.daoImpl.EventRepositoryDAO;
 import org.webapp.dao.daoImpl.WorkerRepositoryDAO;
-import org.webapp.models.WorkerEntity;
-import org.webapp.dao.WorkerRepository;
-
-import javax.persistence.OneToMany;
+import org.webapp.dto.WorkerEventDto;
+import org.webapp.models.WorkerEntity;;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,24 +31,35 @@ public class WorkerService {
         return workerRepositoryDAO.getAllWorkers();
     }
 
+//    @Transactional(readOnly=true)
+//    public List<WorkerEventDto> getActiveWorkers() {
+//        List<WorkerEntity> workers = workerRepositoryDAO.getActiveWorkers();
+//
+//        List<WorkerEventDto> workersDto = new ArrayList<WorkerEventDto>();
+//        for (WorkerEntity worker : workers) {
+//            workersDto.add(new WorkerEventDto(workers,));
+//        }
+//        return workersDto;
+//    }
+
     @Transactional
     public List<WorkerEntity> getActiveWorkers() {
-        return workerRepositoryDAO.getActiveWorkers();
+        List<WorkerEntity> workers = workerRepositoryDAO.getActiveWorkers();
+        return workers;
     }
-
 
     @Transactional
     public void add(WorkerEntity worker) {
-
-        if (!(worker.getName().trim().equals("") || worker.getSurname().trim().equals("") || worker.getId() == 0 ))
+        worker.setActive((short) 1);
+        if (!(worker.getName().trim().equals("") || worker.getSurname().trim().equals("") || worker.getId() == 0))
             workerRepositoryDAO.saveWorker(worker);
     }
 
     @Transactional
     public void deleteWorker(WorkerEntity workerEntity) {
 
-        if (eventRepositoryDAO.getEventsForWorker(workerEntity.getCode()).size() > 0) {
-            workerRepositoryDAO.setInactiveForCode(workerEntity.getCode());
+        if (eventRepositoryDAO.getEventsForWorkerCode(workerEntity.getCode()).size() > 0) {
+            workerRepositoryDAO.setInactiveWorkerForCode(workerEntity.getCode());
         } else {
             workerRepositoryDAO.deleteWorkerForCode(workerEntity.getCode());
         }

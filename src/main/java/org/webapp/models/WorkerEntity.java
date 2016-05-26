@@ -1,15 +1,17 @@
 package org.webapp.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.webapp.utils.Config;
+
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Patryk on 2015-11-01.
  */
-@Entity(name = "workers")
+@Entity
+@Table(name = "workers", schema = Config.frontWitDbSchema)
 public class WorkerEntity implements Serializable {
 
     @Id
@@ -26,6 +28,9 @@ public class WorkerEntity implements Serializable {
 
     private short active;
 
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "worker")
+//    @JsonManagedReference
+//    private List<EventEntity> events;
 
     public short getCode() {
         return code;
@@ -67,13 +72,21 @@ public class WorkerEntity implements Serializable {
         this.position = position;
     }
 
-    public short active() {
+    public short getActive() {
         return active;
     }
 
     public void setActive(short active) {
         this.active = active;
     }
+
+//    public List<EventEntity> getEvents() {
+//        return events;
+//    }
+//
+//    public void setEvents(List<EventEntity> events) {
+//        this.events = events;
+//    }
 
     @Override
     public boolean equals(Object o) {

@@ -27,6 +27,11 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>mvc-dispatcher</servlet-name>-->
+        <!--<url-pattern>/frontWit</url-pattern>-->
+    <!--</servlet-mapping>-->
+
     <servlet-mapping>
         <servlet-name>mvc-dispatcher</servlet-name>
         <url-pattern>*.html</url-pattern>
@@ -51,6 +56,6 @@
         <location>/html/404.html</location>
     </error-page>
 
-    <display-name>Archetype Created Web Application</display-name>
+    <display-name>FrontWit Application</display-name>
 
 </web-app>

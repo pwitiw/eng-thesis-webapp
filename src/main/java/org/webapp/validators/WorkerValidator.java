@@ -3,6 +3,7 @@ package org.webapp.validators;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 import org.webapp.models.WorkerEntity;
 import org.webapp.dao.WorkerRepository;
@@ -25,10 +26,11 @@ public class WorkerValidator implements Validator {
     public void validate(Object target, Errors errors) {
         WorkerEntity worker = (WorkerEntity) target;
 
-        if (workerRepository.findByCode(worker.getCode()) != null) {
-            errors.rejectValue("id", "Worker with id existing");
-        } else if (workerRepository.findByNameAndSurname(worker.getName(), worker.getSurname()) != null) {
-            errors.rejectValue("person", "This worker already exists.");
-        }
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Name is required.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surname", "error.name", "Surname is required.");
+
+        if(worker.getId() <100 || worker.getId() >999)
+            errors.rejectValue("id", "incorrectValue", new Object[]{"'id'"}, "Id included in set 100-999.");
+
     }
 }

@@ -1,19 +1,20 @@
 package org.webapp.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+import org.webapp.models.Component;
 import org.webapp.models.OrderEntity;
-import org.webapp.models.WorkerEntity;
+import org.webapp.services.ComponentService;
 import org.webapp.services.OrderService;
+import org.webapp.services.SyncService;
 
-import javax.persistence.criteria.Order;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -27,18 +28,19 @@ public class OrdersController {
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private ComponentService componentService;
+
+    @Autowired
+    private SyncService syncService;
+
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public ResponseEntity<List<OrderEntity>> allOrders() {
+    public ResponseEntity<List<OrderEntity>> allOrders() throws IOException {
 
+        syncService.synchronize();
         List<OrderEntity> orders = orderService.getAllOrders();
         return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/new", method = RequestMethod.GET)
-    public String addNewOrder(Model model) {
-
-        return "new_order";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -47,5 +49,39 @@ public class OrdersController {
         orderService.add(newOrder);
         return "redirect:/orders/all";
     }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteWorker(@RequestBody OrderEntity order) {
+
+        orderService.deleteOrder(order);
+    }
+
+    @RequestMapping(value = "/addChanges", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void editWorker(@RequestBody OrderEntity order) {
+
+        orderService.confirmChangesIfExists(order);
+    }
+
+    @RequestMapping(value = "/changeStatus", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public void changeStatus(long id) {
+
+        orderService.changeStatusForId(id);
+    }
+
+    @RequestMapping(value = "/{id}/components", method = RequestMethod.GET)
+    public ResponseEntity<List<Component>> getComponentsForOrderId(@PathVariable("id") Long id) {
+        List<Component> components = componentService.getComponents(id);
+        return new ResponseEntity(components, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/getOne", method = RequestMethod.GET)
+    public ResponseEntity<OrderEntity> getOrderForId(@RequestParam Long id) {
+        OrderEntity order = orderService.getOrderForId(id);
+        return new ResponseEntity<OrderEntity>(order, HttpStatus.OK);
+    }
+
 }
 

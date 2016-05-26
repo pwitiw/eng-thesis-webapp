@@ -14,6 +14,8 @@ app.controller('workerController', function ($scope, $http, $route) {
     $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE'];
 
     $scope.posName = function (num) {
+        if(num == -1)
+          return 'BRAKUJĄCY';
         return $scope.positions[num - 1];
     }
 
@@ -47,8 +49,21 @@ app.controller('workerController', function ($scope, $http, $route) {
         $scope.workerToDelete = worker;
     }
 
-    $scope.showStats = function() {
-  //      $state.go("/events");
+    $scope.submit = function(form){
+        if(!form.$valid){
+            return;
+        }
     }
+
+    $scope.addWorker = function(worker){
+        worker.position = $scope.posAsNumber(worker.position);
+
+        $http.post('/workers/addWorker', worker, {headers: {'Content-Type': 'application/json'}})
+            .success(function (response) {
+                $route.reload();
+            })
+    }
+
+
 
 });

@@ -1,5 +1,6 @@
 package org.webapp.dao;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.webapp.models.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,4 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 @Repository("orders")
 public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
+
+    @Query
+    public OrderEntity findById(long id);
 }

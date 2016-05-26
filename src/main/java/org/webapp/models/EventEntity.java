@@ -1,16 +1,17 @@
 package org.webapp.models;
 
-import javafx.concurrent.Worker;
+import org.webapp.utils.Config;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
  * Created by Patryk on 2015-11-19.
  */
-
-@Entity(name = "events")
-public class EventEntity{
+@Entity
+@Table(name = "events", schema = Config.frontWitDbSchema)
+public class EventEntity implements Serializable{
 
 
 
@@ -24,20 +25,29 @@ public class EventEntity{
     @EmbeddedId
     PrimaryKeyEvents prim;
 
-    private short worker;
+    String order_local;
+
+    @Column(name = "worker_code")
+    private short workerCode;
 
     private Timestamp date;
 
     private int missing;
 
-
-
-    public short getWorker() {
-        return worker;
+    public String getOrder_local() {
+        return order_local;
     }
 
-    public void setWorker(short worker) {
-        this.worker = worker;
+    public void setOrder_local(String order_local) {
+        this.order_local = order_local;
+    }
+
+    public short getWorkerCode() {
+        return workerCode;
+    }
+
+    public void setWorkerCode(short workerCode) {
+        this.workerCode = workerCode;
     }
 
     public Timestamp getDate() {

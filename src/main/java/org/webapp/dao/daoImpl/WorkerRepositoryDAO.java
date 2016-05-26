@@ -3,6 +3,7 @@ package org.webapp.dao.daoImpl;
 import javafx.concurrent.Worker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.webapp.dao.OrderRepository;
 import org.webapp.dao.WorkerRepository;
 import org.webapp.models.WorkerEntity;
@@ -36,7 +37,7 @@ public class WorkerRepositoryDAO {
         return workerRepository.findAll();
     }
 
-    public void setInactiveForCode(short code) {
+    public void setInactiveWorkerForCode(short code) {
 
         WorkerEntity workerEntity = workerRepository.findByCode(code);
         workerEntity.setActive((short) 0);

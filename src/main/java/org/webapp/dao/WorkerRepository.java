@@ -16,21 +16,11 @@ import java.util.List;
 @Repository("workers")
 public interface WorkerRepository extends JpaRepository<WorkerEntity, Long> {
 
-    @Modifying
-    @Transactional
-    @Query("delete from workers w where w.code = ?1")
-    void deleteWorkerForCode(short code);
-
     @Query
     WorkerEntity findByNameAndSurname(String name, String surname);
 
     @Query
     WorkerEntity findByCode(short code);
-
-    @Modifying
-    @Transactional
-    @Query("update workers w set w.active = 0 where w.code = ?1")
-    void inactivateWorker(short code);
 
     @Query
     List<WorkerEntity> findByActive(short active);

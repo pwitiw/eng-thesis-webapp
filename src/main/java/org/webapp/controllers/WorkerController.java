@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+import org.webapp.dto.WorkerEventDto;
 import org.webapp.models.EventEntity;
 import org.webapp.models.WorkerEntity;
 import org.webapp.services.EventService;
@@ -38,23 +39,9 @@ public class WorkerController {
         return new ResponseEntity<List<WorkerEntity>>(workers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/statistic", method = RequestMethod.GET)
-    public String workerStatistic(Model model) {
-
-        List<EventEntity> events = eventService.getEventsForWorker((short) 1);
-        model.addAttribute("events", events);
-
-        return "workers_statistic";
-    }
-
-    @RequestMapping(value = "/new", method = RequestMethod.GET)
-    public String addNewWorker(Model model) {
-
-        return "new_worker";
-    }
-
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addNewWorkerButtonClicked(@ModelAttribute("worker") WorkerEntity newWorker, BindingResult result, SessionStatus status) {
+    @RequestMapping(value = "/addWorker", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void addWorker(@RequestBody WorkerEntity newWorker) {
 
      /*   workerValidator.validate(newWorker, result);
 
@@ -63,7 +50,6 @@ public class WorkerController {
 
         status.setComplete();*/
         workerService.add(newWorker);
-        return "redirect:/workers/all";
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)

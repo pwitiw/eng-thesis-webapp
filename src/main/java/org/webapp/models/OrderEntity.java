@@ -1,15 +1,16 @@
 package org.webapp.models;
 
 
-import javax.persistence.*;
-import java.sql.Date;
-import java.sql.Timestamp;
+import org.webapp.utils.Config;
 
+import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by Patryk on 2015-10-28.
  */
-@Entity(name = "orders")
+@Entity
+@Table(name = "orders", schema = Config.frontWitDbSchema)
 public class OrderEntity {
 
     @Id
@@ -24,13 +25,17 @@ public class OrderEntity {
 
     private int amount;
 
+    private short active;
+
     private int stage;
 
     private short missing;
 
     private short express;
 
-    private Timestamp last_update;
+    private Date date;
+
+//    private Timestamp last_update;
 
     public long getId() {
         return id;
@@ -72,6 +77,14 @@ public class OrderEntity {
         this.amount = amount;
     }
 
+    public short getActive() {
+        return active;
+    }
+
+    public void setActive(short active) {
+        this.active = active;
+    }
+
     public int getStage() {
         return stage;
     }
@@ -96,12 +109,11 @@ public class OrderEntity {
         this.express = express;
     }
 
-    public Timestamp getLast_update() {
-        return last_update;
+    public Date getDate() {
+        return date;
     }
 
-    public void setLast_update(Timestamp last_update) {
-        this.last_update = last_update;
+    public void setDate(Date date) {
+        this.date = date;
     }
-
 }

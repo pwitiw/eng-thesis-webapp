@@ -7,22 +7,20 @@
             </div>
         </div>
         <div class="pull-right col-sm-2">
-            <button type="button" class="btn btn-primary" onclick="window.location.href='new'">Dodaj
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWorker">Dodaj
                 Pracownika
             </button>
         </div>
     </div>
 </div>
 
-<div class="panel-heading">
-    <h3 class="panel-title panel-default custom-font-weight">Pracownicy</h3>
-</div>
+<h3 class="panel-heading">Pracownicy</h3>
 <div class="container">
     <table ng-table="workersTable" class="table table-bordered table-striped">
         <thead>
         <tr>
             <th class="custom-element col-sm-1">
-                <a href="" >
+                <a href="">
                     Lp.
                 </a>
             </th>
@@ -79,8 +77,8 @@
             </td>
             <td>
                 <span data-ng-hide="editing">{{worker.id}}</span>
-                <input type="text" data-ng-show="editing" class="form-control" ng-init="entry.id = worker.id"
-                       ng-model="entry.id"
+                <input type="number" name="workerId" data-ng-show="editing" class="form-control" ng-init="entry.id = worker.id"
+                       ng-model="entry.id" min="100" max="999"
                        data-ng-required/>
             </td>
             <td>
@@ -125,6 +123,82 @@
                 <a class="btn btn-danger btn-ok" ng-click="deleteWorker()" data-dismiss="modal">Usuń</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Powrót</button>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form name="workerForm" ng-submit="submit(newWorkerForm)" novalidate>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span
+                            class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Dodawanie nowego pracownika</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group"
+                         ng-class="{ 'has-error' : workerForm.name.$invalid && !workerForm.name.$pristine }">
+                        <div class="col-sm-6 edit-locale-label">
+                            <strong>Imię:</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" name="name" class="form-control" ng-model="newWorker.name"
+                                   ng-minlength="3" required>
+
+                            <p ng-show="workerForm.name.$invalid && !workerForm.name.$pristine" class="help-block">
+                                Wprowadzone imię jest za krótkie.</p>
+                        </div>
+                    </div>
+                    <div class="row form-group"
+                         ng-class="{ 'has-error' : workerForm.surname.$invalid && !workerForm.surname.$pristine }">
+                        <div class="col-sm-6 edit-locale-label">
+                            <strong>Nazwisko:</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" name="surname" class="form-control" ng-model="newWorker.surname"
+                                   ng-minlength="3" required>
+
+                            <p ng-show="workerForm.surname.$invalid && !workerForm.surname.$pristine"
+                               class="help-block">Wprowadzone nazwisko jest za krótkie.</p>
+                        </div>
+                    </div>
+                    <div class="row form-group" ng-class="{ 'has-error' : workerForm.position.$invalid }">
+                        <div class="col-sm-6 edit-locale-label">
+                            <strong>Pozycja:</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control" name="position" size="1" ng-model="newWorker.position"
+                                    ng-options="position for position in positions" required></select>
+                            <span ng-show="workerForm.position.$error.required">Przypisz pozycję dla pracownika.</span>
+                        </div>
+                    </div>
+                    <div class="row form-group"
+                         ng-class="{ 'has-error' : workerForm.workerId.$invalid && !workerForm.workerId.$pristine }">
+                        <div class="col-sm-6 edit-locale-label">
+                            <strong>Identyfikator:</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="number" name="workerId" class="form-control" ng-model="newWorker.id"
+                                   min="100" max="999" required>
+
+                            <p ng-show="workerForm.workerId.$invalid && !workerForm.workerId.$pristine"
+                               class="help-block">
+                                Identyfikator powinien składać się z 3 cyfr.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:  0px;">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true" data-dismiss="modal"></span> Powrót
+                    </button>
+                    <button class="btn btn-success pull-right" type="submit" ng-click="addWorker(newWorker)"
+                            data-dismiss="modal" ng-disabled="workerForm.$invalid">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Dodaj
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

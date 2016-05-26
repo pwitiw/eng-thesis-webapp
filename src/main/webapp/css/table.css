@@ -36,15 +36,43 @@
 }
 
 .home-page-text {
-    text-align:center;
+    text-align: center;
     font-size: 400%;
     text-shadow: 1px 1px 1px rgba(26, 47, 153, 1);
 }
 
-.vcenter{
+.vcenter {
     vertical-align: middle;
 }
 
 .custom-font-weight {
     font-weight: 900 !important;
 }
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*html **/
+/*{*/
+    /*font-family:Tahoma, Geneva, sans-serif !important;*/
+/*}*/
+
+.header-size{
+    font-size:15px;
+}
+
+.header-bigger-size{
+    font-size: 25px;
+}
+
+.red-font{
+    color:red; !important;
+}
+

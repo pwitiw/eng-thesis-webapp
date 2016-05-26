@@ -1,5 +1,6 @@
 package org.webapp.models;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 
@@ -9,26 +10,27 @@ import java.io.Serializable;
 @Embeddable
 public class PrimaryKeyEvents implements Serializable {
 
+    @Column(name="order_id")
+    private long orderId;
+
+    private int stage;
+
     public PrimaryKeyEvents() {
 
     }
 
     public PrimaryKeyEvents(long order_id, int stage) {
-        this.order_id = order_id;
+        this.orderId = order_id;
         this.stage = stage;
 
     }
 
-    private long order_id;
-
-    private int stage;
-
-    public long getOrder_id() {
-        return order_id;
+    public long getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(long order_id) {
-        this.order_id = order_id;
+    public void setOrderId(long order_id) {
+        this.orderId = order_id;
     }
 
     public int getStage() {
@@ -46,14 +48,14 @@ public class PrimaryKeyEvents implements Serializable {
 
         PrimaryKeyEvents that = (PrimaryKeyEvents) o;
 
-        if (order_id != that.order_id) return false;
+        if (orderId != that.orderId) return false;
         return stage == that.stage;
 
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (order_id ^ (order_id >>> 32));
+        int result = (int) (orderId ^ (orderId >>> 32));
         result = 31 * result + stage;
         return result;
     }
