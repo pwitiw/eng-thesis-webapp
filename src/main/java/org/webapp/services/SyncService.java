@@ -41,17 +41,19 @@ public class SyncService {
     ComponentRepositoryDAO componentRepositoryDAO;
 
 
-    public void synchronize() throws IOException {
+    public List<String> synchronize() throws IOException {
         File folder = new File(Consts.SYNC_FOLDER_PATH);
-
+        List<String> result = new ArrayList<String>();
         for (final File fileEntry : folder.listFiles()) {
             if (isCSVFile(fileEntry)) {
                 String path = Consts.SYNC_FOLDER_PATH + "/" + fileEntry.getName();
                 List<Component> components = getComponentsForCSVForPath(path);
+
             } else {
                 continue;
             }
         }
+        return result;
     }
 
     private List<Component> getComponentsForCSVForPath(final String filePath) throws IOException {

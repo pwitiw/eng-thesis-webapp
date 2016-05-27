@@ -3,7 +3,7 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
     $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE', 'UKOŃCZONE'];
     $scope.yesNo = ['NIE', 'TAK'];
     $scope.orders = [];
-    modalService.openPopupModal('lg');
+
 
     $http.get('/orders/all')
         .success(function (response) {
@@ -31,15 +31,24 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
     };
 
     $scope.synchronize = function (id) {
+        items = {
+            header: 'Zsynchronizowane Zamówienia',
+            body: []
+        }
+
         $http.get('/synchronize')
             .success(function (response) {
                 $route.reload();
-                $scope.syncOrders = response;
-                modalService.openPopupModal('lg');
+                if (response.length == 0)
+                    items.body = 'Brak zamówień do synchronizacji.';
+                else
+                    items.body = response;
+
+                modalService.openPopupModal(items);
             }).error(function (response) {
                 $route.reload();
-                $scope.syncOrders = response;
-                modalService.openPopupModal('lg');
+                items.body = 'Operacja nie powiodła się.';
+                modalService.openPopupModal(items);
             })
 
     };
@@ -104,8 +113,6 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
         shareService.set(order);
         $location.path('/orders/components/' + order.id);
     }
-
-
 
 
 });

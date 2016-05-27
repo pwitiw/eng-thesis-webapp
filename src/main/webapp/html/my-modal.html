@@ -1,24 +1,17 @@
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <div class="row">
-                <div class="col-lg-9">
-                    <h3>{{header}}</h3>
-                </div>
+<div class="modal-header">
+    <h3 class="modal-title">{{header}}</h3>
+</div>
+<div class="modal-body">
+    <ul>
+        <div ng-if="isBodyArray()">
+            <div ng-repeat="item in body">
+                <td>{{$index+1}}. {{ item }}</td>
             </div>
         </div>
-        <div class="modal-body">
-            <form name = "kontoForm" szp-focus="sifra">
-                <!-- Šifra -->
-                <szp-input id="sifra" text="Šifra" place-holder="šifra" value="konto.sifra" required="!konto.sifra"></szp-input>
-                <!-- Naziv -->
-                <szp-input id="naziv" text="Naziv" place-holder="naziv" value="konto.naziv" required="!konto.naziv"></szp-input>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" ng-hide="!kontoForm.$valid || (mode == 'edit')" ng-click="okContinue()">OK i nastavi</button>
-            <button class="btn btn-primary" ng-hide="!kontoForm.$valid" ng-click="ok()">OK i zatvori</button>
-            <button class="btn btn-warning" ng-click="cancel()">Odustani</button>
-        </div>
-    </div>
+        <div ng-hide="isBodyArray()">{{ body }}</div>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
 </div>
