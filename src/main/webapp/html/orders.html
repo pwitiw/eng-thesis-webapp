@@ -6,8 +6,8 @@
                 <input type="text" class="form-control " placeholder="Szukaj" ng-model="searchFilter">
             </div>
         </div>
-        <div class="pull-right col-sm-4">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWorker">
+        <div class="pull-right col-sm-2">
+            <button ng-hide="true" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWorker">
                 Dodaj Zamówienie
             </button>
             <button type="button" class="btn btn-danger" ng-click="synchronize()">

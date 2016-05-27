@@ -1,27 +1,24 @@
-<div class="modal fade" id="addWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form name="workerForm" ng-submit="submit(newWorkerForm)" novalidate>
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span
-                            class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Dodawanie nowego pracownika</h4>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h3>{{header}}</h3>
                 </div>
-                <div class="modal-body">
-
-                </div>
-                <div class="modal-footer" style="margin-top:  0px;">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true" data-dismiss="modal"></span> Powrót
-                    </button>
-                    <button class="btn btn-success pull-right" type="submit" ng-click="addWorker(newWorker)"
-                            data-dismiss="modal" ng-disabled="workerForm.$invalid">
-                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Dodaj
-                    </button>
-                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <form name = "kontoForm" szp-focus="sifra">
+                <!-- Šifra -->
+                <szp-input id="sifra" text="Šifra" place-holder="šifra" value="konto.sifra" required="!konto.sifra"></szp-input>
+                <!-- Naziv -->
+                <szp-input id="naziv" text="Naziv" place-holder="naziv" value="konto.naziv" required="!konto.naziv"></szp-input>
             </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-hide="!kontoForm.$valid || (mode == 'edit')" ng-click="okContinue()">OK i nastavi</button>
+            <button class="btn btn-primary" ng-hide="!kontoForm.$valid" ng-click="ok()">OK i zatvori</button>
+            <button class="btn btn-warning" ng-click="cancel()">Odustani</button>
         </div>
     </div>
 </div>

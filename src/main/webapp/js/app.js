@@ -1,5 +1,7 @@
 var app = angular.module('myApp', [
-    'ngRoute', 'ui.bootstrap'
+    'ngRoute',
+    'ngAnimate',
+    'ui.bootstrap'
 ]);
 
 app.config(function ($routeProvider) {

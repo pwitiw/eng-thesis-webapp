@@ -17,6 +17,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -56,17 +58,25 @@ public class SyncService {
         List<Component> components = new ArrayList();
         CSVReader csvReader = new CSVReader(new FileReader(filePath), Consts.SEPARATOR);
         String[] nextLine;
+
         while ((nextLine = csvReader.readNext()) != null) {
 
             components.add(new Component(nextLine));
-            closeAnddeleteFile();
         }
+        csvReader.close();
+        closeAndDeleteFile(filePath);
 
         return components;
     }
 
-    private boolean closeAnddeleteFile() {
-        return true;
+    private boolean closeAndDeleteFile(String path) {
+        File file = new File(path);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return file.delete();
     }
 
     private boolean isCSVFile(final File fileEntry) {

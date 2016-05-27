@@ -1,9 +1,9 @@
-app.controller('orderController', function ($scope, $http, $route, $location, shareService) {
+app.controller('orderController', function ($scope, $http, $route, $location, modalService, shareService) {
 
     $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE', 'UKOŃCZONE'];
     $scope.yesNo = ['NIE', 'TAK'];
     $scope.orders = [];
-
+    modalService.openPopupModal('lg');
 
     $http.get('/orders/all')
         .success(function (response) {
@@ -32,9 +32,16 @@ app.controller('orderController', function ($scope, $http, $route, $location, sh
 
     $scope.synchronize = function (id) {
         $http.get('/synchronize')
-            .success(function () {
+            .success(function (response) {
                 $route.reload();
+                $scope.syncOrders = response;
+                modalService.openPopupModal('lg');
+            }).error(function (response) {
+                $route.reload();
+                $scope.syncOrders = response;
+                modalService.openPopupModal('lg');
             })
+
     };
 
     $scope.getIndexOf = function (order) {
@@ -92,11 +99,13 @@ app.controller('orderController', function ($scope, $http, $route, $location, sh
         return isActive == 1 ? 'AKTYWUJ' : 'DEZAKTYWUJ';
     }
 
-    $scope.getComponentsViewForOrder = function(order){
+    $scope.getComponentsViewForOrder = function (order) {
 
         shareService.set(order);
-        $location.path('/orders/components/'+ order.id);
+        $location.path('/orders/components/' + order.id);
     }
+
+
 
 
 });

@@ -13,13 +13,18 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff2" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/html/events.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/html/workers.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js/lib/angular.js" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js/lib/angular.min.js" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js/lib/ui-bootstrap-0.12.0.min.js" charset="windows-1250" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/js/lib/ui-bootstrap-tpls-0.12.0.min.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/lib/ui-bootstrap-tpls-1.3.3.min.js" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js/lib/underscore-min.js" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/static/404.png" charset="windows-1250" />
   </component>
