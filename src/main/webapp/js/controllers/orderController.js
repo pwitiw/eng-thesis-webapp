@@ -1,6 +1,5 @@
-app.controller('orderController', function ($scope, $http, $route, $location, modalService, shareService) {
+app.controller('orderController', function ($scope, $http, $route, $location, modalService, orderService) {
 
-    $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE', 'UKOŃCZONE'];
     $scope.yesNo = ['NIE', 'TAK'];
     $scope.orders = [];
 
@@ -8,12 +7,10 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
     $http.get('/orders/all')
         .success(function (response) {
             $scope.orders = response;
+            orderService.setPositionsAsStringForOrder($scope.orders);
             $scope.setValues();
         });
 
-    $scope.posName = function (num) {
-        return $scope.positions[num - 1];
-    };
 
     $scope.isExpress = function (missing) {
         return missing == 1 ? 'TAK' : '-';

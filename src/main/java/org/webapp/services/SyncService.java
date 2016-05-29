@@ -48,7 +48,7 @@ public class SyncService {
             if (isCSVFile(fileEntry)) {
                 String path = Consts.SYNC_FOLDER_PATH + "/" + fileEntry.getName();
                 List<Component> components = getComponentsForCSVForPath(path);
-
+                result.add(getOrderId(fileEntry.getName()));
             } else {
                 continue;
             }
@@ -79,6 +79,10 @@ public class SyncService {
             e.printStackTrace();
         }
         return file.delete();
+    }
+
+    private String getOrderId(String file){
+        return file.split("\\.")[0];
     }
 
     private boolean isCSVFile(final File fileEntry) {

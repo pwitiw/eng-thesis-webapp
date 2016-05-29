@@ -1,17 +1,12 @@
-app.controller('eventController', function ($scope, $http, $routeParams, $route) {
+app.controller('eventController', function ($scope, $http, $routeParams, $route, orderService) {
 
     $scope.worker_code = $routeParams.workerCode;
-
-    $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE'];
-
-    $scope.posName = function (num) {
-        return $scope.positions[num - 1];
-    }
 
     if ($scope.worker_code == null) {
         $http.get('/events/all').success(function (response) {
             $scope.workerStats = false;
             $scope.events = response;
+            orderService.setPositionsAsStringForEntity($scope.events);
         });
     }
     else {
@@ -20,7 +15,7 @@ app.controller('eventController', function ($scope, $http, $routeParams, $route)
             $scope.workerName = response.workerName;
             $scope.workerSurname = response.workerSurname;
             $scope.events = response.events;
-
+            orderService.setPositionsAsStringForEntity($scope.events);
         });
     }
     $scope.setEventToDelete = function (event) {

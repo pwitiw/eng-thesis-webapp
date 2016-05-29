@@ -1,23 +1,18 @@
-app.controller('workerController', function ($scope, $http, $route) {
+app.controller('workerController', function ($scope, $http, $route, orderService) {
 
     $http.get('/workers/all')
         .success(function (response) {
             $scope.workers = response;
+            orderService.setPositionsAsStringForWorkers($scope.workers);
         });
+
+    $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE', 'UKOŃCZONE'];
 
     $scope.editing = false;
     $scope.workerToDelete= null;
     $scope.sortType = 'code'; // set the default sort type
     $scope.sortReverse = false;  // set the default sort order
     $scope.searchFilter = '';
-
-    $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE'];
-
-    $scope.posName = function (num) {
-        if(num == -1)
-          return 'BRAKUJĄCY';
-        return $scope.positions[num - 1];
-    }
 
     $scope.posAsNumber = function (pos) {
         for (i = 0; i < $scope.positions.length; i++) {

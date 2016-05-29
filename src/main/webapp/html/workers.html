@@ -69,7 +69,7 @@
                        ng-init="entry.surname = worker.surname" data-ng-required/>
             </td>
             <td>
-                <span data-ng-hide="editing">{{posName(worker.position)}}</span>
+                <span data-ng-hide="editing">{{worker.position}}</span>
                 <select data-ng-show="editing" class="form-control" ng-model="entry.position"
                         ng-init="entry.position = positions[worker.position - 1]"
                         ng-options=" option as option for option in positions">

@@ -61,7 +61,7 @@
                        ng-init="entry.name = worker.name; entry.code = worker.code" data-ng-required/>
             </td>
             <td>
-                <span data-ng-hide="editing">{{posName(event.prim.stage)}}</span>
+                <span data-ng-hide="editing">{{event.prim.stage}}</span>
                 <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.surname"
                        ng-init="entry.surname = worker.surname" data-ng-required/>
             </td>
