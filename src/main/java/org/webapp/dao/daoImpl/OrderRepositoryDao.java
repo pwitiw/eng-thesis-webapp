@@ -29,12 +29,17 @@ public class OrderRepositoryDAO {
         return orderRepository.findById(id);
     }
 
-    public void deleteOrderForId(long id){
+    public void deleteOrderForId(long id) {
         OrderEntity order = orderRepository.findById(id);
         orderRepository.delete(order);
     }
 
+    public List<OrderEntity> getOrderForStage(Integer stage) {
+        return orderRepository.findByStage(stage);
+    }
 
-
+    public OrderEntity save(OrderEntity o) {
+        return orderRepository.save(o);
+    }
 
 }

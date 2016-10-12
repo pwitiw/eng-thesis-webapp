@@ -76,4 +76,15 @@ public class OrderService {
         return actualTime;
     }
 
+    public List<OrderEntity> getOrderForStage(Integer stage) {
+        return orderRepositoryDAO.getOrderForStage(stage);
+    }
+
+    public OrderEntity upgradeOrder(OrderEntity o) {
+        OrderEntity order = orderRepositoryDAO.getOrderForId(o.getId());
+        order.setStage(o.getStage() + 1);
+        order.setMissing(o.getMissing());
+
+        return orderRepositoryDAO.save(order);
+    }
 }

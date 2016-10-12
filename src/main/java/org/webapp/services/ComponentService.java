@@ -16,10 +16,10 @@ public class ComponentService {
     @Autowired
     ComponentRepositoryDAO componentRepositoryDAO;
 
-
     public List<Component> getComponents(long id){
-
         return componentRepositoryDAO.getComponentsForOrderId(id);
     }
+
+
 
 }

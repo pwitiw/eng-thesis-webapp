@@ -116,16 +116,13 @@
             <td>
                 <span data-ng-hide="editing">{{order.amount}}</span>
                 <input type="number" name="orderAmount" data-ng-show="editing" class="form-control"
-                       ng-init="entry.amount = order.amount"
-                       ng-model="entry.amount" min="0"
-                       data-ng-required/>
+                       ng-model="entry.amount" ng-init="entry.amount = order.amount" min="0" data-ng-required/>
             </td>
             <td>
                 <span data-ng-hide="editing">{{order.missing}}</span>
-                <input type="number" name="orderAmount" data-ng-show="editing" class="form-control"
-                       ng-init="entry.missing = order.missing"
-                       ng-model="entry.missing" min="0"
-                       data-ng-required/>
+                <input type="number" name="orderMissing" data-ng-show="editing" class="form-control"
+                       ng-model="entry.missing" ng-init="entry.missing = order.missing"
+                       min="0" max="{{order.amount}}" data-ng-required/>
             </td>
             <td>
                 <span>{{order.stage}}</span>
@@ -134,12 +131,17 @@
                 <!--ng-model="entry.stage" min="-1" max="7"-->
                 <!--data-ng-required/>-->
             </td>
+
             <td>
-                <span data-ng-hide="editing">{{isExpress(order.express)}}</span>
-                <input type="number" name="orderMissing" data-ng-show="editing" class="form-control"
-                       ng-init="entry.missing = order.missing" min="0"
-                       ng-model="entry.missing"
-                       data-ng-required/>
+                <span data-ng-hide="editing">{{order.express}}</span>
+                <!--<input type="text" name="orderExpress" data-ng-show="editing" class="form-control"-->
+                <!--ng-init="entry.express = order.express" min="0"-->
+                <!--ng-model="entry.express"-->
+                <!--data-ng-required/>-->
+                <select class="form-control" data-ng-show="editing" ng-model="entry.express"
+                        ng-init="entry.express = order.express"
+                        ng-options="item for item in expressOptions">
+                </select>
             </td>
             <td>
                 <span>{{order.date | date:' dd/MM/yyyy'}}</span>

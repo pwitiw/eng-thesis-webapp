@@ -16,24 +16,24 @@ import java.util.Date;
 public class TZamowieniaEntity {
 
     @Id
+    @Column(name = "id")
     private int id;
-
+    @Column(name = "tklienci_id")
     private int tklienci_id;
 
     @Column(name = "data_z")
     private Date dataZam;
-
+    @Column(name = "numer")
     private String numer;
-
+    @Column(name = "opis")
     private String opis;
-
+    @Column(name = "cechy")
     private String cechy;
-
+    @Column(name = "pozycje")
     private String pozycje;
-
+    @Column(name = "nr_zam_kl")
     private String nr_zam_kl;
 
-    private String tzamowienia;
 
     public int getId() {
         return id;
@@ -99,13 +99,6 @@ public class TZamowieniaEntity {
         this.nr_zam_kl = nr_zam_kl;
     }
 
-    public String getTzamowienia() {
-        return tzamowienia;
-    }
-
-    public void setTzamowienia(String tzamowienia) {
-        this.tzamowienia = tzamowienia;
-    }
-}
+  }
 
 

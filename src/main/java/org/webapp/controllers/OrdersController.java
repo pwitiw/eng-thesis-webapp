@@ -83,5 +83,11 @@ public class OrdersController {
         return new ResponseEntity<OrderEntity>(order, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/orders", method = RequestMethod.GET)
+    public ResponseEntity<List<OrderEntity>> getOrdersForPos(@RequestParam Integer pos){
+        List<OrderEntity> orders = orderService.getOrderForStage(pos);
+        return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
+    }
+
 }
 

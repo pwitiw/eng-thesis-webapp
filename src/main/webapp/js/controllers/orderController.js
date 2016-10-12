@@ -2,19 +2,16 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
 
     $scope.yesNo = ['NIE', 'TAK'];
     $scope.orders = [];
-
+    $scope.expressOptions = orderService.express;
+    $scope.editingMode = false;
 
     $http.get('/orders/all')
         .success(function (response) {
             $scope.orders = response;
             orderService.setPositionsAsStringForOrder($scope.orders);
+            orderService.setExpressAsString($scope.orders);
             $scope.setValues();
         });
-
-
-    $scope.isExpress = function (missing) {
-        return missing == 1 ? 'TAK' : '-';
-    };
 
     $scope.isActive = function (active) {
         return active == 1 ? true : false;
@@ -66,8 +63,9 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
             })
     };
 
-    $scope.changesConfirmed = function (entry) {
-
+    $scope.changesConfirmed = function (arg) {
+        entry = arg;
+        orderService.convertOrdersToSavingForm(entry);
         $http.post('/orders/addChanges', entry, {headers: {'Content-Type': 'application/json'}})
             .success(function (response) {
                 $route.reload();
@@ -111,5 +109,8 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
         $location.path('/orders/components/' + order.id);
     }
 
+    $scope.setEntryState = function (order) {
+        $scope.entry = order;
+    }
 
 });

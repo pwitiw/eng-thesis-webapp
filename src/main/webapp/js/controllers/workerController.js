@@ -7,7 +7,6 @@ app.controller('workerController', function ($scope, $http, $route, orderService
         });
 
     $scope.positions = ['FREZERNIA', 'CZYSZCZCZENIE', 'PODKŁADOWANIE', 'SZLIFIERNIA', 'LAKIEROWANIE', 'PAKOWANIE', 'UKOŃCZONE'];
-
     $scope.editing = false;
     $scope.workerToDelete= null;
     $scope.sortType = 'code'; // set the default sort type
@@ -27,7 +26,7 @@ app.controller('workerController', function ($scope, $http, $route, orderService
 
         $http.post('/workers/addChanges', entry, {headers: {'Content-Type': 'application/json'}})
             .success(function (response) {
-                $route.reload();
+                //$route.reload();
             })
 
     }
