@@ -7,7 +7,7 @@ CREATE TABLE `workers` (
  `active` smallint(1) NOT NULL DEFAULT '1',
  PRIMARY KEY (`CODE`),
  UNIQUE KEY `Identyfikator` (`ID`)
-) 
+); 
 
 
 CREATE TABLE `orders` (
@@ -22,7 +22,7 @@ CREATE TABLE `orders` (
  `DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
  `LAST_UPDATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  PRIMARY KEY (`ID`)
-) 
+); 
 
 CREATE TABLE `events` (
  `ORDER_ID` bigint(20) NOT NULL,
@@ -34,4 +34,4 @@ CREATE TABLE `events` (
  KEY `WORKER` (`WORKER`),
  CONSTRAINT `events_ibfk_1` FOREIGN KEY (`ORDER_ID`) REFERENCES `orders` (`ID`),
  CONSTRAINT `workers` FOREIGN KEY (`WORKER`) REFERENCES `workers` (`CODE`)
-) 
+); 
