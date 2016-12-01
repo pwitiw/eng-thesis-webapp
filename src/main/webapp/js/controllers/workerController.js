@@ -58,6 +58,4 @@ app.controller('workerController', function ($scope, $http, $route, orderService
             })
     }
 
-
-
 });

@@ -10,35 +10,33 @@ import java.io.Serializable;
 @Embeddable
 public class PrimaryKeyEvents implements Serializable {
 
-    @Column(name="order_id")
-    private long orderId;
-
-    private int stage;
+    @Column(name = "order_id")
+    private Long orderId;
+    @Column(name = "position_id")
+    private Long positionId;
 
     public PrimaryKeyEvents() {
-
     }
 
-    public PrimaryKeyEvents(long order_id, int stage) {
+    public PrimaryKeyEvents(long order_id, long positionId) {
         this.orderId = order_id;
-        this.stage = stage;
-
+        this.positionId = positionId;
     }
 
-    public long getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(long order_id) {
-        this.orderId = order_id;
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 
-    public int getStage() {
-        return stage;
+    public Long getPositionId() {
+        return positionId;
     }
 
-    public void setStage(int stage) {
-        this.stage = stage;
+    public void setPositionId(Long positionId) {
+        this.positionId = positionId;
     }
 
     @Override
@@ -49,14 +47,13 @@ public class PrimaryKeyEvents implements Serializable {
         PrimaryKeyEvents that = (PrimaryKeyEvents) o;
 
         if (orderId != that.orderId) return false;
-        return stage == that.stage;
-
+        return positionId == that.positionId;
     }
 
     @Override
     public int hashCode() {
         int result = (int) (orderId ^ (orderId >>> 32));
-        result = 31 * result + stage;
+        result = 31 * result + positionId.intValue();
         return result;
     }
 }

@@ -13,8 +13,6 @@ import java.sql.Timestamp;
 @Table(name = "events", schema = Config.frontWitDbSchema)
 public class EventEntity implements Serializable{
 
-
-
     public PrimaryKeyEvents getPrim() {
         return prim;
     }
@@ -25,29 +23,19 @@ public class EventEntity implements Serializable{
     @EmbeddedId
     PrimaryKeyEvents prim;
 
-    String order_local;
-
-    @Column(name = "worker_code")
-    private short workerCode;
+    @Column(name = "WORKER_ID")
+    private short workerId;
 
     private Timestamp date;
 
     private int missing;
 
-    public String getOrder_local() {
-        return order_local;
+    public short getWorkerId() {
+        return workerId;
     }
 
-    public void setOrder_local(String order_local) {
-        this.order_local = order_local;
-    }
-
-    public short getWorkerCode() {
-        return workerCode;
-    }
-
-    public void setWorkerCode(short workerCode) {
-        this.workerCode = workerCode;
+    public void setWorkerId(short workerCode) {
+        this.workerId = workerCode;
     }
 
     public Timestamp getDate() {

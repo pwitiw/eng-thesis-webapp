@@ -29,12 +29,12 @@ public class EventRepositoryDAO {
     }
 
     public List<EventEntity> getEventsForWorkerCode(short code) {
-        return eventRepository.findByWorkerCode(code);
+        return eventRepository.findByWorkerId(code);
     }
 
     public void deleteEventForPrimaryKey(PrimaryKeyEvents prim){
 
-        EventEntity event = eventRepository.findByPrimOrderIdAndPrimStage(prim.getOrderId(),prim.getStage());
+        EventEntity event = eventRepository.findByPrimOrderIdAndPrimPositionId(prim.getOrderId(),prim.getPositionId());
         eventRepository.delete(event);
     }
 

@@ -19,10 +19,15 @@ public class OrderService {
 
     @Autowired
     EventService eventService;
-
+//todo tutaj ogarnac jak z tym nullem jak parentId jest przeslany
     @Transactional
     public List<OrderEntity> getAllOrders() {
-        return orderRepositoryDAO.getAllOrders();
+       List<OrderEntity> s= orderRepositoryDAO.getAllOrders();
+        for(OrderEntity i:s){
+            i.setParentId(2L);
+        }
+        return s;
+       // return orderRepositoryDAO.getAllOrders();
     }
 
     @Transactional
@@ -35,8 +40,8 @@ public class OrderService {
     @Transactional
     public void add(OrderEntity order) {
 
-        if ((!(order.getOrder_id().trim().equals("") || order.getCustomer().trim().equals("") || order.getColor().trim().equals("")))) {
-            order.setStage(1);
+        if ((!(order.getName().trim().equals("") || ((Integer)order.getCustomerId()).toString().trim().equals("") ))){ //todo || order.getColor().trim().equals("")))) {
+            order.setPositionId(1);
             orderRepositoryDAO.addOrderToDb(order);
         }
     }
@@ -50,14 +55,12 @@ public class OrderService {
     public void confirmChangesIfExists(OrderEntity newOrder) {
 
         OrderEntity order = orderRepositoryDAO.getOrderForId(newOrder.getId());
-
+//todo tutaj tak troche pokretnie, trzeba na front endzie dac wybor klientow, zeby sie kupy trzymalo
         if (eventService.getEventsForOrder(order).size() > 0)
             return;
-        if (newOrder.getOrder_id().trim().equals(""))
+        if (newOrder.getName().trim().equals(""))
             return;
-        if (newOrder.getCustomer().trim().equals(""))
-            return;
-        if (newOrder.getColor().trim().equals(""))
+        if (((Integer)newOrder.getCustomerId()).toString().trim().equals(""))
             return;
         if (newOrder.getExpress() < 0 || newOrder.getExpress() > 1)
             return;
@@ -80,10 +83,11 @@ public class OrderService {
         return orderRepositoryDAO.getOrderForStage(stage);
     }
 
+
+    //todo tutaj poprawic, co to w ogole jest upgradeOrder..................
     public OrderEntity upgradeOrder(OrderEntity o) {
         OrderEntity order = orderRepositoryDAO.getOrderForId(o.getId());
-        order.setStage(o.getStage() + 1);
-        order.setMissing(o.getMissing());
+        order.setPositionId(o.getPositionId() + 1);
 
         return orderRepositoryDAO.save(order);
     }

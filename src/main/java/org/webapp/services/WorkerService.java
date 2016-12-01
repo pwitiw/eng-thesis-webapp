@@ -5,9 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.webapp.dao.daoImpl.EventRepositoryDAO;
 import org.webapp.dao.daoImpl.WorkerRepositoryDAO;
-import org.webapp.dto.WorkerEventDto;
-import org.webapp.models.WorkerEntity;;
-import java.util.ArrayList;
+import org.webapp.models.WorkerEntity;
 import java.util.List;
 
 /**
@@ -67,13 +65,13 @@ public class WorkerService {
 
     @Transactional
     public WorkerEntity getWorker(short code) {
-        return workerRepositoryDAO.getWorkerForCode(code);
+        return workerRepositoryDAO.getWorkerForId(code);
     }
 
     @Transactional
     public boolean confirmChangesIfExists(WorkerEntity newWorker) {
 
-        WorkerEntity oldWorker = workerRepositoryDAO.getWorkerForCode(newWorker.getCode());
+        WorkerEntity oldWorker = workerRepositoryDAO.getWorkerForId(newWorker.getCode());
         if (oldWorker.equals(newWorker)) {
             return false;
         } else if (!(newWorker.getName().trim().equals("") || newWorker.getSurname().trim().equals(""))) {
@@ -90,7 +88,7 @@ public class WorkerService {
         copy.setId(worker.getId());
         copy.setName(worker.getName());
         copy.setSurname(worker.getSurname());
-        copy.setPosition(worker.getPosition());
+        copy.setPositionId(worker.getPositionId());
     }
 
 

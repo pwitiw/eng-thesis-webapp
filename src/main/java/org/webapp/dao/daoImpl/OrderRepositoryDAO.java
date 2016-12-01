@@ -35,7 +35,7 @@ public class OrderRepositoryDAO {
     }
 
     public List<OrderEntity> getOrderForStage(Integer stage) {
-        return orderRepository.findByStage(stage);
+        return orderRepository.findByPositionId(stage);
     }
 
     public OrderEntity save(OrderEntity o) {

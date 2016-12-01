@@ -15,27 +15,25 @@ public class OrderEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
-    private String order_id;
+    private String name;
 
-    private String color;
-
-    private String customer;
-
-    private int amount;
-
-    private short active;
-
-    private int stage;
-
-    private short missing;
+    @Column(name="customer_id")
+    private int customerId;
+    @Column(name="position_id")
+    private int positionId;
 
     private short express;
 
     private Date date;
+    @Column(name="last_update")
+    private Date lastUpdate;
 
-//    private Timestamp last_update;
+    @Column(name="parent_id")
+    private Long parentId;
+
+    private short active;
 
     public long getId() {
         return id;
@@ -45,60 +43,28 @@ public class OrderEntity {
         this.id = id;
     }
 
-    public String getOrder_id() {
-        return order_id;
+    public String getName() {
+        return name;
     }
 
-    public void setOrder_id(String order_id) {
-        this.order_id = order_id;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getColor() {
-        return color;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public String getCustomer() {
-        return customer;
+    public int getPositionId() {
+        return positionId;
     }
 
-    public void setCustomer(String customer) {
-        this.customer = customer;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public short getActive() {
-        return active;
-    }
-
-    public void setActive(short active) {
-        this.active = active;
-    }
-
-    public int getStage() {
-        return stage;
-    }
-
-    public void setStage(int stage) {
-        this.stage = stage;
-    }
-
-    public short getMissing() {
-        return missing;
-    }
-
-    public void setMissing(short missing) {
-        this.missing = missing;
+    public void setPositionId(int positionId) {
+        this.positionId = positionId;
     }
 
     public short getExpress() {
@@ -115,5 +81,29 @@ public class OrderEntity {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
+
+    public long getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(long parentId) {
+        this.parentId = parentId;
+    }
+
+    public short getActive() {
+        return active;
+    }
+
+    public void setActive(short active) {
+        this.active = active;
     }
 }

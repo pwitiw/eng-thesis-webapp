@@ -16,5 +16,5 @@ public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
     @Query
     public OrderEntity findById(long id);
 
-    public List<OrderEntity> findByStage(int stage);
+    public List<OrderEntity> findByPositionId(int positionId);
 }

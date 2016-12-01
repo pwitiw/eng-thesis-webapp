@@ -22,12 +22,12 @@ public class EventDto implements Serializable {
     private Timestamp date;
 
     private int missing;
-
+//todo tutaj poogarniac all zamiast tego intValue zrobic Longa czy cos w tym stylu
     public EventDto(EventEntity event, OrderEntity order) {
 
         this.order_id = event.getPrim().getOrderId();
-        this.stage = event.getPrim().getStage();
-        this.worker = event.getWorkerCode();
+        this.stage = event.getPrim().getPositionId().intValue();
+        this.worker = event.getWorkerId();
         this.date = event.getDate();
         this.missing = event.getMissing();
         this.order_id = order.getId();

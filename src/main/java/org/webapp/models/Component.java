@@ -17,19 +17,16 @@ public class Component {
     @Id
     private long id;
     @Column(name = "order_id")
-    private long   orderId;
+    private long orderId;
     private int width;
     private int height;
     private int amount;
+    private String color;
     private int missing;
     private String comment;
 
     public Component(){}
-
-    public Component(String[]csvComponent){
-
-    }
-
+    public Component(String[]csvComponent){}
 
     public long getId() {
         return id;
@@ -37,6 +34,14 @@ public class Component {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(long orderId) {
+        this.orderId = orderId;
     }
 
     public int getWidth() {
@@ -59,8 +64,16 @@ public class Component {
         return amount;
     }
 
-    public void setAmount(int amout) {
-        this.amount = amout;
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getMissing() {
@@ -77,13 +90,5 @@ public class Component {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(long orderId) {
-        this.orderId = orderId;
     }
 }

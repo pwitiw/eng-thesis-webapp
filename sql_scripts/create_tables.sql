@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`components` (
  `AMOUNT` integer(10) unsigned NOT NULL,
  `COLOR` varchar(255) NOT NULL,
  `MISSING` integer(10) NOT NULL DEFAULT '0',
- `DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `COMMENT` varchar(255),
  `PARENT_ID` integer(10),
  PRIMARY KEY (`ID`),
  FOREIGN KEY (`ORDER_ID`) REFERENCES `orders` (`ID`)
@@ -67,6 +67,14 @@ CREATE TABLE IF NOT EXISTS `webservice`.`events` (
  CONSTRAINT `FK_ORDER_ID_REF` FOREIGN KEY (`ORDER_ID`) REFERENCES `orders` (`ID`),
  CONSTRAINT `FK_POSITION_ID_REF` FOREIGN KEY (`POSITION_ID`) REFERENCES `positions` (`ID`)
 ); 
+
+CREATE TABLE IF NOT EXISTS `webservice`.`synchronization` (
+ `ID` integer(20) NOT NULL AUTO_INCREMENT,
+ `SYNC_DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `AMOUNT` integer(20) NOT NULL DEFAULT '0',
+ PRIMARY KEY (`ID`)
+ ); 
+
 
 
 

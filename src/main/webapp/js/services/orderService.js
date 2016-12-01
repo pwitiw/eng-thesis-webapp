@@ -12,7 +12,7 @@ angular.module('myApp').service('orderService', function () {
 
     this.setPositionsAsStringForOrder = function (orders) {
         for (i = 0; i < orders.length; i++) {
-            orders[i].stage = posName(orders[i].stage);
+            orders[i].stage = posName(orders[i].positionId);
         }
     };
 

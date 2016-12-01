@@ -31,7 +31,7 @@
             </th>
             <th class="custom-element col-sm-1">
                 <a href="" ng-click="sortType = 'order_id';sortReverse = !sortReverse">
-                    Numer Zamówienia
+                    Zamówienie
                     <span ng-show="sortType == 'order_id' && !sortReverse" class="fa fa-caret-down"></span>
                     <span ng-show="sortType == 'order_id' && sortReverse" class="fa fa-caret-up"></span>
                 </a>
@@ -43,26 +43,26 @@
                     <span ng-show="sortType == 'client' && sortReverse" class="fa fa-caret-up"></span>
                 </a>
             </th>
-            <th class="custom-element col-sm-1">
-                <a href="" ng-click="sortType = 'color';sortReverse = !sortReverse">
-                    Kolor
-                    <span ng-show="sortType == 'color' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'color' && sortReverse" class="fa fa-caret-up"></span>
-                </a></th>
-            <th class="custom-element col-sm-1">
-                <a href="" ng-click="sortType = 'amount';sortReverse = !sortReverse">
-                    Ilość Sztuk
-                    <span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </th>
-            <th class="custom-element col-sm-1">
-                <a href="" ng-click="sortType = 'missing';sortReverse = !sortReverse">
-                    Brakujące
-                    <span ng-show="sortType == 'missing' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'missing' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </th>
+            <!--<th class="custom-element col-sm-1">-->
+                <!--<a href="" ng-click="sortType = 'color';sortReverse = !sortReverse">-->
+                    <!--Kolor-->
+                    <!--<span ng-show="sortType == 'color' && !sortReverse" class="fa fa-caret-down"></span>-->
+                    <!--<span ng-show="sortType == 'color' && sortReverse" class="fa fa-caret-up"></span>-->
+                <!--</a></th>-->
+            <!--<th class="custom-element col-sm-1">-->
+                <!--<a href="" ng-click="sortType = 'amount';sortReverse = !sortReverse">-->
+                    <!--Ilość Sztuk-->
+                    <!--<span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>-->
+                    <!--<span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>-->
+                <!--</a>-->
+            <!--</th>-->
+            <!--<th class="custom-element col-sm-1">-->
+                <!--<a href="" ng-click="sortType = 'missing';sortReverse = !sortReverse">-->
+                    <!--Brakujące-->
+                    <!--<span ng-show="sortType == 'missing' && !sortReverse" class="fa fa-caret-down"></span>-->
+                    <!--<span ng-show="sortType == 'missing' && sortReverse" class="fa fa-caret-up"></span>-->
+                <!--</a>-->
+            <!--</th>-->
             <th class="custom-element col-sm-1">
                 <a href="" ng-click="sortType = 'stage';sortReverse = !sortReverse">
                     Etap Produkcji
@@ -99,31 +99,31 @@
         <tr ng-repeat="order in orders.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:sortType:sortReverse | filter:searchFilter">
             <td>{{orders.indexOf(order)+1}}.</td>
             <td>
-                <span data-ng-hide="editing">{{order.order_id}}</span>
-                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.order_id"
-                       ng-init="entry.order_id = order.order_id; entry.id = order.id" data-ng-required/>
+                <span data-ng-hide="editing">{{order.name}}</span>
+                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.name"
+                       ng-init="entry.name = order.name; entry.name = order.name" data-ng-required/>
             </td>
             <td>
-                <span data-ng-hide="editing">{{order.customer}}</span>
-                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.customer"
-                       ng-init="entry.customer = order.customer" data-ng-required/>
+                <span data-ng-hide="editing">{{order.customerId}}</span>
+                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.customerId"
+                       ng-init="entry.customerId = order.customerId" data-ng-required/>
             </td>
-            <td>
-                <span data-ng-hide="editing">{{order.color}}</span>
-                <input type="text" data-ng-show="editing" class="form-control" ng-model="entry.color"
-                       ng-init="entry.color = order.color">
-            </td>
-            <td>
-                <span data-ng-hide="editing">{{order.amount}}</span>
-                <input type="number" name="orderAmount" data-ng-show="editing" class="form-control"
-                       ng-model="entry.amount" ng-init="entry.amount = order.amount" min="0" data-ng-required/>
-            </td>
-            <td>
-                <span data-ng-hide="editing">{{order.missing}}</span>
-                <input type="number" name="orderMissing" data-ng-show="editing" class="form-control"
-                       ng-model="entry.missing" ng-init="entry.missing = order.missing"
-                       min="0" max="{{order.amount}}" data-ng-required/>
-            </td>
+            <!--<td>-->
+                <!--<span data-ng-hide="editing">{{order.color}}</span>-->
+                <!--<input type="text" data-ng-show="editing" class="form-control" ng-model="entry.color"-->
+                       <!--ng-init="entry.color = order.color">-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<span data-ng-hide="editing">{{order.amount}}</span>-->
+                <!--<input type="number" name="orderAmount" data-ng-show="editing" class="form-control"-->
+                       <!--ng-model="entry.amount" ng-init="entry.amount = order.amount" min="0" data-ng-required/>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<span data-ng-hide="editing">{{order.missing}}</span>-->
+                <!--<input type="number" name="orderMissing" data-ng-show="editing" class="form-control"-->
+                       <!--ng-model="entry.missing" ng-init="entry.missing = order.missing"-->
+                       <!--min="0" max="{{order.amount}}" data-ng-required/>-->
+            <!--</td>-->
             <td>
                 <span>{{order.stage}}</span>
                 <!--<input type="number" name="orderStage" data-ng-show="editing" class="form-control"-->

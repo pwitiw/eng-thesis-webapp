@@ -19,13 +19,13 @@ public class WorkerRepositoryDAO {
     @Autowired
     WorkerRepository workerRepository;
 
-    public WorkerEntity getWorkerForCode(short code){
-        return workerRepository.findByCode(code);
+    public WorkerEntity getWorkerForId(long id){
+        return workerRepository.findById(id);
     }
 
-    public void deleteWorkerForCode(short code) {
+    public void deleteWorkerForCode(long id) {
 
-        WorkerEntity workerEntity = workerRepository.findByCode(code);
+        WorkerEntity workerEntity = workerRepository.findById(id);
         workerRepository.delete(workerEntity);
     }
 
@@ -37,9 +37,9 @@ public class WorkerRepositoryDAO {
         return workerRepository.findAll();
     }
 
-    public void setInactiveWorkerForCode(short code) {
+    public void setInactiveWorkerForCode(long id) {
 
-        WorkerEntity workerEntity = workerRepository.findByCode(code);
+        WorkerEntity workerEntity = workerRepository.findById(id);
         workerEntity.setActive((short) 0);
         workerRepository.save(workerEntity);
     }

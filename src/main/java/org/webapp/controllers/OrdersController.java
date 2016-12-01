@@ -37,9 +37,10 @@ public class OrdersController {
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public ResponseEntity<List<OrderEntity>> allOrders() throws IOException {
-
-        syncService.synchronize();
+        //todo tutaj trzeba ogarnac synchronizacje to bylo sc
+        // syncService.synchronize();
         List<OrderEntity> orders = orderService.getAllOrders();
+
         return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
     }
 
@@ -84,9 +85,16 @@ public class OrdersController {
     }
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
-    public ResponseEntity<List<OrderEntity>> getOrdersForPos(@RequestParam Integer pos){
+    public ResponseEntity<List<OrderEntity>> getOrdersForPos(@RequestParam Integer pos) {
         List<OrderEntity> orders = orderService.getOrderForStage(pos);
         return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
+    }
+
+    @ExceptionHandler(IOException.class)
+    @ResponseBody
+    public String handleException(Throwable e) {
+        e.getMessage();
+        return e.getMessage();
     }
 
 }

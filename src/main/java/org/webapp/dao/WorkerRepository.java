@@ -20,7 +20,7 @@ public interface WorkerRepository extends JpaRepository<WorkerEntity, Long> {
     WorkerEntity findByNameAndSurname(String name, String surname);
 
     @Query
-    WorkerEntity findByCode(short code);
+    WorkerEntity findById(long id);
 
     @Query
     List<WorkerEntity> findByActive(short active);
