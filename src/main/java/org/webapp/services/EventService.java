@@ -6,11 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.webapp.dao.daoImpl.EventRepositoryDAO;
 import org.webapp.dto.WorkerEventDto;
 import org.webapp.models.EventEntity;
-import org.webapp.dao.EventRepository;
 import org.webapp.models.OrderEntity;
 import org.webapp.models.WorkerEntity;
 
-import java.awt.*;
 import java.util.List;
 
 /**
@@ -30,21 +28,16 @@ public class EventService {
         return eventRepositoryDAO.getAllEvents();
     }
 
-//    @Transactional
-//    public List<EventEntity> getEventsForActiveWorkers() {
-//        return eventRepositoryDAO.getEventsForActiveWorkers();
-//    }
-
-    public WorkerEventDto getWorkerEventDtoForWorkerCode(short code) {
-        List<EventEntity> events = getEventsForWorkerCode(code);
-        WorkerEntity worker = workerService.getWorker(code);
+    public WorkerEventDto getWorkerEventDtoForWorkerCode(long id) {
+        List<EventEntity> events = getEventsForWorkerCode(id);
+        WorkerEntity worker = workerService.getWorker(id);
 
         return new WorkerEventDto(worker, events);
     }
 
     @Transactional
-    private List<EventEntity> getEventsForWorkerCode(short code) {
-        return eventRepositoryDAO.getEventsForWorkerCode(code);
+    private List<EventEntity> getEventsForWorkerCode(long id) {
+        return eventRepositoryDAO.getEventsForWorkerId(id);
     }
 
     @Transactional

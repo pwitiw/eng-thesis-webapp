@@ -24,17 +24,17 @@ public class EventEntity implements Serializable{
     PrimaryKeyEvents prim;
 
     @Column(name = "WORKER_ID")
-    private short workerId;
+    private long workerId;
 
     private Timestamp date;
 
     private int missing;
 
-    public short getWorkerId() {
+    public long getWorkerId() {
         return workerId;
     }
 
-    public void setWorkerId(short workerCode) {
+    public void setWorkerId(long workerCode) {
         this.workerId = workerCode;
     }
 

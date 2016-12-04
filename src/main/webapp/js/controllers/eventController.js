@@ -3,7 +3,7 @@ app.controller('eventController', function ($scope, $http, $routeParams, $route,
     $scope.worker_code = $routeParams.workerCode;
 
     if ($scope.worker_code == null) {
-        $http.get('/events/all').success(function (response) {
+        $http.get('/events').success(function (response) {
             $scope.workerStats = false;
             $scope.events = response;
             orderService.setPositionsAsStringForEntity($scope.events);

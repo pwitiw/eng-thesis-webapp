@@ -13,7 +13,7 @@ public class WorkerEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
 
     private String name;
 
@@ -29,11 +29,11 @@ public class WorkerEntity implements Serializable {
 //    @JsonManagedReference
 //    private List<EventEntity> events;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -94,11 +94,11 @@ public class WorkerEntity implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = (int) code;
+        long result = (long) code;
         result = 31 * result + id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + positionId;
-        return result;
+        return (int) result;
     }
 }

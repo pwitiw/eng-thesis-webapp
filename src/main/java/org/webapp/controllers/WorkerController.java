@@ -21,7 +21,6 @@ import java.util.List;
  * Created by Patryk on 2015-11-02.
  */
 @Controller
-@RequestMapping("/workers")
 public class WorkerController {
 
     @Autowired
@@ -31,7 +30,7 @@ public class WorkerController {
     EventService eventService;
 
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/workers", method = RequestMethod.GET)
     public ResponseEntity<List<WorkerEntity>> printWorkerList() {
 
         List<WorkerEntity> workers = workerService.getActiveWorkers();
@@ -39,7 +38,7 @@ public class WorkerController {
         return new ResponseEntity<List<WorkerEntity>>(workers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/addWorker", method = RequestMethod.POST)
+    @RequestMapping(value = "/workers/add-new-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void addWorker(@RequestBody WorkerEntity newWorker) {
 
@@ -52,7 +51,7 @@ public class WorkerController {
         workerService.add(newWorker);
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "workers/delete", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void deleteWorker(@RequestBody WorkerEntity worker) {
 
@@ -60,7 +59,7 @@ public class WorkerController {
     }
 
 
-    @RequestMapping(value = "/addChanges", method = RequestMethod.POST)
+    @RequestMapping(value = "workers/modify", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void editWorker(@RequestBody WorkerEntity worker) {
 

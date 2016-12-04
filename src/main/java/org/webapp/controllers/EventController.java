@@ -17,13 +17,12 @@ import java.util.List;
  * Created by Patryk on 2016-01-05.
  */
 @Controller
-@RequestMapping("/events")
 public class EventController {
 
     @Autowired
     EventService eventService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/events", method = RequestMethod.GET)
     public ResponseEntity<List<EventEntity>> getListOfEvents() {
 
         List<EventEntity> events = eventService.getAllEvents();
@@ -31,15 +30,15 @@ public class EventController {
         return new ResponseEntity<List<EventEntity>>(events, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{code}", method = RequestMethod.GET)
-    public ResponseEntity<WorkerEventDto> getWorkerList(@PathVariable("code") short code) {
+    @RequestMapping(value = "/events/{id}", method = RequestMethod.GET)
+    public ResponseEntity<WorkerEventDto> getWorkerList(@PathVariable("id") long id) {
 
-        WorkerEventDto workerEventDto = eventService.getWorkerEventDtoForWorkerCode(code);
+        WorkerEventDto workerEventDto = eventService.getWorkerEventDtoForWorkerCode(id);
 
         return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/events/delete", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void deleteWorker(@RequestBody EventEntity event) {
 

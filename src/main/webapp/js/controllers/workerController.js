@@ -1,6 +1,6 @@
 app.controller('workerController', function ($scope, $http, $route, orderService) {
 
-    $http.get('/workers/all')
+    $http.get('/workers')
         .success(function (response) {
             $scope.workers = response;
             orderService.setPositionsAsStringForWorkers($scope.workers);
@@ -24,7 +24,7 @@ app.controller('workerController', function ($scope, $http, $route, orderService
 
         entry.position = $scope.posAsNumber(entry.position);
 
-        $http.post('/workers/addChanges', entry, {headers: {'Content-Type': 'application/json'}})
+        $http.post('/workers/modify', entry, {headers: {'Content-Type': 'application/json'}})
             .success(function (response) {
                 //$route.reload();
             })
@@ -52,7 +52,7 @@ app.controller('workerController', function ($scope, $http, $route, orderService
     $scope.addWorker = function(worker){
         worker.position = $scope.posAsNumber(worker.position);
 
-        $http.post('/workers/addWorker', worker, {headers: {'Content-Type': 'application/json'}})
+        $http.post('/workers/add-new-worker', worker, {headers: {'Content-Type': 'application/json'}})
             .success(function (response) {
                 $route.reload();
             })

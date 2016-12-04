@@ -28,8 +28,8 @@ public class EventRepositoryDAO {
         return eventRepository.findAll();
     }
 
-    public List<EventEntity> getEventsForWorkerCode(short code) {
-        return eventRepository.findByWorkerId(code);
+    public List<EventEntity> getEventsForWorkerId(long id) {
+        return eventRepository.findByWorkerId(id);
     }
 
     public void deleteEventForPrimaryKey(PrimaryKeyEvents prim){

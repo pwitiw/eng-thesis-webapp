@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`positions` (
 CREATE TABLE IF NOT EXISTS `webservice`.`orders` (
  `ID` integer(10) NOT NULL AUTO_INCREMENT,
  `NAME` varchar(255) NOT NULL,
+ `COLOR` varchar(255) NOT NULL,
  `CUSTOMER_ID` integer(10) NOT NULL,
  `POSITION_ID` integer(10) NOT NULL DEFAULT '1',
  `EXPRESS` integer(1) NOT NULL DEFAULT '0',
@@ -47,7 +48,6 @@ CREATE TABLE IF NOT EXISTS `webservice`.`components` (
  `WIDTH` integer(10) NOT NULL,
  `HEIGHT` integer(10) NOT NULL,
  `AMOUNT` integer(10) unsigned NOT NULL,
- `COLOR` varchar(255) NOT NULL,
  `MISSING` integer(10) NOT NULL DEFAULT '0',
  `COMMENT` varchar(255),
  `PARENT_ID` integer(10),
@@ -58,14 +58,15 @@ CREATE TABLE IF NOT EXISTS `webservice`.`components` (
 CREATE TABLE IF NOT EXISTS `webservice`.`events` (
  `ID` integer(20) NOT NULL AUTO_INCREMENT,
  `ORDER_ID` integer(20) NOT NULL,
- `WORKER_ID` integer(6) NOT NULL,
+ `WORKER_ID` integer(10) NOT NULL,
  `POSITION_ID` integer(10) NOT NULL,
  `DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
  `MISSING` int(10) unsigned NOT NULL DEFAULT '0',
  PRIMARY KEY (`ORDER_ID`,`POSITION_ID`),
  KEY `ID` (`ID`),
  CONSTRAINT `FK_ORDER_ID_REF` FOREIGN KEY (`ORDER_ID`) REFERENCES `orders` (`ID`),
- CONSTRAINT `FK_POSITION_ID_REF` FOREIGN KEY (`POSITION_ID`) REFERENCES `positions` (`ID`)
+ CONSTRAINT `FK_POSITION_ID_REF` FOREIGN KEY (`POSITION_ID`) REFERENCES `positions` (`ID`),
+ CONSTRAINT `FK_WORKER_ID_REF` FOREIGN KEY (`WORKER_ID`) REFERENCES `workers` (`ID`)
 ); 
 
 CREATE TABLE IF NOT EXISTS `webservice`.`synchronization` (

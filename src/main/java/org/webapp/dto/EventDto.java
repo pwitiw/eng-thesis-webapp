@@ -17,7 +17,7 @@ public class EventDto implements Serializable {
 
     int stage;
 
-    private short worker;
+    private long worker;
 
     private Timestamp date;
 
@@ -30,7 +30,7 @@ public class EventDto implements Serializable {
         this.worker = event.getWorkerId();
         this.date = event.getDate();
         this.missing = event.getMissing();
-        this.order_id = order.getId();
+        //this.order_id = order.getId();
     }
 
     public long getOrder_id() {
@@ -57,11 +57,11 @@ public class EventDto implements Serializable {
         this.stage = stage;
     }
 
-    public short getWorker() {
+    public long getWorker() {
         return worker;
     }
 
-    public void setWorker(short worker) {
+    public void setWorker(long worker) {
         this.worker = worker;
     }
 

@@ -13,9 +13,9 @@ import java.util.List;
 
 @Repository("events")
 public interface EventRepository extends JpaRepository<EventEntity, Long>  {
-int a =4;
+
     @Query
-    List<EventEntity> findByWorkerId(short code);
+    List<EventEntity> findByWorkerId(long id);
 
     EventEntity findByPrimOrderIdAndPrimPositionId(long orderId, long positionId);
 

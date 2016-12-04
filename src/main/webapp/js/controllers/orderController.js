@@ -5,7 +5,7 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
     $scope.expressOptions = orderService.express;
     $scope.editingMode = false;
 
-    $http.get('/orders/all')
+    $http.get('/orders')
         .success(function (response) {
             $scope.orders = response;
             orderService.setPositionsAsStringForOrder($scope.orders);
@@ -18,7 +18,7 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
     };
 
     $scope.changeStatus = function (id) {
-        $http.get('/orders/changeStatus?id=' + id)
+        $http.get('/orders/change-status?id=' + id)
             .success(function () {
                 $route.reload();
             })
@@ -66,7 +66,7 @@ app.controller('orderController', function ($scope, $http, $route, $location, mo
     $scope.changesConfirmed = function (arg) {
         entry = arg;
         orderService.convertOrdersToSavingForm(entry);
-        $http.post('/orders/addChanges', entry, {headers: {'Content-Type': 'application/json'}})
+        $http.post('/orders/modify', entry, {headers: {'Content-Type': 'application/json'}})
             .success(function (response) {
                 $route.reload();
             })
