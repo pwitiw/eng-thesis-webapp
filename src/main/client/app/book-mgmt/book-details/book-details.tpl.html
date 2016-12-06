@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<section class="book-details">
+  <form name="bookDetailsCtrl.bookForm" novalidate>
+    <h1>New book!</h1>
+    <!--everything is in one row-->
+    <div class="row">
+      <!--oznacza sie id np do latwiejszego testowania-->
+      <label class="form-label col-md-1 col-sm-3" for="title">Title:</label>
+
+      <input id="title"
+             name="titleField"
+             type="text"
+             data-ng-model="bookDetailsCtrl.book.title"
+             data-ng-required="true"
+             data-ng-maxlength="50"
+      >
+
+      <span class="error-msg" data-ng-bind="bookDetailsCtrl.getErrorMessageFromField(bookDetailsCtrl.bookForm.titleField)"></span>
+    </div>
+    <div class="row">
+      <label class="form-label col-md-1 col-sm-3" for="author">Author:</label>
+      <input id="author"
+             name="authorField"
+             type="text"
+             data-ng-model="bookDetailsCtrl.book.author"
+             data-ng-required="true"
+             data-ng-maxlength="50"
+      >
+      <span class="error-msg" data-ng-bind="bookDetailsCtrl.getErrorMessageFromField(bookDetailsCtrl.bookForm.authorField)"></span>
+    </div>
+    <div class="row">
+      <button type="submit" class="btn btn-primary col-md-1 col-md-offset-1" data-ng-click="bookDetailsCtrl.save()">
+        Save
+      </button>
+    </div>
+  </form>
+
+</section>
+</body>
+</html>

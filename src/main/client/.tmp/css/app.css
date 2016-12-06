@@ -1,0 +1,23 @@
+@import "../bower_components/bootstrap-css-only/css/bootstrap.css";
+.book-details .form-label {
+  text-align: right;
+}
+.book-details .row {
+  margin-top: 5px;
+}
+.app form input.ng-invalid.ng-touched {
+  border-color: red;
+}
+.app .error-msg {
+  color: red;
+}
+.app .frontwit-logo {
+  top: 0;
+  text-align: center;
+}
+.app .footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  left: 40%;
+}

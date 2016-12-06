@@ -1,0 +1,16 @@
+/// <reference path="../typings/globals/angular/index.d.ts" />
+import * as angular from 'angular';
+import 'angular-ui-router';
+import 'templates';
+import ILocationProvider = angular.ILocationProvider;
+import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
+
+import bookMgmtModuleName from './book-mgmt/book-mgmt.module'
+import orderMgmtModuleName from './order-mgmt/order-mgmt.module'
+import workerMgmtModuleName from './worker-mgmt/worker-mgmt.module'
+
+angular.module('app', [bookMgmtModuleName,orderMgmtModuleName, workerMgmtModuleName])
+  .config(function ($urlRouterProvider:IUrlRouterProvider, $locationProvider:ILocationProvider) {
+    // $urlRouterProvider.when('', '/book-mgmt/book');
+    $locationProvider.html5Mode(false);    //tutaj zeby mozna bylo z # cos todo dopytac o co kaman z tym
+  });

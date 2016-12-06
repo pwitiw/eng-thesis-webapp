@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FrontWit Application</title>
+  <!-- build:css css/app.css -->
+  <link href="/resources/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body class="app" data-ng-app="app">
+<div class="frontwit-logo">
+ <img src="resources/logo.jpg"/>
+</div>
+<nav>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand  header-bigger-size" href="#/">FRONTWIT</a>
+      </div>
+      <div class="navbar-collapse collapse header-size">
+        <ul class="nav navbar-nav">
+          <li data-ui-sref-active="active"><a href data-ui-sref="order-overview">Zamówienia<span class="sr-only">(current)</span></a></li>
+          <li data-ui-sref-active="active"><a href data-ui-sref="worker-overview">Pracownicy<span class="sr-only">(current)</span></a></li>
+          <li data-ui-sref-active="active"><a href data-ui-sref="book-details">Ksiazki<span class="sr-only">(current)</span></a></li>
+          <!--<li><a href="/#/workers">Pracownicy</a>-->
+          <!--</li>-->
+          <!--<li><a href="/#/events">Statystyki Pracowników</a>-->
+          </li>
+        </ul>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+</nav>
+<section class="container-fluid" data-ui-view></section>
+</body>
+<div class="footer">
+  Copyright &copy; Patryk Witiw & Marek Pierzchała
+</div>
+
+<!-- process:remove:prod -->
+<script src="../node_modules/systemjs/dist/system.js"></script>
+<script src="../system.config.js"></script>
+<script>
+  System.import('app/app.module.js');
+</script>
+<!-- /process -->
+
+<!-- build:js app/app.module.js-->
+<!-- process:remove:dev -->
+<script src="app/app.module.js"></script>
+<!-- /process -->
+<!-- endbuild -->
+</body>
+</html>
