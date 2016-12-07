@@ -19,10 +19,10 @@
 </head>
 <body class="app" data-ng-app="app">
 <div class="frontwit-logo">
- <img src="resources/logo.jpg"/>
+  <img src="resources/logo.jpg"/>
 </div>
 <nav>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,16 +31,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand  header-bigger-size" href="#/">FRONTWIT</a>
+        <a data-ui-sref-active="active" class="navbar-brand  header-bigger-size" href
+           data-ui-sref="main-page">FRONTWIT<span class="sr-only">(current)</span>
+        </a>
       </div>
       <div class="navbar-collapse collapse header-size">
         <ul class="nav navbar-nav">
-          <li data-ui-sref-active="active"><a href data-ui-sref="order-overview">Zamówienia<span class="sr-only">(current)</span></a></li>
-          <li data-ui-sref-active="active"><a href data-ui-sref="worker-overview">Pracownicy<span class="sr-only">(current)</span></a></li>
-          <li data-ui-sref-active="active"><a href data-ui-sref="book-details">Ksiazki<span class="sr-only">(current)</span></a></li>
-          <!--<li><a href="/#/workers">Pracownicy</a>-->
-          <!--</li>-->
-          <!--<li><a href="/#/events">Statystyki Pracowników</a>-->
+          <li data-ui-sref-active="active"><a href data-ui-sref="order-overview">Zamówienia<span class="sr-only">(current)</span></a>
+          </li>
+          <li data-ui-sref-active="active"><a href data-ui-sref="worker-overview">Pracownicy<span class="sr-only">(current)</span></a>
+          </li>
+          <li data-ui-sref-active="active"><a href data-ui-sref="event-overview">Statystyki<span class="sr-only">(current)</span></a>
+          </li>
+          <li data-ui-sref-active="active"><a href data-ui-sref="book-details">Ksiazki<span
+            class="sr-only">(current)</span></a></li>
           </li>
         </ul>
       </div>
@@ -48,18 +52,28 @@
   </nav>
 </nav>
 <section class="container-fluid" data-ui-view></section>
+<footer class="footer">
+  <span>Copyright &copy; Patryk Witiw & Marek Pierzchała</span>
+</footer>
 </body>
-<div class="footer">
-  Copyright &copy; Patryk Witiw & Marek Pierzchała
-</div>
+
 
 <!-- process:remove:prod -->
 <script src="../node_modules/systemjs/dist/system.js"></script>
 <script src="../system.config.js"></script>
+
+
+
 <script>
   System.import('app/app.module.js');
 </script>
 <!-- /process -->
+
+<!--EXTERNAL LIBRARIES-->
+<script src="../bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
 <!-- build:js app/app.module.js--><!-- endbuild -->
 </body>

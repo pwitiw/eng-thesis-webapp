@@ -2,15 +2,71 @@ import {OrderRestService} from "../general/rest-services/orderRestService.servic
 import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
-  private order: Order[] = [
-    {id: 1, title: 'Angular', author: 'Henryk Sienkiewicz'},
-    {id: 2, title: 'Java', author: 'Maria Konopnicka'},
-    {id: 3, title: 'Programming mysteries', author: 'Paulo Coelho'}
+  private orders: Order[] = [
+    {
+      id: 1,
+      orderId: '001TW',
+      customer: 'Bootstrap',
+      color: 'RAL2010',
+      position: 'FREZERNIA',
+      type: 'EXPRESS',
+      date: '20 - 04 - 2017'
+    },
+    {
+      id: 2,
+      orderId: '002TW',
+      customer: 'Angular',
+      color: 'RAL2610',
+      position: 'FREZERNIA',
+      type: 'NORMALNY',
+      date: '20 - 04 - 2017'
+    },
+    {
+      id: 3,
+      orderId: '003TW',
+      customer: 'CHmiel',
+      color: 'RAL2010',
+      position: 'FREZERNIA',
+      type: 'EXPRESS',
+      date: '20 - 04 - 2017'
+    },
+    {
+      id: 4,
+      orderId: '004TW',
+      customer: 'Angular',
+      color: 'RAL2310',
+      position: 'FREZERNIA',
+      type: 'NORMALNY',
+      date: '20 - 04 - 2017'
+    },
+    {
+      id: 5,
+      orderId: '005TW',
+      customer: 'Angular',
+      color: 'RAL2010',
+      position: 'FREZERNIA',
+      type: 'NORMALNY',
+      date: '20 - 04 - 2017'
+    },
+    {
+      id: 6,
+      orderId: '006TW',
+      customer: 'CHmiel',
+      color: 'RAL2010',
+      position: 'FREZERNIA',
+      type: 'NORMALNY',
+      date: '20 - 04 - 2017'
+    }
+
   ];
   private sequencer = 1;
 
   constructor(private orderRestService: OrderRestService) {
 
+  }
+
+  getOrders(): Order[] {
+    return this.orders;
   }
 
   save(order: Order): any {

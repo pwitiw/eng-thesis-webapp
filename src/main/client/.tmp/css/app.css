@@ -1,9 +1,22 @@
-@import "../bower_components/bootstrap-css-only/css/bootstrap.css";
+@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
 .book-details .form-label {
   text-align: right;
 }
 .book-details .row {
   margin-top: 5px;
+}
+.main-page .margines {
+  position: fixed;
+  bottom: 0;
+}
+.main-page .home-page-text {
+  text-align: center;
+  font-size: 400%;
+  text-shadow: 1px 1px 1px #1a2f99;
+}
+.main-page .table td {
+  text-align: center;
 }
 .app form input.ng-invalid.ng-touched {
   border-color: red;
@@ -16,8 +29,11 @@
   text-align: center;
 }
 .app .footer {
-  position: fixed;
-  bottom: 0;
   text-align: center;
   left: 40%;
+  background-color: white;
+}
+.app .table td,
+.app th {
+  text-align: center;
 }

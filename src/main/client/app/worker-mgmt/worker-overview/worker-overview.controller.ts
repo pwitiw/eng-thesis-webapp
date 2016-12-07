@@ -4,7 +4,7 @@ export class WorkerOverviewCtrl {
   worker: Worker;
   sda:'DZIALA CZY NIE';
 
-  constructor(private workers: Worker[], private workerService: WorkerService) {
+  constructor(private workerService: WorkerService) {
   }
 
   delete(id: number): void {
