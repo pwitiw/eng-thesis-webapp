@@ -1,4 +1,4 @@
-/// <reference path="../typings/globals/angular/index.d.ts" />
+/// <reference path="../typings/index.d.ts" />
 // import 'jquery';
 import * as angular from 'angular';
 import 'angular-ui-router';
