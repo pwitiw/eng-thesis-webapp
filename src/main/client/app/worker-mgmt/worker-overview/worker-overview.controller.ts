@@ -2,9 +2,10 @@ import {Worker} from "../../general/interfaces/worker.interface";
 import {WorkerService} from "../worker.service";
 export class WorkerOverviewCtrl {
   worker: Worker;
-  sda:'DZIALA CZY NIE';
+  abc='test' ;
 
   constructor(private workerService: WorkerService) {
+    //this.worker = workerService.findOne(2);
   }
 
   delete(id: number): void {

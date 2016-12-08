@@ -3,7 +3,6 @@ import {OrderService} from "../order.service";
 export class OrderOverviewCtrl {
   orders: Order[];
 
-
   constructor(private orderService: OrderService) {
     this.orders = orderService.getOrders();
   }

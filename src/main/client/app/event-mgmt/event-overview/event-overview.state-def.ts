@@ -1,5 +1,4 @@
 import IStateProvider = angular.ui.IStateProvider;
-import { EventService} from "../event.service";
 import {IStateParamsService} from "angular-ui-router";
 import ILocationService = angular.ILocationService;
 /**
@@ -11,13 +10,6 @@ export function addEventOverviewStateDef($stateProvider: IStateProvider) {
     url: '/event-mgmt/events',
     templateUrl: 'event-mgmt/event-overview/event-overview.html',
     controller: 'EventOverviewCtrl',
-    controllerAs: 'eventOverviewCtrl',
-    resolve: {
-      /* @ngInject */
-       events: function (eventService: EventService) {
-       // return orderService.findAll();
-       return ;
-       }
-    }
+    controllerAs: 'eventOverviewCtrl'
   })
 }

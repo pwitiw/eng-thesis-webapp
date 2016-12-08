@@ -9,7 +9,7 @@ export class EventRestService {
     this.restServiceUrl = 'http://127.0.0.1:4567';
   }
 
-  getEvent(): IPromise<any> {
+  getEvents(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/orders/')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;

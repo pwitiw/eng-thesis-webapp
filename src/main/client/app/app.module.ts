@@ -1,7 +1,10 @@
 /// <reference path="../typings/globals/angular/index.d.ts" />
+// import 'jquery';
 import * as angular from 'angular';
 import 'angular-ui-router';
 import 'templates';
+
+
 import ILocationProvider = angular.ILocationProvider;
 import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
 
