@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require("gulp"),
-  config = require('./../../lib/config-factory.js')(require('./../../../config.json')),
+  config = require('./../../lib/org.webapp.config-factory.js')(require('./../../../org.webapp.config.json')),
   assert = require('yeoman-assert'),
   recursiveReadDir = require('recursive-readdir-sync'),
   _ = require('lodash'),

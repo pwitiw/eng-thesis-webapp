@@ -293,9 +293,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * - **params** `{object}` - returns an array of state params that are ensured to 
    *   be a super-set of parent's params.
    * - **views** `{object}` - returns a views object where each key is an absolute view 
-   *   name (i.e. "viewName@stateName") and each value is the config object 
+   *   name (i.e. "viewName@stateName") and each value is the org.webapp.config object
    *   (template, controller) for the view. Even when you don't use the views object 
-   *   explicitly on a state config, one is still created for you internally.
+   *   explicitly on a state org.webapp.config, one is still created for you internally.
    *   So by decorating this builder function you have access to decorating template 
    *   and controller properties.
    * - **ownParams** `{object}` - returns an array of params that belong to the state, 
@@ -313,10 +313,10 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   var result = {},
    *       views = parent(state);
    *
-   *   angular.forEach(views, function (config, name) {
+   *   angular.forEach(views, function (org.webapp.config, name) {
    *     var autoName = (state.name + '.' + name).replace('.', '/');
-   *     config.templateUrl = config.templateUrl || '/partials/' + autoName + '.html';
-   *     result[name] = config;
+   *     org.webapp.config.templateUrl = org.webapp.config.templateUrl || '/partials/' + autoName + '.html';
+   *     result[name] = org.webapp.config;
    *   });
    *   return result;
    * });
@@ -339,7 +339,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * @param {object} func A function that is responsible for decorating the original 
    * builder function. The function receives two parameters:
    *
-   *   - `{object}` - state - The state config object.
+   *   - `{object}` - state - The state org.webapp.config object.
    *   - `{object}` - super - The original builder function.
    *
    * @return {object} $stateProvider - $stateProvider instance

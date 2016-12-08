@@ -1,4 +1,4 @@
-/*global config*/
+/*global org.webapp.config*/
 'use strict';
 
 var httpProxy = require('http-proxy');

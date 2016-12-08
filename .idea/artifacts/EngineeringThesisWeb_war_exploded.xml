@@ -43,6 +43,8 @@
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.4.2" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.4.2" />
           <element id="library" level="project" name="Maven: net.sf.opencsv:opencsv:2.3" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.4.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.4.2.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

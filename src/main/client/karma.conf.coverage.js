@@ -6,7 +6,7 @@
 'use strict';
 
 module.exports = function (config) {
-  var pathsConf = require('./gulp/lib/config-factory.js')(require('./config.json'));
+  var pathsConf = require('./gulp/lib/org.webapp.config-factory.js')(require('./org.webapp.config.json'));
   var COVERAGE_SRC_PATH = pathsConf.paths.testOutput  + '/coverage/';
   // source files, that you wanna generate coverage for
   // do not include tests or libraries
@@ -84,7 +84,7 @@ module.exports = function (config) {
     systemjs: {
       // Path to your SystemJS configuration file
       configFile: 'system.config.js',
-      // SystemJS configuration specifically for tests, added after your config file.
+      // SystemJS configuration specifically for tests, added after your org.webapp.config file.
       // Good for adding test libraries and mock modules
       config: {
         transpiler: null, // we take JS files (already transpiled), so no transpiler needed
