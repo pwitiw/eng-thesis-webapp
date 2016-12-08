@@ -10,10 +10,9 @@ import java.util.List;
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Repository
+@Repository("components")
 public class ComponentRepositoryDAO {
 
-    @Autowired
     ComponentRepository componentRepository;
 
     public Iterable<Component> addComponentToDb(Iterable<Component> components) {

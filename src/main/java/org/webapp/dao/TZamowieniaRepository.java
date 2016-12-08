@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Repository("tzamowienia")
 public interface TZamowieniaRepository extends JpaRepository<TZamowieniaEntity, Long>{
 
     List<TZamowieniaEntity> findByDataZamAfter(Date date);

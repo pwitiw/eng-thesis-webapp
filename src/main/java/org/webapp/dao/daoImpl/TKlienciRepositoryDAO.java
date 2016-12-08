@@ -10,7 +10,6 @@ import org.webapp.dao.TKlienciRepository;
 @Repository
 public class TKlienciRepositoryDAO {
 
-    @Autowired
     TKlienciRepository tKlienciRepository;
 
    public String getClientName(int id){

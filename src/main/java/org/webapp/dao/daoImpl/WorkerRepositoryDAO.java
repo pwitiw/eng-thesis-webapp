@@ -13,10 +13,9 @@ import java.util.List;
 /**
  * Created by Patryk on 2016-01-05.
  */
-@Repository
+@Repository("workers")
 public class WorkerRepositoryDAO {
 
-    @Autowired
     WorkerRepository workerRepository;
 
     public WorkerEntity getWorkerForId(long id){

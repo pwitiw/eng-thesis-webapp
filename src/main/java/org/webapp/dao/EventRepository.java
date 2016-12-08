@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Patryk on 2015-11-19.
  */
 
-@Repository("events")
+
 public interface EventRepository extends JpaRepository<EventEntity, Long>  {
 
     @Query

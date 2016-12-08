@@ -13,11 +13,10 @@ import java.util.List;
 /**
  * Created by Patryk on 2016-01-05.
  */
-@Repository
+@Repository("events")
 @Transactional
 public class EventRepositoryDAO {
 
-    @Autowired
     EventRepository eventRepository;
 
 //    public List<EventEntity> getEventsForActiveWorkers(){

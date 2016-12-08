@@ -1,7 +1,9 @@
 package org.webapp.dao.daoImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.webapp.dao.OrderRepository;
 import org.webapp.models.OrderEntity;
 
@@ -11,7 +13,8 @@ import java.util.List;
  * Created by Patryk on 2015-12-08.
  */
 
-@Repository
+@Component("orderRepositoryDAO")
+@Transactional
 public class OrderRepositoryDAO {
 
     @Autowired

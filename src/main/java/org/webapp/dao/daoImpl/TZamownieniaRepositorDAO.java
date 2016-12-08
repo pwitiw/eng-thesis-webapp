@@ -15,11 +15,9 @@ import java.util.List;
 /**
  * Created by Patryk on 09.04.2016.
  */
-
-@Repository
+@Repository("tzamowienia")
 public class TZamownieniaRepositorDAO {
 
-    @Autowired
     TZamowieniaRepository tZamowieniaRepository;
 
     public List<TZamowieniaEntity> getFromBistolDbForDateGreaterThan(Date date){

@@ -7,7 +7,6 @@ import org.webapp.models.SynchronizationEntity;
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Repository
 public interface SynchronizationRepository extends JpaRepository<SynchronizationEntity, Long> {
 
     SynchronizationEntity findTopByOrderBySyncDateDesc();

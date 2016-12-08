@@ -3,17 +3,17 @@ package org.webapp.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+import org.webapp.dao.OrderRepository;
 import org.webapp.models.Component;
 import org.webapp.models.OrderEntity;
 import org.webapp.services.ComponentService;
 import org.webapp.services.OrderService;
+import org.webapp.services.OrderServiceImpl;
 import org.webapp.services.SyncService;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -21,8 +21,11 @@ import java.util.List;
 /**
  * Created by Patryk on 2015-10-28.
  */
-@Controller
+@RestController
 public class OrdersController {
+
+    @Autowired
+    private OrderRepository orderRepository;
 
     @Autowired
     private OrderService orderService;
@@ -86,7 +89,7 @@ public class OrdersController {
 
 //    @RequestMapping(value = "/orders", method = RequestMethod.GET)
 //    public ResponseEntity<List<OrderEntity>> getOrdersForPos(@RequestParam Integer pos) {
-//        List<OrderEntity> orders = orderService.getOrderForStage(pos);
+//        List<OrderEntity> orders = orderServiceImpl.getOrderForStage(pos);
 //        return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
 //    }
 

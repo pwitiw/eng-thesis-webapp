@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * Created by Patryk on 2016-03-26.
  */
-@Repository("components")
 public interface ComponentRepository extends JpaRepository<Component, Long> {
 
     public List<Component> findByOrderId(long id);

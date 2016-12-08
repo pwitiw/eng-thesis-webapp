@@ -4,6 +4,7 @@ package org.webapp.models;
 import org.webapp.utils.Config;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "orders", schema = Config.frontWitDbSchema)
-public class OrderEntity {
+public class OrderEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

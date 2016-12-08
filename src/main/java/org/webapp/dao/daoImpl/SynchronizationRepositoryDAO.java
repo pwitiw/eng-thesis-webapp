@@ -13,7 +13,6 @@ import java.util.Date;
 @Repository
 public class SynchronizationRepositoryDAO {
 
-    @Autowired
     SynchronizationRepository synchronizationRepository;
 
     public Date getLastSyncDate() {

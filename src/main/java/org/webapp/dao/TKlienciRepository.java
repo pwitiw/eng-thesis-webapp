@@ -7,7 +7,6 @@ import org.webapp.models.TKlienciEntity;
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Repository
 public interface TKlienciRepository extends JpaRepository<TKlienciEntity, Integer> {
 
     public TKlienciEntity findById(int id);

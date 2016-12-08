@@ -12,8 +12,6 @@ import java.util.List;
 /**
  * Created by Patryk on 2015-10-28.
  */
-
-@Repository("workers")
 public interface WorkerRepository extends JpaRepository<WorkerEntity, Long> {
 
     @Query

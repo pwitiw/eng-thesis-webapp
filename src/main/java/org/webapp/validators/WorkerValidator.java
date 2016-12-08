@@ -14,7 +14,6 @@ import org.webapp.dao.WorkerRepository;
 @Component
 public class WorkerValidator implements Validator {
 
-    @Autowired
     WorkerRepository workerRepository;
 
     @Override
