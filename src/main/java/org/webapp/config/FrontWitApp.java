@@ -11,13 +11,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @SpringBootApplication
 @ComponentScan("org.webapp")
-@EnableJpaRepositories("org.webapp.dao")
-@EntityScan("org.webapp.models")
+@EnableJpaRepositories("org.webapp.repositories")
+@EntityScan("org.webapp.entities")
 public class FrontWitApp {
 
     public static void main(String[] args) {
 
         SpringApplication.run(FrontWitApp.class, args);
+
+
     }
 
 

@@ -4,10 +4,10 @@ import au.com.bytecode.opencsv.CSVReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import org.webapp.dao.daoImpl.*;
-import org.webapp.models.Component;
-import org.webapp.models.OrderEntity;
-import org.webapp.models.TZamowieniaEntity;
+import org.webapp.entities.Component;
+import org.webapp.entities.Order;
+import org.webapp.repositories.daoImpl.*;
+import org.webapp.entities.TZamowieniaEntity;
 import org.webapp.utils.ComponentHelper;
 import org.webapp.utils.Consts;
 import org.webapp.utils.OrderHelper;
@@ -26,36 +26,36 @@ import java.util.List;
 public class SyncService {
 
     @Autowired
-    TZamownieniaRepositorDAO tZamownieniaRepositorDAO;
+    TZamownieniaRepositorImpl tZamownieniaRepositorImpl;
     @Autowired
-    TKlienciRepositoryDAO tKlienciRepositoryDAO;
+    TKlienciRepositoryImpl tKlienciRepositoryImpl;
     @Autowired
-    SynchronizationRepositoryDAO synchronizationRepositoryDAO;
+    SynchronizationRepositoryImpl synchronizationRepositoryImpl;
     @Autowired
-    OrderRepositoryDAO orderRepositoryDAO;
+    OrderRepositoryImpl orderRepositoryImpl;
     @Autowired
-    ComponentRepositoryDAO componentRepositoryDAO;
+    ComponentRepositoryImpl componentRepositoryImpl;
 
 
     public List<String> synchronize() {
 
-        Date lastSyncDate = synchronizationRepositoryDAO.getLastSyncDate();
+        Date lastSyncDate = synchronizationRepositoryImpl.getLastSyncDate();
        // List<TZamowieniaEntity> zams = new ArrayList<TZamowieniaEntity>();
-        List<TZamowieniaEntity> zams = tZamownieniaRepositorDAO.getFromBistolDbForDateGreaterThan(lastSyncDate);
+        List<TZamowieniaEntity> zams = tZamownieniaRepositorImpl.getFromBistolDbForDateGreaterThan(lastSyncDate);
 
         String data = "4~90~290~2~~~90~600~2~~~90~290~2~BEZ FREZU~~90~385~2~BEZ FREZU~";
         String data2 = "3~713~156~1~~~430~628~1~~~283~896~1~~";
         String empty = "1~~~~~";
-        OrderEntity order;
+        Order order;
 
         for (TZamowieniaEntity zam : zams) {
 
             List<Component> components = ComponentHelper.parseComponents(zam.getPozycje());
-            String clientName = tKlienciRepositoryDAO.getClientName(zam.getTklienci_id());
+            String clientName = tKlienciRepositoryImpl.getClientName(zam.getTklienci_id());
             order = OrderHelper.assembleInstanceOfOrder(zam, components.size(), clientName);
 
-            componentRepositoryDAO.addComponentToDb(components);
-            orderRepositoryDAO.addOrderToDb(order);
+            componentRepositoryImpl.addComponentToDb(components);
+            orderRepositoryImpl.addOrderToDb(order);
         }
         return new ArrayList<String>();
     }

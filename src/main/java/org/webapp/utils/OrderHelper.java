@@ -1,24 +1,24 @@
 package org.webapp.utils;
 
-import org.webapp.models.OrderEntity;
-import org.webapp.models.TZamowieniaEntity;
+import org.webapp.entities.Order;
+import org.webapp.entities.TZamowieniaEntity;
 
 /**
  * Created by Patryk on 09.04.2016.
  */
 public class OrderHelper {
 //TODO modify this piece of shit
-    public static OrderEntity assembleInstanceOfOrder(TZamowieniaEntity zam, int amount, String clientName){
+    public static Order assembleInstanceOfOrder(TZamowieniaEntity zam, int amount, String clientName){
 
-        OrderEntity orderEntity = new OrderEntity();
-        orderEntity.setId(zam.getId());
-        orderEntity.setName(zam.getNumer());
-        orderEntity.setCustomerId(1);  //todo tutaj ma byc jakos sprawdzane, czy w bazie danych jest dane nazwisko, jak tak to wyszukaj po id
-        orderEntity.setDate(zam.getData_z());
-        orderEntity.setPositionId(1);  //tutaj defautowo to daje to bez sensu
-        orderEntity.setExpress((short) 0);
-        orderEntity.setActive((short) 0);
+        Order order = new Order();
+        order.setId(zam.getId());
+        order.setName(zam.getNumer());
+        order.setCustomerId(1);  //todo tutaj ma byc jakos sprawdzane, czy w bazie danych jest dane nazwisko, jak tak to wyszukaj po id
+        order.setDate(zam.getData_z());
+        order.setPositionId(1);  //tutaj defautowo to daje to bez sensu
+        order.setExpress((short) 0);
+        order.setActive((short) 0);
 
-        return orderEntity;
+        return order;
     }
 }

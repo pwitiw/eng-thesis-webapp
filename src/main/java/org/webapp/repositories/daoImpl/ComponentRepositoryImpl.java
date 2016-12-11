@@ -1,17 +1,15 @@
-package org.webapp.dao.daoImpl;
+package org.webapp.repositories.daoImpl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.webapp.dao.ComponentRepository;
-import org.webapp.models.Component;
+import org.webapp.entities.Component;
+import org.webapp.repositories.ComponentRepository;
 
 import java.util.List;
 
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Repository("components")
-public class ComponentRepositoryDAO {
+@org.springframework.stereotype.Component
+public class ComponentRepositoryImpl {
 
     ComponentRepository componentRepository;
 

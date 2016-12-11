@@ -3,7 +3,7 @@ package org.webapp.validators;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import org.webapp.models.OrderEntity;
+import org.webapp.entities.Order;
 
 /**
  * Created by Patryk on 2016-01-11.
@@ -12,7 +12,7 @@ public class OrderValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return OrderEntity.class.equals(aClass);
+        return Order.class.equals(aClass);
     }
 
     @Override

@@ -3,9 +3,12 @@ package org.webapp.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.webapp.dao.daoImpl.EventRepositoryDAO;
-import org.webapp.dao.daoImpl.WorkerRepositoryDAO;
-import org.webapp.models.WorkerEntity;
+import org.webapp.repositories.daoImpl.EventRepositoryImpl;
+import org.webapp.repositories.daoImpl.WorkerRepositoryImpl;
+import org.webapp.entities.Worker;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 /**
@@ -14,64 +17,65 @@ import java.util.List;
 @Service
 public class WorkerService {
 
-//    @Autowired
-//    @OneToMany
-//    WorkerRepository workerRepository;
+    @PersistenceContext
+    private EntityManager em;
 
     @Autowired
-    WorkerRepositoryDAO workerRepositoryDAO;
+    WorkerRepositoryImpl workerRepositoryDAO;
 
     @Autowired
-    EventRepositoryDAO eventRepositoryDAO;
+    EventRepositoryImpl eventRepositoryDAO;
 
     @Transactional
-    public List<WorkerEntity> getAllWorkers() {
+    public List<Worker> getAllWorkers() {
         return workerRepositoryDAO.getAllWorkers();
     }
 
 //    @Transactional(readOnly=true)
 //    public List<WorkerEventDto> getActiveWorkers() {
-//        List<WorkerEntity> workers = workerRepositoryDAO.getActiveWorkers();
+//        List<Worker> workers = workerRepositoryDAO.getActiveWorkers();
 //
 //        List<WorkerEventDto> workersDto = new ArrayList<WorkerEventDto>();
-//        for (WorkerEntity worker : workers) {
+//        for (Worker worker : workers) {
 //            workersDto.add(new WorkerEventDto(workers,));
 //        }
 //        return workersDto;
 //    }
 
     @Transactional
-    public List<WorkerEntity> getActiveWorkers() {
-        List<WorkerEntity> workers = workerRepositoryDAO.getActiveWorkers();
-        return workers;
+    public List<Worker> getActiveWorkers() {
+        return workerRepositoryDAO.getActiveWorkers();
     }
 
     @Transactional
-    public void add(WorkerEntity worker) {
+    public void add(Worker worker) {
         worker.setActive((short) 1);
         if (!(worker.getName().trim().equals("") || worker.getSurname().trim().equals("") || worker.getId() == 0))
             workerRepositoryDAO.saveWorker(worker);
     }
 
     @Transactional
-    public void deleteWorker(WorkerEntity workerEntity) {
+    public void deleteWorker(Worker worker) {
 
-        if (eventRepositoryDAO.getEventsForWorkerId(workerEntity.getCode()).size() > 0) {
-            workerRepositoryDAO.setInactiveWorkerForCode(workerEntity.getCode());
+        if (eventRepositoryDAO.getEventsForWorkerId(worker.getCode()).size() > 0) {
+            workerRepositoryDAO.setInactiveWorkerForCode(worker.getCode());
         } else {
-            workerRepositoryDAO.deleteWorkerForCode(workerEntity.getCode());
+            workerRepositoryDAO.deleteWorkerForCode(worker.getCode());
         }
     }
 
     @Transactional
-    public WorkerEntity getWorker(long id) {
-        return workerRepositoryDAO.getWorkerForId(id);
+    public Worker getWorker(long id) {
+
+        Worker e = workerRepositoryDAO.getWorkerForId(id);
+        return e;
+
     }
 
     @Transactional
-    public boolean confirmChangesIfExists(WorkerEntity newWorker) {
+    public boolean confirmChangesIfExists(Worker newWorker) {
 
-        WorkerEntity oldWorker = workerRepositoryDAO.getWorkerForId(newWorker.getCode());
+        Worker oldWorker = workerRepositoryDAO.getWorkerForId(newWorker.getCode());
         if (oldWorker.equals(newWorker)) {
             return false;
         } else if (!(newWorker.getName().trim().equals("") || newWorker.getSurname().trim().equals(""))) {
@@ -83,7 +87,7 @@ public class WorkerService {
         return false;
     }
 
-    private void copyFromOneToAnother(WorkerEntity worker, WorkerEntity copy) {
+    private void copyFromOneToAnother(Worker worker, Worker copy) {
 
         copy.setId(worker.getId());
         copy.setName(worker.getName());

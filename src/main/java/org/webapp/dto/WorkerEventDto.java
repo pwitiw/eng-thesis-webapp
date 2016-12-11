@@ -1,10 +1,9 @@
 package org.webapp.dto;
 
-import org.webapp.models.EventEntity;
-import org.webapp.models.WorkerEntity;
+import org.webapp.entities.Event;
+import org.webapp.entities.Worker;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,40 +11,18 @@ import java.util.List;
  */
 public class WorkerEventDto implements Serializable {
 
-    private String workerName;
+    private String name;
 
     private String workerSurname;
 
-    private List<EventEntity> events;
+    private List<Event> events;
 
-    public WorkerEventDto(WorkerEntity worker, List<EventEntity> events) {
+    public WorkerEventDto(Worker worker, List<Event> events) {
 
-        this.workerName = worker.getName();
+        this.name = worker.getName();
         this.workerSurname = worker.getSurname();
         this.events = events;
     }
 
-    public String getWorkerName() {
-        return workerName;
-    }
 
-    public void setWorkerName(String name) {
-        this.workerName = name;
-    }
-
-    public String getWorkerSurname() {
-        return workerSurname;
-    }
-
-    public void setWorkerSurname(String surname) {
-        this.workerSurname = surname;
-    }
-
-    public List<EventEntity> getEvents() {
-        return events;
-    }
-
-    public void setEvents(List<EventEntity> events) {
-        this.events = events;
-    }
 }

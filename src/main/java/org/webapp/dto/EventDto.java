@@ -1,7 +1,8 @@
 package org.webapp.dto;
 
-import org.webapp.models.EventEntity;
-import org.webapp.models.OrderEntity;
+import org.webapp.entities.Event;
+import org.webapp.entities.Order;
+import org.webapp.entities.Worker;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -11,57 +12,56 @@ import java.sql.Timestamp;
  */
 public class EventDto implements Serializable {
 
-    private long order_id;
+    private long orderId;
 
-    private String id;
+    private String orderName;
 
-    int stage;
+    int position;
 
-    private long worker;
+    private String worker;
 
     private Timestamp date;
 
     private int missing;
-//todo tutaj poogarniac all zamiast tego intValue zrobic Longa czy cos w tym stylu
-    public EventDto(EventEntity event, OrderEntity order) {
 
-        this.order_id = event.getPrim().getOrderId();
-        this.stage = event.getPrim().getPositionId().intValue();
-        this.worker = event.getWorkerId();
+    public EventDto(Event event, Order order, Worker worker) {
+        this.orderName = order.getName();
+        this.orderId = order.getId();
+        this.position = event.getPrim().getPositionId();
+        this.worker = worker.getName() + worker.getSurname();
         this.date = event.getDate();
         this.missing = event.getMissing();
-        //this.order_id = order.getId();
     }
 
-    public long getOrder_id() {
-        return order_id;
+    public long getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(long order_id) {
-        this.order_id = order_id;
+    public void setOrderId(long orderId) {
+        this.orderId = orderId;
     }
 
-    public String getId() {
-        return id;
+    public String getOrderName() {
+        return orderName;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
     }
 
-    public int getStage() {
-        return stage;
+    public int getPosition() {
+        return position;
     }
 
-    public void setStage(int stage) {
-        this.stage = stage;
+    public void setPosition(int position) {
+        this.position = position;
     }
 
-    public long getWorker() {
+    public String getWorker() {
         return worker;
     }
 
-    public void setWorker(long worker) {
+    public void setWorker(String worker) {
         this.worker = worker;
     }
 

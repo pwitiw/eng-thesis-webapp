@@ -1,15 +1,16 @@
-package org.webapp.dao.daoImpl;
+package org.webapp.repositories.daoImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.webapp.dao.TKlienciRepository;
+import org.springframework.stereotype.Component;
+import org.webapp.repositories.TKlienciRepository;
 
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Repository
-public class TKlienciRepositoryDAO {
+@Component
+public class TKlienciRepositoryImpl {
 
+    @Autowired
     TKlienciRepository tKlienciRepository;
 
    public String getClientName(int id){

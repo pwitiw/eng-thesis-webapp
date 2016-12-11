@@ -1,5 +1,4 @@
-package org.webapp.models;
-
+package org.webapp.entities;
 import org.webapp.utils.Config;
 
 import javax.persistence.*;
@@ -11,17 +10,17 @@ import java.sql.Timestamp;
  */
 @Entity
 @Table(name = "events", schema = Config.frontWitDbSchema)
-public class EventEntity implements Serializable{
+public class Event implements Serializable{
 
-    public PrimaryKeyEvents getPrim() {
+    public PrimaryKeyEvent getPrim() {
         return prim;
     }
 
-    public void setPrim(PrimaryKeyEvents prim) {
+    public void setPrim(PrimaryKeyEvent prim) {
         this.prim = prim;
     }
     @EmbeddedId
-    PrimaryKeyEvents prim;
+    PrimaryKeyEvent prim;
 
     @Column(name = "WORKER_ID")
     private long workerId;
@@ -29,6 +28,8 @@ public class EventEntity implements Serializable{
     private Timestamp date;
 
     private int missing;
+
+    private Worker worker;
 
     public long getWorkerId() {
         return workerId;
@@ -53,4 +54,15 @@ public class EventEntity implements Serializable{
     public void setMissing(int missing) {
         this.missing = missing;
     }
+//
+//    @Access(AccessType.PROPERTY)
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "worker_id")
+//    public Worker getWorker() {
+//        return worker;
+//    }
+//
+//    public void setWorker(Worker worker) {
+//        this.worker = worker;
+//    }
 }

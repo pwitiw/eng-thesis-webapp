@@ -3,8 +3,8 @@ package com.springapp.repositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.webapp.dao.OrderRepository;
-import org.webapp.models.OrderEntity;
+import org.webapp.repositories.OrderRepository;
+import org.webapp.entities.Order;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,7 +35,7 @@ public class OrderRepositoryTest {
 
     @Test
     public void testAddNewOrder() {
-        OrderEntity order = new OrderEntity();
+        Order order = new Order();
         order.setOrder_id("103TW");
         order.setAmount(24);
         order.setStage(1);
@@ -44,14 +44,14 @@ public class OrderRepositoryTest {
         order.setLast_update(new Timestamp(new Date().getTime()));
         orderRepository.save(order);
 
-        OrderEntity dbOrder = orderRepository.getOne(order.getId());
+        Order dbOrder = orderRepository.getOne(order.getId());
         assertNotNull(dbOrder);
     }
 
     @Test
     public void testGetOrderList() {
 
-        List<OrderEntity> orders = new ArrayList<OrderEntity>();
+        List<Order> orders = new ArrayList<Order>();
         orders = orderRepository.findAll();
         assertEquals(orderRepository.findAll().size(), orders.size());
     }

@@ -1,4 +1,4 @@
-package org.webapp.models;
+package org.webapp.entities;
 
 import org.webapp.utils.Config;
 

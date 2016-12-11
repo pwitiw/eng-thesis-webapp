@@ -2,8 +2,8 @@ package org.webapp.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.webapp.dao.daoImpl.ComponentRepositoryDAO;
-import org.webapp.models.Component;
+import org.webapp.entities.Component;
+import org.webapp.repositories.daoImpl.ComponentRepositoryImpl;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
 public class ComponentService {
 
     @Autowired
-    ComponentRepositoryDAO componentRepositoryDAO;
+    ComponentRepositoryImpl componentRepositoryDAO;
 
     public List<Component> getComponents(long id){
         return componentRepositoryDAO.getComponentsForOrderId(id);

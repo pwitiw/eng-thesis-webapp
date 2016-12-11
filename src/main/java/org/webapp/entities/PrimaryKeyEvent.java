@@ -1,4 +1,4 @@
-package org.webapp.models;
+package org.webapp.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -8,17 +8,17 @@ import java.io.Serializable;
  * Created by Patryk on 2015-11-22.
  */
 @Embeddable
-public class PrimaryKeyEvents implements Serializable {
+public class PrimaryKeyEvent implements Serializable {
 
     @Column(name = "order_id")
     private Long orderId;
     @Column(name = "position_id")
-    private Long positionId;
+    private int positionId;
 
-    public PrimaryKeyEvents() {
+    public PrimaryKeyEvent() {
     }
 
-    public PrimaryKeyEvents(long order_id, long positionId) {
+    public PrimaryKeyEvent(long order_id, int positionId) {
         this.orderId = order_id;
         this.positionId = positionId;
     }
@@ -31,11 +31,11 @@ public class PrimaryKeyEvents implements Serializable {
         this.orderId = orderId;
     }
 
-    public Long getPositionId() {
+    public int getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(Long positionId) {
+    public void setPositionId(int positionId) {
         this.positionId = positionId;
     }
 
@@ -44,7 +44,7 @@ public class PrimaryKeyEvents implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PrimaryKeyEvents that = (PrimaryKeyEvents) o;
+        PrimaryKeyEvent that = (PrimaryKeyEvent) o;
 
         if (orderId != that.orderId) return false;
         return positionId == that.positionId;
@@ -53,7 +53,7 @@ public class PrimaryKeyEvents implements Serializable {
     @Override
     public int hashCode() {
         int result = (int) (orderId ^ (orderId >>> 32));
-        result = 31 * result + positionId.intValue();
+        result = 31 * result + positionId;
         return result;
     }
 }

@@ -1,6 +1,6 @@
 package org.webapp.utils;
 
-import org.webapp.models.Component;
+import org.webapp.entities.Component;
 
 import java.util.ArrayList;
 import java.util.List;

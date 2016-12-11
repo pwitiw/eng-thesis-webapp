@@ -7,90 +7,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="config c.d">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitSecurityConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_37.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_2_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_8_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_2_8_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_4_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_4_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_9_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_7_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_0_19_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/database.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jpaContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/EngineeringThesisWeb_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/EngineeringThesisWeb_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/Customer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/PositionRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/ComponentRepositoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/utils/PositionValues.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/ComponentRepositoryDAO.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EngineeringThesisWeb.iml" afterPath="$PROJECT_DIR$/EngineeringThesisWeb.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-mgmt.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-mgmt.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.state-def.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.state-def.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/directives/custom-table/custom-table.directive.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/directives/custom-table/custom-table.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/OrderRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/OrderRestService.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/jquery/dist/jquery.slim.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/jquery/dist/jquery.slim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/jquery/src/css.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/jquery/src/css.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/controllers/EventController.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/controllers/EventController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/ComponentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/ComponentRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/EventRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/OrderRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/OrderRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/SynchronizationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/SynchronizationRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/TKlienciRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/TKlienciRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/TZamowieniaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/TZamowieniaRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/WorkerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/WorkerRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/ComponentRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/ComponentRepositoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/SynchronizationRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/SynchronizationRepositoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TKlienciRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TKlienciRepositoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TZamownieniaRepositorDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TZamownieniaRepositorDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/WorkerRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/WorkerRepositoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/OrderEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/models/OrderEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/controllers/WorkerController.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/controllers/WorkerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dto/EventDto.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dto/EventDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dto/WorkerEventDto.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/dto/WorkerEventDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/services/ComponentService.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/ComponentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/services/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/EventService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/services/SyncService.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/SyncService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/utils/ComponentHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/utils/ComponentHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/utils/OrderHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/utils/OrderHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/validators/OrderValidator.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/validators/OrderValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/validators/WorkerValidator.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/validators/WorkerValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/springapp/repositories/OrderRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/springapp/repositories/OrderRepositoryTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/ComponentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/ComponentRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/EventRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/OrderRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/OrderRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/SynchronizationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/SynchronizationRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/TKlienciRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/TKlienciRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/TZamowieniaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/TZamowieniaRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/WorkerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/WorkerRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/EventRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/OrderRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/SynchronizationRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/SynchronizationRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TKlienciRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/TKlienciRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TZamownieniaRepositorDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/TZamownieniaRepositorImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/WorkerRepositoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/WorkerRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/Component.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/Component.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/EventEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/Event.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/OrderEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/Order.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/PrimaryKeyEvents.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/PrimaryKeyEvent.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/SynchronizationEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/Synchronization.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/TKlienciEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/TKlienciEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/TZamowieniaEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/TZamowieniaEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/models/WorkerEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/entities/Worker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java" />
     </list>
     <list id="5b8f41e2-6fa3-4c8e-8af3-f136e4eb48e2" name="Rejected commit: Default" comment="" />
     <ignored path="EngineeringThesisWeb.iws" />
@@ -113,48 +80,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java">
+      <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            <state relative-caret-position="39">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderRepositoryDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java">
+      <file leaf-file-name="PositionValues.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/utils/PositionValues.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontWitApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+            <state relative-caret-position="341">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#877#878#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/OrderRepository.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="217">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PositionRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/PositionRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,49 +140,37 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order-overview.controller.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
+      <file leaf-file-name="FrontWitApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+            <state relative-caret-position="289">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderRestService.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+            <state relative-caret-position="85">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Worker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Worker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+            <state relative-caret-position="136">
+              <caret line="11" column="17" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -224,6 +186,7 @@
         <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
       </list>
@@ -250,57 +213,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/app.less" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.state-def.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/index.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/book-mgmt/book-details/book-details.state-def.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-mgmt.module.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/custom-table.directive.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/directives/custom-table.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/directives/custom-table.directive.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/directives/custom-table/custom-table.directive.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/directives/custom-table/custom-table.directive.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/directives/custom-table/custom-table.directive.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/FrontWitApp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/jpaContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/EventRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/WorkerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/WorkerRepositoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/ComponentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/ComponentRepositoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/TZamowieniaRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/SynchronizationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/TKlienciRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TZamownieniaRepositorDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TKlienciRepositoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/SynchronizationRepositoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/validators/WorkerValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/models/OrderEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/OrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.state-def.ts" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/EventRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/WorkerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/WorkerRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/ComponentRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/ComponentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/SynchronizationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/TKlienciRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/EventRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/SynchronizationRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TZamownieniaRepositorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/TZamowieniaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TKlienciRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/services/SyncService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/OrderRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dto/WorkerEventDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/ComponentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/EventRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/SynchronizationRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/controllers/WorkerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/WorkerRepository.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/WorkerRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/entities/EventEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/services/EventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/entities/PrimaryKeyEvents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/dto/EventDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/entities/PositionEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/entities/WorkerEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/entities/Worker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/entities/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/utils/PositionEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/repositories/PositionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webapp/utils/PositionValues.java" />
       </list>
     </option>
   </component>
@@ -330,32 +293,7 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="spring-boot-mysql-springdatajpa-hibernate" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="spring-boot-mysql-springdatajpa-hibernate" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </treeState>
+    <treeState />
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/src/main/client/node_modules" />
@@ -391,8 +329,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -424,16 +360,22 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="springapp" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,6 +394,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -476,26 +422,16 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,41 +453,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="order-mgmt" />
+              <option name="myItemId" value="repositories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -573,25 +483,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="order-mgmt" />
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="order-overview" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -607,7 +575,7 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/services/OrderServiceImpl.java&#10;eventRepositoryDAO&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java&#10;app.module.js&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/client/.tmp/app/app.module.js&#10;EventDto&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;EventEn&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;Worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;EventC&#9;PSI&#9;JAVA://org.webapp.controllers.EventController&#10;Event&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;OrderContr&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;worker&#9;PSI&#9;JAVA://org.webapp.models.WorkerEntity&#10;event&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;OrdersC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;OrderCo&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Sync&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/SyncController.java&#10;html/my-modal.html&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/html/my-modal.html&#10;OrdersCon&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;order&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Component&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/Component.java&#10;Consts&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/utils/Consts.java&#10;OrderC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;Componen&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/services/ComponentService.java&#10;per&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/resources/META-INF/persistence.xml" />
+    <property name="SearchEverywhereHistoryKey" value="EventCon&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/EventController.java&#10;eve&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/entities/EventEntity.java&#10;OrderCon&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;WorkerCon&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;eventRepositoryDAO&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java&#10;app.module.js&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/client/.tmp/app/app.module.js&#10;EventDto&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;EventEn&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;Worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;EventC&#9;PSI&#9;JAVA://org.webapp.controllers.EventController&#10;Event&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;OrderContr&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;worker&#9;PSI&#9;JAVA://org.webapp.models.WorkerEntity&#10;event&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;OrdersC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;OrderCo&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Sync&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/SyncController.java&#10;html/my-modal.html&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/html/my-modal.html&#10;OrdersCon&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;order&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Component&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/Component.java&#10;Consts&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/utils/Consts.java&#10;OrderC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;Componen&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/services/ComponentService.java&#10;per&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/resources/META-INF/persistence.xml" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -630,8 +598,20 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives\custom-table" />
+      <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives" />
+      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\bower_components" />
+      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app" />
+      <recent name="F:\Downloads\EngineeringThesisWeb\src\main\webapp\js\lib" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.springapp.mvc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.webapp.services" />
+      <recent name="org.webapp.repository" />
+      <recent name="org.webapp.controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\main-page" />
@@ -639,18 +619,6 @@
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\general\interfaces" />
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app" />
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\order-mgmt\main-view" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.webapp.services" />
-      <recent name="org.webapp.repository" />
-      <recent name="org.webapp.controllers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives\custom-table" />
-      <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives" />
-      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\bower_components" />
-      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app" />
-      <recent name="F:\Downloads\EngineeringThesisWeb\src\main\webapp\js\lib" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.FrontWitApp">
@@ -1354,7 +1322,10 @@
       <workItem from="1481181253371" duration="10723000" />
       <workItem from="1481216845184" duration="701000" />
       <workItem from="1481220505898" duration="4815000" />
-      <workItem from="1481226276620" duration="8978000" />
+      <workItem from="1481226276620" duration="9245000" />
+      <workItem from="1481294243117" duration="5851000" />
+      <workItem from="1481399420255" duration="1352000" />
+      <workItem from="1481467741491" duration="23094000" />
     </task>
     <task id="LOCAL-00001" summary="config c.d">
       <created>1446059418804</created>
@@ -1367,7 +1338,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="704123000" />
+    <option name="totallyTimeSpent" value="734687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1379,34 +1350,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3548896" sideWeight="0.25416037" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2700491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.049167927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10204082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18154311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63175124" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23567921" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25204584" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.093959734" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2487725" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15875614" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45335516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14075287" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2193646" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065053" sideWeight="0.43125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29623568" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25416037" sideWeight="0.56875" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18494272" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21471927" sideWeight="0.5805471" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1439,33 +1410,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java</url>
-          <line>98</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="215" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java</url>
-          <line>59</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="218" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java</url>
-          <line>66</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java</url>
-          <line>43</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/webapp/services/EventService.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="235" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts</url>
@@ -1476,7 +1447,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="227" />
+      <option name="time" value="244" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1485,292 +1456,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.state-def.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#63#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/directives/custom-table/custom-table.directive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/directives/custom-table/custom-table.directive.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-mgmt.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="100" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#65#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jpaContext.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/SyncService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar!/com/mysql/jdbc/Util.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="273" column="82" selection-start-line="273" selection-start-column="82" selection-end-line="273" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#650#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/EventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/ComponentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/EventRepositoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/ComponentRepositoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/SynchronizationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/SynchronizationRepositoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/TZamowieniaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/WorkerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TZamownieniaRepositorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/TKlienciRepositoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/TKlienciRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/ComponentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/EventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/validators/WorkerValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.6.RELEASE/spring-aop-4.2.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="475" column="0" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/models/EventEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="13" column="48" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/models/OrderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/OrderServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="e#2951#2952#0" expanded="true" />
-            <element signature="e#3013#3014#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/WorkerRepositoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#913#914#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/daoImpl/OrderRepositoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1778,51 +1467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dao/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1830,23 +1474,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
+        <state relative-caret-position="1054">
           <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1854,7 +1488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1862,9 +1495,381 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/SynchronizationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/TKlienciRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/TZamownieniaRepositorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/TKlienciRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/SyncService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="58" column="9" selection-start-line="57" selection-start-column="29" selection-end-line="58" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/TZamowieniaEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/TZamowieniaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/utils/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/UniqueConstraint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/UniqueConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/book-mgmt/book.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/OrderRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.6.RELEASE/spring-web-4.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/ComponentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/SynchronizationRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/WorkerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/OrdersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="72" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.6.RELEASE/spring-aop-4.2.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="461" column="0" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/WorkerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/EventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.6.RELEASE/spring-core-4.2.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/OneToMany.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/EventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" column="0" selection-start-line="32" selection-start-column="6" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/WorkerRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dto/WorkerEventDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/EventRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/PrimaryKeyEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/dto/EventDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/daoImpl/ComponentRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="17" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/entities/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/config/FrontWitApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/EventRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/PositionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webapp/utils/PositionValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

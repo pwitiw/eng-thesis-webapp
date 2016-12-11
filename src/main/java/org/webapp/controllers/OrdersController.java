@@ -6,12 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
-import org.webapp.dao.OrderRepository;
-import org.webapp.models.Component;
-import org.webapp.models.OrderEntity;
+import org.webapp.entities.Order;
+import org.webapp.repositories.OrderRepository;
+import org.webapp.entities.Component;
 import org.webapp.services.ComponentService;
 import org.webapp.services.OrderService;
-import org.webapp.services.OrderServiceImpl;
 import org.webapp.services.SyncService;
 
 import java.io.IOException;
@@ -38,16 +37,16 @@ public class OrdersController {
 
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
-    public ResponseEntity<List<OrderEntity>> allOrders() throws IOException {
+    public ResponseEntity<List<Order>> allOrders() throws IOException {
         //todo tutaj trzeba ogarnac synchronizacje to bylo sc
         // syncService.synchronize();
-        List<OrderEntity> orders = orderService.getAllOrders();
+        List<Order> orders = orderService.getAllOrders();
 
-        return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
+        return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/orders/add", method = RequestMethod.POST)
-    public String addNewWorkerButtonClicked(@ModelAttribute("order") OrderEntity newOrder, BindingResult result, SessionStatus status) {
+    public String addNewWorkerButtonClicked(@ModelAttribute("order") Order newOrder, BindingResult result, SessionStatus status) {
 
         orderService.add(newOrder);
         return "redirect:/orders";
@@ -55,14 +54,14 @@ public class OrdersController {
 
     @RequestMapping(value = "/orders/delete", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteWorker(@RequestBody OrderEntity order) {
+    public void deleteWorker(@RequestBody Order order) {
 
         orderService.deleteOrder(order);
     }
 
     @RequestMapping(value = "/orders/modify", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void editWorker(@RequestBody OrderEntity order) {
+    public void editWorker(@RequestBody Order order) {
 
         orderService.confirmChangesIfExists(order);
     }
@@ -82,15 +81,15 @@ public class OrdersController {
     }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.GET)
-    public ResponseEntity<OrderEntity> getOrderForId(@PathVariable("id") Long id) {
-        OrderEntity order = orderService.getOrderForId(id);
-        return new ResponseEntity<OrderEntity>(order, HttpStatus.OK);
+    public ResponseEntity<Order> getOrderForId(@PathVariable("id") Long id) {
+        Order order = orderService.getOrderForId(id);
+        return new ResponseEntity<Order>(order, HttpStatus.OK);
     }
 
 //    @RequestMapping(value = "/orders", method = RequestMethod.GET)
-//    public ResponseEntity<List<OrderEntity>> getOrdersForPos(@RequestParam Integer pos) {
-//        List<OrderEntity> orders = orderServiceImpl.getOrderForStage(pos);
-//        return new ResponseEntity<List<OrderEntity>>(orders, HttpStatus.OK);
+//    public ResponseEntity<List<Order>> getOrdersForPos(@RequestParam Integer pos) {
+//        List<Order> orders = orderServiceImpl.getOrderForStage(pos);
+//        return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
 //    }
 
     @ExceptionHandler(IOException.class)

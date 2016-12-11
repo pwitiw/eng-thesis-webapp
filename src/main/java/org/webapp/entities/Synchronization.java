@@ -1,4 +1,4 @@
-package org.webapp.models;
+package org.webapp.entities;
 
 import org.webapp.utils.Config;
 
@@ -13,7 +13,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "synchronization", schema = Config.frontWitDbSchema)
-public class SynchronizationEntity {
+public class Synchronization {
 
     @Id
     private int id;

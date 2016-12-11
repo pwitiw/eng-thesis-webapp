@@ -6,10 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.webapp.dto.WorkerEventDto;
-import org.webapp.models.EventEntity;
-import org.webapp.models.WorkerEntity;
+import org.webapp.entities.Event;
 import org.webapp.services.EventService;
-import org.webapp.services.WorkerService;
 
 import java.util.List;
 
@@ -23,11 +21,11 @@ public class EventController {
     EventService eventService;
 
     @RequestMapping(value = "/events", method = RequestMethod.GET)
-    public ResponseEntity<List<EventEntity>> getListOfEvents() {
+    public ResponseEntity<List<Event>> getListOfEvents() {
 
-        List<EventEntity> events = eventService.getAllEvents();
+        List<Event> events = eventService.getAllEvents();
 
-        return new ResponseEntity<List<EventEntity>>(events, HttpStatus.OK);
+        return new ResponseEntity<List<Event>>(events, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/events/{id}", method = RequestMethod.GET)
@@ -40,7 +38,7 @@ public class EventController {
 
     @RequestMapping(value = "/events/delete", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteWorker(@RequestBody EventEntity event) {
+    public void deleteWorker(@RequestBody Event event) {
 
         eventService.deleteEvent(event);
     }
