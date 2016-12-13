@@ -1,4 +1,60 @@
 <section class="worker-overview">
-  <td data-ng-bind="workerOverviewCtrl.abc"></td>
-  {{workerOverviewCtrl.abc}}
+
+  <div class="container">
+    <h3 class="panel-heading">Lista Pracowników</h3>
+
+    <table st-table="workerOverviewCtrl.worker" class="table table-striped">
+
+      <thead>
+        <tr>
+          <td colspan="2">
+            <input type="text" class="form-control" placeholder="Szukaj" st-search="">
+          </td>
+        </tr>
+        <tr>
+          <th st-sort="code">
+             Kod pracownika
+          </th>
+          <th st-sort="firstName">
+            Imię
+          </th>
+          <th st-sort="surname">
+            Nazwisko
+          </th>
+          <th st-sort="position">
+            Pozycja
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="worker in workerOverviewCtrl.worker">
+          <td>{{worker.code}}</td>
+          <td>{{worker.firstName}}</td>
+          <td>{{worker.surname}}</td>
+          <td>{{worker.position}}</td>
+          <td>
+            <button type="button" ng-click="" class="btn btn-default">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+        </td>
+      </tr>
+      </tfoot>
+
+
+    </table>
+
+  </div>
+
+
+
 </section>

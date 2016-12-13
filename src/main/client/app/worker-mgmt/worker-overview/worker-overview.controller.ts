@@ -1,11 +1,12 @@
 import {Worker} from "../../general/interfaces/worker.interface";
 import {WorkerService} from "../worker.service";
 export class WorkerOverviewCtrl {
-  worker: Worker;
-  abc='test' ;
+  worker: Worker[];
+  itemsByPage: number;
 
   constructor(private workerService: WorkerService) {
-    //this.worker = workerService.findOne(2);
+    this.itemsByPage = 10;
+    this.worker = workerService.getWorker();
   }
 
   delete(id: number): void {
