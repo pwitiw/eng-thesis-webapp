@@ -37,3 +37,30 @@
 .app th {
   text-align: center;
 }
+.app table th:first-child {
+  width: 130px;
+}
+.app table th:last-child {
+  width: 50px;
+}
+.app .st-sort-ascent:before {
+  content: '\25B2';
+}
+.app .st-sort-descent:before {
+  content: '\25BC';
+}
+.app .table-filter {
+  width: inherit;
+}
+.app .table-length {
+  vertical-align: middle;
+}
+.app .table-length :nth-child(1) {
+  margin-right: 10px;
+}
+.app .table-length :nth-child(3) {
+  margin-left: 10px;
+}
+.app .pagination a {
+  cursor: pointer;
+}

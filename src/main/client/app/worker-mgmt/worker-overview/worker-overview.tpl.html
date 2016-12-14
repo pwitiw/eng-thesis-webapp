@@ -8,7 +8,14 @@
       <thead>
         <tr>
           <td colspan="2">
-            <input type="text" class="form-control" placeholder="Szukaj" st-search="">
+            <div class="text-left table-length">
+              <span>Pokaż</span>
+              <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="workerOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in workerOverviewCtrl.paginationSizes" ></select>
+              <span>pozycji</span>
+            </div>
+          </td>
+          <td colspan="3">
+            <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
           </td>
         </tr>
         <tr>
@@ -35,17 +42,39 @@
           <td>{{worker.surname}}</td>
           <td>{{worker.position}}</td>
           <td>
-            <button type="button" ng-click="" class="btn btn-default">
-              <i class="fa fa-cog" aria-hidden="true"></i>
-            </button>
+            <div class="dropdown btn-group inline" ng-hide="editing">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="" ng-click="getComponentsViewForOrder(order)">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    Wyświetl statystki
+                  </a>
+                </li>
+                <li>
+                  <a href="" ng-click="editing=true">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    Edytuj
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="#confirm-delete" ng-click="setOrderToDelete(order)" data-toggle="modal">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Usuń
+                  </a>
+                </li>
+              </ul>
+            </div>
           </td>
         </tr>
       </tbody>
 
       <tfoot>
       <tr>
-        <td colspan="5" class="text-center">
-          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+        <td colspan="5" class="text-right">
+          <div st-pagination="" st-items-by-page="workerOverviewCtrl.itemsByPage" st-template="../../table/pagination.html"></div>
         </td>
       </tr>
       </tfoot>
