@@ -6,7 +6,7 @@ import ILocationService = angular.ILocationService;
  */
 
 export function addMainPageStateDef($stateProvider: IStateProvider) {
-  let url = '/';
+  let url = '/home';
 
   return $stateProvider.state('main-page', {
       url: url,
