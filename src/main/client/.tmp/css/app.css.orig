@@ -39,23 +39,12 @@
   text-align: center;
   left: 40%;
   background-color: white;
-  position: fixed;
-  bottom: 0;
 }
 .app .table td,
 .app th {
   text-align: center;
 }
 <<<<<<< HEAD
-.app html,
-.app body,
-.app #container {
-  height: 100%;
-}
-.app body > #container {
-  height: auto;
-  min-height: 100%;
-=======
 .app table th:first-child {
   width: 130px;
 }
@@ -82,5 +71,14 @@
 }
 .app .pagination a {
   cursor: pointer;
->>>>>>> b3de477fda72159b5cb2e9807599d82ff751a658
+=======
+.app html,
+.app body,
+.app #container {
+  height: 100%;
+}
+.app body > #container {
+  height: auto;
+  min-height: 100%;
+>>>>>>> 125fc2b9c3fe194aaab00190c051980b94ac3b29
 }

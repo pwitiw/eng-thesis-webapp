@@ -26,4 +26,39 @@
   .table td, th {
     text-align: center;
   }
+
+  table th{
+    &:first-child {
+      width: 130px;
+    }
+    &:last-child {
+      width: 50px;
+    }
+  }
+
+  .st-sort-ascent:before{
+    content: '\25B2';
+  }
+
+  .st-sort-descent:before{
+    content: '\25BC';
+  }
+
+  .table-filter {
+    width: inherit;
+  }
+
+  .table-length{
+    vertical-align: middle;
+    :nth-child(1) {
+      margin-right: 10px;
+    }
+    :nth-child(3) {
+      margin-left: 10px;
+    }
+  }
+
+  .pagination a {
+    cursor: pointer;
+  }
 }
