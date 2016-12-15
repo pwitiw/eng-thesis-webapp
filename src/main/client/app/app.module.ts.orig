@@ -21,7 +21,7 @@ import workerMgmtModuleName from './worker-mgmt/worker-mgmt.module'
 import eventMgmtModuleName from './event-mgmt/event-mgmt.module'
 import mainPageModuleName from './main-page/main-page.module'
 
-
+<<<<<<< HEAD
 angular.module('app', [mainPageModuleName, bookMgmtModuleName,orderMgmtModuleName, workerMgmtModuleName, eventMgmtModuleName, 'smart-table'])
   .config(function ($urlRouterProvider:IUrlRouterProvider, $locationProvider:ILocationProvider) {
     // $urlRouterProvider.when('', '/book-mgmt/book');
