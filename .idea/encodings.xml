@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/client/app/resources/404.png" charset="windows-1250" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/webapp/controllers/WorkerController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/webapp/repositories/WorkerRepository.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/webapp/services/WorkerService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/WorkerController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/WorkerRepository.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" charset="windows-1250" />

@@ -3,8 +3,8 @@ package com.springapp.repositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.webapp.repositories.OrderRepository;
-import org.webapp.entities.Order;
+import OrderRepository;
+import Order;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
