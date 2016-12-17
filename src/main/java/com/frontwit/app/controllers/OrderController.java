@@ -21,7 +21,7 @@ import java.util.List;
  * Created by Patryk on 2015-10-28.
  */
 @RestController
-public class OrdersController {
+public class OrderController {
 
     @Autowired
     private OrderRepository orderRepository;
@@ -37,48 +37,13 @@ public class OrdersController {
 
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
-    public ResponseEntity<List<Order>> allOrders() throws IOException {
-        //todo tutaj trzeba ogarnac synchronizacje to bylo sc
-        // syncService.synchronize();
+    public ResponseEntity<List<Order>> getOrders() throws IOException {
+        //todo tutaj trzeba ogarnac synchronizacje to bylo syncService.synchronize();
         List<Order> orders = orderService.getAllOrders();
 
         return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/orders/add", method = RequestMethod.POST)
-    public String addNewWorkerButtonClicked(@ModelAttribute("order") Order newOrder, BindingResult result, SessionStatus status) {
-
-        orderService.add(newOrder);
-        return "redirect:/orders";
-    }
-
-    @RequestMapping(value = "/orders/delete", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
-    public void deleteWorker(@RequestBody Order order) {
-
-        orderService.deleteOrder(order);
-    }
-
-    @RequestMapping(value = "/orders/modify", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
-    public void editWorker(@RequestBody Order order) {
-
-        orderService.confirmChangesIfExists(order);
-    }
-
-    //todo post tutaj powinien byc
-    @RequestMapping(value = "/orders/change-status", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    public void changeStatus(long id) {
-
-        orderService.changeStatusForId(id);
-    }
-
-    @RequestMapping(value = "/orders/{id}/components", method = RequestMethod.GET)
-    public ResponseEntity<List<Component>> getComponentsForOrderId(@PathVariable("id") Long id) {
-        List<Component> components = componentService.getComponents(id);
-        return new ResponseEntity(components, HttpStatus.OK);
-    }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.GET)
     public ResponseEntity<Order> getOrderForId(@PathVariable("id") Long id) {
@@ -86,10 +51,38 @@ public class OrdersController {
         return new ResponseEntity<Order>(order, HttpStatus.OK);
     }
 
-//    @RequestMapping(value = "/orders", method = RequestMethod.GET)
-//    public ResponseEntity<List<Order>> getOrdersForPos(@RequestParam Integer pos) {
-//        List<Order> orders = orderServiceImpl.getOrderForStage(pos);
-//        return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
+    @RequestMapping(value = "/orders/{id}/delete", method = RequestMethod.POST)
+    public HttpStatus deleteWorkerForId(@PathVariable("id") Long id) {
+        //todo zrobic conditions do usuwania ordera
+        orderService.deleteOrder(id);
+        return HttpStatus.OK;
+
+    }
+
+    @RequestMapping(value = "/orders/update-order", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void editWorker(@RequestBody Order order) {
+
+        orderService.confirmChangesIfExists(order);
+    }
+
+    @RequestMapping(value = "/orders/{id}/change-status", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void changeStatus(@PathVariable("id") Long id) {
+        orderService.changeStatusForId(id);
+    }
+
+    @RequestMapping(value = "/orders/{id}/components", method = RequestMethod.GET)
+    public ResponseEntity<List<Component>> getComponentsForOrderId(@PathVariable("id") Long id) {
+        List<Component> components = componentService.getComponentsForOrderId(id);
+        return new ResponseEntity(components, HttpStatus.OK);
+    }
+
+    //    @RequestMapping(value = "/orders/add", method = RequestMethod.POST)
+//    public String addNewWorkerButtonClicked(@ModelAttribute("order") Order newOrder, BindingResult result, SessionStatus status) {
+//
+//        orderService.add(newOrder);
+//        return "redirect:/orders";
 //    }
 
     @ExceptionHandler(IOException.class)

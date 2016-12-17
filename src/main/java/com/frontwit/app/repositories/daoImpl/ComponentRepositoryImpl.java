@@ -2,6 +2,7 @@ package com.frontwit.app.repositories.daoImpl;
 
 import com.frontwit.app.repositories.ComponentRepository;
 import com.frontwit.app.entities.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -11,9 +12,10 @@ import java.util.List;
 @org.springframework.stereotype.Component
 public class ComponentRepositoryImpl {
 
+    @Autowired
     ComponentRepository componentRepository;
 
-    public Iterable<Component> addComponentToDb(Iterable<Component> components) {
+    public List<Component> addComponentToDb(Iterable<Component> components) {
         return componentRepository.save(components);
     }
 

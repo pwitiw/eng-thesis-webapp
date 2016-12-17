@@ -55,21 +55,14 @@ public class WorkerService {
     }
 
     @Transactional
-    public void deleteWorker(Worker worker) {
-
-        if (eventRepositoryDAO.getEventsForWorkerId(worker.getCode()).size() > 0) {
-            workerRepositoryDAO.setInactiveWorkerForCode(worker.getCode());
-        } else {
-            workerRepositoryDAO.deleteWorkerForCode(worker.getCode());
-        }
+    public void deleteWorker(long id) {
+        workerRepositoryDAO.setInactiveWorkerForCode(id);
     }
 
     @Transactional
     public Worker getWorker(long id) {
 
-        Worker e = workerRepositoryDAO.getWorkerForId(id);
-        return e;
-
+        return workerRepositoryDAO.getWorkerForId(id);
     }
 
     @Transactional

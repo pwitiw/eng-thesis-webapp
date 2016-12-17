@@ -14,10 +14,10 @@ import java.util.List;
 public class ComponentService {
 
     @Autowired
-    ComponentRepositoryImpl componentRepositoryDAO;
+    ComponentRepositoryImpl componentRepositoryImpl;
 
-    public List<Component> getComponents(long id){
-        return componentRepositoryDAO.getComponentsForOrderId(id);
+    public List<Component> getComponentsForOrderId(long id){
+        return componentRepositoryImpl.getComponentsForOrderId(id);
     }
 
 

@@ -18,7 +18,7 @@ public class EventRepositoryImpl {
     EventRepository eventRepository;
 
 //    public List<Event> getEventsForActiveWorkers(){
-//        return eventRepository. DOKONCZYC
+//        return eventRepository. //todo DOKONCZYC
 //    }
 
     public List<Event> getAllEvents() {

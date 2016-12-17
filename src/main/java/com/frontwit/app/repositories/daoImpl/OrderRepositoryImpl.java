@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.frontwit.app.entities.Order;
 import com.frontwit.app.repositories.OrderRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  */
 
 @Component
+@Transactional
 public class OrderRepositoryImpl {
 
     @Autowired
@@ -34,8 +36,8 @@ public class OrderRepositoryImpl {
         orderRepository.delete(order);
     }
 
-    public List<Order> getOrderForPositionId(Integer stage) {
-        return orderRepository.findByPositionId(stage);
+    public List<Order> getOrderForPositionId(Integer position) {
+        return orderRepository.findByPositionId(position);
     }
 
     public Order save(Order o) {

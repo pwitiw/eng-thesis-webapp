@@ -12,13 +12,6 @@ import java.sql.Timestamp;
 @Table(name = "events", schema = Config.frontWitDbSchema)
 public class Event implements Serializable{
 
-    public PrimaryKeyEvent getPrim() {
-        return prim;
-    }
-
-    public void setPrim(PrimaryKeyEvent prim) {
-        this.prim = prim;
-    }
     @EmbeddedId
     PrimaryKeyEvent prim;
 
@@ -30,6 +23,14 @@ public class Event implements Serializable{
     private int missing;
 
     private Worker worker;
+
+    public PrimaryKeyEvent getPrim() {
+        return prim;
+    }
+
+    public void setPrim(PrimaryKeyEvent prim) {
+        this.prim = prim;
+    }
 
     public long getWorkerId() {
         return workerId;

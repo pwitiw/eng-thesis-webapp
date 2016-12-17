@@ -1,5 +1,6 @@
 package com.frontwit.app.controllers;
 
+import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class WorkerController {
 
 
     @RequestMapping(value = "/workers", method = RequestMethod.GET)
-    public ResponseEntity<List<Worker>> printWorkerList() {
+    public ResponseEntity<List<Worker>> getActiveWorkers() {
 
         List<Worker> workers = workerService.getActiveWorkers();
 
@@ -33,14 +34,14 @@ public class WorkerController {
     }
 
     @RequestMapping(value = "/workers/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Worker> printWorkerList(@PathVariable("id") long id) {
+    public ResponseEntity<Worker> getWorkerForId(@PathVariable("id") long id) {
 
         Worker worker = workerService.getWorker(id);
 
         return new ResponseEntity<Worker>(worker, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/workers/add-new-worker", method = RequestMethod.POST)
+    @RequestMapping(value = "/workers/add-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void addWorker(@RequestBody Worker newWorker) {
 
@@ -53,19 +54,26 @@ public class WorkerController {
         workerService.add(newWorker);
     }
 
-    @RequestMapping(value = "workers/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "workers/{id}/delete-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteWorker(@RequestBody Worker worker) {
+    public void deleteWorkerForId(@PathVariable("id") long id) {
 
-        workerService.deleteWorker(worker);
+        workerService.deleteWorker(id);
     }
 
 
-    @RequestMapping(value = "workers/modify", method = RequestMethod.POST)
+    @RequestMapping(value = "workers/update-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void editWorker(@RequestBody Worker worker) {
 
         workerService.confirmChangesIfExists(worker);
     }
 
+    @RequestMapping(value = "workers/{id}/events", method = RequestMethod.GET)
+    public ResponseEntity<WorkerEventDto> getEventsForWorkerId(@PathVariable("id") long id) {
+
+        WorkerEventDto workerEventDto = eventService.getWorkerEventDtoForWorkerCode(id);
+
+        return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
+    }
 }

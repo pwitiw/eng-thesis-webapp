@@ -31,6 +31,7 @@ public class PositionValues {
     public PositionValues(){}
     @PostConstruct
     public void init() {
+        //todo ogarnac pozycje
         positionRepository.findAll();
     }
 

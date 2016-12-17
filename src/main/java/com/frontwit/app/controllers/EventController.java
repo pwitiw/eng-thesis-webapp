@@ -21,25 +21,17 @@ public class EventController {
     EventService eventService;
 
     @RequestMapping(value = "/events", method = RequestMethod.GET)
-    public ResponseEntity<List<Event>> getListOfEvents() {
+    public ResponseEntity<List<Event>> getEvents() {
 
         List<Event> events = eventService.getAllEvents();
 
         return new ResponseEntity<List<Event>>(events, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/events/{id}", method = RequestMethod.GET)
-    public ResponseEntity<WorkerEventDto> getWorkerList(@PathVariable("id") long id) {
-
-        WorkerEventDto workerEventDto = eventService.getWorkerEventDtoForWorkerCode(id);
-
-        return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
-    }
-
     @RequestMapping(value = "/events/delete", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteWorker(@RequestBody Event event) {
-
+    public void deleteEvent(@RequestBody Event event) {
+        //todo scenariusz na usuwanie eventu
         eventService.deleteEvent(event);
     }
 

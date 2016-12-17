@@ -36,11 +36,11 @@ public class Order implements Serializable {
 
     private short active;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -92,11 +92,11 @@ public class Order implements Serializable {
         this.lastUpdate = lastUpdate;
     }
 
-    public long getParentId() {
+    public Long getParentId() {
         return parentId;
     }
 
-    public void setParentId(long parentId) {
+    public void setParentId(Long parentId) {
         this.parentId = parentId;
     }
 
@@ -106,5 +106,39 @@ public class Order implements Serializable {
 
     public void setActive(short active) {
         this.active = active;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Order order = (Order) o;
+
+        if (customerId != order.customerId) return false;
+        if (positionId != order.positionId) return false;
+        if (express != order.express) return false;
+        if (active != order.active) return false;
+        if (id != null ? !id.equals(order.id) : order.id != null) return false;
+        if (name != null ? !name.equals(order.name) : order.name != null) return false;
+        if (date != null ? !date.equals(order.date) : order.date != null) return false;
+        if (lastUpdate != null ? !lastUpdate.equals(order.lastUpdate) : order.lastUpdate != null) return false;
+        return parentId != null ? parentId.equals(order.parentId) : order.parentId == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + customerId;
+        result = 31 * result + positionId;
+        result = 31 * result + (int) express;
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (lastUpdate != null ? lastUpdate.hashCode() : 0);
+        result = 31 * result + (parentId != null ? parentId.hashCode() : 0);
+        result = 31 * result + (int) active;
+        return result;
     }
 }
