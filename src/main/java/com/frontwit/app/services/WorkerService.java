@@ -1,5 +1,6 @@
 package com.frontwit.app.services;
 
+import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.repositories.daoImpl.WorkerRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import com.frontwit.app.repositories.daoImpl.EventRepositoryImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,8 +45,8 @@ public class WorkerService {
 //    }
 
     @Transactional
-    public List<Worker> getActiveWorkers() {
-        return workerRepositoryDAO.getActiveWorkers();
+    public List<WorkerDto> getActiveWorkers() {
+        return getDtosForWorkers(workerRepositoryDAO.getActiveWorkers());
     }
 
     @Transactional
@@ -85,8 +87,15 @@ public class WorkerService {
         copy.setId(worker.getId());
         copy.setName(worker.getName());
         copy.setSurname(worker.getSurname());
-        copy.setPositionId(worker.getPositionId());
+        copy.setPosition(worker.getPosition());
     }
 
+    private List<WorkerDto> getDtosForWorkers(List<Worker> workers) {
+        List<WorkerDto> workerDtos = new ArrayList<>();
+        for (Worker w : workers) {
+            workerDtos.add(new WorkerDto(w));
+        }
+        return workerDtos;
+    }
 
 }

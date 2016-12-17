@@ -1,5 +1,6 @@
 package com.frontwit.app.controllers;
 
+import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.services.ComponentService;
 import com.frontwit.app.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +38,11 @@ public class OrderController {
 
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
-    public ResponseEntity<List<Order>> getOrders() throws IOException {
+    public ResponseEntity<List<OrderDto>> getOrders() throws IOException {
         //todo tutaj trzeba ogarnac synchronizacje to bylo syncService.synchronize();
-        List<Order> orders = orderService.getAllOrders();
+        List<OrderDto> ordersDtos = orderService.getAllOrders();
 
-        return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
+        return new ResponseEntity<List<OrderDto>>(ordersDtos, HttpStatus.OK);
     }
 
 

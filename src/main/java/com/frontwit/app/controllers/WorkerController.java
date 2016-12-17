@@ -1,5 +1,6 @@
 package com.frontwit.app.controllers;
 
+import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.services.EventService;
@@ -26,18 +27,14 @@ public class WorkerController {
 
 
     @RequestMapping(value = "/workers", method = RequestMethod.GET)
-    public ResponseEntity<List<Worker>> getActiveWorkers() {
-
-        List<Worker> workers = workerService.getActiveWorkers();
-
-        return new ResponseEntity<List<Worker>>(workers, HttpStatus.OK);
+    public ResponseEntity<List<WorkerDto>> getActiveWorkers() {
+        List<WorkerDto> workerDtos = workerService.getActiveWorkers();
+        return new ResponseEntity<List<WorkerDto>>(workerDtos, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/workers/{id}", method = RequestMethod.GET)
     public ResponseEntity<Worker> getWorkerForId(@PathVariable("id") long id) {
-
         Worker worker = workerService.getWorker(id);
-
         return new ResponseEntity<Worker>(worker, HttpStatus.OK);
     }
 
@@ -57,7 +54,6 @@ public class WorkerController {
     @RequestMapping(value = "workers/{id}/delete-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void deleteWorkerForId(@PathVariable("id") long id) {
-
         workerService.deleteWorker(id);
     }
 

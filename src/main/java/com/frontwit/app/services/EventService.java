@@ -1,5 +1,6 @@
 package com.frontwit.app.services;
 
+import com.frontwit.app.dto.EventDto;
 import com.frontwit.app.entities.Event;
 import com.frontwit.app.entities.Worker;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import com.frontwit.app.entities.Order;
 import com.frontwit.app.repositories.daoImpl.EventRepositoryImpl;
 import com.frontwit.app.dto.WorkerEventDto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,8 +26,9 @@ public class EventService {
     WorkerService workerService;
 
     @Transactional
-    public List<Event> getAllEvents() {
-        return eventRepositoryDAO.getAllEvents();
+    public List<EventDto> getAllEvents() {
+        return getDtosForEvents(eventRepositoryDAO.getAllEvents());
+
     }
 
     public WorkerEventDto getWorkerEventDtoForWorkerCode(long id) {
@@ -42,11 +45,21 @@ public class EventService {
 
     @Transactional
     public void deleteEvent(Event event) {
-        eventRepositoryDAO.deleteEventForPrimaryKey(event.getPrim());
+        //todo eventRepositoryDAO.deleteEventForPrimaryKey(event.getPrim());
     }
 
     @Transactional
     public List<Event> getEventsForOrder(Order order) {
         return eventRepositoryDAO.getEventsForOrder(order.getId());
     }
+
+    private List<EventDto> getDtosForEvents(List<Event> events){
+        List<EventDto> eventDtos = new ArrayList<>();
+        for(Event e:events){
+            eventDtos.add(new EventDto(e));
+        }
+        return eventDtos;
+    }
+
 }
+

@@ -13,9 +13,9 @@ public class OrderHelper {
         Order order = new Order();
         order.setId((long) zam.getId());
         order.setName(zam.getNumer());
-        order.setCustomerId(1);  //todo tutaj ma byc jakos sprawdzane, czy w bazie danych jest dane nazwisko, jak tak to wyszukaj po id
+       //todo order.setCustomerId(1);  //todo tutaj ma byc jakos sprawdzane, czy w bazie danych jest dane nazwisko, jak tak to wyszukaj po id
         order.setDate(zam.getData_z());
-        order.setPositionId(1);  //tutaj defautowo to daje to bez sensu
+        //todo order.setPositionId(1);  //tutaj defautowo to daje to bez sensu
         order.setExpress((short) 0);
         order.setActive((short) 0);
 

@@ -16,25 +16,30 @@ public class Order implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
 
     private String name;
 
-    @Column(name="customer_id")
-    private int customerId;
-    @Column(name="position_id")
-    private int positionId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="POSITION_ID")
+    private Position position;
 
     private short express;
 
     private Date date;
-    @Column(name="last_update")
+
+    @Column(name="LAST_UPDATE")
     private Date lastUpdate;
 
     @Column(name="parent_id")
     private Long parentId;
 
     private short active;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="CUSTOMER_ID")
+    private Customer customer;
+
 
     public Long getId() {
         return id;
@@ -52,20 +57,16 @@ public class Order implements Serializable {
         this.name = name;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public Position getPosition() {
+        return position;
     }
 
-    public int getPositionId() {
-        return positionId;
-    }
-
-    public void setPositionId(int positionId) {
-        this.positionId = positionId;
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     public short getExpress() {
@@ -108,37 +109,11 @@ public class Order implements Serializable {
         this.active = active;
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Order order = (Order) o;
-
-        if (customerId != order.customerId) return false;
-        if (positionId != order.positionId) return false;
-        if (express != order.express) return false;
-        if (active != order.active) return false;
-        if (id != null ? !id.equals(order.id) : order.id != null) return false;
-        if (name != null ? !name.equals(order.name) : order.name != null) return false;
-        if (date != null ? !date.equals(order.date) : order.date != null) return false;
-        if (lastUpdate != null ? !lastUpdate.equals(order.lastUpdate) : order.lastUpdate != null) return false;
-        return parentId != null ? parentId.equals(order.parentId) : order.parentId == null;
-
+    public Customer getCustomer() {
+        return customer;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + customerId;
-        result = 31 * result + positionId;
-        result = 31 * result + (int) express;
-        result = 31 * result + (date != null ? date.hashCode() : 0);
-        result = 31 * result + (lastUpdate != null ? lastUpdate.hashCode() : 0);
-        result = 31 * result + (parentId != null ? parentId.hashCode() : 0);
-        result = 31 * result + (int) active;
-        return result;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

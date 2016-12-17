@@ -1,5 +1,6 @@
 package com.frontwit.app.services;
 
+import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,11 +11,12 @@ import com.frontwit.app.entities.Order;
 import com.frontwit.app.repositories.OrderRepository;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @Transactional
-public class OrderService{
+public class OrderService {
 
     @Autowired
     OrderRepositoryImpl orderRepositoryImpl;
@@ -22,15 +24,9 @@ public class OrderService{
     @Autowired
     EventService eventService;
 
-    //todo tutaj ogarnac jak z tym nullem jak parentId jest przeslany
     @Transactional
-    public List<Order> getAllOrders() {
-        List<Order> s = orderRepositoryImpl.getAllOrders();
-        for (Order i : s) {
-            i.setParentId(2L);
-        }
-        return s;
-        // return orderRepositoryDAO.getAllOrders();
+    public List<OrderDto> getAllOrders() {
+        return getDtosForOrders(orderRepositoryImpl.getAllOrders());
     }
 
     @Transactional
@@ -41,11 +37,11 @@ public class OrderService{
 
     @Transactional
     public void add(Order order) {
-
-        if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
+//todo Dodawanie zamowienia, validacje do tego
+      /*  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
             order.setPositionId(1);
             orderRepositoryImpl.save(order);
-        }
+        }*/
     }
 
     @Transactional
@@ -62,8 +58,8 @@ public class OrderService{
             return;
         if (newOrder.getName().trim().equals(""))
             return;
-        if (((Integer) newOrder.getCustomerId()).toString().trim().equals(""))
-            return;
+        //   if (((Integer) newOrder.getCustomerId()).toString().trim().equals(""))
+        //     return;
         if (newOrder.getExpress() < 0 || newOrder.getExpress() > 1)
             return;
 
@@ -83,6 +79,15 @@ public class OrderService{
 
     public List<Order> getOrderForStage(Integer position) {
         return orderRepositoryImpl.getOrderForPositionId(position);
+    }
+
+    private List<OrderDto> getDtosForOrders(List<Order> orders) {
+        List<OrderDto> orderDtos = new ArrayList<>();
+        for (Order o : orders) {
+            OrderDto orderDto = new OrderDto(o);
+            orderDtos.add(orderDto);
+        }
+        return orderDtos;
     }
 
 }

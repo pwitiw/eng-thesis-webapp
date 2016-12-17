@@ -1,5 +1,6 @@
 package com.frontwit.app.controllers;
 
+import com.frontwit.app.dto.EventDto;
 import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Event;
 import com.frontwit.app.services.EventService;
@@ -21,11 +22,11 @@ public class EventController {
     EventService eventService;
 
     @RequestMapping(value = "/events", method = RequestMethod.GET)
-    public ResponseEntity<List<Event>> getEvents() {
+    public ResponseEntity<List<EventDto>> getEvents() {
 
-        List<Event> events = eventService.getAllEvents();
+        List<EventDto> eventDtos = eventService.getAllEvents();
 
-        return new ResponseEntity<List<Event>>(events, HttpStatus.OK);
+        return new ResponseEntity<List<EventDto>>(eventDtos, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/events/delete", method = RequestMethod.POST)

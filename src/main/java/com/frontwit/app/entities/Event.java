@@ -13,31 +13,30 @@ import java.sql.Timestamp;
 public class Event implements Serializable{
 
     @EmbeddedId
-    PrimaryKeyEvent prim;
+    EventPrimaryKey prim;
 
-    @Column(name = "WORKER_ID")
-    private long workerId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "WORKER_ID")
+    private Worker worker;
 
     private Timestamp date;
 
     private int missing;
 
-    private Worker worker;
-
-    public PrimaryKeyEvent getPrim() {
+    public EventPrimaryKey getPrim() {
         return prim;
     }
 
-    public void setPrim(PrimaryKeyEvent prim) {
+    public void setPrim(EventPrimaryKey prim) {
         this.prim = prim;
     }
 
-    public long getWorkerId() {
-        return workerId;
+    public Worker getWorker() {
+        return worker;
     }
 
-    public void setWorkerId(long workerCode) {
-        this.workerId = workerCode;
+    public void setWorker(Worker worker) {
+        this.worker = worker;
     }
 
     public Timestamp getDate() {

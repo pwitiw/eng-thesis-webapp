@@ -1,11 +1,9 @@
 package com.frontwit.app.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Patryk on 11.12.2016.
@@ -29,6 +27,12 @@ public class Customer implements Serializable {
 
     @NotNull
     private short active;
+
+//    @OneToMany(fetch = )
+//    @JoinColumn(name="idarea")
+//    private List<Order> orders;
+
+
 
     public long getId() {
         return id;

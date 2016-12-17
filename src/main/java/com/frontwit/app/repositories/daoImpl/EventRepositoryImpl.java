@@ -1,7 +1,7 @@
 package com.frontwit.app.repositories.daoImpl;
 
 import com.frontwit.app.entities.Event;
-import com.frontwit.app.entities.PrimaryKeyEvent;
+import com.frontwit.app.entities.EventPrimaryKey;
 import com.frontwit.app.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,10 +29,10 @@ public class EventRepositoryImpl {
         return eventRepository.findByWorkerId(id);
     }
 
-    public void deleteEventForPrimaryKey(PrimaryKeyEvent prim){
+    public void deleteEventForPrimaryKey(EventPrimaryKey prim){
 
-        Event event = eventRepository.findByPrimOrderIdAndPrimPositionId(prim.getOrderId(),prim.getPositionId());
-        eventRepository.delete(event);
+//        todo Event event = eventRepository.findByPrimOrderIdAndPrimPositionId(prim.getOrderId(),prim.getPositionId());
+//        eventRepository.delete(event);
     }
 
     public List<Event> getEventsForOrder(long id){

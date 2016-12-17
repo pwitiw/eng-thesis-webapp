@@ -6,9 +6,7 @@ import org.springframework.stereotype.Component;
 import com.frontwit.app.entities.Position;
 
 import javax.annotation.PostConstruct;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Patryk on 11.12.2016.
@@ -16,24 +14,38 @@ import java.util.Map;
 @Component("positions")
 public class PositionValues {
 
-     private Map<Integer, String> POSITIONS;
-
     @Autowired
     PositionRepository positionRepository;
 
-    public PositionValues(List<Position> positions) {
-        POSITIONS = new HashMap();
+    private static Map<Integer, String> POSITIONS;
+
+    public PositionValues() {
+        POSITIONS = new HashMap<>();
+    }
+
+    @PostConstruct
+    public void init() {
+        List<Position> positions = positionRepository.findAll();
         for (Position p : positions) {
             this.POSITIONS.put(p.getId(), p.getName());
         }
     }
 
-    public PositionValues(){}
-    @PostConstruct
-    public void init() {
-        //todo ogarnac pozycje
-        positionRepository.findAll();
+    public static List<String> getStrigValues() {
+        return (List<String>) POSITIONS.values();
     }
 
+    public static String getValueForKey(int key) {
+        return POSITIONS.get(key);
+    }
+
+    public static int getKeyForValue(String value) {
+        POSITIONS.keySet();
+        for (int key : POSITIONS.keySet()) {
+            POSITIONS.get(key).equals(value);
+            return key;
+        }
+        return 0;
+    }
 
 }
