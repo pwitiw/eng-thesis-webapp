@@ -1,7 +1,6 @@
 package com.frontwit.app.dto;
 
 import com.frontwit.app.entities.Event;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 
@@ -30,6 +29,10 @@ public class EventDto implements Serializable {
 
     public long getOrderId() {
         return orderId;
+    }
+
+    public long getPositionId() {
+        return positionId;
     }
 
     public String getOrderName() {

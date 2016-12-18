@@ -1,11 +1,15 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
+import com.sun.istack.internal.Nullable;
+import org.hibernate.annotations.LazyToOne;
+import org.hibernate.annotations.LazyToOneOption;
 import org.jboss.logging.annotations.Pos;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Patryk on 2015-11-01.
@@ -26,7 +30,7 @@ public class Worker implements Serializable {
     @NotNull
     private String surname;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "POSITION_ID")
     private Position position;
 
@@ -35,9 +39,9 @@ public class Worker implements Serializable {
 
     @NotNull
     private short active;
-
-
-//    private List<Event> events;
+    @Nullable
+    @OneToMany(mappedBy = "worker", fetch = FetchType.LAZY)
+    private List<Event> events;
 
     public long getId() {
         return id;
@@ -87,17 +91,13 @@ public class Worker implements Serializable {
         this.active = active;
     }
 
-//    @Access(AccessType.PROPERTY)
-//    @OneToMany( fetch = FetchType.LAZY,cascade={CascadeType.ALL} )
-//    @JoinColumn(name = "worker")
-//    public List<Event> getEvents() {
-//        return events;
-//    }
-//
-//    public void setEvents(List<Event> events) {
-//        this.events = events;
-//    }
+    public List<Event> getEvents() {
+        return events;
+    }
 
+    public void setEvents(List<Event> events) {
+        this.events = events;
+    }
 
     @Override
     public String toString() {

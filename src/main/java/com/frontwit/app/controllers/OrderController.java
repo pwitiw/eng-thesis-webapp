@@ -1,5 +1,6 @@
 package com.frontwit.app.controllers;
 
+import com.frontwit.app.dto.ComponentDto;
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.services.ComponentService;
 import com.frontwit.app.services.OrderService;
@@ -7,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.CustomValidatorBean;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import com.frontwit.app.entities.Order;
@@ -36,15 +39,12 @@ public class OrderController {
     @Autowired
     private SyncService syncService;
 
-
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
     public ResponseEntity<List<OrderDto>> getOrders() throws IOException {
         //todo tutaj trzeba ogarnac synchronizacje to bylo syncService.synchronize();
-        List<OrderDto> ordersDtos = orderService.getAllOrders();
-
-        return new ResponseEntity<List<OrderDto>>(ordersDtos, HttpStatus.OK);
+        List<OrderDto> orders = orderService.getAllOrders();
+        return new ResponseEntity<List<OrderDto>>(orders, HttpStatus.OK);
     }
-
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.GET)
     public ResponseEntity<Order> getOrderForId(@PathVariable("id") Long id) {
@@ -63,7 +63,6 @@ public class OrderController {
     @RequestMapping(value = "/orders/update-order", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void editWorker(@RequestBody Order order) {
-
         orderService.confirmChangesIfExists(order);
     }
 
@@ -74,17 +73,10 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/orders/{id}/components", method = RequestMethod.GET)
-    public ResponseEntity<List<Component>> getComponentsForOrderId(@PathVariable("id") Long id) {
-        List<Component> components = componentService.getComponentsForOrderId(id);
+    public ResponseEntity<?> getComponentsForOrderId(@PathVariable("id") Long id) {
+        List<ComponentDto> components= componentService.getComponentsForOrderId(id);
         return new ResponseEntity(components, HttpStatus.OK);
     }
-
-    //    @RequestMapping(value = "/orders/add", method = RequestMethod.POST)
-//    public String addNewWorkerButtonClicked(@ModelAttribute("order") Order newOrder, BindingResult result, SessionStatus status) {
-//
-//        orderService.add(newOrder);
-//        return "redirect:/orders";
-//    }
 
     @ExceptionHandler(IOException.class)
     @ResponseBody

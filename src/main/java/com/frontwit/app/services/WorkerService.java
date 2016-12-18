@@ -1,15 +1,14 @@
 package com.frontwit.app.services;
 
 import com.frontwit.app.dto.WorkerDto;
+import com.frontwit.app.dto.WorkerEventDto;
+import com.frontwit.app.entities.Event;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.repositories.daoImpl.WorkerRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.frontwit.app.repositories.daoImpl.EventRepositoryImpl;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,34 +18,23 @@ import java.util.List;
 @Service
 public class WorkerService {
 
-    @PersistenceContext
-    private EntityManager em;
-
     @Autowired
     WorkerRepositoryImpl workerRepositoryDAO;
 
     @Autowired
-    EventRepositoryImpl eventRepositoryDAO;
-
-    @Transactional
-    public List<Worker> getAllWorkers() {
-        return workerRepositoryDAO.getAllWorkers();
-    }
-
-//    @Transactional(readOnly=true)
-//    public List<WorkerEventDto> getActiveWorkers() {
-//        List<Worker> workers = workerRepositoryDAO.getActiveWorkers();
-//
-//        List<WorkerEventDto> workersDto = new ArrayList<WorkerEventDto>();
-//        for (Worker worker : workers) {
-//            workersDto.add(new WorkerEventDto(workers,));
-//        }
-//        return workersDto;
-//    }
+    EventService eventService;
 
     @Transactional
     public List<WorkerDto> getActiveWorkers() {
-        return getDtosForWorkers(workerRepositoryDAO.getActiveWorkers());
+        List<Worker> workers = workerRepositoryDAO.getActiveWorkers();
+        return getDtosForWorkers(workers);
+    }
+
+    @Transactional
+    public WorkerEventDto getEventsForWorker(long id) {
+        List<Event> events= eventService.getEventDtosForWorkerId(id);
+        Worker worker = workerRepositoryDAO.getWorkerForId(id);
+        return new WorkerEventDto(worker, events);
     }
 
     @Transactional

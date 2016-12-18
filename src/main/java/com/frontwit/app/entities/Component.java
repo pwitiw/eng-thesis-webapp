@@ -2,31 +2,35 @@ package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Patryk on 2016-01-31.
  */
 @Entity
 @Table(name = "components", schema = Config.frontWitDbSchema)
-public class Component {
+public class Component implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(name = "order_id")
-    private long orderId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ORDER_ID")
+    private Order order;
+
     private int width;
     private int height;
     private int amount;
-    private String color;
     private int missing;
     private String comment;
 
-    public Component(){}
-    public Component(String[]csvComponent){}
+    public Component(String csv[]) {
+    }
+
+    public Component() {
+    }
 
     public long getId() {
         return id;
@@ -36,12 +40,12 @@ public class Component {
         this.id = id;
     }
 
-    public long getOrderId() {
-        return orderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderId(long orderId) {
-        this.orderId = orderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public int getWidth() {
@@ -66,14 +70,6 @@ public class Component {
 
     public void setAmount(int amount) {
         this.amount = amount;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public int getMissing() {

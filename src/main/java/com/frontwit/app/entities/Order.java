@@ -2,10 +2,12 @@ package com.frontwit.app.entities;
 
 
 import com.frontwit.app.utils.Config;
+import com.sun.istack.internal.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Patryk on 2015-10-28.
@@ -20,7 +22,7 @@ public class Order implements Serializable {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="POSITION_ID")
     private Position position;
 
@@ -36,10 +38,13 @@ public class Order implements Serializable {
 
     private short active;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="CUSTOMER_ID")
     private Customer customer;
 
+    @Nullable
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
+    private List<Component> components;
 
     public Long getId() {
         return id;

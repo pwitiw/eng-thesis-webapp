@@ -23,9 +23,7 @@ public class EventController {
 
     @RequestMapping(value = "/events", method = RequestMethod.GET)
     public ResponseEntity<List<EventDto>> getEvents() {
-
         List<EventDto> eventDtos = eventService.getAllEvents();
-
         return new ResponseEntity<List<EventDto>>(eventDtos, HttpStatus.OK);
     }
 

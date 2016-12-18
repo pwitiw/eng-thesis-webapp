@@ -22,25 +22,15 @@ public class EventService {
     @Autowired
     EventRepositoryImpl eventRepositoryDAO;
 
-    @Autowired
-    WorkerService workerService;
-
     @Transactional
     public List<EventDto> getAllEvents() {
         return getDtosForEvents(eventRepositoryDAO.getAllEvents());
 
     }
 
-    public WorkerEventDto getWorkerEventDtoForWorkerCode(long id) {
-        List<Event> events = getEventsForWorkerCode(id);
-        Worker worker = workerService.getWorker(id);
-
-        return new WorkerEventDto(worker, events);
-    }
-
-    @Transactional
-    private List<Event> getEventsForWorkerCode(long id) {
-        return eventRepositoryDAO.getEventsForWorkerId(id);
+    public List<Event> getEventDtosForWorkerId(long id) {
+        List<Event> events = eventRepositoryDAO.getEventsForWorkerId(id);
+        return events;
     }
 
     @Transactional
@@ -53,9 +43,9 @@ public class EventService {
         return eventRepositoryDAO.getEventsForOrder(order.getId());
     }
 
-    private List<EventDto> getDtosForEvents(List<Event> events){
+    private List<EventDto> getDtosForEvents(List<Event> events) {
         List<EventDto> eventDtos = new ArrayList<>();
-        for(Event e:events){
+        for (Event e : events) {
             eventDtos.add(new EventDto(e));
         }
         return eventDtos;

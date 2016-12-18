@@ -54,15 +54,5 @@ public class Event implements Serializable{
     public void setMissing(int missing) {
         this.missing = missing;
     }
-//
-//    @Access(AccessType.PROPERTY)
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "worker_id")
-//    public Worker getWorker() {
-//        return worker;
-//    }
-//
-//    public void setWorker(Worker worker) {
-//        this.worker = worker;
-//    }
+
 }

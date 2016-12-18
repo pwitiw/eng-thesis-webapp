@@ -22,10 +22,6 @@ public class WorkerController {
     @Autowired
     WorkerService workerService;
 
-    @Autowired
-    EventService eventService;
-
-
     @RequestMapping(value = "/workers", method = RequestMethod.GET)
     public ResponseEntity<List<WorkerDto>> getActiveWorkers() {
         List<WorkerDto> workerDtos = workerService.getActiveWorkers();
@@ -57,19 +53,15 @@ public class WorkerController {
         workerService.deleteWorker(id);
     }
 
-
     @RequestMapping(value = "workers/update-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void editWorker(@RequestBody Worker worker) {
-
         workerService.confirmChangesIfExists(worker);
     }
 
     @RequestMapping(value = "workers/{id}/events", method = RequestMethod.GET)
     public ResponseEntity<WorkerEventDto> getEventsForWorkerId(@PathVariable("id") long id) {
-
-        WorkerEventDto workerEventDto = eventService.getWorkerEventDtoForWorkerCode(id);
-
+        WorkerEventDto workerEventDto = workerService.getEventsForWorker(id);
         return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
     }
 }

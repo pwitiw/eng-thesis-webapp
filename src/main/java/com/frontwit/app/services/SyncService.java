@@ -32,9 +32,9 @@ public class SyncService {
     @Autowired
     SynchronizationRepositoryImpl synchronizationRepositoryImpl;
     @Autowired
-    OrderRepositoryImpl orderRepositoryImpl;
+    OrderService orderService;
     @Autowired
-    ComponentRepositoryImpl componentRepositoryImpl;
+    ComponentService componentService;
 
 
     public List<String> synchronize() {
@@ -54,8 +54,9 @@ public class SyncService {
             String clientName = tKlienciRepositoryImpl.getClientName(zam.getTklienci_id());
             order = OrderHelper.assembleInstanceOfOrder(zam, components.size(), clientName);
 
-            componentRepositoryImpl.addComponentToDb(components);
-            orderRepositoryImpl.addOrderToDb(order);
+
+            //componentRepositoryImpl.addComponentToDb(components);
+            //orderRepositoryImpl.addOrderToDb(order);
         }
         return new ArrayList<String>();
     }
