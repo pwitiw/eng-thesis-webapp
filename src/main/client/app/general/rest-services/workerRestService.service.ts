@@ -2,6 +2,7 @@ import IHttpService = angular.IHttpService;
 import IPromise = angular.IPromise;
 import IRequestShortcutConfig = angular.IRequestShortcutConfig
 import {Worker} from "../interfaces/worker.interface";
+import {Order} from "../interfaces/order.interface";
 export class WorkerRestService {
   private restServiceUrl: string;
 
@@ -11,14 +12,14 @@ export class WorkerRestService {
 
   getWorkers(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/workers/')
-      .then((response: ng.IHttpPromiseCallbackArg)=> {
+      .then((response: ng.IHttpPromiseCallbackArg<Worker[]>)=> {
         return response.data;
       })
   }
 
   getWorker(id: number): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/order?id='+id)
-      .then((response: ng.IHttpPromiseCallbackArg)=> {
+      .then((response: ng.IHttpPromiseCallbackArg<Order[]>)=> {
         return response.data;
       })
   }

@@ -61,7 +61,7 @@ export class OrderService {
   ];
   private sequencer = 1;
 
-  constructor(private orderRestService: OrderRestService) {
+  constructor(private orderRestService: OrderRestService, private $uibModal: any) {
 
   }
 
@@ -85,4 +85,35 @@ export class OrderService {
     return this.orderRestService.getOrders();
     //return this.books;
   }
+
+
+  openModal() {
+    let modalObject = {
+      animation: true,
+      controller: 'ComponentsModalCtrl',
+      controllerAs: 'componentsModalCtrl',
+      templateUrl: 'order-mgmt/components-modal/components-modal.html',
+      size: 'md',
+      resolve: {
+        // headerText: () => {
+        //   return header;
+        // },
+        // columnDefs: () => {
+        //   return columnDefs;
+        // },
+        // data: () => {
+        //   return data;
+        // },
+        // multiselect: () => {
+        //   return multiselect || false;
+        // },
+        // gridMenu: () => {
+        //   return gridMenu == null ? true : gridMenu;
+        // }
+      }
+    };
+    return this.$uibModal.open(modalObject);
+  }
+
+
 }

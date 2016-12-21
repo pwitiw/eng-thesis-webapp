@@ -1,13 +1,23 @@
-import {Order} from "../../general/interfaces/order.interface";
-import {OrderService} from "../order.service";
+
 export class ComponentsModalCtrl {
-  orders: Order[];
 
-  constructor(private orderService: OrderService) {
-    this.orders = orderService.getOrders();
+  header:string;
+
+  private gridOptions:any;
+  private gridApi:any;
+
+  constructor(private $uibModal:any, private $uibModalInstance:any,) {
   }
 
-  delete(id: number): void {
-    this.orderService.delete(id);
-  }
+  // private setHeader() {
+  //   this.header = this.headerText;
+  // }
+  //
+  // cancel() {
+  //   this.$uibModalInstance.dismiss();
+  // }
+  //
+  // select() {
+  //   this.$uibModalInstance.close(this.gridApi.selection.getSelectedRows());
+  // }
 }
