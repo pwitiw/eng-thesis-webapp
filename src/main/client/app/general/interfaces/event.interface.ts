@@ -1,5 +1,8 @@
 export interface Event{
   id?:number;
-  title:string;
-  author:string;
+  orderNumber: number;
+  orderStage: number;
+  worker: Worker;
+  element: number;
+  date: string;
 }

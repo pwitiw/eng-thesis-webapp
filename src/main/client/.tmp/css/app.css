@@ -46,6 +46,9 @@
 .app th {
   text-align: center;
 }
+.app table th {
+  vertical-align: middle !important;
+}
 .app table th:first-child {
   width: 130px;
 }
@@ -72,4 +75,13 @@
 }
 .app .pagination a {
   cursor: pointer;
+}
+.app .table-options {
+  margin-bottom: 20px;
+}
+.app .table-options > span {
+  font-size: 28px;
+}
+.app .table-options > button {
+  float: right;
 }

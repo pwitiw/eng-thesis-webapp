@@ -1,9 +1,16 @@
 <section class="worker-overview">
 
   <div class="container">
-    <h3 class="panel-heading">Lista Pracowników</h3>
+    <div class="table-options">
+      <span>
+        Lista Pracowników
+      </span>
+      <button class="btn btn-success" ng-click="workerOverviewCtrl.add('178', 'Adam', 'Kot', 'Pakowacz')">
+        Dodaj pracownika
+      </button>
+    </div>
 
-    <table st-table="workerOverviewCtrl.worker" class="table table-striped">
+    <table st-table="workerOverviewCtrl.displayed" st-safe-src="workerOverviewCtrl.worker" class="table table-striped">
 
       <thead>
         <tr>
@@ -36,7 +43,7 @@
       </thead>
 
       <tbody>
-        <tr ng-repeat="worker in workerOverviewCtrl.worker">
+        <tr ng-repeat="worker in workerOverviewCtrl.displayed">
           <td>{{worker.code}}</td>
           <td>{{worker.firstName}}</td>
           <td>{{worker.surname}}</td>
@@ -48,19 +55,19 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="" ng-click="getComponentsViewForOrder(order)">
+                  <a href="" ng-click="">
                     <i class="fa fa-bar-chart" aria-hidden="true"></i>
                     Wyświetl statystki
                   </a>
                 </li>
                 <li>
-                  <a href="" ng-click="editing=true">
+                  <a href="" ng-click="">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     Edytuj
                   </a>
                 </li>
                 <li>
-                  <a href="" data-target="#confirm-delete" ng-click="setOrderToDelete(order)" data-toggle="modal">
+                  <a href="" data-target="#confirm-delete" ng-click="workerOverviewCtrl.delete(worker.id)" data-toggle="modal">
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                     Usuń
                   </a>

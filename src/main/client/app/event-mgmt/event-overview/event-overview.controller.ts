@@ -3,13 +3,24 @@ import {EventService} from "../event.service";
 
 export class EventOverviewCtrl {
   events: Event[];
-  sample='sampmle';
+  workerCode: number;
+  displayed = [];
+  itemsByPage: number;
+  paginationSizes: any;
 
   constructor(private eventService: EventService) {
-    // this.events = eventService.getEvent();
+    this.events = eventService.getEvent();
+    this.itemsByPage = 5;
+    this.paginationSizes = [5, 10, 15, 20, 25];
+
   }
 
   delete(id: number): void {
+    alert("Usuniety z id = " + id);
     this.eventService.delete(id);
+  }
+
+  updatePagination(size: number): void {
+    this.itemsByPage = size;
   }
 }

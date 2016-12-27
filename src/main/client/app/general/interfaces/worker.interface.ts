@@ -1,5 +1,7 @@
 export interface Worker{
   id?:number;
-  title:string;
-  author:string;
+  code:number
+  firstName:string;
+  surname:string;
+  position:string;
 }
