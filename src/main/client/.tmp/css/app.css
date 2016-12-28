@@ -85,3 +85,15 @@
 .app .table-options > button {
   float: right;
 }
+.app .modal-header > span {
+  font-size: 20px;
+  float: left;
+}
+.app .modal-header > a {
+  color: black;
+  font-size: 16px;
+  float: right;
+}
+.app .modal-header > a:focus {
+  outline: none;
+}

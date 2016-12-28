@@ -1,7 +1,14 @@
-
 import {WorkerRestService} from "../general/rest-services/workerRestService.service";
 import {Worker} from "../general/interfaces/worker.interface";
+
 export class WorkerService {
+  //DO edycji pracownika
+  private user = {
+    firstName: "",
+    surname: "",
+    position: ""
+  };
+  //zamiast restowego api
   private worker: Worker[] = [
     {id: 1, code: 101, firstName: 'Adam', surname: 'Ugfsfd', position: "Pakowacz"},
     {id: 2, code: 102, firstName: 'Artur', surname: 'Ksdfsdfds', position: "Monter"},
@@ -19,15 +26,16 @@ export class WorkerService {
     {id: 14, code: 114, firstName: 'Tomasz', surname: 'Kus', position: "Pakowacz"},
     {id: 15, code: 115, firstName: 'Pali', surname: 'Woda', position: "Pakowacz"},
   ];
-  constructor(private workerRestService: WorkerRestService) {
+  constructor(private workerRestService: WorkerRestService, private $uibModal: any) {
 
   }
 
+  //tylko, jak nie ma restowegoapi
   getWorker(): Worker[] {
     return this.worker;
   }
 
-  save(worker: Worker): any {
+  save(worker: Worker): any { //TODO ja bym sprawdzał kod w bazie i brał +1 po prostu
     this.worker.push(worker);
     //this.workerRestService.save(worker);
   }
@@ -38,11 +46,60 @@ export class WorkerService {
   }
 
   findOne(id: number): any {
-    return this.workerRestService.getWorker(id);
+    //TODO zamiast this.worker[id-1] dajesz this.workerRestService.getWorker(id)
+    var worker = this.worker[id-1]; //-1, bo tablica obecnie
+    this.user = {
+      firstName: worker.firstName,
+      surname: worker.surname,
+      position: worker.position
+    };
+    //return this.workerRestService.getWorker(id);
   }
 
   findAll(): any {
     return this.workerRestService.getWorkers();
     //return this.books;
+  }
+
+  clearUser(): void {
+    this.user = {
+      firstName: "",
+      surname: "",
+      position: ""
+    }
+  }
+
+  openModal() {
+    var that = this;
+
+    let modalObject = {
+      animation: true,
+      controller: 'WorkerModalCtrl',
+      controllerAs: 'workerModalCtrl',
+      templateUrl: 'worker-mgmt/components-modal/worker-modal.tpl.html',
+      size: 'md',
+      resolve: {
+        user: that.user
+      }
+    };
+
+    var modalInstance = this.$uibModal.open(modalObject);
+
+    modalInstance.result.then(
+      //close
+      function (result) {
+        let newWorker = {
+          code: 234,  //TODO ja bym sprawdzał kod w bazie i brał +1 po prostu
+          firstName: result.firstName,
+          surname: result.surname,
+          position: result.position
+        };
+        that.save(<Worker>newWorker);
+      },
+      //dismiss
+      function (result) {
+
+      }
+    )
   }
 }

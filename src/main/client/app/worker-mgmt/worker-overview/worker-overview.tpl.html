@@ -5,7 +5,7 @@
       <span>
         Lista Pracowników
       </span>
-      <button class="btn btn-success" ng-click="workerOverviewCtrl.add('178', 'Adam', 'Kot', 'Pakowacz')">
+      <button class="btn btn-success" ng-click="workerOverviewCtrl.addUser()"> <!--ng-click="workerOverviewCtrl.add('178', 'Adam', 'Kot', 'Pakowacz')"-->
         Dodaj pracownika
       </button>
     </div>
@@ -61,8 +61,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" ng-click="">
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  <a href="" ng-click="workerOverviewCtrl.editUser(worker.id)" >
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
                     Edytuj
                   </a>
                 </li>

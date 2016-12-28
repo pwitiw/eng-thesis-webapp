@@ -8,7 +8,7 @@ export class WorkerOverviewCtrl {
 
   constructor(private workerService: WorkerService) {
     this.itemsByPage = 5;
-    this.worker = workerService.getWorker();
+    this.worker = workerService.getWorker(); //TODO dajesz potem workerService.getWorker().findAll()
     this.paginationSizes = [5, 10, 15, 20, 25];
   }
 
@@ -21,14 +21,13 @@ export class WorkerOverviewCtrl {
     this.itemsByPage = size;
   }
 
-  add(code: number, firstName: string, surname: string, position: string) {
-    let newWorker = {
-      code: code,
-      firstName: firstName,
-      surname: surname,
-      position: position
-    };
+  addUser(): void {
+    this.workerService.clearUser();
+    this.workerService.openModal();
+  }
 
-    this.workerService.save(<Worker>newWorker);
+  editUser(id: number): void {
+    this.workerService.findOne(id);
+    this.workerService.openModal();
   }
 }
