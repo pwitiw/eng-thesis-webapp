@@ -83,6 +83,7 @@
   font-size: 28px;
 }
 .app .table-options > button {
+  margin-left: 10px;
   float: right;
 }
 .app .modal-header > span {

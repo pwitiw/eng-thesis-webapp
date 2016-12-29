@@ -6,7 +6,7 @@ import {OrderService} from "./order.service";
 import {OrderRestService} from "../general/rest-services/orderRestService.service";
 import {OrderOverviewCtrl} from "./order-overview/order-overview.controller";
 import {addOrderOverviewStateDef} from "./order-overview/order-overview.state-def";
-import {ComponentsModalCtrl} from "./components-modal/components-modal.controller";
+import {OrderModalCtrl} from "./components-modal/order-modal.controller";
 
 
 let orderMgmtModule: IModule = angular.module('order-mgmt', [
@@ -16,7 +16,7 @@ let orderMgmtModule: IModule = angular.module('order-mgmt', [
     addOrderOverviewStateDef($stateProvider)
   })
   .controller('OrderOverviewCtrl', OrderOverviewCtrl)
-  .controller('ComponentsModalCtrl', ComponentsModalCtrl)
+  .controller('OrderModalCtrl', OrderModalCtrl)
   .service('orderService', OrderService)
   .service('orderRestService', OrderRestService);
 export default orderMgmtModule.name;

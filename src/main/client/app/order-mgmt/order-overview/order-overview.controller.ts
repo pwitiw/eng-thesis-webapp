@@ -5,9 +5,15 @@ import {ComponentsModalService} from "../components-modal/components-modal.servi
 
 export class OrderOverviewCtrl {
   orders: Order[];
+  displayed = [];
+  itemsByPage: number;
+  paginationSizes: any;
+
 
   constructor(private orderService: OrderService) {
     this.orders = orderService.getOrders();
+    this.itemsByPage = 5;
+    this.paginationSizes = [5, 10, 15, 20, 25];
   }
 
   delete(id: number): void {
@@ -15,6 +21,20 @@ export class OrderOverviewCtrl {
   }
 
   synchronize():void {
+    this.orderService.openModal();
+  }
+
+  updatePagination(size: number): void {
+    this.itemsByPage = size;
+  }
+
+  addOrder(): void {
+    this.orderService.clearOrder();
+    this.orderService.openModal();
+  }
+
+  editOrder(id: number): void {
+    this.orderService.findOne(id);
     this.orderService.openModal();
   }
 }

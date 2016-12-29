@@ -1,0 +1,59 @@
+<div class="modal-header">
+  <span>Dodaj nowe zamówienie</span>
+  <a href="" ng-click="orderModalCtrl.cancel()">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </a>
+</div>
+<div class="modal-body">
+  <form name="newOrderForm" novalidate>
+    <!-- ORDER -->
+    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.orderId.$invalid && !newOrderForm.orderId.$pristine }">
+      <label>Zamówienie</label>
+      <input type="text" name="orderId" class="form-control" ng-model="orderModalCtrl.order.orderId" required>
+      <p ng-show="newOrderForm.orderId.$invalid && !newOrderForm.orderId.$pristine" class="help-block">Zamówienie jest wymagane.</p>
+    </div>
+
+    <!-- CLIENT -->
+    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine }">
+      <label>Nazwa klienta</label>
+      <input type="text" name="customer" class="form-control" ng-model="orderModalCtrl.order.customer" required>
+      <p ng-show="newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine" class="help-block">Nazwa klienta jest wymagana.</p>
+    </div>
+
+    <!-- COLOR -->
+    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.color.$invalid && !newOrderForm.color.$pristine }">
+      <label>Kolor</label>
+      <input type="text" name="color" class="form-control" ng-model="orderModalCtrl.order.color" required>
+      <p ng-show="newOrderForm.color.$invalid && !newOrderForm.color.$pristine" class="help-block">Kolor jest wymagany.</p>
+    </div>
+
+    <!-- POSITION -->
+    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.position.$invalid && !newOrderForm.position.$pristine }">
+      <label>Etap produkcji</label>
+      <input type="text" name="position" class="form-control" ng-model="orderModalCtrl.order.position" required>
+      <p ng-show="newOrderForm.position.$invalid && !newOrderForm.position.$pristine" class="help-block">Etap produkcji jest wymagany.</p>
+    </div>
+
+    <!-- TYPE -->
+    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.type.$invalid && !newOrderForm.type.$pristine }">
+      <label>Rodzaj</label>
+      <select name="type" class="form-control" ng-model="orderModalCtrl.order.type" required>
+        <option value="express">express</option>
+        <option value="normalny">normalny</option>
+      </select>
+      <p ng-show="newOrderForm.type.$invalid && !newOrderForm.type.$pristine" class="help-block">Rodzaj jest wymagany.</p>
+    </div>
+
+    <!-- DATE -->
+    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.date.$invalid && !newOrderForm.date.$pristine }">
+      <label>Data</label>
+      <input type="text" name="date" class="form-control" ng-model="orderModalCtrl.order.date" required>
+      <p ng-show="newOrderForm.date.$invalid && !newOrderForm.date.$pristine" class="help-block">Data jest wymagana.</p>
+    </div>
+
+  </form>
+</div>
+</div>
+<div class="modal-footer">
+  <button type="submit" class="btn btn-primary" ng-click="orderModalCtrl.ok(orderModalCtrl.order.orderId, orderModalCtrl.order.customer, orderModalCtrl.order.color, orderModalCtrl.order.position, orderModalCtrl.order.type, orderModalCtrl.order.date)" ng-disabled="newOrderForm.$invalid">Dodaj</button>
+</div>

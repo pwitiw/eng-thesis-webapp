@@ -1,15 +1,141 @@
 <section class="order-overview">
-  <!--Górna sekcja strony-->
+
+  <div class="container">
+    <div class="table-options">
+      <span>
+        Lista Zamówień
+      </span>
+      <button class="btn btn-success" ng-click="orderOverviewCtrl.addOrder()">
+        Dodaj zamówienie
+      </button>
+      <button class="btn btn-success" ng-click="orderOverviewCtrl.addOrder()">
+        Synchronizuj zamówienia
+      </button>
+    </div>
+
+    <table st-table="orderOverviewCtrl.displayed" st-safe-src="orderOverviewCtrl.orders" class="table table-striped">
+
+      <thead>
+      <tr>
+        <td colspan="2">
+          <div class="text-left table-length">
+            <span>Pokaż</span>
+            <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="orderOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in orderOverviewCtrl.paginationSizes" ></select>
+            <span>pozycji</span>
+          </div>
+        </td>
+        <td colspan="6">
+          <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
+        </td>
+      </tr>
+      <tr>
+        <th st-sort="id">
+          Nr
+        </th>
+        <th st-sort="orderId">
+          Zamówienie
+        </th>
+        <th st-sort="customer">
+          Nazwa klienta
+        </th>
+        <th st-sort="color">
+          Kolor
+        </th>
+        <th st-sort="position">
+          Etap produkcji
+        </th>
+        <th st-sort="type">
+          Rodzaj
+        </th>
+        <th st-sort="date">
+          Data nadejścia
+        </th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr ng-repeat="order in orderOverviewCtrl.displayed">
+        <td>{{order.id}}</td>
+        <td>{{order.orderId}}</td>
+        <td>{{order.customer}}</td>
+        <td>{{order.color}}</td>
+        <td>{{order.position}}</td>
+        <td>{{order.type}}</td>
+        <td>{{order.date}}</td>
+        <td>
+          <div class="dropdown btn-group inline" ng-hide="editing">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="" ng-click="orderOverviewCtrl.changeType(order.id)" >
+                  <i class="fa fa-exchange" aria-hidden="true" ></i>
+                  Zmień status
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="orderOverviewCtrl.editOrder(order.id)" >
+                  <i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
+                  Edytuj
+                </a>
+              </li>
+              <li>
+                <a href="" data-target="#confirm-delete" ng-click="orderOverviewCtrl.delete(order.id)" data-toggle="modal">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  Usuń
+                </a>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <td colspan="8" class="text-right">
+          <div st-pagination="" st-items-by-page="orderOverviewCtrl.itemsByPage" st-template="../../table/pagination.html"></div>
+        </td>
+      </tr>
+      </tfoot>
+
+
+    </table>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--
+
+
+  &lt;!&ndash;Górna sekcja strony&ndash;&gt;
   <div class="container">
     <div class="row">
-      <!--Filtracja po frazie-->
+      &lt;!&ndash;Filtracja po frazie&ndash;&gt;
       <div class="form-group col-sm-4">
         <div class="input-group">
           <div class="input-group-addon"><i class="fa fa-search"></i></div>
           <input type="text" class="form-control " placeholder="Szukaj" data-ng-model="orderOverviewCtrl.searchFilter">
         </div>
       </div>
-      <!--Przyciski Dodaj zamówienie/ synchronizuj-->
+      &lt;!&ndash;Przyciski Dodaj zamówienie/ synchronizuj&ndash;&gt;
       <div class="pull-right col-sm-2">
         <button data-ng-hide="true" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWorker">
           Dodaj Zamówienie
@@ -20,11 +146,11 @@
       </div>
     </div>
   </div>
-  <!--Sekcja z tabela-->
+  &lt;!&ndash;Sekcja z tabela&ndash;&gt;
   <div class="container">
     <h3 class="panel-heading">Lista Zamówień</h3>
     <table st-table="orderOverviewCtrl.orders" class="table table-striped">
-      <!-- HEAD OF TABLE-->
+      &lt;!&ndash; HEAD OF TABLE&ndash;&gt;
       <thead>
       <tr>
         <th st-sort="id">Nr</th>
@@ -37,7 +163,7 @@
         <th></th>
       </tr>
       </thead>
-      <!-- BODY OF TABLE-->
+      &lt;!&ndash; BODY OF TABLE&ndash;&gt;
       <tbody>
       <tr ng-repeat="order in orderOverviewCtrl.orders">
         <td>{{order.id}}</td>
@@ -190,4 +316,6 @@
       </div>
     </div>
   </div>
+  -->
+
 </section>

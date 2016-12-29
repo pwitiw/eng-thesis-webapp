@@ -3,7 +3,7 @@ import {Worker} from "../general/interfaces/worker.interface";
 
 export class WorkerService {
   //DO edycji pracownika
-  private user = {
+  private user: any = {
     firstName: "",
     surname: "",
     position: ""

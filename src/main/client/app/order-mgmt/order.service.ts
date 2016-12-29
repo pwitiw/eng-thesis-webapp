@@ -2,6 +2,15 @@ import {OrderRestService} from "../general/rest-services/orderRestService.servic
 import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
+  private order: any = {
+    orderId: '',
+    customer: '',
+    color: '',
+    position: '',
+    type: '',
+    date: ''
+  };
+
   private orders: Order[] = [
     {
       id: 1,
@@ -9,7 +18,7 @@ export class OrderService {
       customer: 'Bootstrap',
       color: 'RAL2010',
       position: 'FREZERNIA',
-      type: 'EXPRESS',
+      type: 'express',
       date: '20 - 04 - 2017'
     },
     {
@@ -18,7 +27,7 @@ export class OrderService {
       customer: 'Angular',
       color: 'RAL2610',
       position: 'FREZERNIA',
-      type: 'NORMALNY',
+      type: 'normalny',
       date: '20 - 04 - 2017'
     },
     {
@@ -27,7 +36,7 @@ export class OrderService {
       customer: 'CHmiel',
       color: 'RAL2010',
       position: 'FREZERNIA',
-      type: 'EXPRESS',
+      type: 'express',
       date: '20 - 04 - 2017'
     },
     {
@@ -36,7 +45,7 @@ export class OrderService {
       customer: 'Angular',
       color: 'RAL2310',
       position: 'FREZERNIA',
-      type: 'NORMALNY',
+      type: 'normalny',
       date: '20 - 04 - 2017'
     },
     {
@@ -45,7 +54,7 @@ export class OrderService {
       customer: 'Angular',
       color: 'RAL2010',
       position: 'FREZERNIA',
-      type: 'NORMALNY',
+      type: 'normalny',
       date: '20 - 04 - 2017'
     },
     {
@@ -54,7 +63,7 @@ export class OrderService {
       customer: 'CHmiel',
       color: 'RAL2010',
       position: 'FREZERNIA',
-      type: 'NORMALNY',
+      type: 'normalny',
       date: '20 - 04 - 2017'
     }
 
@@ -70,15 +79,26 @@ export class OrderService {
   }
 
   save(order: Order): any {
-    this.orderRestService.save(order);
+    this.orders.push(order);
+    //this.orderRestService.save(order);
   }
 
   delete(id: number): any {
-    this.orderRestService.delete(id);
+    this.orders.pop();
+    //this.orderRestService.delete(id);
   }
 
   findOne(id: number): any {
-    return this.orderRestService.getOrder(id);
+    var order = this.orders[id-1]; //-1, bo tablica obecnie
+    this.order = {
+      orderId: order.orderId,
+      customer: order.customer,
+      color: order.color,
+      position: order.position,
+      type: order.type,
+      date: order.date
+    };
+    //return this.orderRestService.getOrder(id);
   }
 
   findAll(): any {
@@ -86,33 +106,52 @@ export class OrderService {
     //return this.books;
   }
 
+  clearOrder(): void {
+    this.order = {
+      orderId: '',
+      customer: '',
+      color: '',
+      position: '',
+      type: '',
+      date: ''
+    };
+  }
 
   openModal() {
+    var that = this;
+
     let modalObject = {
       animation: true,
-      controller: 'ComponentsModalCtrl',
-      controllerAs: 'componentsModalCtrl',
-      templateUrl: 'order-mgmt/components-modal/components-modal.html',
+      controller: 'OrderModalCtrl',
+      controllerAs: 'orderModalCtrl',
+      templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
       size: 'md',
       resolve: {
-        // headerText: () => {
-        //   return header;
-        // },
-        // columnDefs: () => {
-        //   return columnDefs;
-        // },
-        // data: () => {
-        //   return data;
-        // },
-        // multiselect: () => {
-        //   return multiselect || false;
-        // },
-        // gridMenu: () => {
-        //   return gridMenu == null ? true : gridMenu;
-        // }
+        order: that.order
       }
     };
-    return this.$uibModal.open(modalObject);
+
+    var modalInstance = this.$uibModal.open(modalObject);
+
+    modalInstance.result.then(
+      //close
+      function (result) {
+        let newOrder = {
+          id: 78,
+          orderId: result.orderId,
+          customer: result.customer,
+          color: result.color,
+          position: result.position,
+          type: result.type,
+          date: result.date
+        };
+        that.save(<Order>newOrder);
+      },
+      //dismiss
+      function (result) {
+
+      }
+    )
   }
 
 
