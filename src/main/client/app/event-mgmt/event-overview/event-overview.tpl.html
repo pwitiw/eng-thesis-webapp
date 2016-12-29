@@ -18,11 +18,14 @@
             <span>pozycji</span>
           </div>
         </td>
-        <td colspan="4">
+        <td colspan="5">
           <input  type="text" class="pull-right form-control table-filter" placeholder="Szukaj" ng-model="eventOverviewCtrl.workerCode" st-search="worker.code">
         </td>
       </tr>
       <tr>
+        <th st-sort="id">
+          Id
+        </th>
         <th st-sort="orderNumber">
           Numer zamówienia
         </th>
@@ -44,6 +47,7 @@
 
       <tbody>
       <tr ng-repeat="event in eventOverviewCtrl.displayed">
+        <td>{{event.id}}</td>
         <td>{{event.orderNumber}}</td>
         <td>{{event.orderStage}}</td>
         <td>

@@ -21,11 +21,14 @@
               <span>pozycji</span>
             </div>
           </td>
-          <td colspan="3">
+          <td colspan="4">
             <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
           </td>
         </tr>
         <tr>
+          <th st-sort="id">
+            Id
+          </th>
           <th st-sort="code">
              Kod pracownika
           </th>
@@ -44,6 +47,7 @@
 
       <tbody>
         <tr ng-repeat="worker in workerOverviewCtrl.displayed">
+          <td>{{worker.id}}</td>
           <td>{{worker.code}}</td>
           <td>{{worker.firstName}}</td>
           <td>{{worker.surname}}</td>

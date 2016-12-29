@@ -50,10 +50,10 @@
   vertical-align: middle !important;
 }
 .app table th:first-child {
-  width: 130px;
+  width: 50px;
 }
 .app table th:last-child {
-  width: 50px;
+  width: 55px;
 }
 .app .st-sort-ascent:before {
   content: '\25B2';
