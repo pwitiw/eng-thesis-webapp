@@ -1,11 +1,6 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
-import com.sun.istack.internal.Nullable;
-import org.hibernate.annotations.LazyToOne;
-import org.hibernate.annotations.LazyToOneOption;
-import org.jboss.logging.annotations.Pos;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -39,7 +34,7 @@ public class Worker implements Serializable {
 
     @NotNull
     private short active;
-    @Nullable
+
     @OneToMany(mappedBy = "worker", fetch = FetchType.LAZY)
     private List<Event> events;
 

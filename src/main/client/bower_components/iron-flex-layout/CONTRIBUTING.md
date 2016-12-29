@@ -22,7 +22,7 @@ Polymer Elements are built in the open, and the Polymer authors eagerly encourag
 
  1. **Who will use the feature?** _“As someone filling out a form…”_
  2. **When will they use the feature?** _“When I enter an invalid value…”_
- 3. **What is the user’s goal?** _“I want to be visually notified that the value needs to be corrected…”_
+ 3. **What is the person’s goal?** _“I want to be visually notified that the value needs to be corrected…”_
 
 **If you are filing an issue to report a bug**, please provide:
 

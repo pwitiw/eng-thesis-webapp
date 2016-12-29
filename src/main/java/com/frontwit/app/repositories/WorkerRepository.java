@@ -16,7 +16,7 @@ public interface WorkerRepository extends JpaRepository<Worker, Long> {
     @Query
     Worker findByNameAndSurname(String name, String surname);
 
-    @Query
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
     Worker findById(long id);
 
     @Query

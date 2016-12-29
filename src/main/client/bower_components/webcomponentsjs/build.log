@@ -411,7 +411,7 @@ unzip-response: 1.0.0
 update-notifier: 0.6.3
 url-parse-lax: 1.0.0
 urijs: 1.16.1
-user-home: 1.1.1
+person-home: 1.1.1
 utf8: 2.1.0
 util: 0.10.3
 util-extend: 1.0.3

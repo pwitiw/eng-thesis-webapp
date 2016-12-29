@@ -4,6 +4,7 @@ import com.frontwit.app.dto.ComponentDto;
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.services.ComponentService;
 import com.frontwit.app.services.OrderService;
+import com.frontwit.app.utils.FrontWitRestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * Created by Patryk on 2015-10-28.
  */
-@RestController
+@FrontWitRestController
 public class OrderController {
 
     @Autowired

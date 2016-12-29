@@ -2,8 +2,6 @@ package com.frontwit.app.entities;
 
 
 import com.frontwit.app.utils.Config;
-import com.sun.istack.internal.Nullable;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -42,7 +40,6 @@ public class Order implements Serializable {
     @JoinColumn(name="CUSTOMER_ID")
     private Customer customer;
 
-    @Nullable
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
     private List<Component> components;
 

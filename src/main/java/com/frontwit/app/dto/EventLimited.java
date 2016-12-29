@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Patryk on 18.12.2016.
  */
 
-class EventLimited implements Serializable {
+public class EventLimited implements Serializable {
 
     private String orderName;
     private Timestamp date;
