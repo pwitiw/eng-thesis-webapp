@@ -13,6 +13,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableJpaRepositories("com.frontwit.app.repositories")
 @EntityScan("com.frontwit.app.entities")
-public class PersistenceConfiguration extends JpaRepositoryConfigExtension {
+public class FrontWitPersistenceConfiguration extends JpaRepositoryConfigExtension {
 
 }

@@ -2,10 +2,12 @@ package com.frontwit.app.dto;
 
 import com.frontwit.app.entities.Worker;
 
+import java.io.Serializable;
+
 /**
  * Created by Patryk on 17.12.2016.
  */
-public class WorkerDto {
+public class WorkerDto implements Serializable {
 
     private long id;
     private String name;
