@@ -1986,7 +1986,7 @@ _configure: function () {
 this._configureAnnotationReferences();
 this._configureInstanceProperties();
 this._aboveConfig = this.mixin({}, this._config);
-var config = {};
+var org.webapp.config = {};
 for (var i = 0; i < this.behaviors.length; i++) {
 this._configureProperties(this.behaviors[i].properties, config);
 }
@@ -2005,7 +2005,7 @@ delete this[i];
 }
 }
 },
-_configureProperties: function (properties, config) {
+_configureProperties: function (properties, org.webapp.config) {
 for (var i in properties) {
 var c = properties[i];
 if (c.value !== undefined) {
@@ -2017,7 +2017,7 @@ config[i] = value;
 }
 }
 },
-_distributeConfig: function (config) {
+_distributeConfig: function (org.webapp.config) {
 var fx$ = this._propertyEffects;
 if (fx$) {
 for (var p in config) {
@@ -2048,7 +2048,7 @@ this._executeStaticEffects();
 this._applyConfig(this._config, this._aboveConfig);
 this._flushHandlers();
 },
-_applyConfig: function (config, aboveConfig) {
+_applyConfig: function (org.webapp.config, aboveConfig) {
 for (var n in config) {
 if (this[n] === undefined) {
 this.__setProperty(n, config[n], n in aboveConfig);
@@ -5291,7 +5291,7 @@ return selector;
 _configureInstanceProperties: function () {
 },
 _prepConfigure: function () {
-var config = {};
+var org.webapp.config = {};
 for (var prop in this._propertyEffects) {
 config[prop] = this[prop];
 }

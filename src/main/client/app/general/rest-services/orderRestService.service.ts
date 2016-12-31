@@ -6,11 +6,11 @@ export class OrderRestService {
   private restServiceUrl: string;
 
   constructor(private $http: IHttpService) {
-    this.restServiceUrl = 'http://127.0.0.1:4567';
+    this.restServiceUrl = 'http://127.0.0.1:8080';
   }
 
   getOrders(): IPromise<any> {
-    return this.$http.get(this.restServiceUrl + '/orders/')
+    return this.$http.get(this.restServiceUrl + '/orders')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;
       })

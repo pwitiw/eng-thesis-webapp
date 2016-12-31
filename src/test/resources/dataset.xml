@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+
+    <!-- CUSTOMER DATA -->
+    <customers id="1" name="Meblex" active="1"/>
+    <!--<customer id="2" name="Maks-meble" active="1"/>-->
+    <!--<customer id="3" name="Fronter" active="1"/>-->
+
+
+    <!-- POSITION DATA -->
+    <positions id="-1" name="WSTRZYMANE"/>
+    <positions id="1" name="FREZERNIA"/>
+    <positions id="2" name="CZYSssZCZENIE"/>
+    <positions id="3" name="PODKLADOWANIE"/>
+    <positions id="4" name="SZLIFOWANIE"/>
+    <positions id="5" name="LAKIEROWANIE"/>
+    <positions id="6" name="POLEROWANIE"/>
+    <position id="7" name="PAKOWANIE"/>
+
+    <!-- ORDER DATA -->
+    <orders id="1" name="001 TW" color="RAL1041"  express="0" date="2016-12-11 19:47:39" last_update="2016-12-11 19:47:39" parent_id="" active="1"/>
+    <!--<orders id="2" name="002 TW" color="RAL1042" customer_id="1" position_id="1"  express="0" date="2016-12-11 19:47:39" last_update="2016-12-11 19:47:39" active="0"/>-->
+    <!--<orders id="3" name="003 TW" color="RAL1043" customer_id="2" position_id="3"  express="1" date="2016-12-11 19:47:39" last_update="2016-12-11 19:47:39" active="1"/>-->
+    <!--<orders id="4" name="004 TW" color="RAL1044" customer_id="3" position_id="4"  express="0" date="2016-12-11 19:47:39" last_update="2016-12-11 19:47:39" active="1"/>-->
+    <!--<orders id="5" name="005 TW" color="RAL1043" customer_id="3" position_id="6"  express="1" date="2016-12-11 19:47:39" last_update="2016-12-11 19:47:39" active="1"/>-->
+
+</dataset>

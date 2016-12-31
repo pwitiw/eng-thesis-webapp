@@ -8,7 +8,7 @@
 module.exports = function (config) {
 
   //merge libraries configured by bower, application sources, and specs
-  var pathsConf = require('./gulp/lib/config-factory.js')(require('./config.json'));
+  var pathsConf = require('./gulp/lib/org.webapp.config-factory.js')(require('./org.webapp.config.json'));
 
   var karmaDefaultConfig = {
     // enable / disable watching file and executing tests whenever any file changes
@@ -66,7 +66,7 @@ module.exports = function (config) {
       // Path to your SystemJS configuration file
       configFile: 'system.config.js',
 
-      // SystemJS configuration specifically for tests, added after your config file.
+      // SystemJS configuration specifically for tests, added after your org.webapp.config file.
       // Good for adding test libraries and mock modules
       config: {
         paths: {

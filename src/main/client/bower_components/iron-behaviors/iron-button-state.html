@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     properties: {
 
       /**
-       * If true, the user is currently holding down the button.
+       * If true, the person is currently holding down the button.
        */
       pressed: {
         type: Boolean,
@@ -116,7 +116,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this._setReceivedFocusFromKeyboard(!this.pointerDown && focused);
     },
 
-    // to emulate native checkbox, (de-)activations from a user interaction fire
+    // to emulate native checkbox, (de-)activations from a person interaction fire
     // 'change' events
     _userActivate: function(active) {
       if (this.active !== active) {
