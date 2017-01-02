@@ -5,6 +5,7 @@ import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import java.util.List;
  * Created by Patryk on 2015-11-02.
  */
 @Controller
+@CrossOrigin(origins = "http://localhost:9000")
 public class WorkerController {
 
     @Autowired
@@ -29,9 +31,10 @@ public class WorkerController {
     }
 
     @RequestMapping(value = "/workers/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Worker> getWorkerForId(@PathVariable("id") long id) {
+    public ResponseEntity<WorkerDto> getWorkerForId(@PathVariable("id") long id) {
         Worker worker = workerService.getWorker(id);
-        return new ResponseEntity<Worker>(worker, HttpStatus.OK);
+        WorkerDto workerDto = new WorkerDto(worker);
+        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/workers/add-worker", method = RequestMethod.POST)

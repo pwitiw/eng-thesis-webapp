@@ -26,6 +26,7 @@ import java.util.List;
  * Created by Patryk on 2015-10-28.
  */
 @FrontWitRestController
+@CrossOrigin(origins = "http://localhost:9000")
 public class OrderController {
 
     @Autowired

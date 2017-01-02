@@ -16,6 +16,7 @@ import java.util.List;
  * Created by Patryk on 2016-01-05.
  */
 @Controller
+@CrossOrigin(origins = "http://localhost:9000")
 public class EventController {
 
     @Autowired
