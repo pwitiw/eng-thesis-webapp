@@ -17,7 +17,8 @@ public class OrderValidator implements Validator {
 
     @Override
     public void validate(Object o, Errors errors) {
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Name is required.");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surname", "error.name", "Name is required.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Order name is required.");
+        ValidationUtils.rejectIfEmpty(errors, "customer", "error.customer", "Customer is required.");
+        ValidationUtils.rejectIfEmpty(errors, "components", "error.name", "At least one component is required.");
     }
 }

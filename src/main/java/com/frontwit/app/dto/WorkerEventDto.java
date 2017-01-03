@@ -28,6 +28,8 @@ public class WorkerEventDto implements Serializable {
         this.events = new ArrayList<>(EventLimited.convertEvents(events));
     }
 
+    public WorkerEventDto(){}
+
     public String getName() {
         return name;
     }

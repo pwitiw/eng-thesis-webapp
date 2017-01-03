@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Transactional
 public class OrderService {
 
     @Autowired
@@ -77,8 +76,9 @@ public class OrderService {
         return actualTime;
     }
 
-    public List<Order> getOrderForStage(Integer position) {
-        return orderRepositoryImpl.getOrderForPositionId(position);
+    @Transactional
+    public List<OrderDto> getOrdersForPositionId(Integer posId) {
+        return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionId(posId));
     }
 
     private List<OrderDto> getDtosForOrders(List<Order> orders) {

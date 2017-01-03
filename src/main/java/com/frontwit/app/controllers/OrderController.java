@@ -42,7 +42,7 @@ public class OrderController {
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
     public ResponseEntity<List<OrderDto>> getOrders() throws IOException {
-        //todo tutaj trzeba ogarnac synchronizacje to bylo syncService.synchronize();
+        //todo tutaj trzeba ogarnac synchronizacje, to bylo syncService.synchronize();
         List<OrderDto> orders = orderService.getAllOrders();
         return new ResponseEntity<List<OrderDto>>(orders, HttpStatus.OK);
     }
@@ -77,6 +77,13 @@ public class OrderController {
     public ResponseEntity<?> getComponentsForOrderId(@PathVariable("id") Long id) {
         List<ComponentDto> components= componentService.getComponentsForOrderId(id);
         return new ResponseEntity(components, HttpStatus.OK);
+    }
+
+    //FOR MOBILE DEVICES
+    @RequestMapping(value = "/orders/position/{id}", method = RequestMethod.GET)
+    public ResponseEntity<?> getOrdersForPositionId(@PathVariable("id") Integer id) {
+        List<OrderDto> orders= orderService.getOrdersForPositionId(id);
+        return new ResponseEntity(orders, HttpStatus.OK);
     }
 
     @ExceptionHandler(IOException.class)

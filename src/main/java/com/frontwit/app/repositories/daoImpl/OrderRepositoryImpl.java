@@ -36,7 +36,7 @@ public class OrderRepositoryImpl {
         orderRepository.delete(order);
     }
 
-    public List<Order> getOrderForPositionId(Integer position) {
+    public List<Order> getOrdersForPositionId(Integer position) {
         return orderRepository.findByPositionId(position);
     }
 

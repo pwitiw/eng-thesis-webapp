@@ -3,11 +3,16 @@ package com.frontwit.app.controllers;
 import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Worker;
-import com.frontwit.app.services.EventService;
+import com.frontwit.app.exceptions.ResourcesBadFormatException;
+import com.frontwit.app.exceptions.ResourcesDuplicationException;
+import com.frontwit.app.exceptions.ResourcesNotFoundException;
+import com.frontwit.app.validators.WorkerValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.frontwit.app.services.WorkerService;
 
@@ -22,45 +27,50 @@ public class WorkerController {
     @Autowired
     WorkerService workerService;
 
+    @Autowired
+    WorkerValidator workerValidator;
+
     @RequestMapping(value = "/workers", method = RequestMethod.GET)
-    public ResponseEntity<List<WorkerDto>> getActiveWorkers() {
+    public ResponseEntity<?> getActiveWorkers() {
         List<WorkerDto> workerDtos = workerService.getActiveWorkers();
         return new ResponseEntity<List<WorkerDto>>(workerDtos, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/workers/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Worker> getWorkerForId(@PathVariable("id") long id) {
-        Worker worker = workerService.getWorker(id);
-        return new ResponseEntity<Worker>(worker, HttpStatus.OK);
+    public ResponseEntity<?> getWorkerForId(@PathVariable("id") long id) throws ResourcesNotFoundException {
+        WorkerDto workerDto = workerService.getWorkerForId(id);
+        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/workers/add-worker", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
-    public void addWorker(@RequestBody Worker newWorker) {
+    @RequestMapping(value = "/workers/add-worker", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<?> addWorker(@RequestBody WorkerDto workerDto, BindingResult result) throws ResourcesBadFormatException, ResourcesDuplicationException {
 
-     /*   workerValidator.validate(newWorker, result);
-
+        workerValidator.validate(workerDto, result);
         if (result.hasErrors())
-            return "/workers/new";
-
-        status.setComplete();*/
-        workerService.add(newWorker);
+            throw new ResourcesBadFormatException();
+        workerService.addWorker(workerDto);
+        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "workers/{id}/delete-worker", method = RequestMethod.POST)
+    @RequestMapping(value = "workers/delete-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteWorkerForId(@PathVariable("id") long id) {
-        workerService.deleteWorker(id);
+    public ResponseEntity<?> deleteWorkerForId(@RequestBody WorkerDto workerDto) throws ResourcesNotFoundException {
+        workerService.deleteWorker(workerDto);
+        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
     @RequestMapping(value = "workers/update-worker", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public void editWorker(@RequestBody Worker worker) {
-        workerService.confirmChangesIfExists(worker);
+    public ResponseEntity<?> editWorker(@RequestBody WorkerDto workerDto, BindingResult result) throws ResourcesNotFoundException, ResourcesBadFormatException {
+        workerValidator.validate(workerDto, result);
+        if (result.hasErrors())
+            throw new ResourcesBadFormatException();
+        workerService.updateWorker(workerDto);
+        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
     @RequestMapping(value = "workers/{id}/events", method = RequestMethod.GET)
-    public ResponseEntity<WorkerEventDto> getEventsForWorkerId(@PathVariable("id") long id) {
+    public ResponseEntity<?> getEventsForWorkerId(@PathVariable("id") long id) {
         WorkerEventDto workerEventDto = workerService.getEventsForWorker(id);
         return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
     }

@@ -1,6 +1,8 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
+import javafx.beans.DefaultProperty;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -33,7 +35,7 @@ public class Worker implements Serializable {
     private short code;
 
     @NotNull
-    private short active;
+    private short active = 1;
 
     @OneToMany(mappedBy = "worker", fetch = FetchType.LAZY)
     private List<Event> events;
@@ -97,5 +99,32 @@ public class Worker implements Serializable {
     @Override
     public String toString() {
         return name + " " + surname;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Worker worker = (Worker) o;
+
+        if (id != worker.id) return false;
+        if (code != worker.code) return false;
+        if (active != worker.active) return false;
+        if (name != null ? !name.equals(worker.name) : worker.name != null) return false;
+        if (surname != null ? !surname.equals(worker.surname) : worker.surname != null) return false;
+        return position != null ? position.equals(worker.position) : worker.position == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        result = 31 * result + (position != null ? position.hashCode() : 0);
+        result = 31 * result + (int) code;
+        result = 31 * result + (int) active;
+        return result;
     }
 }

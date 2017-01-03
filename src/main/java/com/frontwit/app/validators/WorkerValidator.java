@@ -1,34 +1,40 @@
 package com.frontwit.app.validators;
 
-import com.frontwit.app.entities.Worker;
-import org.springframework.stereotype.Component;
+import com.frontwit.app.dto.WorkerDto;
+import com.frontwit.app.services.WorkerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import com.frontwit.app.repositories.WorkerRepository;
 
 /**
  * Created by Patryk on 2015-11-23.
  */
-@Component
+@Service
 public class WorkerValidator implements Validator {
 
-    WorkerRepository workerRepository;
+
+    WorkerService workerService;
 
     @Override
     public boolean supports(Class c) {
-        return Worker.class.equals(c);
+        return WorkerDto.class.equals(c);
     }
 
     @Override
     public void validate(Object target, Errors errors) {
-        Worker worker = (Worker) target;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Name is required.");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surname", "error.name", "Surname is required.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Imie jest wymagana.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surname", "error.surname", "Nazwisko jest wymagane.");
+        if (((WorkerDto) target).getCode() < 100 || ((WorkerDto) target).getCode() > 999)
+            errors.rejectValue("code", "incorrectCode", new Object[]{"'code'"}, "Kod powinien byc 3-cyfrowy.");
+ //       if (workerService.workerExistsForCode(((WorkerDto) target).getCode()))
+   //         errors.rejectValue("code", "duplicateCode", new Object[]{"'code'"}, "Pracownik o z danym kodem już istnieje.");
+    }
 
-        if(worker.getId() <100 || worker.getId() >999)
-            errors.rejectValue("id", "incorrectValue", new Object[]{"'id'"}, "Id included in set 100-999.");
-
+    @Autowired
+    public void setWorkerService(WorkerService workerService) {
+        this.workerService = workerService;
     }
 }

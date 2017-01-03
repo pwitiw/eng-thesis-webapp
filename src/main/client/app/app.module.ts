@@ -4,8 +4,6 @@ import * as angular from 'angular';
 import '../bower_components/angular-smart-table/dist/smart-table.min.js';
 import 'angular-ui-router';
 import 'templates';
-//import 'angular-translate';
-import 'templates';
 import 'angular-ui-bootstrap';
 
 import ILocationProvider = angular.ILocationProvider;
@@ -16,9 +14,12 @@ import orderMgmtModuleName from './order-mgmt/order-mgmt.module'
 import workerMgmtModuleName from './worker-mgmt/worker-mgmt.module'
 import eventMgmtModuleName from './event-mgmt/event-mgmt.module'
 import mainPageModuleName from './main-page/main-page.module'
+import loginPageModuleName from './login-page/login-page.module'
+
 import any = jasmine.any;
 
 angular.module('app', [
+  loginPageModuleName,
   mainPageModuleName,
   bookMgmtModuleName,
   orderMgmtModuleName,

@@ -21,41 +21,16 @@ public class WorkerRepositoryImpl {
     public Worker getWorkerForId(long id) {
         return workerRepository.findById(id);
     }
-//    @Transactional
-//    public Worker getWorkerForId(long id) {
-//        Worker workerEntity = workerRepository.findById(id);
-//        workerEntity.getEvents().size();
-//
-//
-//        return workerEntity;
-//    }
-
-    public void deleteWorkerForCode(long id) {
-
-        Worker worker = workerRepository.findById(id);
-        workerRepository.delete(worker);
-    }
 
     public List<Worker> getActiveWorkers() {
         return workerRepository.findByActive((short) 1);
     }
 
-    public List<Worker> getAllWorkers() {
-        return workerRepository.findAll();
-    }
-
-    public void setInactiveWorkerForCode(long id) {
-
-        Worker worker = workerRepository.findById(id);
-        worker.setActive((short) 0);
-        workerRepository.save(worker);
-    }
-
     public void saveWorker(Worker worker) {
         workerRepository.save(worker);
     }
-//
-//    public List<Event> getEntitiesForWorker(long id){
-//        return workerRepository.findEntityListforWorkerId(id);
-//    }
+
+    public Worker getWorkerForCode(short code){
+        return workerRepository.findByCode(code);
+    }
 }

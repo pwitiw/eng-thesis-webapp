@@ -25,6 +25,25 @@
   box-shadow: 3px 3px 3px #888888;
   margin-top: 10px;
 }
+.main-page h3 {
+  margin-top: 10px;
+}
+.main-page .home-page-text {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 400%;
+  text-shadow: 1px 1px 1px #1a2f99;
+}
+.main-page .home-page-buttons {
+  text-align: center ;
+}
+.main-page .table td {
+  text-align: center;
+}
+.main-page .main-btn {
+  box-shadow: 3px 3px 3px #888888;
+  margin-top: 10px;
+}
 .app form input.ng-invalid.ng-touched {
   border-color: red;
 }
