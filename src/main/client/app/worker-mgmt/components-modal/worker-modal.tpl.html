@@ -6,11 +6,18 @@
 </div>
 <div class="modal-body">
   <form name="newUserForm" novalidate>
+    <!-- CODE -->
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.code.$invalid && !newUserForm.code.$pristine }">
+      <label>Kod pracownika</label>
+      <input type="text" name="code" class="form-control" ng-maxlength="3" ng-minlength="3" ng-model="workerModalCtrl.user.code" required>
+      <p ng-show="newUserForm.name.$invalid && !newUserForm.name.$pristine" class="help-block">Kod jest wymagany. Kod musi składać się z 3 znaków.</p>
+    </div>
+
     <!-- NAME -->
-    <div class="form-group" ng-class="{ 'has-error' : newUserForm.firstName.$invalid && !newUserForm.firstName.$pristine }">
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.name.$invalid && !newUserForm.name.$pristine }">
       <label>Imię</label>
-      <input type="text" name="firstName" class="form-control" ng-model="workerModalCtrl.user.firstName" required>
-      <p ng-show="newUserForm.firstName.$invalid && !newUserForm.firstName.$pristine" class="help-block">Imię jest wymagane.</p>
+      <input type="text" name="name" class="form-control" ng-model="workerModalCtrl.user.name" required>
+      <p ng-show="newUserForm.name.$invalid && !newUserForm.name.$pristine" class="help-block">Imię jest wymagane.</p>
     </div>
 
     <!-- USERNAME -->
@@ -24,8 +31,7 @@
     <div class="form-group" ng-class="{ 'has-error' : newUserForm.position.$invalid && !newUserForm.position.$pristine }">
       <label>Pozycja</label>
       <select name="position" class="form-control" ng-model="workerModalCtrl.user.position" required>
-        <option value="Pakowacz">Pakowacz</option>
-        <option value="Lakiernik">Lakiernik</option>
+        <option ng-repeat="x in workerModalCtrl.positions" value="{{x.name}}">{{x.name}}</option>
       </select>
       <p ng-show="newUserForm.position.$invalid && !newUserForm.position.$pristine" class="help-block">Pozycja jest wymagana.</p>
     </div>
@@ -34,5 +40,5 @@
 </div>
 </div>
 <div class="modal-footer">
-  <button type="submit" class="btn btn-primary" ng-click="workerModalCtrl.ok(workerModalCtrl.user.firstName, workerModalCtrl.user.surname, workerModalCtrl.user.position)" ng-disabled="newUserForm.$invalid">Dodaj</button>
+  <button type="submit" class="btn btn-primary" ng-click="workerModalCtrl.ok(workerModalCtrl.user.code, workerModalCtrl.user.name, workerModalCtrl.user.surname, workerModalCtrl.user.position)" ng-disabled="newUserForm.$invalid">Dodaj</button>
 </div>

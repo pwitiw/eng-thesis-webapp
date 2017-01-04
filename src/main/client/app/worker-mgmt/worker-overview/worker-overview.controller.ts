@@ -1,20 +1,33 @@
 import {Worker} from "../../general/interfaces/worker.interface";
 import {WorkerService} from "../worker.service";
+import IPromise = angular.IPromise;
+
 export class WorkerOverviewCtrl {
-  worker: Worker[];
-  displayed = [];
-  itemsByPage: number;
-  paginationSizes: any;
+  private worker: Worker[];
+  private displayed = [];
+  private itemsByPage: number;
+  private paginationSizes: any;
 
   constructor(private workerService: WorkerService) {
     this.itemsByPage = 5;
-    this.worker = workerService.getWorker(); //TODO dajesz potem workerService.getWorker().findAll()
     this.paginationSizes = [5, 10, 15, 20, 25];
+    this.findAll();
   }
 
+  findAll(){
+    var that = this;
+    this.workerService.findAll().then(function(data) {
+      that.worker = data;
+    });
+  }
+
+
   delete(id: number): void {
-    alert("Usuniety z id = " + id);
-    this.workerService.delete(id);
+    var that = this;
+    this.workerService.delete(id).then(function(){
+      var index = that.worker.findIndex(worker => worker.id === id);
+      that.worker.splice(index, 1);
+    });
   }
 
   updatePagination(size: number): void {
@@ -22,12 +35,14 @@ export class WorkerOverviewCtrl {
   }
 
   addUser(): void {
-    this.workerService.clearUser();
     this.workerService.openModal();
   }
 
   editUser(id: number): void {
-    this.workerService.findOne(id);
-    this.workerService.openModal();
+    var that = this;
+    this.workerService.findOne(id).then(function(worker){
+        that.workerService.openModal(worker);
+    });
   }
 }
+utrb

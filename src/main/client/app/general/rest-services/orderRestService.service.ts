@@ -6,7 +6,7 @@ export class OrderRestService {
   private restServiceUrl: string;
 
   constructor(private $http: IHttpService) {
-    this.restServiceUrl = 'http://127.0.0.1:4567';
+    this.restServiceUrl = 'http://localhost:8080';
   }
 
   getOrders(): IPromise<any> {
@@ -17,15 +17,15 @@ export class OrderRestService {
   }
 
   getOrder(id: number): IPromise<any> {
-    return this.$http.get(this.restServiceUrl + '/order?id='+id)
+    return this.$http.get(this.restServiceUrl + '/orders/'+id)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;
       })
   }
 
-  save(order: Order): IPromise<any> {
+  edit(id: number, order: Order): IPromise<any> {
     let config: IRequestShortcutConfig;
-    return this.$http.post(this.restServiceUrl + '/order/', order)
+    return this.$http.put(this.restServiceUrl + '/orders/' + id, order)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;
       })
@@ -33,7 +33,15 @@ export class OrderRestService {
 
   delete(id:number): IPromise<any> {
     let config: IRequestShortcutConfig;
-    return this.$http.get(this.restServiceUrl + '/deleteOrder?id='+id)
+    return this.$http.delete(this.restServiceUrl + '/orders/'+id)
+      .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return response.data;
+      })
+  }
+
+  changeType(id: number): IPromise<any> {
+    let config: IRequestShortcutConfig;
+    return this.$http.put(this.restServiceUrl + '/orders/'+id+"/change-status", "")
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;
       })

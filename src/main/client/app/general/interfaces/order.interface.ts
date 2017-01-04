@@ -1,9 +1,12 @@
 export interface Order {
   id?: number;
-  orderId: string;
+  name: string;
   customer: string;
-  color: string;
   position: string;
-  type: string;      //express czy nie
+  color: string;
   date: string;
+  express: string;      //express czy nie
+  lastUpdate: string;
+  parentId: number;
+  active: boolean;
 }
