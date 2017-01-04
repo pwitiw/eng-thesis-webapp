@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Patryk on 2015-10-28.
  */
 @Entity
-@Table(name = "orders", schema = Config.frontWitDbSchema)
+@Table(name = "orders", schema = Config.FRONTWIT_DB_SCHEMA)
 public class Order implements Serializable {
 
     @Id
@@ -117,5 +117,13 @@ public class Order implements Serializable {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public List<Component> getComponents() {
+        return components;
+    }
+
+    public void setComponents(List<Component> components) {
+        this.components = components;
     }
 }

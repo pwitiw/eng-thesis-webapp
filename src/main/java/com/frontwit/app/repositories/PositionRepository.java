@@ -13,5 +13,8 @@ import java.util.List;
 public interface PositionRepository extends JpaRepository<Position, Long> {
 
     List<Position> findAll();
+
     Position findByName(String name);
+
+    List<Position> findByIdGreaterThan(long id);
 }

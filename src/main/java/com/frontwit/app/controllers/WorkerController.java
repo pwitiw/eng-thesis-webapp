@@ -1,23 +1,24 @@
 package com.frontwit.app.controllers;
 
-import com.frontwit.app.dto.WorkerDto;
-import com.frontwit.app.dto.WorkerEventDto;
-import com.frontwit.app.entities.Worker;
-import com.frontwit.app.exceptions.ResourcesBadFormatException;
-import com.frontwit.app.exceptions.ResourcesDuplicationException;
-import com.frontwit.app.exceptions.ResourcesNotFoundException;
-import com.frontwit.app.utils.FrontWitRestController;
-import com.frontwit.app.validators.WorkerValidator;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
-import com.frontwit.app.services.WorkerService;
+        import com.frontwit.app.dto.PositionDto;
+        import com.frontwit.app.dto.WorkerDto;
+        import com.frontwit.app.dto.WorkerEventDto;
+        import com.frontwit.app.entities.Worker;
+        import com.frontwit.app.exceptions.ResourcesBadFormatException;
+        import com.frontwit.app.exceptions.ResourcesDuplicationException;
+        import com.frontwit.app.exceptions.ResourcesNotFoundException;
+        import com.frontwit.app.utils.FrontWitRestController;
+        import com.frontwit.app.validators.WorkerValidator;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.http.HttpStatus;
+        import org.springframework.http.MediaType;
+        import org.springframework.http.ResponseEntity;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.validation.BindingResult;
+        import org.springframework.web.bind.annotation.*;
+        import com.frontwit.app.services.WorkerService;
 
-import java.util.List;
+        import java.util.List;
 
 /**
  * Created by Patryk on 2015-11-02.
@@ -84,4 +85,12 @@ public class WorkerController {
         WorkerEventDto workerEventDto = workerService.getEventsForWorker(id);
         return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "workers/positions", method = RequestMethod.GET)
+    public ResponseEntity<?> getWorkerPositions() {
+
+        List<PositionDto> positionDtos = workerService.getWorkerPositions();
+        return new ResponseEntity<List<PositionDto>>(positionDtos, HttpStatus.OK);
+    }
+
 }

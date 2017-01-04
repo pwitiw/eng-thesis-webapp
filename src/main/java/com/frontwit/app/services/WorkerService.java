@@ -1,5 +1,6 @@
 package com.frontwit.app.services;
 
+import com.frontwit.app.dto.PositionDto;
 import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Event;
@@ -21,13 +22,13 @@ import java.util.List;
 public class WorkerService {
 
     @Autowired
-    WorkerRepositoryImpl workerRepositoryDAO;
+    private WorkerRepositoryImpl workerRepositoryDAO;
 
     @Autowired
-    EventService eventService;
+    private EventService eventService;
 
     @Autowired
-    PositionService positionService;
+    private PositionService positionService;
 
     @Transactional
     public List<WorkerDto> getActiveWorkers() {
@@ -40,7 +41,7 @@ public class WorkerService {
     public WorkerEventDto getEventsForWorker(long id) throws ResourcesNotFoundException {
 
         Worker worker = workerRepositoryDAO.getWorkerForId(id);
-        if(worker == null)
+        if (worker == null)
             throw new ResourcesNotFoundException();
         List<Event> events = eventService.getEventDtosForWorkerId(id);
 
@@ -76,11 +77,16 @@ public class WorkerService {
 
         Worker updatedWorker = workerDtoToWorker(workerDto);
         Worker oldWorker = workerRepositoryDAO.getWorkerForId(workerDto.getId());
-        if(!isWorkerCodeUnique(updatedWorker) || oldWorker == null)
+        if (!isWorkerCodeUnique(updatedWorker) || oldWorker == null)
             throw new ResourcesNotFoundException();
         copyWorker(oldWorker, updatedWorker);
         workerRepositoryDAO.saveWorker(oldWorker);
         return workerDto;
+    }
+
+    @Transactional
+    public List<PositionDto> getWorkerPositions() {
+        return positionService.getWorkerPositions();
     }
 
     private static void copyWorker(Worker w1, Worker w2) {

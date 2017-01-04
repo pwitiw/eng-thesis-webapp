@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by Patryk on 02.01.2017.
  */
@@ -20,4 +22,11 @@ public class PositionRepositoryImpl {
         return positionRepository.findByName(name);
     }
 
+    public List<Position> getWorkerPositions(long id) {
+        return positionRepository.findByIdGreaterThan(id);
+    }
+
+    public List<Position> getOrderPositions() {
+        return positionRepository.findAll();
+    }
 }

@@ -9,7 +9,7 @@ import java.sql.Timestamp;
  * Created by Patryk on 2015-11-19.
  */
 @Entity
-@Table(name = "events", schema = Config.frontWitDbSchema)
+@Table(name = "events", schema = Config.FRONTWIT_DB_SCHEMA)
 public class Event implements Serializable{
 
     @EmbeddedId

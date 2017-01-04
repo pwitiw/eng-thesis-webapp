@@ -1,7 +1,6 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
-import javafx.beans.DefaultProperty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -12,7 +11,7 @@ import java.util.List;
  * Created by Patryk on 2015-11-01.
  */
 @Entity
-@Table(name = "workers", schema = Config.frontWitDbSchema,
+@Table(name = "workers", schema = Config.FRONTWIT_DB_SCHEMA,
         uniqueConstraints = @UniqueConstraint(columnNames = {"code", "id"}))
 public class Worker implements Serializable {
 

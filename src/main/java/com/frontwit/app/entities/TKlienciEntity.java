@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * Created by Patryk on 09.04.2016.
  */
 @Entity
-@Table(name = "tklienci", schema = Config.bistolDbSchema)
+@Table(name = "tklienci", schema = Config.BISTOL_DB_SCHEMA)
 public class TKlienciEntity {
 
     @Id

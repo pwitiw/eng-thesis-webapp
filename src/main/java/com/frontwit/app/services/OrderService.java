@@ -1,6 +1,7 @@
 package com.frontwit.app.services;
 
 import com.frontwit.app.dto.OrderDto;
+import com.frontwit.app.dto.OrderEventDto;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,18 +20,19 @@ import java.util.List;
 public class OrderService {
 
     @Autowired
-    OrderRepositoryImpl orderRepositoryImpl;
+    private OrderRepositoryImpl orderRepositoryImpl;
 
     @Autowired
-    EventService eventService;
+    private EventService eventService;
 
     @Autowired
-    PositionService positionService;
+    private PositionService positionService;
 
     @Autowired
-    CustomerService customerService;
+    private CustomerService customerService;
 
     @Transactional
+
     public List<OrderDto> getAllOrders() {
         return getDtosForOrders(orderRepositoryImpl.getAllOrders());
     }
@@ -78,12 +80,12 @@ public class OrderService {
     }
 
     @Transactional
-    public OrderDto getOrderForId(long id) throws ResourcesNotFoundException {
+    public OrderEventDto getOrderForId(long id) throws ResourcesNotFoundException {
 
-       Order order = orderRepositoryImpl.getOrderForId(id);
-        if(order == null)
+        Order order = orderRepositoryImpl.getOrderForId(id);
+        if (order == null)
             throw new ResourcesNotFoundException();
-        return OrderDto.parseOrderDto(order);
+        return OrderEventDto.parseOrderEventDto(order);
     }
 
     private Timestamp getActualTimestamp() {

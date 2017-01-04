@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by Patryk on 09.04.2016.
  */
 @Entity
-@Table(name = "synchronization", schema = Config.frontWitDbSchema)
+@Table(name = "synchronization", schema = Config.FRONTWIT_DB_SCHEMA)
 public class Synchronization {
 
     @Id

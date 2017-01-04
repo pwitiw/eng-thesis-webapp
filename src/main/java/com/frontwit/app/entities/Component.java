@@ -9,7 +9,7 @@ import java.io.Serializable;
  * Created by Patryk on 2016-01-31.
  */
 @Entity
-@Table(name = "components", schema = Config.frontWitDbSchema)
+@Table(name = "components", schema = Config.FRONTWIT_DB_SCHEMA)
 public class Component implements Serializable {
 
     @Id

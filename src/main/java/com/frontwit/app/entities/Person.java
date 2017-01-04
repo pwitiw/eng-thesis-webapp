@@ -11,7 +11,7 @@ import javax.persistence.Table;
  * Created by Patryk on 22.12.2016.
  */
 @Entity
-@Table(name = "persons", schema = Config.frontWitDbSchema)
+@Table(name = "persons", schema = Config.FRONTWIT_DB_SCHEMA)
 public class Person {
 
     @Id

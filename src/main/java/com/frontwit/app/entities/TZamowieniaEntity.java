@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by Patryk on 09.04.2016.
  */
 @Entity
-@Table(name = "tzamowienia", schema = Config.bistolDbSchema)
+@Table(name = "tzamowienia", schema = Config.BISTOL_DB_SCHEMA)
 public class TZamowieniaEntity {
 
     @Id

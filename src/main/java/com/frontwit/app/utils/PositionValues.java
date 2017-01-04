@@ -17,7 +17,7 @@ public class PositionValues {
     @Autowired
     PositionRepository positionRepository;
 
-    private static Map<Integer, String> POSITIONS;
+    private static Map<Long, String> POSITIONS;
 
     public PositionValues() {
         POSITIONS = new HashMap<>();
@@ -39,9 +39,9 @@ public class PositionValues {
         return POSITIONS.get(key);
     }
 
-    public static int getKeyForValue(String value) {
+    public static long getKeyForValue(String value) {
         POSITIONS.keySet();
-        for (int key : POSITIONS.keySet()) {
+        for (long key : POSITIONS.keySet()) {
             POSITIONS.get(key).equals(value);
             return key;
         }
