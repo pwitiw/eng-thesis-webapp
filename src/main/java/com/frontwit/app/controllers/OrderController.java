@@ -2,7 +2,7 @@ package com.frontwit.app.controllers;
 
 import com.frontwit.app.dto.ComponentDto;
 import com.frontwit.app.dto.OrderDto;
-import com.frontwit.app.dto.OrderEventDto;
+import com.frontwit.app.dto.OrderComponentDto;
 import com.frontwit.app.dto.PositionDto;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.services.ComponentService;
@@ -56,8 +56,8 @@ public class OrderController {
     public ResponseEntity<?> getOrderForId(@PathVariable("id") Long id)
             throws ResourcesNotFoundException {
 
-        OrderEventDto orderEventDto = orderService.getOrderForId(id);
-        return new ResponseEntity<OrderEventDto>(orderEventDto, HttpStatus.OK);
+        OrderComponentDto orderComponentDto = orderService.getOrderForId(id);
+        return new ResponseEntity<OrderComponentDto>(orderComponentDto, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.DELETE)

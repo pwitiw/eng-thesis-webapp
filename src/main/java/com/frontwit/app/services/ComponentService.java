@@ -29,7 +29,7 @@ public class ComponentService {
     private List<ComponentDto> getDtosForComponents(List<Component> components) {
         List<ComponentDto> componentDtos = new ArrayList<>();
         for (Component c : components) {
-            componentDtos.add(new ComponentDto(c));
+            componentDtos.add(ComponentDto.parseComponentDto(c));
         }
         return componentDtos;
     }

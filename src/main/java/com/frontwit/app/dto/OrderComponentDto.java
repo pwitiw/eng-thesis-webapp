@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Patryk on 04.01.2017.
  */
-public class OrderEventDto implements Serializable {
+public class OrderComponentDto implements Serializable {
 
     private long id;
     private String name;
@@ -21,7 +21,7 @@ public class OrderEventDto implements Serializable {
     private Date lastUpdate;
     private Long parentId;
     private short active;
-    private List<Component> components;
+    private List<ComponentDto> components;
 
     public long getId() {
         return id;
@@ -95,27 +95,27 @@ public class OrderEventDto implements Serializable {
         this.active = active;
     }
 
-    public List<Component> getComponents() {
+    public List<ComponentDto> getComponents() {
         return components;
     }
 
-    public void setComponents(List<Component> components) {
+    public void setComponents(List<ComponentDto> components) {
         this.components = components;
     }
 
-    public static OrderEventDto parseOrderEventDto(Order order) {
+    public static OrderComponentDto parseOrderEventDto(Order order) {
 
-        OrderEventDto orderEventDto = new OrderEventDto();
-        orderEventDto.setId(order.getId());
-        orderEventDto.setName(order.getName());
-        orderEventDto.setCustomer(order.getCustomer().getName());
-        orderEventDto.setPosition(order.getPosition().getName());
-        orderEventDto.setDate(order.getDate());
-        orderEventDto.setExpress(order.getExpress());
-        orderEventDto.setLastUpdate(order.getLastUpdate());
-        orderEventDto.setParentId(order.getParentId());
-        orderEventDto.setActive(order.getActive());
-        orderEventDto.setComponents(order.getComponents());
-        return orderEventDto;
+        OrderComponentDto orderComponentDto = new OrderComponentDto();
+        orderComponentDto.setId(order.getId());
+        orderComponentDto.setName(order.getName());
+        orderComponentDto.setCustomer(order.getCustomer().getName());
+        orderComponentDto.setPosition(order.getPosition().getName());
+        orderComponentDto.setDate(order.getDate());
+        orderComponentDto.setExpress(order.getExpress());
+        orderComponentDto.setLastUpdate(order.getLastUpdate());
+        orderComponentDto.setParentId(order.getParentId());
+        orderComponentDto.setActive(order.getActive());
+        orderComponentDto.setComponents(ComponentDto.parseComponentDtos(order.getComponents()));
+        return orderComponentDto;
     }
 }
