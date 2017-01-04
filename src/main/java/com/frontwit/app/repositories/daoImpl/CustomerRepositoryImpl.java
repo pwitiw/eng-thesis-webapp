@@ -21,4 +21,7 @@ public class CustomerRepositoryImpl {
         return customerRepository.findByActive((short) 1);
     }
 
+    public Customer getCustomerForName(String name) {
+        return customerRepository.findByName(name);
+    }
 }

@@ -1,5 +1,6 @@
 package com.frontwit.app.controllers;
 
+import com.frontwit.app.utils.FrontWitRestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +15,7 @@ import java.util.List;
 /**
  * Created by Patryk on 09.04.2016.
  */
-@Controller
+@FrontWitRestController
 public class SyncController {
 
     @Autowired

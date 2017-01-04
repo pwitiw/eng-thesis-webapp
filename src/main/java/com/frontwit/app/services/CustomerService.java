@@ -20,4 +20,8 @@ public class CustomerService {
         return customerRepository.getActiveCustomers();
     }
 
+    public Customer getCustomerForName(String name){
+        return customerRepository.getCustomerForName(name);
+    }
+
 }

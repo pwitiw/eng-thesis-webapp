@@ -6,6 +6,7 @@ import com.frontwit.app.entities.Worker;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesDuplicationException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
+import com.frontwit.app.utils.FrontWitRestController;
 import com.frontwit.app.validators.WorkerValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * Created by Patryk on 2015-11-02.
  */
-@Controller
+@FrontWitRestController
 public class WorkerController {
 
     @Autowired
@@ -32,18 +33,22 @@ public class WorkerController {
 
     @RequestMapping(value = "/workers", method = RequestMethod.GET)
     public ResponseEntity<?> getActiveWorkers() {
+
         List<WorkerDto> workerDtos = workerService.getActiveWorkers();
         return new ResponseEntity<List<WorkerDto>>(workerDtos, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/workers/{id}", method = RequestMethod.GET)
-    public ResponseEntity<?> getWorkerForId(@PathVariable("id") long id) throws ResourcesNotFoundException {
+    public ResponseEntity<?> getWorkerForId(@PathVariable("id") long id)
+            throws ResourcesNotFoundException {
+
         WorkerDto workerDto = workerService.getWorkerForId(id);
         return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/workers/add-worker", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> addWorker(@RequestBody WorkerDto workerDto, BindingResult result) throws ResourcesBadFormatException, ResourcesDuplicationException {
+    @RequestMapping(value = "/workers", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<?> addWorker(@RequestBody WorkerDto workerDto, BindingResult result)
+            throws ResourcesBadFormatException, ResourcesDuplicationException {
 
         workerValidator.validate(workerDto, result);
         if (result.hasErrors())
@@ -52,16 +57,19 @@ public class WorkerController {
         return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "workers/delete-worker", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<?> deleteWorkerForId(@RequestBody WorkerDto workerDto) throws ResourcesNotFoundException {
-        workerService.deleteWorker(workerDto);
-        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
+    @RequestMapping(value = "workers/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteWorkerForId(@PathVariable("id") long id)
+            throws ResourcesNotFoundException {
+
+        workerService.deleteWorker(id);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "workers/update-worker", method = RequestMethod.POST)
+    @RequestMapping(value = "workers/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<?> editWorker(@RequestBody WorkerDto workerDto, BindingResult result) throws ResourcesNotFoundException, ResourcesBadFormatException {
+    public ResponseEntity<?> editWorker(@PathVariable("id") long id, @RequestBody WorkerDto workerDto, BindingResult result)
+            throws ResourcesNotFoundException, ResourcesBadFormatException {
+
         workerValidator.validate(workerDto, result);
         if (result.hasErrors())
             throw new ResourcesBadFormatException();
@@ -70,7 +78,9 @@ public class WorkerController {
     }
 
     @RequestMapping(value = "workers/{id}/events", method = RequestMethod.GET)
-    public ResponseEntity<?> getEventsForWorkerId(@PathVariable("id") long id) {
+    public ResponseEntity<?> getEventsForWorkerId(@PathVariable("id") long id)
+            throws ResourcesNotFoundException {
+
         WorkerEventDto workerEventDto = workerService.getEventsForWorker(id);
         return new ResponseEntity<WorkerEventDto>(workerEventDto, HttpStatus.OK);
     }

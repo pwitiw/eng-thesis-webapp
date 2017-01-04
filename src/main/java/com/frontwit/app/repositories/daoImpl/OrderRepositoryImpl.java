@@ -23,16 +23,15 @@ public class OrderRepositoryImpl {
         return orderRepository.findAll();
     }
 
-    public void addOrderToDb(Order order) {
-        orderRepository.save(order);
+    public Order save(Order o) {
+        return orderRepository.save(o);
     }
 
     public Order getOrderForId(long id) {
         return orderRepository.findById(id);
     }
 
-    public void deleteOrderForId(long id) {
-        Order order = orderRepository.findById(id);
+    public void deleteOrder(Order order) {
         orderRepository.delete(order);
     }
 
@@ -40,8 +39,6 @@ public class OrderRepositoryImpl {
         return orderRepository.findByPositionId(position);
     }
 
-    public Order save(Order o) {
-        return orderRepository.save(o);
-    }
+
 
 }

@@ -1,6 +1,7 @@
 package com.frontwit.app.services;
 
 import com.frontwit.app.dto.OrderDto;
+import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,12 @@ public class OrderService {
     @Autowired
     EventService eventService;
 
+    @Autowired
+    PositionService positionService;
+
+    @Autowired
+    CustomerService customerService;
+
     @Transactional
     public List<OrderDto> getAllOrders() {
         return getDtosForOrders(orderRepositoryImpl.getAllOrders());
@@ -43,16 +50,21 @@ public class OrderService {
         }*/
     }
 
+    //todo Dodać logikę usuwania ordera
     @Transactional
     public void deleteOrder(Long id) {
-        orderRepositoryImpl.deleteOrderForId(id);
+        Order order = orderRepositoryImpl.getOrderForId(id);
+        orderRepositoryImpl.deleteOrder(order);
     }
 
     @Transactional
-    public void confirmChangesIfExists(Order newOrder) {
+    public void updateOrder(OrderDto orderDto) {
 
-        Order order = orderRepositoryImpl.getOrderForId(newOrder.getId());
-//todo tutaj tak troche pokretnie, trzeba na front endzie dac wybor klientow, zeby sie kupy trzymalo
+        Order updatedOrder = getOrderForDto(orderDto);
+        Order order = orderRepositoryImpl.getOrderForId(orderDto.getId());
+        copyOrder(order, updatedOrder);
+//todo wewnetrzna validacja
+      /*
         if (eventService.getEventsForOrder(order).size() > 0)
             return;
         if (newOrder.getName().trim().equals(""))
@@ -60,14 +72,18 @@ public class OrderService {
         //   if (((Integer) newOrder.getCustomerId()).toString().trim().equals(""))
         //     return;
         if (newOrder.getExpress() < 0 || newOrder.getExpress() > 1)
-            return;
+            return;*/
 
-        orderRepositoryImpl.save(newOrder);
+        orderRepositoryImpl.save(order);
     }
 
     @Transactional
-    public Order getOrderForId(long id) {
-        return orderRepositoryImpl.getOrderForId(id);
+    public OrderDto getOrderForId(long id) throws ResourcesNotFoundException {
+
+       Order order = orderRepositoryImpl.getOrderForId(id);
+        if(order == null)
+            throw new ResourcesNotFoundException();
+        return OrderDto.parseOrderDto(order);
     }
 
     private Timestamp getActualTimestamp() {
@@ -84,10 +100,38 @@ public class OrderService {
     private List<OrderDto> getDtosForOrders(List<Order> orders) {
         List<OrderDto> orderDtos = new ArrayList<>();
         for (Order o : orders) {
-            OrderDto orderDto = new OrderDto(o);
-            orderDtos.add(orderDto);
+            orderDtos.add(OrderDto.parseOrderDto(o));
         }
         return orderDtos;
+    }
+
+    private Order getOrderForDto(OrderDto dto) {
+
+        Order order = new Order();
+        order.setId(dto.getId());
+        order.setName(dto.getName());
+        order.setPosition(positionService.getPositionForName(dto.getPosition()));
+        order.setExpress(dto.getExpress());
+        order.setDate(dto.getDate());
+        order.setLastUpdate(dto.getLastUpdate());
+        order.setParentId(dto.getParentId());
+        order.setActive(dto.getActive());
+        order.setCustomer(customerService.getCustomerForName(dto.getCustomer()));
+
+        return order;
+    }
+
+    private static void copyOrder(Order order1, Order order2) {
+
+        order1.setId(order2.getId());
+        order1.setName(order2.getName());
+        order1.setPosition(order2.getPosition());
+        order1.setExpress(order2.getExpress());
+        order1.setDate(order2.getDate());
+        order1.setLastUpdate(order2.getLastUpdate());
+        order1.setParentId(order2.getParentId());
+        order1.setActive(order2.getActive());
+        order1.setCustomer(order2.getCustomer());
     }
 
 }

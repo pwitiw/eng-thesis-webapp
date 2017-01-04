@@ -12,4 +12,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     List<Customer> findByActive(short active);
 
+    Customer findByName(String name);
+
 }

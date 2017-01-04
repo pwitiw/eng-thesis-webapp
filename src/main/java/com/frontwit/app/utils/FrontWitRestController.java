@@ -1,5 +1,6 @@
 package com.frontwit.app.utils;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @RestController
+@CrossOrigin(origins = "http://localhost:9000")
 //@RequestMapping("/rest/v1")
 public @ interface FrontWitRestController {
 }

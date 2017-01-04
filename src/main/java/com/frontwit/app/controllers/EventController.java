@@ -4,6 +4,7 @@ import com.frontwit.app.dto.EventDto;
 import com.frontwit.app.dto.WorkerEventDto;
 import com.frontwit.app.entities.Event;
 import com.frontwit.app.services.EventService;
+import com.frontwit.app.utils.FrontWitRestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by Patryk on 2016-01-05.
  */
-@Controller
+@FrontWitRestController
 public class EventController {
 
     @Autowired
