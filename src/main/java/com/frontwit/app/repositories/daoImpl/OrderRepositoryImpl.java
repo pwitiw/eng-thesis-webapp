@@ -24,7 +24,7 @@ public class OrderRepositoryImpl {
     }
 
     public Order save(Order o) {
-        return orderRepository.save(o);
+        return orderRepository.saveAndFlush(o);
     }
 
     public Order getOrderForId(long id) {

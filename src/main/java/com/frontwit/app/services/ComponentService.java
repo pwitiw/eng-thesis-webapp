@@ -34,4 +34,24 @@ public class ComponentService {
         return componentDtos;
     }
 
+    private Component getComponentForDto(ComponentDto dto) {
+
+        Component component = new Component();
+        component.setId(dto.getId());
+        component.setComment(dto.getComment());
+        component.setHeight(dto.getHeight());
+        component.setWidth(dto.getWidth());
+        component.setAmount(dto.getAmount());
+        component.setMissing(dto.getMissing());
+        return component;
+    }
+
+    public List<Component> getComponentsForDtos(List<ComponentDto> dtos) {
+
+        List<Component> components = new ArrayList<>();
+        for (ComponentDto dto : dtos) {
+            components.add(getComponentForDto(dto));
+        }
+        return components;
+    }
 }

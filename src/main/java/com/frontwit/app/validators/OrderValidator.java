@@ -24,4 +24,14 @@ public class OrderValidator implements Validator {
         ValidationUtils.rejectIfEmpty(errors, "customer", "error.customer", "Customer is required.");
         ValidationUtils.rejectIfEmpty(errors, "components", "error.name", "At least one component is required.");
     }
+
+        /*
+        if (eventService.getEventsForOrder(order).size() > 0)
+            return;
+        if (newOrder.getName().trim().equals(""))
+            return;
+        //   if (((Integer) newOrder.getCustomerId()).toString().trim().equals(""))
+        //     return;
+        if (newOrder.getExpress() < 0 || newOrder.getExpress() > 1)
+            return;*/
 }

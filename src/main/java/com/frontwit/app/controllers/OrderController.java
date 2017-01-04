@@ -68,10 +68,10 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<?> updateOrder(@PathVariable("id") Long id,@RequestBody OrderDto orderDto, BindingResult result) {
+    public ResponseEntity<?> updateOrder(@PathVariable("id") Long id,@RequestBody OrderComponentDto orderComponentDto, BindingResult result) {
 
        // orderValidator.validate(orderDto, result);
-        orderService.updateOrder(orderDto);
+        orderService.updateOrder(orderComponentDto);
         return new ResponseEntity(HttpStatus.OK);
     }
 

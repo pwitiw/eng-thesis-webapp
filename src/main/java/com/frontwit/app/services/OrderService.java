@@ -5,6 +5,7 @@ import com.frontwit.app.dto.OrderComponentDto;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +29,9 @@ public class OrderService {
 
     @Autowired
     private CustomerService customerService;
+
+    @Autowired
+    private ComponentService componentService;
 
     @Transactional
 
@@ -56,24 +60,13 @@ public class OrderService {
         Order order = orderRepositoryImpl.getOrderForId(id);
         orderRepositoryImpl.deleteOrder(order);
     }
-
+//todo componenty sie nie updatuja
     @Transactional
-    public void updateOrder(OrderDto orderDto) {
+    public void updateOrder(OrderComponentDto orderComponentDto) {
 
-        Order updatedOrder = getOrderForDto(orderDto);
-        Order order = orderRepositoryImpl.getOrderForId(orderDto.getId());
+        Order updatedOrder = getOrderForOrderComponentDto(orderComponentDto);
+        Order order = orderRepositoryImpl.getOrderForId(orderComponentDto.getId());
         copyOrder(order, updatedOrder);
-//todo wewnetrzna validacja
-      /*
-        if (eventService.getEventsForOrder(order).size() > 0)
-            return;
-        if (newOrder.getName().trim().equals(""))
-            return;
-        //   if (((Integer) newOrder.getCustomerId()).toString().trim().equals(""))
-        //     return;
-        if (newOrder.getExpress() < 0 || newOrder.getExpress() > 1)
-            return;*/
-
         orderRepositoryImpl.save(order);
     }
 
@@ -105,7 +98,7 @@ public class OrderService {
         return orderDtos;
     }
 
-    private Order getOrderForDto(OrderDto dto) {
+    private Order getOrderForOrderComponentDto(OrderComponentDto dto) {
 
         Order order = new Order();
         order.setId(dto.getId());
@@ -117,10 +110,12 @@ public class OrderService {
         order.setParentId(dto.getParentId());
         order.setActive(dto.getActive());
         order.setCustomer(customerService.getCustomerForName(dto.getCustomer()));
+        order.setComponents(componentService.getComponentsForDtos(dto.getComponents()));
 
         return order;
     }
 
+    //todo jak edytujemy z componentamia to jeszcze przypisac componenty
     private static void copyOrder(Order order1, Order order2) {
 
         order1.setId(order2.getId());
@@ -132,6 +127,7 @@ public class OrderService {
         order1.setParentId(order2.getParentId());
         order1.setActive(order2.getActive());
         order1.setCustomer(order2.getCustomer());
+        order1.setComponents(order2.getComponents());
     }
 
 }

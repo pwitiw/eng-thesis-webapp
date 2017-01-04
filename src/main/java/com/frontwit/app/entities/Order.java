@@ -2,6 +2,8 @@ package com.frontwit.app.entities;
 
 
 import com.frontwit.app.utils.Config;
+import org.hibernate.validator.constraints.Range;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -21,26 +23,28 @@ public class Order implements Serializable {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="POSITION_ID")
+    @JoinColumn(name = "POSITION_ID")
     private Position position;
 
+    @Range(min = 0, max = 1)
     private short express;
 
     private Date date;
 
-    @Column(name="LAST_UPDATE")
+    @Column(name = "LAST_UPDATE")
     private Date lastUpdate;
 
-    @Column(name="parent_id")
+    @Column(name = "parent_id")
     private Long parentId;
 
+    @Range(min = 0, max = 1)
     private short active;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="CUSTOMER_ID")
+    @JoinColumn(name = "CUSTOMER_ID")
     private Customer customer;
 
-    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Component> components;
 
     public Long getId() {

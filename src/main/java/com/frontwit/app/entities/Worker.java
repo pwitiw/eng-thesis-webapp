@@ -1,6 +1,7 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -31,6 +32,7 @@ public class Worker implements Serializable {
     private Position position;
 
     @NotNull
+    @Range(min = 100, max=999)
     private short code;
 
     @NotNull
