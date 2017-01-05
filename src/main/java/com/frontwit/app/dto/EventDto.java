@@ -1,8 +1,11 @@
 package com.frontwit.app.dto;
 
 import com.frontwit.app.entities.Event;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Patryk on 2016-01-06.
@@ -17,41 +20,80 @@ public class EventDto implements Serializable {
     private Timestamp date;
     private int missing;
 
-    public EventDto(Event event){
-        this.orderId = event.getPrim().getOrder().getId();
-        this.positionId = event.getPrim().getPosition().getId();
-        this.orderName = event.getPrim().getOrder().getName();
-        this.position = event.getPrim().getPosition().getName();
-        this.worker = event.getWorker().toString();
-        this.date = event.getDate();
-        this.missing = event.getMissing();
-    }
-
     public long getOrderId() {
         return orderId;
+    }
+
+    public void setOrderId(long orderId) {
+        this.orderId = orderId;
     }
 
     public long getPositionId() {
         return positionId;
     }
 
+    public void setPositionId(long positionId) {
+        this.positionId = positionId;
+    }
+
     public String getOrderName() {
         return orderName;
+    }
+
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
     }
 
     public String getPosition() {
         return position;
     }
 
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
     public String getWorker() {
         return worker;
+    }
+
+    public void setWorker(String worker) {
+        this.worker = worker;
     }
 
     public Timestamp getDate() {
         return date;
     }
 
+    public void setDate(Timestamp date) {
+        this.date = date;
+    }
+
     public int getMissing() {
         return missing;
+    }
+
+    public void setMissing(int missing) {
+        this.missing = missing;
+    }
+
+    public static EventDto parseEventDto(Event event) {
+        EventDto dto = new EventDto();
+
+        dto.setOrderId(event.getPrim().getOrder().getId());
+        dto.setPositionId(event.getPrim().getPosition().getId());
+        dto.setOrderName(event.getPrim().getOrder().getName());
+        dto.setPosition(event.getPrim().getPosition().getName());
+        dto.setWorker(event.getWorker().toString());
+        dto.setMissing(event.getMissing());
+        dto.setDate(event.getDate());
+        return dto;
+    }
+
+    public static List<EventDto> parseEventDtos(List<Event> events) {
+
+        List<EventDto> dtos = new ArrayList<>();
+        for (Event event : events)
+            dtos.add(EventDto.parseEventDto(event));
+        return dtos;
     }
 }

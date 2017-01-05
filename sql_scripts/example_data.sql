@@ -1,12 +1,12 @@
-INSERT INTO `webservice`.`customers` (`NAME`, `FIRST_NAME`, `LAST_NAME`) 
+INSERT INTO `webservice`.`customers` (`NAME`, `FIRST_NAME`, `LAST_NAME`, `ACTIVE`) 
 VALUES
-('Macierewicz', '', ''),
-('Kowalski-kuchnie', '', ''),
-('Perfekt', '', ''),
-('Kaczynski', '', ''),
-('Tusk-meble', '', ''),
-('Meblolux', '', ''),
-('Mebel-lak', '', '')
+('Macierewicz', '', '', '1'),
+('Kowalski-kuchnie', '', '', '1'),
+('Perfekt', '', '', '1'),
+('Kaczynski', '', '', '1'),
+('Tusk-meble', '', '', '1'),
+('Meblolux', '', '', '1'),
+('Mebel-lak', '', '', '1')
 ;
 
 INSERT INTO `webservice`.`workers` (`NAME`,`SURNAME`,`POSITION_ID`, `CODE`, `ACTIVE`) 

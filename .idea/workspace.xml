@@ -7,30 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="dodanie zamówień">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/BadOperationOnResourcesException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Person.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/PersonRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventLimited.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql_scripts/allScripts.sql.txt" afterPath="$PROJECT_DIR$/sql_scripts/allScripts.sql.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql_scripts/example_data.sql" afterPath="$PROJECT_DIR$/sql_scripts/example_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/WorkerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/WorkerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Component.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Component.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Order.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/WorkerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/WorkerRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/WorkerRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/WorkerRepositoryImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/FrontWitUserDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/FrontWitUserDetailsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/OrderValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/OrderValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/WorkerValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/WorkerValidator.java" />
     </list>
     <list id="5b8f41e2-6fa3-4c8e-8af3-f136e4eb48e2" name="Rejected commit: Default" comment="" />
     <ignored path="EngineeringThesisWeb.iws" />
@@ -61,8 +49,64 @@
       <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="69" />
+            <state relative-caret-position="163">
+              <caret line="65" column="43" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#773#774#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -75,32 +119,7 @@
               <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1761#1762#0" expanded="true" />
-                <element signature="e#1789#1790#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-              <folding>
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="38" column="5" selection-start-line="36" selection-start-column="41" selection-end-line="38" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -141,11 +160,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/client/app/login-page/login-page.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/main-page/main-page.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.state-def.ts" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/CustomResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/FrontWitApp.java" />
@@ -160,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/config/FrontWitCORSFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/FrontWitRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/SyncController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderEventDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/PositionRepositoryImpl.java" />
@@ -176,13 +192,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/ComponentDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/ComponentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/WorkerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/WorkerRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/WorkerValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/BadOperationOnResourcesException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java" />
@@ -191,6 +203,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/OrderValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java" />
       </list>
     </option>
@@ -361,6 +380,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EngineeringThesisWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -382,7 +461,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Val&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/validators/OrderValidator.java&#10;Vali&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/validators/WorkerValidator.java&#10;WorkerC&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/controllers/WorkerController.java&#10;app.module.js&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/client/.tmp/app/app.module.js&#10;EventDto&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;EventEn&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;Worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;EventC&#9;PSI&#9;JAVA://org.webapp.controllers.EventController&#10;Event&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;OrderContr&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;worker&#9;PSI&#9;JAVA://org.webapp.models.WorkerEntity&#10;event&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;OrdersC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;OrderCo&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Sync&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/SyncController.java&#10;html/my-modal.html&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/html/my-modal.html&#10;OrdersCon&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;order&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Component&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/Component.java&#10;Consts&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/utils/Consts.java&#10;OrderC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;Componen&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/services/ComponentService.java&#10;per&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/resources/META-INF/persistence.xml" />
+    <property name="SearchEverywhereHistoryKey" value="worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/dto/WorkerEventDto.java&#10;Val&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/validators/OrderValidator.java&#10;Vali&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/validators/WorkerValidator.java&#10;WorkerC&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/controllers/WorkerController.java&#10;app.module.js&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/client/.tmp/app/app.module.js&#10;EventDto&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;EventEn&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;Worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;EventC&#9;PSI&#9;JAVA://org.webapp.controllers.EventController&#10;Event&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;OrderContr&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;event&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;OrdersC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;OrderCo&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Sync&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/SyncController.java&#10;html/my-modal.html&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/html/my-modal.html&#10;OrdersCon&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;order&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Component&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/Component.java&#10;Consts&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/utils/Consts.java&#10;OrderC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;Componen&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/services/ComponentService.java&#10;per&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/resources/META-INF/persistence.xml" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -1124,7 +1203,7 @@
       <workItem from="1483386992812" duration="7152000" />
       <workItem from="1483460673929" duration="16978000" />
       <workItem from="1483538962669" duration="18838000" />
-      <workItem from="1483629491351" duration="11564000" />
+      <workItem from="1483629491351" duration="14709000" />
     </task>
     <task id="LOCAL-00001" summary="config c.d">
       <created>1446059418804</created>
@@ -1179,7 +1258,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="818384000" />
+    <option name="totallyTimeSpent" value="821529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1215,7 +1294,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3420622" sideWeight="0.65938306" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21331316" sideWeight="0.44011977" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21406959" sideWeight="0.44011977" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21331316" sideWeight="0.55988026" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42389524" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
@@ -1332,56 +1411,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/SyncController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.6.RELEASE/spring-web-4.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventLimited.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1394,13 +1427,6 @@
             <element signature="e#693#694#0" expanded="false" />
             <element signature="e#758#759#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1421,6 +1447,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1467,7 +1496,7 @@
         <state relative-caret-position="135">
           <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1535,14 +1564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/ComponentDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/ComponentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-405">
@@ -1567,50 +1588,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-          <folding>
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/WorkerRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding>
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1652,7 +1636,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1681,32 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="103" column="59" selection-start-line="103" selection-start-column="59" selection-end-line="103" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/OrderValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1715,11 +1673,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventLimited.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="103" column="59" selection-start-line="103" selection-start-column="59" selection-end-line="103" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+          <folding>
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1227#1228#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/ComponentDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="69" />
+        <state relative-caret-position="163">
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/EventPrimaryKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1729,27 +1824,44 @@
           <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1761#1762#0" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="38" column="5" selection-start-line="36" selection-start-column="41" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="86">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>

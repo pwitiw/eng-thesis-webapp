@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`customers` (
  `NAME` varchar(255) NOT NULL,
  `FIRST_NAME` varchar(255),
  `LAST_NAME` varchar(255),
+ `ACTIVE` integer(1) NOT NULL DEFAULT '1',
  PRIMARY KEY (`ID`)
 ); 
 

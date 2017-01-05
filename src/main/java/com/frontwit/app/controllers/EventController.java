@@ -23,15 +23,15 @@ public class EventController {
     EventService eventService;
 
     @RequestMapping(value = "/events", method = RequestMethod.GET)
-    public ResponseEntity<List<EventDto>> getEvents() {
+    public ResponseEntity<?> getEvents() {
         List<EventDto> eventDtos = eventService.getAllEvents();
         return new ResponseEntity<List<EventDto>>(eventDtos, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/events/{id}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
-    public void deleteEvent(@RequestBody Event event, @PathVariable("id") Long id) {
-        eventService.deleteEvent(id);
+    @RequestMapping(value = "/events/{order-id}/{position-id}", method = RequestMethod.DELETE)
+    public ResponseEntity deleteEvent(@PathVariable("order-id") Long orderId, @PathVariable("position-id") Long positionId) {
+        //eventService.deleteEvent(orderId, positionId);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
 }

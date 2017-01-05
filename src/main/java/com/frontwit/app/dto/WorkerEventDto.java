@@ -19,31 +19,48 @@ public class WorkerEventDto implements Serializable {
 
     private String position;
 
-    private List<EventLimited> events;
-
-    public WorkerEventDto(Worker worker, List<Event> events) {
-        this.name = worker.getName();
-        this.surname = worker.getSurname();
-        this.position = worker.getPosition().getName();
-        this.events = new ArrayList<>(EventLimited.convertEvents(events));
-    }
-
-    public WorkerEventDto(){}
+    private List<EventDto> events;
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {
         return surname;
     }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public String getPosition() {
         return position;
     }
 
-    public List<EventLimited> getEvents() {
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public List<EventDto> getEvents() {
         return events;
+    }
+
+    public void setEvents(List<EventDto> events) {
+        this.events = events;
+    }
+
+    public static WorkerEventDto parseWorkerEventDto(Worker worker){
+
+        WorkerEventDto dto = new WorkerEventDto();
+        dto.setName(worker.getName());
+        dto.setSurname(worker.getSurname());
+        dto.setPosition(worker.getPosition().getName());
+        dto.setEvents(EventDto.parseEventDtos(worker.getEvents()));
+        return dto;
     }
 }
 

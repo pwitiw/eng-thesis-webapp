@@ -25,17 +25,17 @@ public class EventRepositoryImpl {
         return eventRepository.findByWorkerId(id);
     }
 
-    public void deleteEventForPrimaryKey(EventPrimaryKey prim){
-
-//        todo Event event = eventRepository.findByPrimOrderIdAndPrimPositionId(prim.getOrderId(),prim.getPositionId());
-//        eventRepository.delete(event);
+    public void deleteEvent(long orderId, long positionId) {
+        eventRepository.deleteByPrimOrderIdAndPrimPositionId(orderId, positionId);
     }
 
-    public List<Event> getEventsForOrder(long id){
+//        todo Event event = eventRepository.findByPrimOrderIdAndPrimPositionId(prim.getOrderId(),prim.getPositionId());
+
+    public List<Event> getEventsForOrder(long id) {
         return eventRepository.findByPrimOrderId(id);
     }
 
-    public Long getCountForWorkerId(long workerId){
+    public Long getCountForWorkerId(long workerId) {
         return eventRepository.countByWorkerId(workerId);
     }
 

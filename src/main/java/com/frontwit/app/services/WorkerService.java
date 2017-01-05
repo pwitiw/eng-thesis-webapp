@@ -1,5 +1,6 @@
 package com.frontwit.app.services;
 
+import com.frontwit.app.dto.EventDto;
 import com.frontwit.app.dto.PositionDto;
 import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.dto.WorkerEventDto;
@@ -22,7 +23,7 @@ import java.util.List;
 public class WorkerService {
 
     @Autowired
-    private WorkerRepositoryImpl workerRepositoryDAO;
+    private WorkerRepositoryImpl workerRepositoryImpl;
 
     @Autowired
     private EventService eventService;
@@ -33,58 +34,57 @@ public class WorkerService {
     @Transactional
     public List<WorkerDto> getActiveWorkers() {
 
-        List<Worker> workers = workerRepositoryDAO.getActiveWorkers();
+        List<Worker> workers = workerRepositoryImpl.getActiveWorkers();
         return getDtosForWorkers(workers);
     }
 
     @Transactional
     public WorkerEventDto getEventsForWorker(long id) throws ResourcesNotFoundException {
 
-        Worker worker = workerRepositoryDAO.getWorkerForId(id);
+        Worker worker = workerRepositoryImpl.getWorkerForId(id);
         if (worker == null)
             throw new ResourcesNotFoundException();
-        List<Event> events = eventService.getEventDtosForWorkerId(id);
 
-        return new WorkerEventDto(worker, events);
+        return WorkerEventDto.parseWorkerEventDto(worker);
     }
 
     @Transactional
     public void addWorker(WorkerDto workerDto) throws ResourcesDuplicationException {
 
-        if (workerRepositoryDAO.getWorkerForCode(workerDto.getCode()) != null)
+        if (workerRepositoryImpl.getWorkerForCode(workerDto.getCode()) != null)
             throw new ResourcesDuplicationException();
-        workerRepositoryDAO.saveWorker(workerDtoToWorker(workerDto));
+        workerRepositoryImpl.saveWorker(workerDtoToWorker(workerDto));
     }
 
     @Transactional
     public void deleteWorker(long id) throws ResourcesNotFoundException {
 
-        Worker worker = workerRepositoryDAO.getWorkerForId(id);
+        Worker worker = workerRepositoryImpl.getWorkerForId(id);
         if (worker == null)
             throw new ResourcesNotFoundException();
         if (eventService.getEventCountForWorekr(id) == 0) {
-            workerRepositoryDAO.deleteWorker(worker);
+            workerRepositoryImpl.deleteWorker(worker);
         } else {
             setInactivateWorker(worker);
-            workerRepositoryDAO.saveWorker(worker);
+            workerRepositoryImpl.saveWorker(worker);
         }
     }
 
     @Transactional
     public WorkerDto getWorkerForId(long id) throws ResourcesNotFoundException {
 
-        return getDtoForWorker(workerRepositoryDAO.getWorkerForId(id));
+        return getDtoForWorker(workerRepositoryImpl.getWorkerForId(id));
     }
 
     @Transactional
     public WorkerDto updateWorker(WorkerDto workerDto) throws ResourcesNotFoundException {
 
         Worker updatedWorker = workerDtoToWorker(workerDto);
-        Worker oldWorker = workerRepositoryDAO.getWorkerForId(workerDto.getId());
+        Worker oldWorker = workerRepositoryImpl.getWorkerForId(workerDto.getId());
         if (!isWorkerCodeUnique(updatedWorker) || oldWorker == null)
             throw new ResourcesNotFoundException();
         copyWorker(oldWorker, updatedWorker);
-        workerRepositoryDAO.saveWorker(oldWorker);
+        workerRepositoryImpl.saveWorker(oldWorker);
         return workerDto;
     }
 
@@ -139,7 +139,7 @@ public class WorkerService {
 
     private boolean isWorkerCodeUnique(Worker worker) {
 
-        Worker w = workerRepositoryDAO.getWorkerForCode(worker.getCode());
+        Worker w = workerRepositoryImpl.getWorkerForCode(worker.getCode());
         return w == null ? true : w.getId() == worker.getId() ? true : false;
     }
 }
