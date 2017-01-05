@@ -4,6 +4,8 @@ import com.frontwit.app.dto.ComponentDto;
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.dto.OrderComponentDto;
 import com.frontwit.app.dto.PositionDto;
+import com.frontwit.app.exceptions.BadOperationOnResourcesException;
+import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.services.ComponentService;
 import com.frontwit.app.services.OrderService;
@@ -61,16 +63,20 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<?> deleteOrder(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deleteOrder(@PathVariable("id") Long id)
+            throws BadOperationOnResourcesException {
 
         orderService.deleteOrder(id);
         return new ResponseEntity(HttpStatus.OK);
     }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<?> updateOrder(@PathVariable("id") Long id,@RequestBody OrderComponentDto orderComponentDto, BindingResult result) {
+    public ResponseEntity<?> updateOrder(@PathVariable("id") Long id, @RequestBody OrderComponentDto orderComponentDto, BindingResult result)
+            throws ResourcesBadFormatException {
 
-       // orderValidator.validate(orderDto, result);
+        orderValidator.validate(orderComponentDto, result);
+        if (result.hasErrors())
+            throw new ResourcesBadFormatException();
         orderService.updateOrder(orderComponentDto);
         return new ResponseEntity(HttpStatus.OK);
     }

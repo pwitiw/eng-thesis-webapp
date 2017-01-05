@@ -1,5 +1,6 @@
 package com.frontwit.app.validators;
 
+import com.frontwit.app.dto.OrderComponentDto;
 import com.frontwit.app.dto.OrderDto;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
@@ -15,14 +16,33 @@ public class OrderValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return OrderDto.class.equals(aClass);
+        return OrderComponentDto.class.equals(aClass);
     }
 
     @Override
-    public void validate(Object o, Errors errors) {
+    public void validate(Object target, Errors errors) {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Order name is required.");
         ValidationUtils.rejectIfEmpty(errors, "customer", "error.customer", "Customer is required.");
-        ValidationUtils.rejectIfEmpty(errors, "components", "error.name", "At least one component is required.");
+        validateComponentsCount(target,errors);
+        validateExpressRange(target, errors);
+        validateActiveRange(target, errors);
+    }
+
+    private void validateComponentsCount(Object target,Errors errors){
+        if(((OrderComponentDto)target).getComponents().size()== 0)
+            errors.rejectValue("components","error.components", "At least one component is required.");
+    }
+
+    private void validateExpressRange(Object target, Errors errors) {
+
+        if ((((OrderComponentDto) target).getExpress() != 0) && (((OrderComponentDto) target).getExpress() != 1))
+            errors.rejectValue("express", "error.express", "Zła wartość pola.");
+    }
+
+    private void validateActiveRange(Object target, Errors errors) {
+
+        if ((((OrderComponentDto) target).getActive() != 0) && (((OrderComponentDto) target).getActive() != 1))
+            errors.rejectValue("active", "error.active", "Zła wartość pola.");
     }
 
         /*

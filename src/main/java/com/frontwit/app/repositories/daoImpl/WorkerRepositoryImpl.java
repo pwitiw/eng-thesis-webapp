@@ -17,7 +17,6 @@ public class WorkerRepositoryImpl {
     @Autowired
     WorkerRepository workerRepository;
 
-@Transactional
     public Worker getWorkerForId(long id) {
         return workerRepository.findById(id);
     }
@@ -27,10 +26,14 @@ public class WorkerRepositoryImpl {
     }
 
     public void saveWorker(Worker worker) {
-        workerRepository.save(worker);
+        workerRepository.saveAndFlush(worker);
     }
 
     public Worker getWorkerForCode(short code){
         return workerRepository.findByCode(code);
+    }
+
+    public void deleteWorker(Worker worker){
+        workerRepository.delete(worker);
     }
 }

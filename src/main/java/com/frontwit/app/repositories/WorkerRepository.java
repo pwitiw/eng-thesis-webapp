@@ -14,9 +14,12 @@ import java.util.List;
 public interface WorkerRepository extends JpaRepository<Worker, Long> {
 
     Worker findByNameAndSurname(String name, String surname);
-//    @PreAuthorize("hasRole('ROLE_ADMIN')")
+
+    //    @PreAuthorize("hasRole('ROLE_ADMIN')")
     Worker findById(long id);
+
     List<Worker> findByActive(short active);
+
     Worker findByCode(short code);
 
 }

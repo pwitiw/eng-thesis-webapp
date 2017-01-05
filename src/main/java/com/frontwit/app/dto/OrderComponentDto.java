@@ -16,6 +16,7 @@ public class OrderComponentDto implements Serializable {
     private String name;
     private String customer;
     private String position;
+    private String color;
     private Date date;
     private short express;
     private Date lastUpdate;
@@ -53,6 +54,14 @@ public class OrderComponentDto implements Serializable {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public Date getDate() {
@@ -110,6 +119,7 @@ public class OrderComponentDto implements Serializable {
         orderComponentDto.setName(order.getName());
         orderComponentDto.setCustomer(order.getCustomer().getName());
         orderComponentDto.setPosition(order.getPosition().getName());
+        orderComponentDto.setColor(order.getColor());
         orderComponentDto.setDate(order.getDate());
         orderComponentDto.setExpress(order.getExpress());
         orderComponentDto.setLastUpdate(order.getLastUpdate());

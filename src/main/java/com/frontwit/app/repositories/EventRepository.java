@@ -19,4 +19,6 @@ public interface EventRepository extends JpaRepository<Event, Long>  {
     Event findByPrimOrderIdAndPrimPositionId(long orderId, long positionId);
 
     List<Event> findByPrimOrderId(long orderId);
+
+    Long countByWorkerId(long workerId);
 }

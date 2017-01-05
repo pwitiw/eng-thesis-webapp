@@ -39,8 +39,13 @@ public class EventService {
     }
 
     @Transactional
-    public List<Event> getEventsForOrder(Order order) {
-        return eventRepositoryDAO.getEventsForOrder(order.getId());
+    public List<Event> getEventsForOrderId(Long id) {
+        return eventRepositoryDAO.getEventsForOrder(id);
+    }
+
+    @Transactional
+    public long getEventCountForWorekr(long id){
+        return eventRepositoryDAO.getCountForWorkerId(id);
     }
 
     private List<EventDto> getDtosForEvents(List<Event> events) {

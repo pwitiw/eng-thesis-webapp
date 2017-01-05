@@ -28,11 +28,10 @@ public class EventController {
         return new ResponseEntity<List<EventDto>>(eventDtos, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/events/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/events/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteEvent(@RequestBody Event event) {
-        //todo scenariusz na usuwanie eventu
-        eventService.deleteEvent(event);
+    public void deleteEvent(@RequestBody Event event, @PathVariable("id") Long id) {
+        eventService.deleteEvent(id);
     }
 
 }

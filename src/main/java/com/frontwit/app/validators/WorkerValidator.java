@@ -27,14 +27,16 @@ public class WorkerValidator implements Validator {
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Imie jest wymagana.");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surname", "error.surname", "Nazwisko jest wymagane.");
-        if (((WorkerDto) target).getCode() < 100 || ((WorkerDto) target).getCode() > 999)
-            errors.rejectValue("code", "incorrectCode", new Object[]{"'code'"}, "Kod powinien byc 3-cyfrowy.");
- //       if (workerService.workerExistsForCode(((WorkerDto) target).getCode()))
-   //         errors.rejectValue("code", "duplicateCode", new Object[]{"'code'"}, "Pracownik o z danym kodem już istnieje.");
+        validateCodeValueRange(target, errors);
     }
 
     @Autowired
     public void setWorkerService(WorkerService workerService) {
         this.workerService = workerService;
+    }
+
+    private void validateCodeValueRange(Object target, Errors errors) {
+        if (((WorkerDto) target).getCode() < 100 || ((WorkerDto) target).getCode() > 999)
+            errors.rejectValue("code", "incorrectCode", new Object[]{"'code'"}, "Kod powinien byc 3-cyfrowy.");
     }
 }

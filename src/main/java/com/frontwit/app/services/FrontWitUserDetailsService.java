@@ -1,9 +1,7 @@
 package com.frontwit.app.services;
 
 import com.frontwit.app.entities.Order;
-import com.frontwit.app.entities.Person;
 import com.frontwit.app.repositories.OrderRepository;
-import com.frontwit.app.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;

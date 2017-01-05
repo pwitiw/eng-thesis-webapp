@@ -2,6 +2,8 @@ package com.frontwit.app.services;
 
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.dto.OrderComponentDto;
+import com.frontwit.app.exceptions.BadOperationOnResourcesException;
+import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,18 +51,19 @@ public class OrderService {
     public void add(Order order) {
 //todo Dodawanie zamowienia, validacje do tego
       /*  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
-            order.setPositionId(1);
             orderRepositoryImpl.save(order);
         }*/
     }
 
-    //todo Dodać logikę usuwania ordera
     @Transactional
-    public void deleteOrder(Long id) {
+    public void deleteOrder(Long id) throws BadOperationOnResourcesException {
+
+        if (eventService.getEventsForOrderId(id).size() > 0)
+            throw new BadOperationOnResourcesException();
         Order order = orderRepositoryImpl.getOrderForId(id);
         orderRepositoryImpl.deleteOrder(order);
     }
-//todo componenty sie nie updatuja
+
     @Transactional
     public void updateOrder(OrderComponentDto orderComponentDto) {
 
@@ -104,6 +107,7 @@ public class OrderService {
         order.setId(dto.getId());
         order.setName(dto.getName());
         order.setPosition(positionService.getPositionForName(dto.getPosition()));
+        order.setColor(dto.getColor());
         order.setExpress(dto.getExpress());
         order.setDate(dto.getDate());
         order.setLastUpdate(dto.getLastUpdate());
@@ -115,12 +119,12 @@ public class OrderService {
         return order;
     }
 
-    //todo jak edytujemy z componentamia to jeszcze przypisac componenty
     private static void copyOrder(Order order1, Order order2) {
 
         order1.setId(order2.getId());
         order1.setName(order2.getName());
         order1.setPosition(order2.getPosition());
+        order1.setColor(order2.getColor());
         order1.setExpress(order2.getExpress());
         order1.setDate(order2.getDate());
         order1.setLastUpdate(order2.getLastUpdate());

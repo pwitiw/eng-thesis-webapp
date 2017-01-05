@@ -1,6 +1,7 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,7 +18,7 @@ public class Component implements Serializable {
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ORDER_ID")
+    @JoinColumn(name = "ORDER_ID", updatable = false)
     private Order order;
 
     private int width;
@@ -86,5 +87,32 @@ public class Component implements Serializable {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Component component = (Component) o;
+
+        if (id != component.id) return false;
+        if (width != component.width) return false;
+        if (height != component.height) return false;
+        if (amount != component.amount) return false;
+        if (missing != component.missing) return false;
+        return comment != null ? comment.equals(component.comment) : component.comment == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + width;
+        result = 31 * result + height;
+        result = 31 * result + amount;
+        result = 31 * result + missing;
+        result = 31 * result + (comment != null ? comment.hashCode() : 0);
+        return result;
     }
 }

@@ -2,9 +2,13 @@ package com.frontwit.app.entities;
 
 
 import com.frontwit.app.utils.Config;
+import org.hibernate.annotations.*;
 import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -26,6 +30,8 @@ public class Order implements Serializable {
     @JoinColumn(name = "POSITION_ID")
     private Position position;
 
+    private String color;
+
     @Range(min = 0, max = 1)
     private short express;
 
@@ -44,7 +50,7 @@ public class Order implements Serializable {
     @JoinColumn(name = "CUSTOMER_ID")
     private Customer customer;
 
-    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Component> components;
 
     public Long getId() {
@@ -73,6 +79,14 @@ public class Order implements Serializable {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public short getExpress() {

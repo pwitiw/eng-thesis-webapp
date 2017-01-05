@@ -32,7 +32,7 @@ public class Worker implements Serializable {
     private Position position;
 
     @NotNull
-    @Range(min = 100, max=999)
+   // @Range(min = 100, max=999)
     private short code;
 
     @NotNull

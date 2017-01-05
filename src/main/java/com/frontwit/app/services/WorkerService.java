@@ -62,8 +62,12 @@ public class WorkerService {
         Worker worker = workerRepositoryDAO.getWorkerForId(id);
         if (worker == null)
             throw new ResourcesNotFoundException();
-        setInactivateWorker(worker);
-        workerRepositoryDAO.saveWorker(worker);
+        if (eventService.getEventCountForWorekr(id) == 0) {
+            workerRepositoryDAO.deleteWorker(worker);
+        } else {
+            setInactivateWorker(worker);
+            workerRepositoryDAO.saveWorker(worker);
+        }
     }
 
     @Transactional

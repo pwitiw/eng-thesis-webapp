@@ -15,6 +15,7 @@ public class OrderDto {
     private String name;
     private String customer;
     private String position;
+    private String color;
     private Date date;
     private short express;
     private Date lastUpdate;
@@ -51,6 +52,14 @@ public class OrderDto {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public Date getDate() {
@@ -100,6 +109,7 @@ public class OrderDto {
         orderDto.setName(order.getName());
         orderDto.setCustomer(order.getCustomer().getName());
         orderDto.setPosition(order.getPosition().getName());
+        orderDto.setColor(order.getColor());
         orderDto.setDate(order.getDate());
         orderDto.setExpress(order.getExpress());
         orderDto.setLastUpdate(order.getLastUpdate());

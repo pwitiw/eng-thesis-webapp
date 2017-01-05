@@ -17,10 +17,6 @@ public class EventRepositoryImpl {
     @Autowired
     EventRepository eventRepository;
 
-//    public List<Event> getEventsForActiveWorkers(){
-//        return eventRepository. //todo DOKONCZYC
-//    }
-
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
     }
@@ -37,6 +33,10 @@ public class EventRepositoryImpl {
 
     public List<Event> getEventsForOrder(long id){
         return eventRepository.findByPrimOrderId(id);
+    }
+
+    public Long getCountForWorkerId(long workerId){
+        return eventRepository.countByWorkerId(workerId);
     }
 
 }
