@@ -1,9 +1,7 @@
 package com.frontwit.app.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.frontwit.app.entities.Order;
-import com.frontwit.app.utils.PositionValues;
-
-import javax.persistence.Column;
 import java.util.Date;
 
 /**

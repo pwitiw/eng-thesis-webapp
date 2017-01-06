@@ -2,7 +2,6 @@ package com.frontwit.app.entities;
 
 
 import com.frontwit.app.utils.Config;
-import org.hibernate.annotations.*;
 import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
@@ -50,7 +49,7 @@ public class Order implements Serializable {
     @JoinColumn(name = "CUSTOMER_ID")
     private Customer customer;
 
-    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Component> components;
 
     public Long getId() {

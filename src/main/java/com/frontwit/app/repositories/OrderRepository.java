@@ -16,5 +16,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     @Query
     public Order findById(long id);
 
-    public List<Order> findByPositionId(int positionId);
+    public List<Order> findByPositionId(long positionId);
 }

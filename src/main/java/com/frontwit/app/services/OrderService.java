@@ -88,8 +88,9 @@ public class OrderService {
         return actualTime;
     }
 
+    //todo aktywne i pozycja i dla 3 to brac 1 2 3
     @Transactional
-    public List<OrderDto> getOrdersForPositionId(Integer posId) {
+    public List<OrderDto> getOrdersForPositionId(long posId) {
         return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionId(posId));
     }
 
@@ -131,7 +132,9 @@ public class OrderService {
         order1.setParentId(order2.getParentId());
         order1.setActive(order2.getActive());
         order1.setCustomer(order2.getCustomer());
-        order1.setComponents(order2.getComponents());
+      //  order1.setComponents(order2.getComponents());
+        order1.getComponents().clear();
+        order1.getComponents().addAll(order2.getComponents());
     }
 
 }
