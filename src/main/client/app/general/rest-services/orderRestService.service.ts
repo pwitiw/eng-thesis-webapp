@@ -47,4 +47,11 @@ export class OrderRestService {
       })
   }
 
+
+  getComponent(id: number): IPromise<any> {
+    return this.$http.get(this.restServiceUrl + '/orders/'+id + "/components")
+      .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return response.data;
+      })
+  }
 }

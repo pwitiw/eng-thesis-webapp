@@ -9,15 +9,25 @@ export class EventOverviewCtrl {
   paginationSizes: any;
 
   constructor(private eventService: EventService) {
-    this.events = eventService.getEvent();
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
+    this.findAll();
 
   }
 
-  delete(id: number): void {
-    alert("Usuniety z id = " + id);
-    this.eventService.delete(id);
+  findAll(): any {
+    var that = this;
+    this.eventService.findAll().then(function(data){
+      that.events = data;
+    })
+  }
+
+  delete(orderId: number, positionId: number): void {
+    var that = this;
+    this.delete(orderId, positionId).then(function(data){
+      var index = that.events.findIndex(data);
+      that.events.splice(index, 1);
+    })
   }
 
   updatePagination(size: number): void {

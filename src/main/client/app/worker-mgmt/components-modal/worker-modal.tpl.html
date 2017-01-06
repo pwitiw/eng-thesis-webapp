@@ -9,7 +9,7 @@
     <!-- CODE -->
     <div class="form-group" ng-class="{ 'has-error' : newUserForm.code.$invalid && !newUserForm.code.$pristine }">
       <label>Kod pracownika</label>
-      <input type="text" name="code" class="form-control" ng-maxlength="3" ng-minlength="3" ng-model="workerModalCtrl.user.code" required>
+      <input type="number" name="code" class="form-control" ng-maxlength="3" ng-minlength="3" ng-model="workerModalCtrl.user.code" required>
       <p ng-show="newUserForm.name.$invalid && !newUserForm.name.$pristine" class="help-block">Kod jest wymagany. Kod musi składać się z 3 znaków.</p>
     </div>
 

@@ -10,30 +10,14 @@ export class EventRestService {
   }
 
   getEvents(): IPromise<any> {
-    return this.$http.get(this.restServiceUrl + '/orders/')
+    return this.$http.get(this.restServiceUrl + '/events')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;
       })
   }
 
-  getEvent(id: number): IPromise<any> {
-    return this.$http.get(this.restServiceUrl + '/order?id='+id)
-      .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
-      })
-  }
-
-  save(event: Event): IPromise<any> {
-    let config: IRequestShortcutConfig;
-    return this.$http.post(this.restServiceUrl + '/order/', event)
-      .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
-      })
-  }
-
-  delete(id:number): IPromise<any> {
-    let config: IRequestShortcutConfig;
-    return this.$http.get(this.restServiceUrl + '/deleteOrder?id='+id)
+  deleteEvent(orderId: number, positionId: number): IPromise<any> {
+    return this.$http.delete(this.restServiceUrl + '/events/' + orderId + "/" + positionId)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return response.data;
       })

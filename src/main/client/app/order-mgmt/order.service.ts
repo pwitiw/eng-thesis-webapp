@@ -1,4 +1,5 @@
 import {OrderRestService} from "../general/rest-services/orderRestService.service";
+import {WorkerRestService} from "../general/rest-services/workerRestService.service";
 import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
@@ -7,24 +8,24 @@ export class OrderService {
     name: '',
     customer: '',
     position: '',
-    color: '',
     date: '',
-    express: '',      //express czy nie
+    express: null,      //express czy nie
     lastUpdate: '',
-    parentId: null
+    parentId: null,
+    active: null
   };
 
-  constructor(private orderRestService: OrderRestService, private $uibModal: any) {
+  constructor(private orderRestService: OrderRestService, private workerRestService: WorkerRestService, private $uibModal: any) {
 
   }
 
 
-  save(order: Order): any {
-    //this.orderRestService.save(order);
+  edit(id: number, order: Order): any {
+    this.orderRestService.edit(id, order);
   }
 
   delete(id: number): any {
-    //this.orderRestService.delete(id);
+    this.orderRestService.delete(id);
   }
 
   changeType(id: number): any {
@@ -39,17 +40,70 @@ export class OrderService {
     return this.orderRestService.getOrders();
   }
 
+  findComponents(id: number): any {
+    return this.orderRestService.getComponent(id);
+  }
+
   openModal(order) {
+    var that = this;
+
+    this.workerRestService.getPositions().then(function(positions){
+      let modalObject = {
+        animation: true,
+        controller: 'OrderModalCtrl',
+        controllerAs: 'orderModalCtrl',
+        templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
+        size: 'md',
+        resolve: {
+          order: function() {
+            return order;
+          },
+          positions: function(){
+            return positions;
+          }
+        }
+      };
+
+
+      var modalInstance = that.$uibModal.open(modalObject);
+
+
+      modalInstance.result.then(
+        //close
+        function (result) {
+          let newOrder = {
+            id: result.id,
+            name: result.name,
+            customer: result.customer,
+            position: result.position,
+            date: result.date,
+            express: result.express,
+            active: result.active
+          };
+          that.edit(result.id, <Order>newOrder);
+        },
+        //dismiss
+        function (result) {
+
+        }
+      )
+    });
+  }
+
+
+  openComponentModal(components) {
     var that = this;
 
     let modalObject = {
       animation: true,
-      controller: 'OrderModalCtrl',
-      controllerAs: 'orderModalCtrl',
-      templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
-      size: 'md',
+      controller: 'ComponentsModalCtrl',
+      controllerAs: 'componentsModalCtrl',
+      templateUrl: 'order-mgmt/components-modal/components-modal.tpl.html',
+      size: 'lg',
       resolve: {
-        order: order
+        components: function() {
+          return components;
+        }
       }
     };
 
@@ -58,16 +112,7 @@ export class OrderService {
     modalInstance.result.then(
       //close
       function (result) {
-        let newOrder = {
-          id: 78,
-          orderId: result.orderId,
-          customer: result.customer,
-          color: result.color,
-          position: result.position,
-          type: result.type,
-          date: result.date
-        };
-        that.save(<Order>newOrder);
+
       },
       //dismiss
       function (result) {
@@ -75,6 +120,5 @@ export class OrderService {
       }
     )
   }
-
 
 }

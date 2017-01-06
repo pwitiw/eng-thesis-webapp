@@ -1,31 +1,33 @@
 
 export class OrderModalCtrl {
   private order: any = {
-    orderId: '',
+    id: null,
+    name: '',
     customer: '',
-    color: '',
     position: '',
-    type: '',
-    date: ''
+    date: '',
+    express: null,      //express czy nie
+    lastUpdate: '',
+    parentId: null,
+    active: ''
   };
 
-  constructor(private $uibModal:any, private $uibModalInstance:any, order) {
+  private status = [{ id: "1", name: "Aktywny"}, { id: "0", name: "Nieaktywny"}];
+
+  private positions = [];
+
+  constructor(private $uibModal:any, private $uibModalInstance:any, order, positions) {
+    var date = new Date(order.date);
+    order.date = date;
     this.order = order;
+    this.positions = positions;
   }
 
   cancel() {
     this.$uibModalInstance.dismiss();
   }
 
-  ok(orderId, customer, color, position, type, date) {
-    let order = {
-      orderId: orderId,
-      customer: customer,
-      color: color,
-      position: position,
-      type: type,
-      date: date
-    };
+  ok(order) {
     this.$uibModalInstance.close(order);
   }
 }

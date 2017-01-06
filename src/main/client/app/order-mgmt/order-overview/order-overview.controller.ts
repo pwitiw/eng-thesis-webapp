@@ -53,4 +53,11 @@ export class OrderOverviewCtrl {
       that.orderService.openModal(data);
     });
   }
+
+  openComponents(id: number): void{
+    var that = this;
+    this.orderService.findComponents(id).then(function(data) {
+      that.orderService.openComponentModal(data);
+    })
+  }
 }

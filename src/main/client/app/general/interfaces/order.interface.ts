@@ -5,7 +5,7 @@ export interface Order {
   position: string;
   color: string;
   date: string;
-  express: string;      //express czy nie
+  express: boolean;      //express czy nie
   lastUpdate: string;
   parentId: number;
   active: boolean;
