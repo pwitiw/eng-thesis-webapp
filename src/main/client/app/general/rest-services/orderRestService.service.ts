@@ -54,4 +54,11 @@ export class OrderRestService {
         return response.data;
       })
   }
+
+  synchronize(): IPromise<any> {
+    return this.$http.get(this.restServiceUrl + '/synchronize')
+      .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return response.data;
+      })
+  }
 }

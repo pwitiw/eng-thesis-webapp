@@ -9,4 +9,5 @@ export interface Order {
   lastUpdate: string;
   parentId: number;
   active: boolean;
+  components: any[];
 }

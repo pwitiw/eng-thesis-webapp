@@ -11,11 +11,13 @@ export class ComponentsModalCtrl {
     "missing": null,
     "comment": ""
   };
+  private order: any;
   private displayed = [];
   private editMode = false;
 
-  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, components) {
-    this.components = components;
+  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, order) {
+    this.order = order;
+    this.components = order.components;
   }
 
   editComponent(component) {
@@ -64,6 +66,11 @@ export class ComponentsModalCtrl {
   }
 
   ok() {
-    this.$uibModalInstance.close();
+    this.order.components = this.components;
+    var that = this;
+    this.orderRestService.edit(this.order.id, this.order).then(function(data){
+      that.$uibModalInstance.close();
+    });
+
   }
 }

@@ -24,7 +24,11 @@ export class OrderOverviewCtrl {
   }
 
   delete(id: number): void {
-    this.orderService.delete(id);
+    var that = this;
+    this.orderService.delete(id).then(function(data) {
+      var index = that.orders.findIndex(order => order.id === id);
+      that.orders.splice(index, 1);
+    })
   }
 
   synchronize():void {
@@ -56,7 +60,7 @@ export class OrderOverviewCtrl {
 
   openComponents(id: number): void{
     var that = this;
-    this.orderService.findComponents(id).then(function(data) {
+    this.orderService.findOne(id).then(function(data) {
       that.orderService.openComponentModal(data);
     })
   }

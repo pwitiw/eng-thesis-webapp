@@ -6,9 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="dodanie elementów">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+    <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/OrderRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/OrderRestService.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="5b8f41e2-6fa3-4c8e-8af3-f136e4eb48e2" name="Rejected commit: Default" comment="" />
@@ -33,11 +41,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="components-modal.controller.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="components-modal.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7799353">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order-modal.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.68248177">
+              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order-overview.tpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order-overview.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.interface.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,7 +104,7 @@
       <file leaf-file-name="order-modal.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.76923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding />
             </state>
@@ -56,7 +114,7 @@
       <file leaf-file-name="worker-modal.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53846157">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
@@ -67,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="14" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="14" />
+              <caret line="58" column="62" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -76,7 +134,7 @@
       <file leaf-file-name="components-modal.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.307693">
+            <state vertical-scroll-proportion="0.0">
               <caret line="60" column="103" selection-start-line="60" selection-start-column="103" selection-end-line="60" selection-end-column="103" />
               <folding />
             </state>
@@ -156,20 +214,20 @@
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
       </list>
     </option>
   </component>
@@ -274,7 +332,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -636,6 +693,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1166,7 +1224,8 @@
       <workItem from="1483547239914" duration="7901000" />
       <workItem from="1483642778850" duration="21000" />
       <workItem from="1483642807149" duration="2626000" />
-      <workItem from="1483712422016" duration="12207000" />
+      <workItem from="1483712422016" duration="12815000" />
+      <workItem from="1483785597692" duration="3492000" />
     </task>
     <task id="LOCAL-00001" summary="config c.d">
       <created>1446059418804</created>
@@ -1228,11 +1287,17 @@
       <option name="project" value="LOCAL" />
       <updated>1483727166429</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="dodanie elementów">
+      <created>1483727204933</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1483727204933</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="784942000" />
+    <option name="totallyTimeSpent" value="789042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1244,43 +1309,43 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29261744" sideWeight="0.34061697" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2700491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46624804" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.093959734" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22684564" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21401028" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40425533" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25204584" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.093959734" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22684564" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21401028" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1328859" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21471927" sideWeight="0.5805471" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40425533" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25204584" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39896372" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1328859" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1371,7 +1436,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="225" />
+      <option name="time" value="226" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1595,7 +1660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,34 +1684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29675812">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24757281">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119932435">
-          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6229774">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1664,22 +1704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5776699">
           <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="56" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49514562">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19255663">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1704,7 +1728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1712,21 +1735,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77022654">
           <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.76923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           <folding />
         </state>
@@ -1734,7 +1748,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53846157">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
@@ -1742,16 +1756,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.307693">
+        <state vertical-scroll-proportion="0.0">
           <caret line="60" column="103" selection-start-line="60" selection-start-column="103" selection-end-line="60" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7799353">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="62" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68248177">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding />
         </state>
       </provider>

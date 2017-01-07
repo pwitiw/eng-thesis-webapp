@@ -19,13 +19,16 @@ export class OrderService {
 
   }
 
+  synchronize(): any {
+    return this.orderRestService.synchronize();
+  }
 
   edit(id: number, order: Order): any {
-    this.orderRestService.edit(id, order);
+    return this.orderRestService.edit(id, order);
   }
 
   delete(id: number): any {
-    this.orderRestService.delete(id);
+    return this.orderRestService.delete(id);
   }
 
   changeType(id: number): any {
@@ -71,16 +74,7 @@ export class OrderService {
       modalInstance.result.then(
         //close
         function (result) {
-          let newOrder = {
-            id: result.id,
-            name: result.name,
-            customer: result.customer,
-            position: result.position,
-            date: result.date,
-            express: result.express,
-            active: result.active
-          };
-          that.edit(result.id, <Order>newOrder);
+          that.edit(result.id, <Order>result)
         },
         //dismiss
         function (result) {
@@ -91,7 +85,7 @@ export class OrderService {
   }
 
 
-  openComponentModal(components) {
+  openComponentModal(order) {
     var that = this;
 
     let modalObject = {
@@ -101,8 +95,8 @@ export class OrderService {
       templateUrl: 'order-mgmt/components-modal/components-modal.tpl.html',
       size: 'lg',
       resolve: {
-        components: function() {
-          return components;
+        order: function() {
+          return order;
         }
       }
     };
