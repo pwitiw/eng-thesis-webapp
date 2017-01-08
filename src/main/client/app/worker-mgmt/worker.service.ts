@@ -17,7 +17,9 @@ export class WorkerService {
   }
 
   save(worker: Worker): any {
-    this.workerRestService.save(worker);
+    this.workerRestService.save(worker).then(function(data) {
+
+    });
   }
 
   update(id: number, worker: Worker): void {
@@ -48,6 +50,7 @@ export class WorkerService {
         controllerAs: 'workerModalCtrl',
         templateUrl: 'worker-mgmt/components-modal/worker-modal.tpl.html',
         size: 'md',
+        backdrop: 'static',
         resolve: {
           user: function() {
             return worker

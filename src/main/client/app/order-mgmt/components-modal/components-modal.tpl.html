@@ -10,8 +10,13 @@
 
       <thead>
       <tr>
-        <td colspan="7">
+        <td colspan="6">
           <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
+        </td>
+        <td class="component-add-button">
+          <a href="" ng-click="componentsModalCtrl.add()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </a>
         </td>
       </tr>
       <tr>
@@ -140,13 +145,11 @@
 </div>
 </div>
 <div class="modal-footer">
-  <button ng-show="!componentsModalCtrl.editMode" class="btn btn-primary"
-          ng-click="componentsModalCtrl.add()">Dodaj element</button>
 
   <button ng-show="!componentsModalCtrl.editMode" class="btn btn-primary"
           ng-click="componentsModalCtrl.ok()">Aktualizuj</button>
 
-  <button ng-show="componentsModalCtrl.editMode" class="btn btn-primary"
+  <button ng-show="componentsModalCtrl.editMode" class="btn btn-warning"
           ng-click="componentsModalCtrl.back()">Cofnij</button>
 
   <button ng-show="componentsModalCtrl.editMode" type="submit" class="btn btn-primary"

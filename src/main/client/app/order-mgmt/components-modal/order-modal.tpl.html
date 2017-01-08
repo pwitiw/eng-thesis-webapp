@@ -48,10 +48,8 @@
           Rodzaj
         </label>
         <div class="col-sm-9">
-          <select name="express" class="form-control" ng-model="orderModalCtrl.order.express" required>
-            <option value="1">express</option>
-            <option value="0">normalny</option>
-          </select>
+          <select name="express" class="form-control" ng-options="value.id as value.name for (key, value) in orderModalCtrl.type"
+                  ng-model="orderModalCtrl.order.express" required> </select>
           <p ng-show="newOrderForm.express.$invalid && !newOrderForm.express.$pristine" class="help-block">Rodzaj jest wymagany.</p>
         </div>
       </div>
@@ -62,10 +60,8 @@
           Status
         </label>
         <div class="col-sm-9">
-          <select name="active" class="form-control" ng-model="orderModalCtrl.order.active" required>
-            <option value="1">Aktywny</option>
-            <option value="0">Nieaktywny</option>
-          </select>
+          <select name="active" class="form-control" ng-options="value.id as value.name for (key, value) in orderModalCtrl.status"
+                  ng-model="orderModalCtrl.order.active" required ></select>
           <p ng-show="newOrderForm.active.$invalid && !newOrderForm.active.$pristine" class="help-block">Rodzaj jest wymagany.</p>
         </div>
       </div>

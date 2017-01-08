@@ -12,8 +12,8 @@ export class OrderModalCtrl {
     active: ''
   };
 
-  private status = [{ id: "1", name: "Aktywny"}, { id: "0", name: "Nieaktywny"}];
-
+  private status = [{ id: 1, name: "Aktywny"}, { id: 0, name: "Nieaktywny"}];
+  private type = [{ id: 1, name: "Express"}, { id: 0, name: "Normalny"}];
   private positions = [];
 
   constructor(private $uibModal:any, private $uibModalInstance:any, order, positions) {

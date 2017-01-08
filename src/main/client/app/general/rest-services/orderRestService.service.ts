@@ -12,14 +12,14 @@ export class OrderRestService {
   getOrders(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/orders/')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   getOrder(id: number): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/orders/'+id)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -27,7 +27,7 @@ export class OrderRestService {
     let config: IRequestShortcutConfig;
     return this.$http.put(this.restServiceUrl + '/orders/' + id, order)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -35,7 +35,7 @@ export class OrderRestService {
     let config: IRequestShortcutConfig;
     return this.$http.delete(this.restServiceUrl + '/orders/'+id)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -43,7 +43,7 @@ export class OrderRestService {
     let config: IRequestShortcutConfig;
     return this.$http.put(this.restServiceUrl + '/orders/'+id+"/change-status", "")
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -51,14 +51,14 @@ export class OrderRestService {
   getComponent(id: number): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/orders/'+id + "/components")
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   synchronize(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/synchronize')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 }

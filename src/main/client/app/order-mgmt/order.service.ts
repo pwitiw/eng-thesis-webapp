@@ -47,41 +47,32 @@ export class OrderService {
     return this.orderRestService.getComponent(id);
   }
 
-  openModal(order) {
+  findPositions(): any{
+    return this.workerRestService.getPositions();
+  }
+
+  openModal(order, positions) {
     var that = this;
 
-    this.workerRestService.getPositions().then(function(positions){
-      let modalObject = {
-        animation: true,
-        controller: 'OrderModalCtrl',
-        controllerAs: 'orderModalCtrl',
-        templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
-        size: 'md',
-        resolve: {
-          order: function() {
-            return order;
-          },
-          positions: function(){
-            return positions;
-          }
-        }
-      };
-
-
-      var modalInstance = that.$uibModal.open(modalObject);
-
-
-      modalInstance.result.then(
-        //close
-        function (result) {
-          that.edit(result.id, <Order>result)
+    let modalObject = {
+      animation: true,
+      controller: 'OrderModalCtrl',
+      controllerAs: 'orderModalCtrl',
+      templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
+      size: 'md',
+      backdrop: 'static',
+      resolve: {
+        order: function() {
+          return order;
         },
-        //dismiss
-        function (result) {
-
+        positions: function(){
+          return positions;
         }
-      )
-    });
+      }
+    };
+
+
+    return that.$uibModal.open(modalObject).result;
   }
 
 
@@ -94,6 +85,7 @@ export class OrderService {
       controllerAs: 'componentsModalCtrl',
       templateUrl: 'order-mgmt/components-modal/components-modal.tpl.html',
       size: 'lg',
+      backdrop: 'static',
       resolve: {
         order: function() {
           return order;

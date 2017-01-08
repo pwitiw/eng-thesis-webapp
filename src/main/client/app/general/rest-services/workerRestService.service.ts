@@ -13,7 +13,7 @@ export class WorkerRestService {
   getPositions(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/workers/positions')
       .then((response: ng.IHttpPromiseCallbackArg<Worker[]>)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
