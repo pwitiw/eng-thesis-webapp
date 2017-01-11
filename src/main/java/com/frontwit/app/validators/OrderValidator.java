@@ -15,8 +15,8 @@ import com.frontwit.app.entities.Order;
 public class OrderValidator implements Validator {
 
     @Override
-    public boolean supports(Class<?> aClass) {
-        return OrderComponentDto.class.equals(aClass);
+    public boolean supports(Class<?> clazz) {
+        return OrderComponentDto.class.equals(clazz);
     }
 
     @Override

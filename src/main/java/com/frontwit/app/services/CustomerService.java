@@ -45,6 +45,11 @@ public class CustomerService {
             customerRepositoryImpl.deleteCustomer(customer);
     }
 
+    @Transactional
+    public Customer saveCustomer(Customer customer){
+        return customerRepositoryImpl.save(customer);
+    }
+
     private void setInactivateCustomer(Customer customer) {
         customer.setActive((short) 0);
     }

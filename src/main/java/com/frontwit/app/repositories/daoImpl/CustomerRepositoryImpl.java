@@ -27,5 +27,7 @@ public class CustomerRepositoryImpl {
 
     public Customer getCustomerForId(long id){return customerRepository.findById(id);}
 
+    public Customer save(Customer customer){return customerRepository.saveAndFlush(customer);}
+
     public void deleteCustomer(Customer customer){customerRepository.delete(customer);}
 }
