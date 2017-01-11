@@ -76,8 +76,10 @@ export class OrderOverviewCtrl {
 
   openComponents(id: number): void{
     var that = this;
-    this.orderService.findOne(id).then(function(data) {
-      that.orderService.openComponentModal(data)
+    this.orderService.findOne(id).then(function(response) {
+      if(response.status == 200) {
+        that.orderService.openComponentModal(response.data)
+      }
     })
   }
 }

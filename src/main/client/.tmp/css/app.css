@@ -1,11 +1,5 @@
 @import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
-.book-details .form-label {
-  text-align: right;
-}
-.book-details .row {
-  margin-top: 5px;
-}
 .main-page h3 {
   margin-top: 10px;
 }

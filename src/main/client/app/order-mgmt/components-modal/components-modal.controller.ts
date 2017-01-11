@@ -1,4 +1,4 @@
-import {OrderRestService} from "../general/rest-services/orderRestService.service";
+import {OrderRestService} from "../../general/rest-services/orderRestService.service";
 
 export class ComponentsModalCtrl {
   private components = [];

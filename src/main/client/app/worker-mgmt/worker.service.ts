@@ -31,6 +31,10 @@ export class WorkerService {
     return this.workerRestService.delete(id);
   }
 
+  findPositions(): any {
+    return this.workerRestService.getPositions()
+  }
+
   findOne(id: number): any {
     return this.workerRestService.getWorker(id);
   }
@@ -40,10 +44,9 @@ export class WorkerService {
     //return this.books;
   }
 
-  openModal(worker): void {
+  openModal(worker, positions): any {
     var that = this;
 
-    this.workerRestService.getPositions().then(function(positions){
       let modalObject = {
         animation: true,
         controller: 'WorkerModalCtrl',
@@ -61,31 +64,6 @@ export class WorkerService {
         }
       };
 
-      var modalInstance = that.$uibModal.open(modalObject);
-
-      modalInstance.result.then(
-        //close
-        function (result) {
-          let newWorker = {
-            id: result.id,
-            active: 1, //ustawienie na aktywnego
-            code: result.code,
-            name: result.name,
-            surname: result.surname,
-            position: result.position
-          };
-          if( typeof result.id === 'undefined' || result.id === null ) {
-            that.save(<Worker>newWorker);
-          } else {
-            that.update(result.id, <Worker>newWorker);
-          }
-
-        },
-        //dismiss
-        function (result) {
-
-        }
-      )
-    });
+      return that.$uibModal.open(modalObject).result;
   }
 }

@@ -20,14 +20,7 @@ export class WorkerModalCtrl {
      this.$uibModalInstance.dismiss();
   }
 
-  ok(code, name, surname, position) {
-    let worker = {
-      id: this.user.id,
-      code: code,
-      name: name,
-      surname: surname,
-      position: position
-    };
+  ok(worker) {
     this.$uibModalInstance.close(worker);
   }
 }

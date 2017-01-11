@@ -2,11 +2,11 @@ import {Event} from "../../general/interfaces/event.interface";
 import {EventService} from "../event.service";
 
 export class EventOverviewCtrl {
-  events: Event[];
-  workerCode: number;
-  displayed = [];
-  itemsByPage: number;
-  paginationSizes: any;
+  private events: Event[];
+  private workerCode: number;
+  private displayed = [];
+  private itemsByPage: number;
+  private paginationSizes: any;
 
   constructor(private eventService: EventService) {
     this.itemsByPage = 5;
@@ -24,7 +24,7 @@ export class EventOverviewCtrl {
 
   delete(orderId: number, positionId: number): void {
     var that = this;
-    this.delete(orderId, positionId).then(function(data){
+    this.eventService.delete(orderId, positionId).then(function(data){
       var index = that.events.findIndex(data);
       that.events.splice(index, 1);
     })
