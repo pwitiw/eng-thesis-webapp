@@ -1,5 +1,7 @@
 <div class="modal-header">
-  <span>Lista elementów</span>
+  <span ng-show="!componentsModalCtrl.editMode">Lista elementów dla {{componentsModalCtrl.orderName}}</span>
+  <span ng-show="componentsModalCtrl.editMode && !componentsModalCtrl.component.id">Dodaj nowy element</span>
+  <span ng-show="componentsModalCtrl.editMode && componentsModalCtrl.component.id">Edytuj element</span>
   <a ng-show="!componentsModalCtrl.editMode" href="" ng-click="componentsModalCtrl.cancel()">
     <i class="fa fa-times" aria-hidden="true"></i>
   </a>
@@ -73,7 +75,7 @@
       <tfoot>
       <tr>
         <td colspan="9" class="text-right">
-          <div st-pagination="" st-items-by-page="5" st-template="../../table/pagination.html"></div>
+          <div st-pagination="" st-items-by-page="5" st-template="../../general/template/pagination.html"></div>
         </td>
       </tr>
       </tfoot>

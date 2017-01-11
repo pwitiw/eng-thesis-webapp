@@ -1,5 +1,6 @@
 import {Event} from "../../general/interfaces/event.interface";
 import {EventService} from "../event.service";
+import {ToastService} from "../../general/toast/toast.service";
 
 export class EventOverviewCtrl {
   private events: Event[];
@@ -8,7 +9,7 @@ export class EventOverviewCtrl {
   private itemsByPage: number;
   private paginationSizes: any;
 
-  constructor(private eventService: EventService) {
+  constructor(private eventService: EventService, private toastService: ToastService) {
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
     this.findAll();

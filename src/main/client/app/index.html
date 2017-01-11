@@ -14,6 +14,7 @@
   <title>FrontWit Application</title>
   <!-- build:css css/app.css -->
   <link href="/resources/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="css/app.css">
   <!-- endbuild -->
 </head>
@@ -24,7 +25,7 @@
 <nav>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-      <div class="navbar-header">
+     <!-- <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -34,9 +35,11 @@
         <a data-ui-sref-active="active" class="navbar-brand  header-bigger-size" href
            data-ui-sref="main-page">FRONTWIT<span class="sr-only">(current)</span>
         </a>
-      </div>
+      </div>-->
       <div class="navbar-collapse collapse header-size">
         <ul class="nav navbar-nav">
+          <li data-ui-sref-active="active"><a href data-ui-sref="main-page">FRONTWIT<span class="sr-only">(current)</span></a>
+          </li>
           <li data-ui-sref-active="active"><a href data-ui-sref="order-overview">Zamówienia<span class="sr-only">(current)</span></a>
           </li>
           <li data-ui-sref-active="active"><a href data-ui-sref="worker-overview">Pracownicy<span class="sr-only">(current)</span></a>

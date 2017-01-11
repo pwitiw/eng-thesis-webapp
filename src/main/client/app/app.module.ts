@@ -2,6 +2,9 @@
 
 import * as angular from 'angular';
 import '../bower_components/angular-smart-table/dist/smart-table.min.js';
+import '../bower_components/angular-aria/angular-aria.js';
+import '../bower_components/angular-animate/angular-animate.js';
+import '../bower_components/angular-material/angular-material.js';
 import 'angular-ui-router';
 import 'templates';
 import 'angular-ui-bootstrap';
@@ -26,7 +29,8 @@ angular.module('app', [
   eventMgmtModuleName,
   customerMgmtModuleName,
   'smart-table',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngMaterial'
 ])
   .config(function ($urlRouterProvider: IUrlRouterProvider, $locationProvider: ILocationProvider) {
     //todo to import,$translateProvider : any

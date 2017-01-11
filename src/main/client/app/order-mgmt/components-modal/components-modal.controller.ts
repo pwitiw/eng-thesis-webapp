@@ -12,12 +12,14 @@ export class ComponentsModalCtrl {
     "comment": ""
   };
   private order: any;
+  private orderName: string;
   private displayed = [];
   private editMode = false;
 
-  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, order) {
+  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, order, orderName) {
     this.order = order;
     this.components = order.components;
+    this.orderName = orderName;
   }
 
   editComponent(component) {
@@ -35,6 +37,7 @@ export class ComponentsModalCtrl {
       var index = this.components.findIndex(c => c.id === component.id);
       this.components.splice(index, 1, component);
     } else {
+      component.orderName = this.orderName;
       this.components.push(component);
     }
     this.component = null;
