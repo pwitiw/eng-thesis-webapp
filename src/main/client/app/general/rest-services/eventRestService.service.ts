@@ -12,15 +12,7 @@ export class EventRestService {
   getEvents(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/events')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
-
-  deleteEvent(orderId: number, positionId: number): IPromise<any> {
-    return this.$http.delete(this.restServiceUrl + '/events/' + orderId + "/" + positionId)
-      .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
-      })
-  }
-
 }

@@ -17,17 +17,14 @@ export class WorkerService {
   }
 
   save(worker: Worker): any {
-    this.workerRestService.save(worker).then(function(data) {
-
-    });
+    return this.workerRestService.save(worker);
   }
 
-  update(id: number, worker: Worker): void {
-    this.workerRestService.update(id, worker);
+  update(id: number, worker: Worker): any {
+    return this.workerRestService.update(id, worker);
   }
 
   delete(id: number): any {
-    //this.worker.pop(); //usuwa ostatni element
     return this.workerRestService.delete(id);
   }
 
@@ -41,7 +38,6 @@ export class WorkerService {
 
   findAll(): any {
     return this.workerRestService.getWorkers();
-    //return this.books;
   }
 
   openModal(worker, positions): any {

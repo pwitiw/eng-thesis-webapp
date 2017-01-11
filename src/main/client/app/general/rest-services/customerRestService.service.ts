@@ -12,7 +12,7 @@ export class CustomerRestService {
   getCustomers(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/customers')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
-        return response.data;
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
