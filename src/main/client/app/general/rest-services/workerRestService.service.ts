@@ -55,4 +55,11 @@ export class WorkerRestService {
       })
   }
 
+  getEvents(id: number): IPromise<any> {
+    return this.$http.get(this.restServiceUrl + '/workers/' + id + '/events')
+      .then((response: ng.IHttpPromiseCallbackArg<Order[]>)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      })
+  }
+
 }

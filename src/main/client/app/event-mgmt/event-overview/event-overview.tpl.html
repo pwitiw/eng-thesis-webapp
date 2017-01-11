@@ -2,8 +2,11 @@
 
   <div class="container">
     <div class="table-options">
-      <span>
+      <span ng-show="!eventOverviewCtrl.id">
         Statystyki
+      </span>
+      <span ng-show="eventOverviewCtrl.id">
+        Statystyki dla {{eventOverviewCtrl.id}}
       </span>
     </div>
 
@@ -19,7 +22,7 @@
           </div>
         </td>
         <td colspan="5">
-          <input  type="text" class="pull-right form-control table-filter" placeholder="Szukaj" ng-model="eventOverviewCtrl.workerCode" st-search="worker.code">
+          <input  type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="worker.code">
         </td>
       </tr>
       <tr>
