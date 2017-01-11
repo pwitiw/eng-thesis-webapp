@@ -1,0 +1,157 @@
+<div class="modal-header">
+  <span>Lista elementów</span>
+  <a ng-show="!componentsModalCtrl.editMode" href="" ng-click="componentsModalCtrl.cancel()">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </a>
+</div>
+<div class="modal-body">
+  <section ng-show="!componentsModalCtrl.editMode">
+    <table st-table="componentsModalCtrl.displayed" st-safe-src="componentsModalCtrl.components" class="table table-striped">
+
+      <thead>
+      <tr>
+        <td colspan="6">
+          <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
+        </td>
+        <td class="component-add-button">
+          <a href="" ng-click="componentsModalCtrl.add()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th st-sort="id">
+          Id
+        </th>
+        <th st-sort="width">
+          Szerokość
+        </th>
+        <th st-sort="height">
+          Wysokość
+        </th>
+        <th st-sort="amount">
+          Ilość elementów
+        </th>
+        <th st-sort="missing">
+          Ilość brakujących elementów
+        </th>
+        <th st-sort="comment">
+          Komentarz
+        </th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr ng-repeat="component in componentsModalCtrl.displayed">
+        <td>{{component.id}}</td>
+        <td><div contenteditable="true" data-ng-click="editComponent">{{component.width}}</div></td>
+        <td>{{component.height}}</td>
+        <td>{{component.amount}}</td>
+        <td>{{component.missing}}</td>
+        <td>{{component.comment}}</td>
+        <td>
+          <div class="dropdown btn-group inline" ng-hide="editing">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="" ng-click="componentsModalCtrl.editComponent(component)" >
+                  <i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
+                  Edytuj
+                </a>
+              </li>
+              <li>
+                <a href="" data-target="#confirm-delete" ng-click="componentsModalCtrl.delete(component)" data-toggle="modal">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  Usuń
+                </a>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <td colspan="9" class="text-right">
+          <div st-pagination="" st-items-by-page="5" st-template="../../table/pagination.html"></div>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section ng-show="componentsModalCtrl.editMode">
+    <form class="form-horizontal" name="newComponentForm" novalidate>
+      <!-- width -->
+      <div class="form-group" ng-class="{ 'has-error' : newComponentForm.width.$invalid && !newComponentForm.width.$pristine }">
+        <label class="control-label col-sm-3">
+          Szerokość
+        </label>
+        <div class="col-sm-9">
+          <input type="number" name="width" class="form-control" ng-model="componentsModalCtrl.component.width" required>
+          <p ng-show="newComponentForm.width.$invalid && !newComponentForm.width.$pristine" class="help-block">Zamówienie jest wymagane.</p>
+        </div>
+      </div>
+
+      <!-- height -->
+      <div class="form-group" ng-class="{ 'has-error' : newComponentForm.height.$invalid && !newComponentForm.height.$pristine }">
+        <label class="control-label col-sm-3">
+          Wysokość
+        </label>
+        <div class="col-sm-9">
+          <input type="number" name="height" class="form-control" ng-model="componentsModalCtrl.component.height" required>
+          <p ng-show="newComponentForm.height.$invalid && !newComponentForm.height.$pristine" class="help-block">Nazwa klienta jest wymagana.</p>
+        </div>
+      </div>
+
+      <!-- amount -->
+      <div class="form-group" ng-class="{ 'has-error' : newComponentForm.amount.$invalid && !newComponentForm.amount.$pristine }">
+        <label class="control-label col-sm-3">
+          Ilość elementów
+        </label>
+        <div class="col-sm-9">
+          <input type="number" name="amount" class="form-control" ng-model="componentsModalCtrl.component.amount" required>
+          <p ng-show="newComponentForm.amount.$invalid && !newComponentForm.amount.$pristine" class="help-block">Etap produkcji jest wymagany.</p>
+        </div>
+      </div>
+
+      <!-- missing -->
+      <div class="form-group" ng-class="{ 'has-error' : newComponentForm.missing.$invalid && !newComponentForm.missing.$pristine }">
+        <label class="control-label col-sm-3">
+          Ilość brakujących elementów
+        </label>
+        <div class="col-sm-9">
+          <input type="number" name="missing" class="form-control" ng-model="componentsModalCtrl.component.missing" required>
+          <p ng-show="newComponentForm.missing.$invalid && !newComponentForm.missing.$pristine" class="help-block">Etap produkcji jest wymagany.</p>
+        </div>
+      </div>
+
+      <!-- comment -->
+      <div class="form-group">
+        <label class="control-label col-sm-3">
+          Komentarz
+        </label>
+        <div class="col-sm-9">
+          <input type="text" name="comment" class="form-control" ng-model="componentsModalCtrl.component.comment">
+        </div>
+      </div>
+
+    </form>
+  </section>
+</div>
+</div>
+<div class="modal-footer">
+
+  <button ng-show="!componentsModalCtrl.editMode" class="btn btn-primary"
+          ng-click="componentsModalCtrl.ok()">Aktualizuj</button>
+
+  <button ng-show="componentsModalCtrl.editMode" class="btn btn-warning"
+          ng-click="componentsModalCtrl.back()">Cofnij</button>
+
+  <button ng-show="componentsModalCtrl.editMode" type="submit" class="btn btn-primary"
+          ng-click="componentsModalCtrl.save(componentsModalCtrl.component)">Zapisz</button>
+</div>

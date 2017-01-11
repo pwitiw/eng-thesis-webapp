@@ -1,25 +1,26 @@
 export class WorkerModalCtrl {
 
   private user = {
-    firstName: "",
+    active: null,
+    id: null,
+    code: null,
+    name: "",
     surname: "",
     position: ""
   };
 
-  constructor(private $uibModal:any, private $uibModalInstance:any, user) {
+  private positions = [];
+
+  constructor(private $uibModal:any, private $uibModalInstance:any, user, positions) {
     this.user = user;
+    this.positions = positions;
   }
 
   cancel() {
      this.$uibModalInstance.dismiss();
   }
 
-  ok(firstName, surname, position) {
-    let worker = {
-      firstName: firstName,
-      surname: surname,
-      position: position
-    };
+  ok(worker) {
     this.$uibModalInstance.close(worker);
   }
 }

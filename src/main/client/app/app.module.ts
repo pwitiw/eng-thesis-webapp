@@ -9,10 +9,10 @@ import 'angular-ui-bootstrap';
 import ILocationProvider = angular.ILocationProvider;
 import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
 
-import bookMgmtModuleName from './book-mgmt/book-mgmt.module'
 import orderMgmtModuleName from './order-mgmt/order-mgmt.module'
 import workerMgmtModuleName from './worker-mgmt/worker-mgmt.module'
 import eventMgmtModuleName from './event-mgmt/event-mgmt.module'
+import customerMgmtModuleName from './customer-mgmt/customer-mgmt.module'
 import mainPageModuleName from './main-page/main-page.module'
 import loginPageModuleName from './login-page/login-page.module'
 
@@ -21,10 +21,10 @@ import any = jasmine.any;
 angular.module('app', [
   loginPageModuleName,
   mainPageModuleName,
-  bookMgmtModuleName,
   orderMgmtModuleName,
   workerMgmtModuleName,
   eventMgmtModuleName,
+  customerMgmtModuleName,
   'smart-table',
   'ui.bootstrap'
 ])

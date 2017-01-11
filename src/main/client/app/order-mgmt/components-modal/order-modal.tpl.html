@@ -4,56 +4,85 @@
     <i class="fa fa-times" aria-hidden="true"></i>
   </a>
 </div>
-<div class="modal-body">
-  <form name="newOrderForm" novalidate>
-    <!-- ORDER -->
-    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.orderId.$invalid && !newOrderForm.orderId.$pristine }">
-      <label>Zamówienie</label>
-      <input type="text" name="orderId" class="form-control" ng-model="orderModalCtrl.order.orderId" required>
-      <p ng-show="newOrderForm.orderId.$invalid && !newOrderForm.orderId.$pristine" class="help-block">Zamówienie jest wymagane.</p>
-    </div>
+<div class="modal-body order-modal-body">
+  <section>
+    <form class="form-horizontal" name="newOrderForm" novalidate>
+      <!-- ORDER -->
+      <div class="form-group" ng-class="{ 'has-error' : newOrderForm.name.$invalid && !newOrderForm.name.$pristine }">
+        <label class="control-label col-sm-3">
+          Zamówienie
+        </label>
+        <div class="col-sm-9">
+          <input type="text" name="name" class="form-control" ng-model="orderModalCtrl.order.name" required>
+          <p ng-show="newOrderForm.name.$invalid && !newOrderForm.name.$pristine" class="help-block">Zamówienie jest wymagane.</p>
+        </div>
+      </div>
 
-    <!-- CLIENT -->
-    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine }">
-      <label>Nazwa klienta</label>
-      <input type="text" name="customer" class="form-control" ng-model="orderModalCtrl.order.customer" required>
-      <p ng-show="newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine" class="help-block">Nazwa klienta jest wymagana.</p>
-    </div>
+      <!-- CLIENT -->
+      <div class="form-group" ng-class="{ 'has-error' : newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine }">
+        <label class="control-label col-sm-3">
+          Nazwa klienta
+        </label>
+        <div class="col-sm-9">
+          <input type="text" name="customer" class="form-control" ng-model="orderModalCtrl.order.customer" required>
+          <p ng-show="newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine" class="help-block">Nazwa klienta jest wymagana.</p>
+        </div>
+      </div>
 
-    <!-- COLOR -->
-    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.color.$invalid && !newOrderForm.color.$pristine }">
-      <label>Kolor</label>
-      <input type="text" name="color" class="form-control" ng-model="orderModalCtrl.order.color" required>
-      <p ng-show="newOrderForm.color.$invalid && !newOrderForm.color.$pristine" class="help-block">Kolor jest wymagany.</p>
-    </div>
+      <!-- POSITION -->
+      <div class="form-group" ng-class="{ 'has-error' : newOrderForm.position.$invalid && !newOrderForm.position.$pristine }">
+        <label class="control-label col-sm-3">
+          Etap produkcji
+        </label>
+        <div class="col-sm-9">
+          <select name="position" class="form-control" ng-model="orderModalCtrl.order.position" required>
+            <option ng-repeat="x in orderModalCtrl.positions" value="{{x.name}}">{{x.name}}</option>
+          </select>
+          <p ng-show="newOrderForm.position.$invalid && !newOrderForm.position.$pristine" class="help-block">Etap produkcji jest wymagany.</p>
+        </div>
+      </div>
 
-    <!-- POSITION -->
-    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.position.$invalid && !newOrderForm.position.$pristine }">
-      <label>Etap produkcji</label>
-      <input type="text" name="position" class="form-control" ng-model="orderModalCtrl.order.position" required>
-      <p ng-show="newOrderForm.position.$invalid && !newOrderForm.position.$pristine" class="help-block">Etap produkcji jest wymagany.</p>
-    </div>
+      <!-- TYPE -->
+      <div class="form-group" ng-class="{ 'has-error' : newOrderForm.express.$invalid && !newOrderForm.express.$pristine }">
+        <label class="control-label col-sm-3">
+          Rodzaj
+        </label>
+        <div class="col-sm-9">
+          <select name="express" class="form-control" ng-options="value.id as value.name for (key, value) in orderModalCtrl.type"
+                  ng-model="orderModalCtrl.order.express" required> </select>
+          <p ng-show="newOrderForm.express.$invalid && !newOrderForm.express.$pristine" class="help-block">Rodzaj jest wymagany.</p>
+        </div>
+      </div>
 
-    <!-- TYPE -->
-    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.type.$invalid && !newOrderForm.type.$pristine }">
-      <label>Rodzaj</label>
-      <select name="type" class="form-control" ng-model="orderModalCtrl.order.type" required>
-        <option value="express">express</option>
-        <option value="normalny">normalny</option>
-      </select>
-      <p ng-show="newOrderForm.type.$invalid && !newOrderForm.type.$pristine" class="help-block">Rodzaj jest wymagany.</p>
-    </div>
+      <!-- STATUS -->
+      <div class="form-group" ng-class="{ 'has-error' : newOrderForm.active.$invalid && !newOrderForm.active.$pristine }">
+        <label class="control-label col-sm-3">
+          Status
+        </label>
+        <div class="col-sm-9">
+          <select name="active" class="form-control" ng-options="value.id as value.name for (key, value) in orderModalCtrl.status"
+                  ng-model="orderModalCtrl.order.active" required ></select>
+          <p ng-show="newOrderForm.active.$invalid && !newOrderForm.active.$pristine" class="help-block">Rodzaj jest wymagany.</p>
+        </div>
+      </div>
 
-    <!-- DATE -->
-    <div class="form-group" ng-class="{ 'has-error' : newOrderForm.date.$invalid && !newOrderForm.date.$pristine }">
-      <label>Data</label>
-      <input type="text" name="date" class="form-control" ng-model="orderModalCtrl.order.date" required>
-      <p ng-show="newOrderForm.date.$invalid && !newOrderForm.date.$pristine" class="help-block">Data jest wymagana.</p>
-    </div>
+      <!-- DATE -->
+      <div class="form-group" ng-class="{ 'has-error' : newOrderForm.date.$invalid && !newOrderForm.date.$pristine }">
+        <label class="control-label col-sm-3">
+          Data
+        </label>
+        <div class="col-sm-9">
+          <input type="date" name="date" class="form-control" ng-model="orderModalCtrl.order.date" required>
+          <p ng-show="newOrderForm.date.$invalid && !newOrderForm.date.$pristine" class="help-block">Data jest wymagana.</p>
+        </div>
+      </div>
 
-  </form>
+    </form>
+  </section>
+
 </div>
 </div>
 <div class="modal-footer">
-  <button type="submit" class="btn btn-primary" ng-click="orderModalCtrl.ok(orderModalCtrl.order.orderId, orderModalCtrl.order.customer, orderModalCtrl.order.color, orderModalCtrl.order.position, orderModalCtrl.order.type, orderModalCtrl.order.date)" ng-disabled="newOrderForm.$invalid">Dodaj</button>
+  <button type="submit" class="btn btn-primary"
+          ng-click="orderModalCtrl.ok(orderModalCtrl.order)" ng-disabled="newOrderForm.$invalid">Zapisz</button>
 </div>

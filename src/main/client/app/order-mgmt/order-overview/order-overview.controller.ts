@@ -10,14 +10,29 @@ export class OrderOverviewCtrl {
   paginationSizes: any;
 
 
-  constructor(private orderService: OrderService) {
-    this.orders = orderService.getOrders();
+  constructor(private orderService: OrderService, private $uibModal: any) {
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
+    this.findAll();
+  }
+
+  findAll(): void {
+    var that = this;
+    this.orderService.findAll().then(function(response) {
+      if(response.status == 200) {
+        that.orders = response.data;
+      }
+    })
   }
 
   delete(id: number): void {
-    this.orderService.delete(id);
+    var that = this;
+    this.orderService.delete(id).then(function(response) {
+      if(response.status == 200) {
+        var index = that.orders.findIndex(order => order.id === id);
+        that.orders.splice(index, 1);
+      }
+    })
   }
 
   synchronize():void {
@@ -28,13 +43,43 @@ export class OrderOverviewCtrl {
     this.itemsByPage = size;
   }
 
-  addOrder(): void {
-    this.orderService.clearOrder();
-    this.orderService.openModal();
+  changeType(id: number): void {
+    var that = this;
+    this.orderService.changeType(id).then(function(response) {
+      if(response.status == 200) {
+        var index = that.orders.findIndex(order => order.id === id);
+        that.orders[index].active ? that.orders[index].active = false : that.orders[index].active = true;
+      }
+    })
   }
 
+
   editOrder(id: number): void {
-    this.orderService.findOne(id);
-    this.orderService.openModal();
+    var that = this;
+    this.orderService.findOne(id).then(function(findOneResponse){
+      if(findOneResponse.status == 200) {
+        that.orderService.findPositions().then(function (positions) {
+          if(positions.status == 200) {
+            that.orderService.openModal(findOneResponse.data, positions.data).then(function (resultModal) {
+              that.orderService.edit(resultModal.id, resultModal).then(function (editResponse) {
+                if(editResponse.status == 200) {
+                  var index = that.orders.findIndex(order => order.id === resultModal.id);
+                  that.orders.splice(index, 1, resultModal);
+                }
+              });
+            });
+          }
+        });
+      }
+    });
+  }
+
+  openComponents(id: number): void{
+    var that = this;
+    this.orderService.findOne(id).then(function(response) {
+      if(response.status == 200) {
+        that.orderService.openComponentModal(response.data)
+      }
+    })
   }
 }

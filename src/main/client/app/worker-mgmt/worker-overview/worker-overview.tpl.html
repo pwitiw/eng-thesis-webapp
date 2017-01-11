@@ -32,7 +32,7 @@
           <th st-sort="code">
              Kod pracownika
           </th>
-          <th st-sort="firstName">
+          <th st-sort="name">
             Imię
           </th>
           <th st-sort="surname">
@@ -49,7 +49,7 @@
         <tr ng-repeat="worker in workerOverviewCtrl.displayed">
           <td>{{worker.id}}</td>
           <td>{{worker.code}}</td>
-          <td>{{worker.firstName}}</td>
+          <td>{{worker.name}}</td>
           <td>{{worker.surname}}</td>
           <td>{{worker.position}}</td>
           <td>
