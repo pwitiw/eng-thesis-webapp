@@ -2,6 +2,7 @@ package com.frontwit.app.services;
 
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.dto.OrderComponentDto;
+import com.frontwit.app.entities.Component;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
@@ -70,6 +71,7 @@ public class OrderService {
         Order updatedOrder = getOrderForOrderComponentDto(orderComponentDto);
         Order order = orderRepositoryImpl.getOrderForId(orderComponentDto.getId());
         copyOrder(order, updatedOrder);
+
         orderRepositoryImpl.save(order);
     }
 

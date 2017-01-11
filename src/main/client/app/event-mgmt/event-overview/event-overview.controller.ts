@@ -2,22 +2,32 @@ import {Event} from "../../general/interfaces/event.interface";
 import {EventService} from "../event.service";
 
 export class EventOverviewCtrl {
-  events: Event[];
-  workerCode: number;
-  displayed = [];
-  itemsByPage: number;
-  paginationSizes: any;
+  private events: Event[];
+  private workerCode: number;
+  private displayed = [];
+  private itemsByPage: number;
+  private paginationSizes: any;
 
   constructor(private eventService: EventService) {
-    this.events = eventService.getEvent();
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
+    this.findAll();
 
   }
 
-  delete(id: number): void {
-    alert("Usuniety z id = " + id);
-    this.eventService.delete(id);
+  findAll(): any {
+    var that = this;
+    this.eventService.findAll().then(function(data){
+      that.events = data;
+    })
+  }
+
+  delete(orderId: number, positionId: number): void {
+    var that = this;
+    this.eventService.delete(orderId, positionId).then(function(data){
+      var index = that.events.findIndex(data);
+      that.events.splice(index, 1);
+    })
   }
 
   updatePagination(size: number): void {

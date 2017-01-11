@@ -1,7 +1,8 @@
 export interface Worker{
+  active?:number;
   id?:number;
   code:number
-  firstName:string;
+  name:string;
   surname:string;
   position:string;
 }

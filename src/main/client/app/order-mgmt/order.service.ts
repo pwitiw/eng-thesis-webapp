@@ -1,123 +1,57 @@
 import {OrderRestService} from "../general/rest-services/orderRestService.service";
+import {WorkerRestService} from "../general/rest-services/workerRestService.service";
 import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
   private order: any = {
-    orderId: '',
+    id: null,
+    name: '',
     customer: '',
-    color: '',
     position: '',
-    type: '',
-    date: ''
+    date: '',
+    express: null,      //express czy nie
+    lastUpdate: '',
+    parentId: null,
+    active: null
   };
 
-  private orders: Order[] = [
-    {
-      id: 1,
-      orderId: '001TW',
-      customer: 'Bootstrap',
-      color: 'RAL2010',
-      position: 'FREZERNIA',
-      type: 'express',
-      date: '20 - 04 - 2017'
-    },
-    {
-      id: 2,
-      orderId: '002TW',
-      customer: 'Angular',
-      color: 'RAL2610',
-      position: 'FREZERNIA',
-      type: 'normalny',
-      date: '20 - 04 - 2017'
-    },
-    {
-      id: 3,
-      orderId: '003TW',
-      customer: 'CHmiel',
-      color: 'RAL2010',
-      position: 'FREZERNIA',
-      type: 'express',
-      date: '20 - 04 - 2017'
-    },
-    {
-      id: 4,
-      orderId: '004TW',
-      customer: 'Angular',
-      color: 'RAL2310',
-      position: 'FREZERNIA',
-      type: 'normalny',
-      date: '20 - 04 - 2017'
-    },
-    {
-      id: 5,
-      orderId: '005TW',
-      customer: 'Angular',
-      color: 'RAL2010',
-      position: 'FREZERNIA',
-      type: 'normalny',
-      date: '20 - 04 - 2017'
-    },
-    {
-      id: 6,
-      orderId: '006TW',
-      customer: 'CHmiel',
-      color: 'RAL2010',
-      position: 'FREZERNIA',
-      type: 'normalny',
-      date: '20 - 04 - 2017'
-    }
-
-  ];
-  private sequencer = 1;
-
-  constructor(private orderRestService: OrderRestService, private $uibModal: any) {
+  constructor(private orderRestService: OrderRestService, private workerRestService: WorkerRestService, private $uibModal: any) {
 
   }
 
-  getOrders(): Order[] {
-    return this.orders;
+  synchronize(): any {
+    return this.orderRestService.synchronize();
   }
 
-  save(order: Order): any {
-    this.orders.push(order);
-    //this.orderRestService.save(order);
+  edit(id: number, order: Order): any {
+    return this.orderRestService.edit(id, order);
   }
 
   delete(id: number): any {
-    this.orders.pop();
-    //this.orderRestService.delete(id);
+    return this.orderRestService.delete(id);
+  }
+
+  changeType(id: number): any {
+    return this.orderRestService.changeType(id);
   }
 
   findOne(id: number): any {
-    var order = this.orders[id-1]; //-1, bo tablica obecnie
-    this.order = {
-      orderId: order.orderId,
-      customer: order.customer,
-      color: order.color,
-      position: order.position,
-      type: order.type,
-      date: order.date
-    };
-    //return this.orderRestService.getOrder(id);
+    return this.orderRestService.getOrder(id);
   }
 
   findAll(): any {
     return this.orderRestService.getOrders();
-    //return this.books;
   }
 
-  clearOrder(): void {
-    this.order = {
-      orderId: '',
-      customer: '',
-      color: '',
-      position: '',
-      type: '',
-      date: ''
-    };
+  findComponents(id: number): any {
+    return this.orderRestService.getComponent(id);
   }
 
-  openModal() {
+  findPositions(): any{
+    return this.workerRestService.getPositions();
+  }
+
+  openModal(order, positions) {
     var that = this;
 
     let modalObject = {
@@ -126,8 +60,36 @@ export class OrderService {
       controllerAs: 'orderModalCtrl',
       templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
       size: 'md',
+      backdrop: 'static',
       resolve: {
-        order: that.order
+        order: function() {
+          return order;
+        },
+        positions: function(){
+          return positions;
+        }
+      }
+    };
+
+
+    return that.$uibModal.open(modalObject).result;
+  }
+
+
+  openComponentModal(order) {
+    var that = this;
+
+    let modalObject = {
+      animation: true,
+      controller: 'ComponentsModalCtrl',
+      controllerAs: 'componentsModalCtrl',
+      templateUrl: 'order-mgmt/components-modal/components-modal.tpl.html',
+      size: 'lg',
+      backdrop: 'static',
+      resolve: {
+        order: function() {
+          return order;
+        }
       }
     };
 
@@ -136,16 +98,7 @@ export class OrderService {
     modalInstance.result.then(
       //close
       function (result) {
-        let newOrder = {
-          id: 78,
-          orderId: result.orderId,
-          customer: result.customer,
-          color: result.color,
-          position: result.position,
-          type: result.type,
-          date: result.date
-        };
-        that.save(<Order>newOrder);
+
       },
       //dismiss
       function (result) {
@@ -153,6 +106,5 @@ export class OrderService {
       }
     )
   }
-
 
 }
