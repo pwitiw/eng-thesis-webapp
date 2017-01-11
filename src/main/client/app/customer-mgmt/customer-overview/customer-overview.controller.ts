@@ -16,9 +16,35 @@ export class CustomerOverviewCtrl {
 
   findAll(){
     var that = this;
-    this.customerService.findAll().then(function(data) {
-      that.customers = data;
+    this.customerService.findAll().then(function(response) {
+      if(response.status == 200) {
+        that.customers = response.data;
+      }
     });
+  }
+
+  delete(id: number): void {
+    var that = this;
+    var index = that.customers.findIndex(customer => customer.id === id);
+    that.customers.splice(index, 1);
+  }
+
+  addCustomer(): void {
+    var that = this;
+    this.customerService.openModal({}).then(
+      //close
+      function (result) {
+        alert("Dodalem " + JSON.stringify(result));
+      },
+      //dismiss
+      function (result) {
+
+      }
+    )
+  }
+
+  editCustomer(id: number): void {
+    alert("edycja")
   }
 
   updatePagination(size: number): void {

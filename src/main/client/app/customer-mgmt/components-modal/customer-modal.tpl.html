@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <span ng-show="customerModalCtrl.customer.id">Edytuj klienta</span>
+  <span ng-show="!customerModalCtrl.customer.id">Dodaj nowego klienta</span>
+  <a href="" ng-click="customerModalCtrl.cancel()">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </a>
+</div>
+<div class="modal-body">
+  <form name="newCustomerForm" novalidate>
+    <!-- NAME -->
+    <div class="form-group" ng-class="{ 'has-error' : newCustomerForm.name.$invalid && !newCustomerForm.name.$pristine }">
+      <label>Nazwa</label>
+      <input type="text" name="name" class="form-control" ng-model="customerModalCtrl.customer.name" required>
+      <p ng-show="newCustomerForm.name.$invalid && !newCustomerForm.name.$pristine" class="help-block">Nazwa jest wymagana.</p>
+    </div>
+
+    <!-- FIRSTNAME -->
+    <div class="form-group" ng-class="{ 'has-error' : newCustomerForm.firstName.$invalid && !newCustomerForm.firstName.$pristine }">
+      <label>Imię</label>
+      <input type="text" name="firstName" class="form-control" ng-model="customerModalCtrl.customer.firstName" required>
+      <p ng-show="newCustomerForm.firstName.$invalid && !newCustomerForm.firstName.$pristine" class="help-block">Imię jest wymagane.</p>
+    </div>
+
+    <!-- LASTNAME -->
+    <div class="form-group" ng-class="{ 'has-error' : newCustomerForm.lastName.$invalid && !newCustomerForm.lastName.$pristine }">
+      <label>Nazwisko</label>
+      <input type="text" name="lastName" class="form-control" ng-model="customerModalCtrl.customer.lastName" required>
+      <p ng-show="newCustomerForm.lastName.$invalid && !newCustomerForm.lastName.$pristine" class="help-block">Nazwisko jest wymagane.</p>
+    </div>
+
+  </form>
+</div>
+</div>
+<div class="modal-footer">
+  <button type="submit" class="btn btn-primary" ng-click="customerModalCtrl.ok(customerModalCtrl.customer)" ng-disabled="newCustomerForm.$invalid">Dodaj</button>
+</div>

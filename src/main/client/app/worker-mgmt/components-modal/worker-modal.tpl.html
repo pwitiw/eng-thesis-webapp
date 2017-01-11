@@ -1,5 +1,6 @@
 <div class="modal-header">
-  <span>Dodaj nowego pracownika</span>
+  <span ng-show="workerModalCtrl.user.id">Edytuj dane pracownika</span>
+  <span ng-show="!workerModalCtrl.user.id">Dodaj nowego pracownika</span>
   <a href="" ng-click="workerModalCtrl.cancel()">
     <i class="fa fa-times" aria-hidden="true"></i>
   </a>

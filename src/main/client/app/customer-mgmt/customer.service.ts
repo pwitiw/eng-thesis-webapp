@@ -10,4 +10,24 @@ export class CustomerService {
   findAll(): any {
     return this.customerRestService.getCustomers();
   }
+
+  openModal(customer): any {
+    var that = this;
+
+    let modalObject = {
+      animation: true,
+      controller: 'CustomerModalCtrl',
+      controllerAs: 'customerModalCtrl',
+      templateUrl: 'customer-mgmt/components-modal/customer-modal.tpl.html',
+      size: 'md',
+      backdrop: 'static',
+      resolve: {
+        customer: function() {
+          return customer
+        }
+      }
+    };
+
+    return that.$uibModal.open(modalObject).result;
+  }
 }

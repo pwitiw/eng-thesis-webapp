@@ -77,11 +77,11 @@ export class OrderOverviewCtrl {
     });
   }
 
-  openComponents(id: number): void{
+  openComponents(id: number, orderName: string): void{
     var that = this;
     this.orderService.findOne(id).then(function(response) {
       if(response.status == 200) {
-        that.orderService.openComponentModal(response.data)
+        that.orderService.openComponentModal(response.data, orderName)
       }
     })
   }

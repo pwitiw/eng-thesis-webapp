@@ -14,7 +14,7 @@
 
       <thead>
       <tr>
-        <td colspan="2">
+        <td colspan="3">
           <div class="text-left table-length">
             <span>Pokaż</span>
             <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="orderOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in orderOverviewCtrl.paginationSizes" ></select>
@@ -34,6 +34,9 @@
         </th>
         <th st-sort="customer">
           Nazwa klienta
+        </th>
+        <th st-sort="color">
+          Kolor
         </th>
         <th st-sort="position">
           Etap produkcji
@@ -56,6 +59,7 @@
         <td>{{order.id}}</td>
         <td>{{order.name}}</td>
         <td>{{order.customer}}</td>
+        <td>{{order.color}}</td>
         <td>{{order.position}}</td>
         <td>{{order.express ? 'EXPRESS' : 'NORMALNY'}}</td>
         <td>{{order.active ? 'Aktywny' : 'Nieaktywny'}}</td>
@@ -67,7 +71,7 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="" ng-click="orderOverviewCtrl.openComponents(order.id)" >
+                <a href="" ng-click="orderOverviewCtrl.openComponents(order.id, order.name)" >
                   <i class="fa fa-list" aria-hidden="true" ></i>
                   Elementy
                 </a>

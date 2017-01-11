@@ -65,7 +65,7 @@ export class OrderService {
   }
 
 
-  openComponentModal(order) {
+  openComponentModal(order, orderName) {
     var that = this;
 
     let modalObject = {
@@ -78,6 +78,9 @@ export class OrderService {
       resolve: {
         order: function() {
           return order;
+        },
+        orderName: function(){
+          return orderName;
         }
       }
     };
