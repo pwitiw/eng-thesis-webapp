@@ -6,6 +6,7 @@ import {EventRestService} from "../general/rest-services/eventRestService.servic
 import {EventOverviewCtrl} from "./event-overview/event-overview.controller";
 import {addEventOverviewStateDef} from "./event-overview/event-overview.state-def";
 import {CustomTableDirectiveFactory} from "../general/directives/custom-table/custom-table.directive";
+import {ToastService} from "../general/toast/toast.service";
 
 
 let eventMgmtModule: IModule = angular.module('event-mgmt', ['ui.router'])
@@ -15,5 +16,6 @@ let eventMgmtModule: IModule = angular.module('event-mgmt', ['ui.router'])
   .controller('EventOverviewCtrl', EventOverviewCtrl)
   .directive('customTable', CustomTableDirectiveFactory)
   .service('eventService', EventService)
-  .service('eventRestService', EventRestService);
+  .service('eventRestService', EventRestService)
+  .service('toastService', ToastService);
 export default eventMgmtModule.name;

@@ -6,28 +6,159 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/components-modal/customer-modal.controller.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/components-modal/customer-modal.tpl.html" />
+    <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="klienci, pracownicy - dodanie dymków">
+      <change type="MOVED" beforePath="C:\Frontwit\EngineeringThesisWeb\src\main\client\app\table\pagination.html" afterPath="$PROJECT_DIR$/src/main/client/app/general/template/pagination.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/.bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.gitignore" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.gitignore" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.gitignore" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.travis.yml" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.travis.yml" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.travis.yml" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/CustomElements.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/CustomElements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/CustomElements.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/CustomElements.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/HTMLImports.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/HTMLImports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/HTMLImports.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/HTMLImports.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/.github/ISSUE_TEMPLATE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/.github/ISSUE_TEMPLATE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/.github/ISSUE_TEMPLATE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/LICENSE.txt" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/MutationObserver.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/MutationObserver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/MutationObserver.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/MutationObserver.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/OrderRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/OrderRestService.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/README.md" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/ShadowDOM.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/ShadowDOM.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/ShadowDOM.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/ShadowDOM.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular-csp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/angular-mocks.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/angular-mocks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/css/app.css" afterPath="$PROJECT_DIR$/src/main/client/.tmp/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/app.less" afterPath="$PROJECT_DIR$/src/main/client/app/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/app.module.ts" afterPath="$PROJECT_DIR$/src/main/client/app/app.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/test/basic-test.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/test/basic-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/bower.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/build.log" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/build.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/build.log" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/build.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/color.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/color.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/directives/custom-table/custom-table.directive.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/directives/custom-table/custom-table.directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/default-theme.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/default-theme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/demo-pages.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/demo-pages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/demo.css" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-mgmt.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-mgmt.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-mgmt.module.ts" afterPath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-mgmt.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.state-def.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event-overview/event-overview.state-def.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/interfaces/event.interface.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/interfaces/event.interface.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/event-mgmt/event.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/global.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/global.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/index.html" afterPath="$PROJECT_DIR$/src/main/client/.tmp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/index.html" afterPath="$PROJECT_DIR$/src/main/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/main-page/main-page.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/main-page/main-page.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/demo/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/test/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/demo/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/test/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/demo/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/test/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/demo/index.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/index.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/index.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/main-page/main-page.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/main-page/main-page.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/main-page/main-page.state-def.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/main-page/main-page.state-def.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/ngAnimateMock.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/ngAnimateMock.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/ngMock.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/ngMock.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/ngMockE2E.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/ngMockE2E.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-mgmt.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-mgmt.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.state-def.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.state-def.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/interfaces/order.interface.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/interfaces/order.interface.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/package.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/package.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-mocks/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/package.json" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/paper-button.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/paper-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/test/paper-button.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-button/test/paper-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/paper-ripple.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/paper-ripple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/test/paper-ripple.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-ripple/test/paper-ripple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/paper-styles-classes.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/paper-styles-classes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/paper-styles.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/paper-styles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/polymer-micro.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/polymer-micro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/polymer-mini.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/polymer-mini.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/polymer/polymer.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/polymer/polymer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/shadow-layout.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/shadow-layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/shadow.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/shadow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/shadow.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/shadow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/typography.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/typography.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/typography.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/paper-styles/classes/typography.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap-csp.css" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap-csp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents-lite.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents-lite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents-lite.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents-lite.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents.min.js" afterPath="$PROJECT_DIR$/src/main/client/bower_components/webcomponentsjs/webcomponents.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-mgmt.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-mgmt.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.state-def.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.state-def.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/interfaces/worker.interface.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/interfaces/worker.interface.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/workerRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/workerRestService.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/demo/x-key-aware.html" afterPath="$PROJECT_DIR$/src/main/client/bower_components/iron-a11y-keys-behavior/demo/x-key-aware.html" />
     </list>
     <list id="5b8f41e2-6fa3-4c8e-8af3-f136e4eb48e2" name="Rejected commit: Default" comment="" />
     <ignored path="EngineeringThesisWeb.iws" />
@@ -50,7 +181,38 @@
     <favorites_list name="EngineeringThesisWeb" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="customer-overview.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6028369">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customerRestService.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customer.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -86,57 +248,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-mgmt.module.js" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/event.interface.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/components-modal.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/components-modal.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/components-modal.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/components-modal.state-def.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/worker-modal.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/worker-modal.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.state-def.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/worker.interface.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.less" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/bookRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/book.interface.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/typings/index.d.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/customer.interface.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/worker-overview/customer-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/worker-overview/customer-overview.state-def.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.state-def.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/app.less" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/components-modal/customer-modal.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/components-modal/customer-modal.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/index.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/main-page/main-page.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/bower.json" />
+        <option value="$PROJECT_DIR$/src/main/client/app/index.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/template/toast.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/toast/toast.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/app.less" />
       </list>
     </option>
   </component>
@@ -241,7 +403,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -431,71 +592,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="order-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="order-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components-modal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main-page" />
+              <option name="myItemId" value="general" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -563,42 +660,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customer-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components-modal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -607,7 +671,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server/EngineeringThesisWeb" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -647,11 +711,11 @@
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Frontwit\EngineeringThesisWeb\src\main\client\app\general\template" />
       <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives\custom-table" />
       <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives" />
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\bower_components" />
       <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app" />
-      <recent name="F:\Downloads\EngineeringThesisWeb\src\main\webapp\js\lib" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.springapp.mvc" />
@@ -1134,6 +1198,7 @@
       <workItem from="1483805218533" duration="10491000" />
       <workItem from="1484062421587" duration="4751000" />
       <workItem from="1484128666905" duration="9753000" />
+      <workItem from="1484160719640" duration="8713000" />
     </task>
     <task id="LOCAL-00001" summary="config c.d">
       <created>1446059418804</created>
@@ -1235,7 +1300,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="814083000" />
+    <option name="totallyTimeSpent" value="822796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1247,39 +1312,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="1592" y="-8" width="1456" height="916" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29261744" sideWeight="0.34061697" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2700491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46624804" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40425533" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2509554" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.093959734" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24585988" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24585988" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4535032" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2086514" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21471927" sideWeight="0.5805471" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40425533" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2509554" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39896372" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1353,7 +1418,8 @@
     <MESSAGE value="pracownicy - serwis zwraca status" />
     <MESSAGE value="zamówienia - dodanie statusu i inne ładowanie pozycji" />
     <MESSAGE value="klienci - dodanie modali" />
-    <option name="LAST_COMMIT_MESSAGE" value="klienci - dodanie modali" />
+    <MESSAGE value="klienci, pracownicy - dodanie dymków" />
+    <option name="LAST_COMMIT_MESSAGE" value="klienci, pracownicy - dodanie dymków" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1389,42 +1455,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.814816">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/.tmp/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.794686">
-          <caret line="41" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/table/pagination.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20930232">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22457068">
-          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-mgmt.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11623932">
-          <caret line="4" column="89" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/bower_components/angular-bootstrap/ui-bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33241758">
@@ -1453,13 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/components-modal/order-modal.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04009434">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/worker.interface.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14994487">
@@ -1467,19 +1490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27919707">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21715328">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1494,7 +1508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67830426">
           <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="18" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,14 +1521,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.773913">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/typings/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04927536">
@@ -1523,19 +1528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59336823">
-          <caret line="20" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/event.interface.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.059336822">
           <caret line="2" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1543,15 +1539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17801048">
           <caret line="6" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1559,15 +1546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20767888">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/customer.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15017667">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1575,15 +1553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48056537">
           <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4204947">
-          <caret line="14" column="89" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1591,7 +1560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6307421">
           <caret line="22" column="89" selection-start-line="22" selection-start-column="89" selection-end-line="22" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1599,7 +1567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1615,23 +1582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06007067">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42932862">
-          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1647,15 +1597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72407407">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1671,7 +1612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15799257">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1679,46 +1619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.031598512">
           <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.063197024">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4822695">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="3" selection-start-line="42" selection-start-column="2" selection-end-line="63" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2109929">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="85" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1731,42 +1631,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692">
-          <caret line="64" column="94" selection-start-line="64" selection-start-column="88" selection-end-line="64" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/components-modal/customer-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5862069">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1779,10 +1647,202 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47309834">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9454546">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34343433">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.384615">
+          <caret line="78" column="119" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.423077">
+          <caret line="83" column="116" selection-start-line="83" selection-start-column="116" selection-end-line="83" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6153846">
+          <caret line="77" column="88" selection-start-line="77" selection-start-column="88" selection-end-line="77" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.730769">
+          <caret line="105" column="116" selection-start-line="105" selection-start-column="116" selection-end-line="105" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5413333">
-          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+        <state vertical-scroll-proportion="-10.423077">
+          <caret line="87" column="117" selection-start-line="87" selection-start-column="117" selection-end-line="87" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/toast/toast.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6318584">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57168144">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6920354">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-mgmt.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57168144">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5115044">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2712766">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4822695">
+          <caret line="63" column="3" selection-start-line="42" selection-start-column="2" selection-end-line="63" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5425532">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/customer.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.704501">
+          <caret line="103" column="3" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6028369">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
       </provider>

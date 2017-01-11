@@ -11,6 +11,22 @@ export class CustomerService {
     return this.customerRestService.getCustomers();
   }
 
+  findOne(id:number): any {
+    return this.customerRestService.getCustomer(id);
+  }
+
+  delete(id:number): any {
+    return this.customerRestService.deleteCustomer(id);
+  }
+
+  save(customer: Customer): any {
+    return this.customerRestService.addCustomer(customer);
+  }
+
+  update(id: number, customer: Customer): any {
+    return this.customerRestService.editCustomer(id, customer);
+  }
+
   openModal(customer): any {
     var that = this;
 

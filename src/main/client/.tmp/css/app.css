@@ -102,3 +102,9 @@
 .app .component-add-button > a {
   color: black;
 }
+.app .toast-success {
+  background-color: seagreen;
+}
+.app .toast-error {
+  background-color: indianred;
+}

@@ -1,5 +1,6 @@
 import {Worker} from "../../general/interfaces/worker.interface";
 import {WorkerService} from "../worker.service";
+import {ToastService} from "../../general/toast/toast.service";
 import IPromise = angular.IPromise;
 
 export class WorkerOverviewCtrl {
@@ -9,7 +10,7 @@ export class WorkerOverviewCtrl {
   private paginationSizes: any;
   private positions: any;
 
-  constructor(private workerService: WorkerService) {
+  constructor(private workerService: WorkerService, private toastService: ToastService) {
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
     this.findPositions();
@@ -21,6 +22,8 @@ export class WorkerOverviewCtrl {
     this.workerService.findPositions().then(function(response) {
       if(response.status == 200) {
         that.positions = response.data;
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania pozycji");
       }
     });
   }
@@ -30,6 +33,8 @@ export class WorkerOverviewCtrl {
     this.workerService.findAll().then(function(response) {
       if(response.status == 200) {
         that.worker = response.data;
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania pracowników");
       }
     });
   }
@@ -40,6 +45,9 @@ export class WorkerOverviewCtrl {
       if(response.status == 200) {
         var index = that.worker.findIndex(worker => worker.id === id);
         that.worker.splice(index, 1);
+        that.toastService.showSimpleToast("success", "Pracownik został usunięty");
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania pracownika");
       }
     });
   }
@@ -52,6 +60,9 @@ export class WorkerOverviewCtrl {
         that.workerService.save(<Worker>result).then(function(response) {
           if(response.status == 200) {
             that.worker.push(result);
+            that.toastService.showSimpleToast("success", "Pracownik został dodany");
+          } else {
+            that.toastService.showSimpleToast("error", "Wystąpił błąd podczas dodawania pracownika");
           }
         });
       },
@@ -73,6 +84,9 @@ export class WorkerOverviewCtrl {
               if (response.status == 200) {
                 var index = that.worker.findIndex(worker => worker.id === result.id);
                 that.updateArray(<Worker>result, index);
+                that.toastService.showSimpleToast("error", "Dane pracownika zostały zaktualizowane");
+              } else {
+                that.toastService.showSimpleToast("error", "Wystąpił błąd podczas edycji pracownika");
               }
             });
           },
@@ -81,6 +95,8 @@ export class WorkerOverviewCtrl {
 
           }
         )
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania danych pracownika");
       }
     });
   }

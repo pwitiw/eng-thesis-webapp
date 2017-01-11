@@ -7,7 +7,7 @@ import {CustomerRestService} from "../general/rest-services/customerRestService.
 import {CustomerOverviewCtrl} from "./customer-overview/customer-overview.controller";
 import {addCustomerOverviewStateDef} from "./customer-overview/customer-overview.state-def";
 import {CustomerModalCtrl} from "./components-modal/customer-modal.controller";
-
+import {ToastService} from "../general/toast/toast.service";
 
 let customerMgmtModule: IModule = angular.module('customer-mgmt', ['ui.router', 'ui.bootstrap'])
   .config(function ($stateProvider: IStateProvider) {
@@ -16,6 +16,7 @@ let customerMgmtModule: IModule = angular.module('customer-mgmt', ['ui.router', 
   .controller('CustomerOverviewCtrl', CustomerOverviewCtrl)
   .controller('CustomerModalCtrl', CustomerModalCtrl)
   .service('customerService', CustomerService)
-  .service('customerRestService', CustomerRestService);
+  .service('customerRestService', CustomerRestService)
+  .service('toastService', ToastService);
 export default customerMgmtModule.name;
 

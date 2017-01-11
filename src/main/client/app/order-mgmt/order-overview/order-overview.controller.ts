@@ -2,6 +2,7 @@ import {Order} from "../../general/interfaces/order.interface";
 import {OrderService} from "../order.service";
 import {ComponentsModalCtrl} from "../components-modal/components-modal.controller";
 import {ComponentsModalService} from "../components-modal/components-modal.service";
+import {ToastService} from "../../general/toast/toast.service";
 
 export class OrderOverviewCtrl {
   private orders: Order[];
@@ -10,7 +11,7 @@ export class OrderOverviewCtrl {
   private paginationSizes: any;
   private positions: any;
 
-  constructor(private orderService: OrderService, private $uibModal: any) {
+  constructor(private orderService: OrderService, private $uibModal: any, private toastService: ToastService) {
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
     this.findAll();
