@@ -143,12 +143,14 @@
   text-align: center;
 }
 .app table th {
+  cursor: pointer;
   vertical-align: middle !important;
 }
 .app table th:first-child {
   width: 50px;
 }
 .app table th:last-child {
+  cursor: default;
   width: 55px;
 }
 .app .st-sort-ascent:before {

@@ -19,23 +19,69 @@ export class WorkerOverviewCtrl {
   findPositions() {
     var that = this;
     this.workerService.findPositions().then(function(response) {
-      that.positions = response.data;
+      if(response.status == 200) {
+        that.positions = response.data;
+      }
     });
   }
 
   findAll(){
     var that = this;
-    this.workerService.findAll().then(function(data) {
-      that.worker = data;
+    this.workerService.findAll().then(function(response) {
+      if(response.status == 200) {
+        that.worker = response.data;
+      }
     });
   }
 
-
   delete(id: number): void {
     var that = this;
-    this.workerService.delete(id).then(function(){
-      var index = that.worker.findIndex(worker => worker.id === id);
-      that.worker.splice(index, 1);
+    this.workerService.delete(id).then(function(response){
+      if(response.status == 200) {
+        var index = that.worker.findIndex(worker => worker.id === id);
+        that.worker.splice(index, 1);
+      }
+    });
+  }
+
+  addUser(): void {
+    var that = this;
+    this.workerService.openModal({},this.positions).then(
+      //close
+      function (result) {
+        that.workerService.save(<Worker>result).then(function(response) {
+          if(response.status == 200) {
+            that.worker.push(result);
+          }
+        });
+      },
+      //dismiss
+      function (result) {
+
+      }
+    )
+  }
+
+  editUser(id: number): void {
+    var that = this;
+    this.workerService.findOne(id).then(function(responseWorker){
+      if(responseWorker.status == 200) {
+        that.workerService.openModal(responseWorker.data, that.positions).then(
+          //close
+          function (result) {
+            that.workerService.update(result.id, <Worker>result).then(function (response) {
+              if (response.status == 200) {
+                var index = that.worker.findIndex(worker => worker.id === result.id);
+                that.updateArray(<Worker>result, index);
+              }
+            });
+          },
+          //dismiss
+          function (result) {
+
+          }
+        )
+      }
     });
   }
 
@@ -51,36 +97,4 @@ export class WorkerOverviewCtrl {
     this.worker[index].active = worker.active;
   }
 
-  addUser(): void {
-    var that = this;
-    this.workerService.openModal({},this.positions).then(
-      //close
-      function (result) {
-          that.workerService.save(<Worker>result);
-          that.worker.push(result);
-      },
-      //dismiss
-      function (result) {
-
-      }
-    )
-  }
-
-  editUser(id: number): void {
-    var that = this;
-    this.workerService.findOne(id).then(function(worker){
-        that.workerService.openModal(worker, that.positions).then(
-          //close
-          function (result) {
-            that.workerService.update(result.id, <Worker>result);
-            var index = that.worker.findIndex(worker => worker.id === result.id);
-            that.updateArray(<Worker>result, index);
-          },
-          //dismiss
-          function (result) {
-
-          }
-        )
-    });
-  }
 }

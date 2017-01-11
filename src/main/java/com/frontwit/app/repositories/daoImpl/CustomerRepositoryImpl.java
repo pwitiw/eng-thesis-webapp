@@ -24,4 +24,8 @@ public class CustomerRepositoryImpl {
     public Customer getCustomerForName(String name) {
         return customerRepository.findByName(name);
     }
+
+    public Customer getCustomerForId(long id){return customerRepository.findById(id);}
+
+    public void deleteCustomer(Customer customer){customerRepository.delete(customer);}
 }

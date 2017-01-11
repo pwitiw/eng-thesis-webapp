@@ -62,6 +62,7 @@ public class OrderService {
         if (eventService.getEventsForOrderId(id).size() > 0)
             throw new BadOperationOnResourcesException();
         Order order = orderRepositoryImpl.getOrderForId(id);
+
         orderRepositoryImpl.deleteOrder(order);
     }
 
@@ -84,12 +85,6 @@ public class OrderService {
         return OrderComponentDto.parseOrderEventDto(order);
     }
 
-    private Timestamp getActualTimestamp() {
-
-        Timestamp actualTime = new Timestamp(new java.util.Date().getTime());
-        return actualTime;
-    }
-
     //todo aktywne i pozycja i dla 3 to brac 1 2 3
     @Transactional
     public List<OrderDto> getOrdersForPositionId(long posId) {
@@ -102,6 +97,10 @@ public class OrderService {
             orderDtos.add(OrderDto.parseOrderDto(o));
         }
         return orderDtos;
+    }
+
+    public List<Order> getOrdersForCustomerId(long workerId){
+        return orderRepositoryImpl.getOrdersForCustomerId(workerId);
     }
 
     private Order getOrderForOrderComponentDto(OrderComponentDto dto) {

@@ -6,7 +6,43 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="dodanie zamówień" />
+    <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.module.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/workerRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/workerRestService.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/css/app.css" afterPath="$PROJECT_DIR$/src/main/client/.tmp/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/index.html" afterPath="$PROJECT_DIR$/src/main/client/.tmp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/app.less" afterPath="$PROJECT_DIR$/src/main/client/app/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/index.html" afterPath="$PROJECT_DIR$/src/main/client/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/CustomerRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/CustomerRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/CustomerRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/OrderRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/OrderRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+    </list>
     <list id="5b8f41e2-6fa3-4c8e-8af3-f136e4eb48e2" name="Rejected commit: Default" comment="" />
     <ignored path="EngineeringThesisWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,11 +55,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/EngineeringThesisWeb$FrontWitApp.coverage" NAME="FrontWitApp Coverage Results" MODIFIED="1483384013373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.frontwit.app.*</FILTER>
-    </SUITE>
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -32,12 +63,12 @@
     <favorites_list name="EngineeringThesisWeb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state relative-caret-position="194">
+              <caret line="47" column="66" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -46,68 +77,80 @@
       <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderComponentDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="101" column="43" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/OrderHelper.java">
+      <file leaf-file-name="OrderRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/OrderRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="83">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <folding>
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1035#1036#0" expanded="true" />
+                <element signature="e#1094#1095#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="e#960#961#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1544#1545#0" expanded="true" />
+                <element signature="e#1589#1590#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/CustomerRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/CustomerRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -120,11 +163,11 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Html5" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -149,57 +192,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.state-def.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/CustomResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/FrontWitApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/WorkerNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/ResourceNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/ResourcesNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/ResourcesBadFormatException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/ResourcesDuplicationException.java" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/components-modal.state-def.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/worker-modal.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/worker-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.state-def.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/worker.interface.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.less" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/bookRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/book.interface.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/typings/index.d.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/customer.interface.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/worker-overview/customer-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/worker-overview/customer-overview.state-def.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.state-def.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/index.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/app.less" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/CustomerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/CustomerRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/config/FrontWitCORSFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/SyncController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderEventDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/PositionRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/PositionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/PositionService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/PositionRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Position.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/PositionValues.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/PositionDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Component.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/ComponentDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/ComponentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/WorkerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/WorkerRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/WorkerValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/BadOperationOnResourcesException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/WorkerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/OrderValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/FrontWitRestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/OrderRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java" />
       </list>
     </option>
   </component>
@@ -229,7 +272,46 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="frontWit" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="frontWit" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="frontWit" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
@@ -248,7 +330,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -266,7 +348,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,28 +418,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -391,7 +452,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,74 +482,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -496,14 +496,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="D:/Uczelnia/Semantic Web/Lab4" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/dto/WorkerEventDto.java&#10;Val&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/validators/OrderValidator.java&#10;Vali&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/validators/WorkerValidator.java&#10;WorkerC&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/com/frontwit/app/controllers/WorkerController.java&#10;app.module.js&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/client/.tmp/app/app.module.js&#10;EventDto&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;EventEn&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;Worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;EventC&#9;PSI&#9;JAVA://org.webapp.controllers.EventController&#10;Event&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;OrderContr&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;event&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;OrdersC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;OrderCo&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Sync&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/SyncController.java&#10;html/my-modal.html&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/html/my-modal.html&#10;OrdersCon&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;order&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Component&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/Component.java&#10;Consts&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/utils/Consts.java&#10;OrderC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;Componen&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/services/ComponentService.java&#10;per&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/resources/META-INF/persistence.xml" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="OrderService&#9;PSI&#9;JAVA://com.frontwit.app.services.OrderService&#10;Modal&#9;null&#9;null&#10;OrderModal&#9;null&#9;null&#10;app.module.js&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/client/.tmp/app/app.module.js&#10;EventDto&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;EventEn&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;Worker&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/controllers/WorkerController.java&#10;EventC&#9;PSI&#9;JAVA://org.webapp.controllers.EventController&#10;Event&#9;FILE&#9;file://D:/Projects/EngineeringThesisWeb/src/main/java/org/webapp/dto/EventDto.java&#10;OrderContr&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;worker&#9;PSI&#9;JAVA://org.webapp.models.WorkerEntity&#10;event&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/EventEntity.java&#10;OrdersC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;OrderCo&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Sync&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/SyncController.java&#10;html/my-modal.html&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/html/my-modal.html&#10;OrdersCon&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;order&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/webapp/js/controllers/orderController.js&#10;Component&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/models/Component.java&#10;Consts&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/utils/Consts.java&#10;OrderC&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/controllers/OrdersController.java&#10;Componen&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/java/org/webapp/services/ComponentService.java&#10;per&#9;FILE&#9;file://F:/Downloads/EngineeringThesisWeb/src/main/resources/META-INF/persistence.xml" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="51" />
@@ -523,8 +525,16 @@
     <property name="editor.config.accepted" value="true" />
     <property name="typescript-compiler-editor-notification" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Frontwit\EngineeringThesisWeb\src\main\client\app\worker-mgmt" />
+      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\main-page" />
+      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\general\rest-services" />
+      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\general\interfaces" />
+      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives\custom-table" />
       <recent name="C:\Users\pwitiw\Desktop\EngineeringThesisWeb\src\main\client\app\general\directives" />
@@ -540,23 +550,17 @@
       <recent name="org.webapp.repository" />
       <recent name="org.webapp.controllers" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\login-page" />
-      <recent name="C:\Frontwit\EngineeringThesisWeb\src\main\client\app\worker-mgmt" />
-      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\main-page" />
-      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\general\rest-services" />
-      <recent name="D:\Projects\EngineeringThesisWeb\src\main\client\app\general\interfaces" />
-    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.FrontWitApp">
     <configuration default="false" name="FrontWitApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.frontwit.app.*" />
+          <option name="PATTERN" value="org.webapp.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.frontwit.app.FrontWitApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <module name="EngineeringThesisWeb" />
       <envs />
       <method />
@@ -793,7 +797,6 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -995,6 +998,32 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="false" name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.springapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EngineeringThesisWeb" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.springapp.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.springapp.repositories.OrderRepositoryTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="false" name="Tomcat 7.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.65" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="EngineeringThesisWeb:war exploded">
@@ -1067,9 +1096,10 @@
         </option>
       </method>
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0.65" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.FrontWitApp" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.OrderRepositoryTest" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0.65" />
+      <item index="2" class="java.lang.String" itemvalue="Spring Boot.FrontWitApp" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -1234,24 +1264,20 @@
       <workItem from="1482908898424" duration="15000" />
       <workItem from="1482939809299" duration="12382000" />
       <workItem from="1483027996172" duration="3951000" />
-      <workItem from="1483192858154" duration="3981000" />
-      <workItem from="1483266624390" duration="1236000" />
-      <workItem from="1483267892628" duration="1221000" />
-      <workItem from="1483343784109" duration="1961000" />
-      <workItem from="1483350928411" duration="1689000" />
-      <workItem from="1483353146106" duration="1645000" />
-      <workItem from="1483382254764" duration="3838000" />
-      <workItem from="1483386992812" duration="7152000" />
-      <workItem from="1483460673929" duration="16978000" />
-      <workItem from="1483538962669" duration="18838000" />
-      <workItem from="1483629491351" duration="15045000" />
-      <workItem from="1483723690719" duration="667000" />
-      <workItem from="1483790271931" duration="119000" />
-      <workItem from="1483795151968" duration="5090000" />
-      <workItem from="1483819605573" duration="5500000" />
-      <workItem from="1483877693761" duration="175000" />
-      <workItem from="1483896143157" duration="724000" />
-      <workItem from="1483987827156" duration="120000" />
+      <workItem from="1483372372341" duration="8465000" />
+      <workItem from="1483429106699" duration="2146000" />
+      <workItem from="1483435069364" duration="1357000" />
+      <workItem from="1483451579075" duration="1701000" />
+      <workItem from="1483522745488" duration="237000" />
+      <workItem from="1483547239914" duration="7901000" />
+      <workItem from="1483642778850" duration="21000" />
+      <workItem from="1483642807149" duration="2626000" />
+      <workItem from="1483712422016" duration="12815000" />
+      <workItem from="1483785597692" duration="3538000" />
+      <workItem from="1483805218533" duration="10491000" />
+      <workItem from="1484062421587" duration="4751000" />
+      <workItem from="1484128666905" duration="6456000" />
+      <workItem from="1484156785079" duration="3441000" />
     </task>
     <task id="LOCAL-00001" summary="config c.d">
       <created>1446059418804</created>
@@ -1302,11 +1328,67 @@
       <option name="project" value="LOCAL" />
       <updated>1483031397504</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="zamówienia, pracownicy">
+      <created>1483555130700</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1483555130700</updated>
+    </task>
+    <task id="LOCAL-00009" summary="zamówienia, pracownicy2">
+      <created>1483555169997</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1483555169997</updated>
+    </task>
+    <task id="LOCAL-00010" summary="dodanie elementów">
+      <created>1483727166429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1483727166429</updated>
+    </task>
+    <task id="LOCAL-00011" summary="dodanie elementów">
+      <created>1483727204933</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1483727204933</updated>
+    </task>
+    <task id="LOCAL-00012" summary="aktulizacja elementow - juz dziala">
+      <created>1483789245880</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1483789245880</updated>
+    </task>
+    <task id="LOCAL-00013" summary="zamówienia - edycja">
+      <created>1483875960521</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1483875960521</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dodanie klientów">
+      <created>1484151997977</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1484151997977</updated>
+    </task>
+    <task id="LOCAL-00015" summary="pracownicy - serwis zwraca status">
+      <created>1484153138726</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1484153138726</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="834260000" />
+    <option name="totallyTimeSpent" value="814227000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1322,40 +1404,39 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29261744" sideWeight="0.34061697" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2700491" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46596065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88870704" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31423897" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26350245" sideWeight="0.65938306" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29261744" sideWeight="0.34061697" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2700491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46624804" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21406959" sideWeight="0.41618496" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21331316" sideWeight="0.55988026" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29787233" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21406959" sideWeight="0.58381504" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5040917" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2509554" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.093959734" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24222586" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21471927" sideWeight="0.5805471" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19967267" sideWeight="0.48184568" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39896372" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42389524" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4535032" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1365,7 +1446,7 @@
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29261744" sideWeight="0.34061697" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2700491" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46596065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46624804" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1373,26 +1454,25 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07692308" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40425533" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19967267" sideWeight="0.48184568" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2509554" sideWeight="0.48184568" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39896372" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88870704" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31423897" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.093959734" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.117839605" sideWeight="0.65938306" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24222586" sideWeight="0.65938306" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21331316" sideWeight="0.44011977" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21331316" sideWeight="0.55988026" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42389524" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27231467" sideWeight="0.5906593" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4535032" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21471927" sideWeight="0.5805471" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1417,7 +1497,15 @@
     <MESSAGE value="zrobiona tabela statystyk i pracowników" />
     <MESSAGE value="pracownicy dzaialaja" />
     <MESSAGE value="dodanie zamówień" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie zamówień" />
+    <MESSAGE value="zamówienia, pracownicy" />
+    <MESSAGE value="zamówienia, pracownicy2" />
+    <MESSAGE value="dodanie elementów" />
+    <MESSAGE value="aktulizacja elementow - juz dziala" />
+    <MESSAGE value="zamówienia - edycja" />
+    <MESSAGE value="dodanie klientów" />
+    <MESSAGE value="pracownicy - serwis zwraca status" />
+    <MESSAGE value="zamówienia - dodanie statusu i inne ładowanie pozycji" />
+    <option name="LAST_COMMIT_MESSAGE" value="zamówienia - dodanie statusu i inne ładowanie pozycji" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1441,28 +1529,16 @@
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java</url>
-          <line>71</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="299" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="300" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="301" />
+          <option name="timeStamp" value="236" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="311" />
+      <option name="time" value="238" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1471,329 +1547,289 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/config/FrontWitPersistenceConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="82" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="82" />
+        <state relative-caret-position="0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="50" column="128" selection-start-line="50" selection-start-column="128" selection-end-line="50" selection-end-column="128" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.jar!/org/hibernate/validator/constraints/Range.class">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.module.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.state-def.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.module.ts.orig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/typings/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="42" column="97" selection-start-line="42" selection-start-column="97" selection-end-line="42" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="20" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/event.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.state-def.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.state-def.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/customer.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="89" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="22" column="89" selection-start-line="22" selection-start-column="89" selection-end-line="22" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="76" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="82" />
+        <state relative-caret-position="0">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/ManyToOne.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/CascadeType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final-sources.jar!/org/hibernate/annotations/Cascade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final-sources.jar!/org/hibernate/annotations/CascadeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/JoinColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="134" column="21" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/ComponentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/WorkerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/WorkerRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.6.RELEASE/spring-context-4.2.6.RELEASE-sources.jar!/org/springframework/validation/Errors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.6.RELEASE/spring-context-4.2.6.RELEASE-sources.jar!/org/springframework/validation/ValidationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="199" column="23" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/WorkerValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/ResourcesBadFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/exceptions/BadOperationOnResourcesException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/WorkerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Person.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/PersonRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/validators/OrderValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventLimited.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Worker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/EventDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/WorkerEventDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/ComponentDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/EventPrimaryKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/EventRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/EventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/EventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/EventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/config/FrontWitCORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/config/FrontWitSecurityConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/FrontWitRestController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Position.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/OrderRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/resources/404.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/utils/OrderHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderComponentDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+        <state relative-caret-position="-279">
+          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/dto/OrderDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="22">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding>
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#83#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.6.RELEASE/spring-web-4.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="131" column="47" selection-start-line="131" selection-start-column="47" selection-end-line="131" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1801,23 +1837,108 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="47" />
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="47" column="66" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/CustomerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/entities/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/WorkerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/CustomerRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/daoImpl/OrderRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/repositories/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/WorkerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+        <state relative-caret-position="85">
+          <caret line="101" column="43" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/controllers/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="83">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frontwit/app/services/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1863,7 +1984,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1880,7 +2001,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1888,7 +2008,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>Maven: org.springframework:spring-webmvc:4.1.1.RELEASE</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

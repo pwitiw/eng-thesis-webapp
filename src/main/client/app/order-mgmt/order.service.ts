@@ -3,17 +3,6 @@ import {WorkerRestService} from "../general/rest-services/workerRestService.serv
 import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
-  private order: any = {
-    id: null,
-    name: '',
-    customer: '',
-    position: '',
-    date: '',
-    express: null,      //express czy nie
-    lastUpdate: '',
-    parentId: null,
-    active: null
-  };
 
   constructor(private orderRestService: OrderRestService, private workerRestService: WorkerRestService, private $uibModal: any) {
 

@@ -1,17 +1,7 @@
+import {Order} from "../../general/interfaces/order.interface";
 
 export class OrderModalCtrl {
-  private order: any = {
-    id: null,
-    name: '',
-    customer: '',
-    position: '',
-    date: '',
-    express: null,      //express czy nie
-    lastUpdate: '',
-    parentId: null,
-    active: ''
-  };
-
+  private order: Order;
   private status = [{ id: 1, name: "Aktywny"}, { id: 0, name: "Nieaktywny"}];
   private type = [{ id: 1, name: "Express"}, { id: 0, name: "Normalny"}];
   private positions = [];
