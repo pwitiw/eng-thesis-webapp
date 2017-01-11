@@ -10,7 +10,7 @@
 
       <thead>
       <tr>
-        <td colspan="6">
+        <td colspan="5">
           <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
         </td>
         <td class="component-add-button">
@@ -20,9 +20,6 @@
         </td>
       </tr>
       <tr>
-        <th st-sort="id">
-          Id
-        </th>
         <th st-sort="width">
           Szerokość
         </th>
@@ -44,8 +41,7 @@
 
       <tbody>
       <tr ng-repeat="component in componentsModalCtrl.displayed">
-        <td>{{component.id}}</td>
-        <td><div contenteditable="true" data-ng-click="editComponent">{{component.width}}</div></td>
+        <td>{{component.width}}</td>
         <td>{{component.height}}</td>
         <td>{{component.amount}}</td>
         <td>{{component.missing}}</td>

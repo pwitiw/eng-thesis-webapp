@@ -68,8 +68,10 @@ export class ComponentsModalCtrl {
   ok() {
     this.order.components = this.components;
     var that = this;
-    this.orderRestService.edit(this.order.id, this.order).then(function(data){
-      that.$uibModalInstance.close();
+    this.orderRestService.edit(this.order.id, this.order).then(function(response){
+      if(response.status == 200) {
+        that.$uibModalInstance.close();
+      }
     });
 
   }

@@ -7,15 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d5a5b8-90bb-44c7-b09f-ab36e4ac54e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/eventRestService.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker-overview/worker-overview.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/worker-mgmt/worker.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/workerRestService.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/general/rest-services/workerRestService.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/css/app.css" afterPath="$PROJECT_DIR$/src/main/client/.tmp/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/app.less" afterPath="$PROJECT_DIR$/src/main/client/app/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/app.templates.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/index.html" afterPath="$PROJECT_DIR$/src/main/client/.tmp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/index.html" afterPath="$PROJECT_DIR$/src/main/client/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order-overview/order-overview.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" afterPath="$PROJECT_DIR$/src/main/client/.tmp/app/order-mgmt/order.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" afterPath="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" afterPath="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="5b8f41e2-6fa3-4c8e-8af3-f136e4eb48e2" name="Rejected commit: Default" comment="" />
@@ -39,28 +46,7 @@
     <favorites_list name="EngineeringThesisWeb" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="worker.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="worker-overview.controller.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.55">
-              <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,26 +96,17 @@
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.state-def.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-mgmt.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/worker.interface.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.less" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/bookRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/book.interface.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/app.less" />
         <option value="$PROJECT_DIR$/src/main/client/typings/index.d.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/interfaces/customer.interface.ts" />
@@ -138,15 +115,24 @@
         <option value="$PROJECT_DIR$/src/main/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-mgmt.module.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.state-def.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/index.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.controller.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/customerRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/general/rest-services/workerRestService.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts" />
         <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/index.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html" />
+        <option value="$PROJECT_DIR$/src/main/client/app/app.less" />
       </list>
     </option>
   </component>
@@ -322,96 +308,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worker-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EngineeringThesisWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worker-mgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worker-overview" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -951,7 +847,7 @@
       <workItem from="1483785597692" duration="3538000" />
       <workItem from="1483805218533" duration="10491000" />
       <workItem from="1484062421587" duration="4751000" />
-      <workItem from="1484128666905" duration="5190000" />
+      <workItem from="1484128666905" duration="6456000" />
     </task>
     <task id="LOCAL-00001" summary="config c.d">
       <created>1446059418804</created>
@@ -1037,11 +933,17 @@
       <option name="project" value="LOCAL" />
       <updated>1484151997977</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="pracownicy - serwis zwraca status">
+      <created>1484153138726</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1484153138726</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="809520000" />
+    <option name="totallyTimeSpent" value="810786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1054,7 +956,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1069,15 +971,15 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40425533" sideWeight="0.74583966" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2509554" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2509554" sideWeight="0.48184568" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.093959734" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.72087747" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2433121" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2433121" sideWeight="0.65938306" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24856733" sideWeight="0.41945288" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4535032" sideWeight="0.4387292" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21471927" sideWeight="0.5805471" order="4" side_tool="true" content_ui="tabs" />
@@ -1157,7 +1059,8 @@
     <MESSAGE value="zamówienia - edycja" />
     <MESSAGE value="dodanie klientów" />
     <MESSAGE value="pracownicy - serwis zwraca status" />
-    <option name="LAST_COMMIT_MESSAGE" value="pracownicy - serwis zwraca status" />
+    <MESSAGE value="zamówienia - dodanie statusu i inne ładowanie pozycji" />
+    <option name="LAST_COMMIT_MESSAGE" value="zamówienia - dodanie statusu i inne ładowanie pozycji" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1293,29 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43074325">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22796935">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40328467">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-mgmt.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27919707">
@@ -1332,25 +1212,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75714284">
-          <caret line="151" column="64" selection-start-line="151" selection-start-column="64" selection-end-line="151" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.53809524">
           <caret line="50" column="128" selection-start-line="50" selection-start-column="128" selection-end-line="50" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54260087">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1387,14 +1252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05821918">
-          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/typings/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04927536">
@@ -1402,26 +1259,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/components-modal/worker-modal.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7513711">
           <caret line="42" column="97" selection-start-line="42" selection-start-column="97" selection-end-line="42" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8533686">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1458,14 +1299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03107861">
-          <caret line="14" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1486,14 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2670157">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.692307">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1522,22 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46575344">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5689046">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/eventRestService.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48056537">
@@ -1562,14 +1371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49823323">
-          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1578,10 +1379,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.096045196">
+          <caret line="0" column="76" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/rest-services/orderRestService.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.55">
-          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.24285714">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/order-modal.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.137931">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/general/interfaces/order.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06007067">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/order-overview/order-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6296296">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/worker-mgmt/worker-overview/worker-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50555557">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/event-mgmt/event-overview/event-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/customer-mgmt/customer-overview/customer-overview.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7722222">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/order-mgmt/components-modal/components-modal.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/client/app/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6296296">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
           <folding />
         </state>
       </provider>
