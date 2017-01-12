@@ -24,7 +24,9 @@
           Nazwa klienta
         </label>
         <div class="col-sm-9">
-          <input type="text" name="customer" class="form-control" ng-model="orderModalCtrl.order.customer" required>
+          <select name="customer" class="form-control" ng-model="orderModalCtrl.order.customer" required>
+            <option ng-repeat="x in orderModalCtrl.customers" value="{{x.name}}">{{x.name}}</option>
+          </select>
           <p ng-show="newOrderForm.customer.$invalid && !newOrderForm.customer.$pristine" class="help-block">Nazwa klienta jest wymagana.</p>
         </div>
       </div>

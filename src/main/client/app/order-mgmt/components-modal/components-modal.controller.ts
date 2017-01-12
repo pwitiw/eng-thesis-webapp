@@ -1,4 +1,5 @@
 import {OrderRestService} from "../../general/rest-services/orderRestService.service";
+import {ToastService} from "../../general/toast/toast.service";
 
 export class ComponentsModalCtrl {
   private components = [];
@@ -16,7 +17,7 @@ export class ComponentsModalCtrl {
   private displayed = [];
   private editMode = false;
 
-  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, order, orderName) {
+  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, order, orderName, private toastService: ToastService) {
     this.order = order;
     this.components = order.components;
     this.orderName = orderName;
@@ -74,6 +75,9 @@ export class ComponentsModalCtrl {
     this.orderRestService.edit(this.order.id, this.order).then(function(response){
       if(response.status == 200) {
         that.$uibModalInstance.close();
+        that.toastService.showSimpleToast("success", "Poprawnie zauktualizowano elementy");
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas aktualizacji elementów");
       }
     });
 

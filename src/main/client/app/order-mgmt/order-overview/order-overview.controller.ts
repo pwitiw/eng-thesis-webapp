@@ -42,13 +42,22 @@ export class OrderOverviewCtrl {
       if(response.status == 200) {
         var index = that.orders.findIndex(order => order.id === id);
         that.orders.splice(index, 1);
+        that.toastService.showSimpleToast("success", "Poprawnie usunięto zamówienie");
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania zamówienia");
       }
     })
   }
 
   synchronize():void {
-    //this.orderService.openModal();
-    alert("Synchronizacja");
+    var that = this;
+    this.orderService.synchronize().then(function(response) {
+      if(response.status == 200) {
+        that.toastService.showSimpleToast("success", "Poprawnie zsynchronizowano zamówienia");
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas synchronizacji zamówień");
+      }
+    })
   }
 
   changeType(id: number): void {
@@ -57,6 +66,9 @@ export class OrderOverviewCtrl {
       if(response.status == 200) {
         var index = that.orders.findIndex(order => order.id === id);
         that.orders[index].active ? that.orders[index].active = false : that.orders[index].active = true;
+        that.toastService.showSimpleToast("success", "Poprawnie zmieniono status zamówienia");
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas zmiany statusu zamówienia");
       }
     })
   }
@@ -66,14 +78,25 @@ export class OrderOverviewCtrl {
     var that = this;
     this.orderService.findOne(id).then(function(findOneResponse){
       if(findOneResponse.status == 200) {
-        that.orderService.openModal(findOneResponse.data, that.positions).then(function (resultModal) {
-          that.orderService.edit(resultModal.id, resultModal).then(function (editResponse) {
-            if(editResponse.status == 200) {
-              var index = that.orders.findIndex(order => order.id === resultModal.id);
-              that.updateArray(index, <Order> resultModal);
-            }
-          });
+        that.orderService.findCustomers().then(function(customerResponse) {
+          if(customerResponse.status == 200) {
+            that.orderService.openModal(findOneResponse.data, that.positions, customerResponse.data).then(function (resultModal) {
+              that.orderService.edit(resultModal.id, resultModal).then(function (editResponse) {
+                if (editResponse.status == 200) {
+                  var index = that.orders.findIndex(order => order.id === resultModal.id);
+                  that.updateArray(index, <Order> resultModal);
+                  that.toastService.showSimpleToast("success", "Zamówienie zostało zaktualizowane");
+                } else {
+                  that.toastService.showSimpleToast("error", "Wystąpił błąd podczas zapisywania zamówienia");
+                }
+              });
+            });
+          } else {
+            that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania klientów");
+          }
         });
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania danych zamówienia");
       }
     });
   }

@@ -40,6 +40,9 @@
 .app th {
   text-align: center;
 }
+.app .event-overview table th:first-child {
+  width: auto;
+}
 .app table th {
   cursor: pointer;
   vertical-align: middle !important;

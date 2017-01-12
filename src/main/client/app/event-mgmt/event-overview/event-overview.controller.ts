@@ -9,6 +9,7 @@ export class EventOverviewCtrl {
   private itemsByPage: number;
   private paginationSizes: any;
   private id:number;
+  private name:string;
 
   constructor(private eventService: EventService, private toastService: ToastService, $stateParams) {
     this.id = $stateParams.id;
@@ -37,7 +38,8 @@ export class EventOverviewCtrl {
     var that = this;
     this.eventService.findForWorker(id).then(function(response){
       if(response.status == 200) {
-        that.events = response.data;
+        that.events = response.data.events;
+        that.name = response.data.name + " " + response.data.surname;
       } else {
         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania danych")
       }
@@ -48,7 +50,7 @@ export class EventOverviewCtrl {
     var that = this;
     this.eventService.delete(orderId, positionId).then(function(response){
       if(response.status == 200) {
-        var index = that.events.findIndex(response.data);
+        var index = that.events.findIndex(event => (event.orderId === orderId) && (event.positionId === positionId));
         that.events.splice(index, 1);
         that.toastService.showSimpleToast("success", "Element zostal usunięty")
       } else {

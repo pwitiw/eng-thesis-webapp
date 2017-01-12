@@ -5,7 +5,7 @@
       <span>
         Lista Pracowników
       </span>
-      <button class="btn btn-success" ng-click="workerOverviewCtrl.addUser()"> <!--ng-click="workerOverviewCtrl.add('178', 'Adam', 'Kot', 'Pakowacz')"-->
+      <button class="btn btn-success" ng-click="workerOverviewCtrl.addUser()">
         Dodaj pracownika
       </button>
     </div>
@@ -59,7 +59,7 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="" ng-click="">
+                  <a href="" data-ui-sref="event-overview({id: worker.id})">
                     <i class="fa fa-bar-chart" aria-hidden="true"></i>
                     Wyświetl statystki
                   </a>

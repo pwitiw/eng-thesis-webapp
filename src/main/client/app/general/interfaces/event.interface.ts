@@ -1,8 +1,9 @@
 export interface Event{
-  id?:number;
-  orderNumber: number;
-  orderStage: number;
-  worker: Worker;
-  element: number;
-  date: string;
+  orderId: number,
+  positionId: number,
+  orderName: string,
+  position: string,
+  worker: string,
+  date: string,
+  missing: number
 }
