@@ -46,8 +46,10 @@ public class CustomerService {
     }
 
     @Transactional
-    public Customer saveCustomer(Customer customer){
-        return customerRepositoryImpl.save(customer);
+    public Customer saveCustomer(Customer customer) {
+        Customer newCustomer = customerRepositoryImpl.save(customer);
+        newCustomer.setId(newCustomer.getId());
+        return newCustomer;
     }
 
     private void setInactivateCustomer(Customer customer) {

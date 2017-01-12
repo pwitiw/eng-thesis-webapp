@@ -15,5 +15,6 @@ public interface TElementyRepository extends JpaRepository<TElementyEntity, Long
 
     public List<TElementyEntity> findByOrderId(long id);
 
+    
     public List<TElementyEntity> findAll();
 }
