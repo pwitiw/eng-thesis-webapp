@@ -90,7 +90,7 @@
           Szerokość
         </label>
         <div class="col-sm-9">
-          <input type="number" name="width" class="form-control" ng-model="componentsModalCtrl.component.width" required>
+          <input type="number" min="0" name="width" class="form-control" ng-model="componentsModalCtrl.component.width" required>
           <p ng-show="newComponentForm.width.$invalid && !newComponentForm.width.$pristine" class="help-block">Szerokość jest wymagana.</p>
         </div>
       </div>
@@ -101,7 +101,7 @@
           Wysokość
         </label>
         <div class="col-sm-9">
-          <input type="number" name="height" class="form-control" ng-model="componentsModalCtrl.component.height" required>
+          <input type="number" min="0"  name="height" class="form-control" ng-model="componentsModalCtrl.component.height" required>
           <p ng-show="newComponentForm.height.$invalid && !newComponentForm.height.$pristine" class="help-block">Wysokość jest wymagana.</p>
         </div>
       </div>
@@ -112,7 +112,7 @@
           Ilość elementów
         </label>
         <div class="col-sm-9">
-          <input type="number" name="amount" class="form-control" ng-model="componentsModalCtrl.component.amount" required>
+          <input type="number" min="0"  name="amount" class="form-control" ng-model="componentsModalCtrl.component.amount" required>
           <p ng-show="newComponentForm.amount.$invalid && !newComponentForm.amount.$pristine" class="help-block">Ilość elementów jest wymagany.</p>
         </div>
       </div>
@@ -123,7 +123,7 @@
           Ilość brakujących elementów
         </label>
         <div class="col-sm-9">
-          <input type="number" name="missing" class="form-control" ng-model="componentsModalCtrl.component.missing" required>
+          <input type="number" min="0"  name="missing" class="form-control" ng-model="componentsModalCtrl.component.missing" required>
           <p ng-show="newComponentForm.missing.$invalid && !newComponentForm.missing.$pristine" class="help-block">Ilość brakujących elementów jest wymagany.</p>
         </div>
       </div>
