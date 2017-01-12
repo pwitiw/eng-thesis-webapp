@@ -2,8 +2,11 @@
 
   <div class="container">
     <div class="table-options">
-      <span>
+      <span ng-show="!eventOverviewCtrl.id">
         Statystyki
+      </span>
+      <span ng-show="eventOverviewCtrl.id">
+        Statystyki dla {{eventOverviewCtrl.name}}
       </span>
     </div>
 
@@ -18,24 +21,21 @@
             <span>pozycji</span>
           </div>
         </td>
-        <td colspan="5">
-          <input  type="text" class="pull-right form-control table-filter" placeholder="Szukaj" ng-model="eventOverviewCtrl.workerCode" st-search="worker.code">
+        <td colspan="4">
+          <input  type="text" class="pull-right form-control table-filter" placeholder="Szukaj">
         </td>
       </tr>
       <tr>
-        <th st-sort="id">
-          L.p.
+        <th st-sort="orderName">
+          Nazwa zamówienia
         </th>
-        <th st-sort="orderNumber">
-          Numer zamówienia
+        <th st-sort="position">
+          Pozycja
         </th>
-        <th st-sort="orderStage">
-          Etap
+        <th st-sort="worker">
+          Pracownik
         </th>
-        <th st-sort="worker.code">
-          Kod pracownika
-        </th>
-        <th st-sort="element">
+        <th st-sort="missing">
           Brakujące elementy
         </th>
         <th st-sort="date">
@@ -47,19 +47,11 @@
 
       <tbody>
       <tr ng-repeat="event in eventOverviewCtrl.displayed">
-        <td>{{event.id}}</td>
-        <td>{{event.orderNumber}}</td>
-        <td>{{event.orderStage}}</td>
-        <td>
-          {{event.worker.code}}
-
-          <a uib-popover="{{event.worker.firstName}} {{event.worker.surname}} - {{event.worker.position}}" popover-title="Pracownik" popover-trigger="'mouseenter'">
-            <i class="fa fa-info-circle" aria-hidden="true"></i>
-          </a>
-
-        </td>
-        <td>{{event.element}}</td>
-        <td>{{event.date}}</td>
+        <td>{{event.orderName}}</td>
+        <td>{{event.position}}</td>
+        <td>{{event.worker}}</td>
+        <td>{{event.missing}}</td>
+        <td>{{event.date | date: 'yyyy-MM-dd'}}</td>
         <td>
           <div class="dropdown btn-group inline" ng-hide="editing">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -67,7 +59,7 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="" data-target="#confirm-delete" ng-click="eventOverviewCtrl.delete(event.id)" data-toggle="modal">
+                <a href="" data-target="#confirm-delete" ng-click="eventOverviewCtrl.delete(event.orderId, event.positionId)" data-toggle="modal">
                   <i uib-popover="sdds" popover-title="title" class="fa fa-trash-o" aria-hidden="true"></i>
                   Usuń
                 </a>
@@ -80,7 +72,7 @@
 
       <tfoot>
       <tr>
-        <td colspan="5" class="text-right">
+        <td colspan="6" class="text-right">
           <div st-pagination="" st-items-by-page="eventOverviewCtrl.itemsByPage" st-template="../../general/template/pagination.html"></div>
         </td>
       </tr>

@@ -7,7 +7,7 @@ import ILocationService = angular.ILocationService;
 
 export function addEventOverviewStateDef($stateProvider: IStateProvider) {
   return $stateProvider.state('event-overview', {
-    url: '/event-mgmt/events',
+    url: '/event-mgmt/events/:id',
     templateUrl: 'event-mgmt/event-overview/event-overview.html',
     controller: 'EventOverviewCtrl',
     controllerAs: 'eventOverviewCtrl'

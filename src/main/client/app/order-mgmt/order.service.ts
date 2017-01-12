@@ -1,10 +1,11 @@
 import {OrderRestService} from "../general/rest-services/orderRestService.service";
 import {WorkerRestService} from "../general/rest-services/workerRestService.service";
+import {CustomerRestService} from "../general/rest-services/customerRestService.service";
 import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
 
-  constructor(private orderRestService: OrderRestService, private workerRestService: WorkerRestService, private $uibModal: any) {
+  constructor(private orderRestService: OrderRestService, private workerRestService: WorkerRestService, private customerRestService: CustomerRestService, private $uibModal: any) {
 
   }
 
@@ -40,7 +41,11 @@ export class OrderService {
     return this.workerRestService.getPositions();
   }
 
-  openModal(order, positions) {
+  findCustomers(): any {
+    return this.customerRestService.getCustomers();
+  }
+
+  openModal(order, positions, customers) {
     var that = this;
 
     let modalObject = {
@@ -56,6 +61,9 @@ export class OrderService {
         },
         positions: function(){
           return positions;
+        },
+        customers: function(){
+          return customers;
         }
       }
     };

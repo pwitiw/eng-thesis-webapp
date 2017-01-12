@@ -8,26 +8,54 @@ export class EventOverviewCtrl {
   private displayed = [];
   private itemsByPage: number;
   private paginationSizes: any;
+  private id:number;
+  private name:string;
 
-  constructor(private eventService: EventService, private toastService: ToastService) {
+  constructor(private eventService: EventService, private toastService: ToastService, $stateParams) {
+    this.id = $stateParams.id;
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
-    this.findAll();
+    if(this.id == "") {
+      this.findAll();
+    } else {
+      this.findForId(this.id);
+    }
 
   }
 
-  findAll(): any {
+  findAll(): void {
     var that = this;
-    this.eventService.findAll().then(function(data){
-      that.events = data;
+    this.eventService.findAll().then(function(response){
+      if(response.status == 200) {
+        that.events = response.data;
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania danych")
+      }
+    })
+  }
+
+  findForId(id: number): void {
+    var that = this;
+    this.eventService.findForWorker(id).then(function(response){
+      if(response.status == 200) {
+        that.events = response.data.events;
+        that.name = response.data.name + " " + response.data.surname;
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania danych")
+      }
     })
   }
 
   delete(orderId: number, positionId: number): void {
     var that = this;
-    this.eventService.delete(orderId, positionId).then(function(data){
-      var index = that.events.findIndex(data);
-      that.events.splice(index, 1);
+    this.eventService.delete(orderId, positionId).then(function(response){
+      if(response.status == 200) {
+        var index = that.events.findIndex(event => (event.orderId === orderId) && (event.positionId === positionId));
+        that.events.splice(index, 1);
+        that.toastService.showSimpleToast("success", "Element zostal usunięty")
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania danych")
+      }
     })
   }
 

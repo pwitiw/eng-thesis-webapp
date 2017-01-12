@@ -6,11 +6,18 @@ export class EventRestService {
   private restServiceUrl: string;
 
   constructor(private $http: IHttpService) {
-    this.restServiceUrl = 'http://127.0.0.1:4567';
+    this.restServiceUrl = 'http://localhost:8080';
   }
 
   getEvents(): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/events')
+      .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      })
+  }
+
+  delete(orderId: number, positionId: number): IPromise<any> {
+    return this.$http.delete(this.restServiceUrl + '/events/' + orderId + '/' + positionId)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
