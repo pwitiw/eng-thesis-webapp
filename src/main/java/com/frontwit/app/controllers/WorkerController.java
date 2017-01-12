@@ -53,8 +53,8 @@ public class WorkerController {
         workerValidator.validate(workerDto, result);
         if (result.hasErrors())
             throw new ResourcesBadFormatException();
-        workerService.addWorker(workerDto);
-        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
+        WorkerDto newWorker =  workerService.addWorker(workerDto);
+        return new ResponseEntity<WorkerDto>(newWorker, HttpStatus.OK);
     }
 
     @RequestMapping(value = "workers/{id}", method = RequestMethod.DELETE)
@@ -73,8 +73,8 @@ public class WorkerController {
         workerValidator.validate(workerDto, result);
         if (result.hasErrors())
             throw new ResourcesBadFormatException();
-        workerService.updateWorker(workerDto);
-        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
+        WorkerDto updatedWorker = workerService.updateWorker(workerDto);
+        return new ResponseEntity<WorkerDto>(updatedWorker, HttpStatus.OK);
     }
 
     @RequestMapping(value = "workers/{id}/events", method = RequestMethod.GET)

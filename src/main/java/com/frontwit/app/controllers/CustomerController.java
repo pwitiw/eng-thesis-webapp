@@ -49,8 +49,8 @@ public class CustomerController {
         customerValidator.validate(customer, result);
         if (result.hasErrors())
             throw new ResourcesBadFormatException();
-        customerService.saveCustomer(customer);
-        return new ResponseEntity<Customer>(customer, HttpStatus.OK);
+        Customer newCustomer = customerService.saveCustomer(customer);
+        return new ResponseEntity<Customer>(newCustomer, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/customers/{id}", method = RequestMethod.PUT)

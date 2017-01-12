@@ -25,15 +25,15 @@ public class WorkerRepositoryImpl {
         return workerRepository.findByActive((short) 1);
     }
 
-    public void saveWorker(Worker worker) {
-        workerRepository.saveAndFlush(worker);
+    public Worker saveWorker(Worker worker) {
+        return workerRepository.saveAndFlush(worker);
     }
 
-    public Worker getWorkerForCode(short code){
+    public Worker getWorkerForCode(short code) {
         return workerRepository.findByCode(code);
     }
 
-    public void deleteWorker(Worker worker){
+    public void deleteWorker(Worker worker) {
         workerRepository.delete(worker);
     }
 }

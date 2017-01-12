@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `webservice`.`orders` (
  `PARENT_ID` integer(10),
  `ACTIVE` integer(1) DEFAULT '0',
  PRIMARY KEY (`ID`),
- FOREIGN KEY (`CUSTOMER_ID`) REFERENCES `customers` (`ID`),
- FOREIGN KEY (`POSITION_ID`) REFERENCES `positions` (`ID`)
+ FOREIGN KEY (`CUSTOMER_ID`) REFERENCES `webservice`.`customers` (`ID`),
+ FOREIGN KEY (`POSITION_ID`) REFERENCES `webservice`.`positions` (`ID`)
 ); 
 
 CREATE TABLE IF NOT EXISTS `webservice`.`components` (
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`components` (
  `COMMENT` varchar(255),
  `PARENT_ID` integer(10),
  PRIMARY KEY (`ID`),
- FOREIGN KEY (`ORDER_ID`) REFERENCES `orders` (`ID`)
+ FOREIGN KEY (`ORDER_ID`) REFERENCES `webservice`.`orders` (`ID`)
 ); 
 
 CREATE TABLE IF NOT EXISTS `webservice`.`events` (
@@ -65,9 +65,9 @@ CREATE TABLE IF NOT EXISTS `webservice`.`events` (
  `MISSING` int(10) unsigned NOT NULL DEFAULT '0',
  PRIMARY KEY (`ORDER_ID`,`POSITION_ID`),
  KEY `ID` (`ID`),
- CONSTRAINT `FK_ORDER_ID_REF` FOREIGN KEY (`ORDER_ID`) REFERENCES `orders` (`ID`),
- CONSTRAINT `FK_POSITION_ID_REF` FOREIGN KEY (`POSITION_ID`) REFERENCES `positions` (`ID`),
- CONSTRAINT `FK_WORKER_ID_REF` FOREIGN KEY (`WORKER_ID`) REFERENCES `workers` (`ID`)
+ CONSTRAINT `FK_ORDER_ID_REF` FOREIGN KEY (`ORDER_ID`) REFERENCES `webservice`.`orders` (`ID`),
+ CONSTRAINT `FK_POSITION_ID_REF` FOREIGN KEY (`POSITION_ID`) REFERENCES `webservice`.`positions` (`ID`),
+ CONSTRAINT `FK_WORKER_ID_REF` FOREIGN KEY (`WORKER_ID`) REFERENCES `webservice`.`workers` (`ID`)
 ); 
 
 CREATE TABLE IF NOT EXISTS `webservice`.`synchronization` (
@@ -81,10 +81,10 @@ CREATE TABLE IF NOT EXISTS `webservice`.`synchronization` (
 
 
 /*BISTOL DATABASE*/
-DROP DATABASE IF EXISTS `bistoldb`;
-CREATE DATABASE IF NOT EXISTS `bistoldb`;
+DROP DATABASE IF EXISTS `bistolb`;
+CREATE DATABASE IF NOT EXISTS `bistolb`;
 
-CREATE TABLE IF NOT EXISTS `bistoldb`.`tklienci` (
+CREATE TABLE IF NOT EXISTS `bistolb`.`tklienci` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `tfilie_id` int(10) unsigned NOT NULL,
   `nazwa` varchar(45) NOT NULL,
@@ -97,6 +97,38 @@ CREATE TABLE IF NOT EXISTS `bistoldb`.`tklienci` (
   KEY `tklienci_FKIndex1` (`tfilie_id`)
 );
 
+
+CREATE TABLE IF NOT EXISTS `bistolb`.`tzamowienia` (
+ `ID` integer(10) NOT NULL AUTO_INCREMENT,
+ `NAME` varchar(255) NOT NULL,
+ `COLOR` varchar(255) NOT NULL,
+ `CUSTOMER_ID` integer(10) NOT NULL,
+ `POSITION_ID` integer(10) NOT NULL DEFAULT '1',
+ `EXPRESS` integer(1) NOT NULL DEFAULT '0',
+ `DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `LAST_UPDATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ `PARENT_ID` integer(10),
+ `ACTIVE` integer(1) DEFAULT '0',
+ PRIMARY KEY (`ID`)
+); 
+
+CREATE TABLE IF NOT EXISTS `bistolb`.`telementy` (
+ `ID` integer(10) NOT NULL AUTO_INCREMENT,
+ `ORDER_ID` integer(10) NOT NULL,
+ `WIDTH` integer(10) NOT NULL,
+ `HEIGHT` integer(10) NOT NULL,
+ `AMOUNT` integer(10) unsigned NOT NULL,
+ `MISSING` integer(10) NOT NULL DEFAULT '0',
+ `COMMENT` varchar(255),
+ `PARENT_ID` integer(10),
+ PRIMARY KEY (`ID`),
+ FOREIGN KEY (`ORDER_ID`) REFERENCES `bistolb`.`tzamowienia` (`ID`)
+); 
+
+
+
+
+
 INSERT INTO `webservice`.`positions` (`ID`, `NAME`) VALUES
 (-1, 'WSTRZYMANE'),
 (1, 'FREZOWANIE'),
@@ -106,6 +138,13 @@ INSERT INTO `webservice`.`positions` (`ID`, `NAME`) VALUES
 (5, 'LAKIEROWANIE'),
 (6, 'POLEROWANIE'),
 (7, 'PAKOWANIE');
+
+
+
+
+
+
+
 
 INSERT INTO `webservice`.`customers` (`NAME`, `FIRST_NAME`, `LAST_NAME`, `ACTIVE`) 
 VALUES
@@ -137,10 +176,10 @@ VALUES
 
 INSERT INTO `webservice`.`orders` (`NAME`, `COLOR`, `CUSTOMER_ID`, `POSITION_ID`, `EXPRESS`, `DATE`, `LAST_UPDATE`, `PARENT_ID`, `ACTIVE`) 
 VALUES
- ('001 TW', 'RAL1028', (select ID from webservice.customers where name = 'Macierewicz' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
- ('002 TW', 'RAL1100', (select ID from webservice.customers where name = 'Kowalski-kuchnie' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
- ('003 TW', 'RAL1000', (select ID from webservice.customers where name = 'Perfekt' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '0'),
- ('004 TW', 'RAL0258', (select ID from webservice.customers where name = 'Perfekt' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('001 TW', 'RAL1028', (select ID from webservice.customers where name = 'Macierewicz' ), '3', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('002 TW', 'RAL1100', (select ID from webservice.customers where name = 'Kowalski-kuchnie' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('003 TW', 'RAL1000', (select ID from webservice.customers where name = 'Perfekt' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '0'),
+ ('004 TW', 'RAL0258', (select ID from webservice.customers where name = 'Perfekt' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
  ('005 TW', 'RAL1345', (select ID from webservice.customers where name = 'Kaczynski' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
  ('006 TW', 'RAL0145', (select ID from webservice.customers where name = 'Macierewicz' ), '1', '0', CURRENT_TIMESTAMP+400, CURRENT_TIMESTAMP+400, NULL, '1'),
  ('007 TW', 'RAL0013', (select ID from webservice.customers where name = 'Macierewicz' ), '1', '0', CURRENT_TIMESTAMP+500, CURRENT_TIMESTAMP+500, NULL, '1'),
@@ -200,5 +239,48 @@ VALUES
  
  INSERT INTO `webservice`.`events` (`ORDER_ID`, `WORKER_ID`, `POSITION_ID`, `DATE`, `MISSING`) 
  VALUES 
- ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0')
+ ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Czysciciel' and name = 'Mateusz' ), (select POSITION_ID from webservice.workers where name = 'Mateusz' and surname = 'Czysciciel' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '002 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '003 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '004 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0')
  ;
+
+ -- BISTOLB test data
+ INSERT INTO `bistolb`.`tzamowienia` (`NAME`, `COLOR`, `CUSTOMER_ID`, `POSITION_ID`, `EXPRESS`, `DATE`, `LAST_UPDATE`, `PARENT_ID`, `ACTIVE`) 
+VALUES
+ ('017 TW', 'RAL1111', 1, '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('018 TW', 'RAL1210', 2, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('019 TW', 'RAL0000', 3, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '0'),
+ ('020 TW', 'RAL2158', 4, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('021 TW', 'RAL1344', 5, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1')
+ ;
+ 
+INSERT INTO `bistolb`.`telementy` (`ORDER_ID`, `WIDTH`, `HEIGHT`, `AMOUNT`, `MISSING`, `COMMENT`, `PARENT_ID`) 
+ VALUES 
+ ((select ID from bistolb.tzamowienia where name = '017 TW' ), '340', '280', '3', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '017 TW' ), '300', '480', '2', '0', 'FREZ PO SZEROKOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '018 TW' ), '1200', '200', '1', '0', 'FREZ PO DLUGOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '018 TW' ), '340', '280', '5', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '018 TW' ), '340', '280', '3', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '019 TW' ), '300', '4180', '4', '0', 'FREZ PO DLUGOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '020 TW' ), '1200', '200', '1', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '020 TW' ), '340', '280', '2', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '1200', '2100', '3', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '3140', '280', '5', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '340', '280', '5', '0', 'FREZ PO DLUGOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '1340', '280', '3', '0', '', NULL)
+ ;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

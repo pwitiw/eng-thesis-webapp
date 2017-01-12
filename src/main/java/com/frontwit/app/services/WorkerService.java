@@ -49,11 +49,12 @@ public class WorkerService {
     }
 
     @Transactional
-    public void addWorker(WorkerDto workerDto) throws ResourcesDuplicationException {
+    public WorkerDto addWorker(WorkerDto workerDto) throws ResourcesDuplicationException {
 
         if (workerRepositoryImpl.getWorkerForCode(workerDto.getCode()) != null)
             throw new ResourcesDuplicationException();
-        workerRepositoryImpl.saveWorker(workerDtoToWorker(workerDto));
+        Worker worker = workerRepositoryImpl.saveWorker(workerDtoToWorker(workerDto));
+        return new WorkerDto(worker);
     }
 
     @Transactional

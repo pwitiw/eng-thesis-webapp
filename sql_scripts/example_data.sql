@@ -28,10 +28,10 @@ VALUES
 
 INSERT INTO `webservice`.`orders` (`NAME`, `COLOR`, `CUSTOMER_ID`, `POSITION_ID`, `EXPRESS`, `DATE`, `LAST_UPDATE`, `PARENT_ID`, `ACTIVE`) 
 VALUES
- ('001 TW', 'RAL1028', (select ID from webservice.customers where name = 'Macierewicz' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
- ('002 TW', 'RAL1100', (select ID from webservice.customers where name = 'Kowalski-kuchnie' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
- ('003 TW', 'RAL1000', (select ID from webservice.customers where name = 'Perfekt' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '0'),
- ('004 TW', 'RAL0258', (select ID from webservice.customers where name = 'Perfekt' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('001 TW', 'RAL1028', (select ID from webservice.customers where name = 'Macierewicz' ), '3', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('002 TW', 'RAL1100', (select ID from webservice.customers where name = 'Kowalski-kuchnie' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('003 TW', 'RAL1000', (select ID from webservice.customers where name = 'Perfekt' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '0'),
+ ('004 TW', 'RAL0258', (select ID from webservice.customers where name = 'Perfekt' ), '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
  ('005 TW', 'RAL1345', (select ID from webservice.customers where name = 'Kaczynski' ), '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
  ('006 TW', 'RAL0145', (select ID from webservice.customers where name = 'Macierewicz' ), '1', '0', CURRENT_TIMESTAMP+400, CURRENT_TIMESTAMP+400, NULL, '1'),
  ('007 TW', 'RAL0013', (select ID from webservice.customers where name = 'Macierewicz' ), '1', '0', CURRENT_TIMESTAMP+500, CURRENT_TIMESTAMP+500, NULL, '1'),
@@ -91,11 +91,13 @@ VALUES
  
  INSERT INTO `webservice`.`events` (`ORDER_ID`, `WORKER_ID`, `POSITION_ID`, `DATE`, `MISSING`) 
  VALUES 
- ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0')
+ ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Czysciciel' and name = 'Mateusz' ), (select POSITION_ID from webservice.workers where name = 'Mateusz' and surname = 'Czysciciel' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '002 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '003 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0'),
+ ((select ID from webservice.orders where name = '004 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0')
  ;
- 
- 
- 
+
  -- BISTOLB test data
  INSERT INTO `bistolb`.`tzamowienia` (`NAME`, `COLOR`, `CUSTOMER_ID`, `POSITION_ID`, `EXPRESS`, `DATE`, `LAST_UPDATE`, `PARENT_ID`, `ACTIVE`) 
 VALUES
