@@ -14,6 +14,7 @@ public class Customer implements Serializable {
 
     @NotNull
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @NotNull

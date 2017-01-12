@@ -9,6 +9,7 @@ import com.frontwit.app.validators.CustomerValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,6 +43,7 @@ public class CustomerController {
         return new ResponseEntity<Customer>(customer, HttpStatus.OK);
     }
 
+    @Transactional
     @RequestMapping(value = "/customers", method = RequestMethod.POST)
     public ResponseEntity<?> addCustomer(@RequestBody Customer customer, BindingResult result)
             throws ResourcesBadFormatException {
@@ -63,7 +65,6 @@ public class CustomerController {
         customerService.saveCustomer(customer);
         return new ResponseEntity<Customer>(customer, HttpStatus.OK);
     }
-
 
 
     @RequestMapping(value = "/customers/{id}", method = RequestMethod.DELETE)

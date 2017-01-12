@@ -47,8 +47,8 @@ public class CustomerService {
 
     @Transactional
     public Customer saveCustomer(Customer customer) {
+        customer.setActive((short)1);
         Customer newCustomer = customerRepositoryImpl.save(customer);
-        newCustomer.setId(newCustomer.getId());
         return newCustomer;
     }
 
