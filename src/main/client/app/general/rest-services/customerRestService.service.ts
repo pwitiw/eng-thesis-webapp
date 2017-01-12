@@ -13,12 +13,18 @@ export class CustomerRestService {
     return this.$http.get(this.restServiceUrl + '/customers')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   getCustomer(id: number): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/customers/' + id)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
   }
@@ -27,6 +33,9 @@ export class CustomerRestService {
     return this.$http.post(this.restServiceUrl + '/customers/', customer)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -34,12 +43,18 @@ export class CustomerRestService {
     return this.$http.put(this.restServiceUrl + '/customers/' + id, customer)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   deleteCustomer(id: number): IPromise<any> {
     return this.$http.delete(this.restServiceUrl + '/customers/' + id)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
   }

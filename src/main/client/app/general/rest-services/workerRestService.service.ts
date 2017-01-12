@@ -14,6 +14,9 @@ export class WorkerRestService {
     return this.$http.get(this.restServiceUrl + '/workers/positions')
       .then((response: ng.IHttpPromiseCallbackArg<Worker[]>)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -21,12 +24,18 @@ export class WorkerRestService {
     return this.$http.get(this.restServiceUrl + '/workers/')
       .then((response: ng.IHttpPromiseCallbackArg<Worker[]>)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   getWorker(id: number): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/workers/'+id)
       .then((response: ng.IHttpPromiseCallbackArg<Order[]>)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
   }
@@ -36,6 +45,9 @@ export class WorkerRestService {
     return this.$http.post(this.restServiceUrl + '/workers', worker)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
@@ -43,6 +55,9 @@ export class WorkerRestService {
     let config: IRequestShortcutConfig;
     return this.$http.put(this.restServiceUrl + '/workers/' + id, worker)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
   }
@@ -52,12 +67,18 @@ export class WorkerRestService {
     return this.$http.delete(this.restServiceUrl + '/workers/' + id)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   getEvents(id: number): IPromise<any> {
     return this.$http.get(this.restServiceUrl + '/workers/' + id + '/events')
       .then((response: ng.IHttpPromiseCallbackArg<Order[]>)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
   }

@@ -13,12 +13,18 @@ export class EventRestService {
     return this.$http.get(this.restServiceUrl + '/events')
       .then((response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
       })
   }
 
   delete(orderId: number, positionId: number): IPromise<any> {
     return this.$http.delete(this.restServiceUrl + '/events/' + orderId + '/' + positionId)
       .then((response: ng.IHttpPromiseCallbackArg)=> {
+        return {status: response.status, text: response.statusText, data: response.data};
+      },
+      (response: ng.IHttpPromiseCallbackArg)=> {
         return {status: response.status, text: response.statusText, data: response.data};
       })
   }
