@@ -77,6 +77,7 @@ export class ComponentsModalCtrl {
         that.$uibModalInstance.close();
         that.toastService.showSimpleToast("success", "Poprawnie zauktualizowano elementy");
       } else {
+        that.$uibModalInstance.dismiss();
         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas aktualizacji elementów");
       }
     });
