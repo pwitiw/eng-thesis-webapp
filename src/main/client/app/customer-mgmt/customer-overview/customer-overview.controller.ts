@@ -47,7 +47,7 @@ export class CustomerOverviewCtrl {
       function (result) {
         that.customerService.save(<Customer>result).then(function(response){
           if(response.status == 200){
-            that.customers.push(response.data);
+            that.customers.push(<Customer>response.data);
             that.toastService.showSimpleToast("success", "Poprawnie dodano klienta");
           } else {
             that.toastService.showSimpleToast("error", "Wystąpił błąd podczas dodawania klienta");
