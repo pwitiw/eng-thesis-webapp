@@ -37,7 +37,6 @@ public class OrderService {
     private ComponentService componentService;
 
     @Transactional
-
     public List<OrderDto> getAllOrders() {
         return getDtosForOrders(orderRepositoryImpl.getAllOrders());
     }
@@ -49,11 +48,11 @@ public class OrderService {
     }
 
     @Transactional
-    public void add(Order order) {
+    public Order add(Order order) {
 //todo Dodawanie zamowienia, validacje do tego
-      /*  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
-            orderRepositoryImpl.save(order);
-        }*/
+      //  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
+     return orderRepositoryImpl.save(order);
+
     }
 
     @Transactional

@@ -17,4 +17,6 @@ public interface PositionRepository extends JpaRepository<Position, Long> {
     Position findByName(String name);
 
     List<Position> findByIdGreaterThan(long id);
+
+    Position findById(long id);
 }

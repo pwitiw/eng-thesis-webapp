@@ -18,7 +18,11 @@ public class SynchronizationRepositoryImpl {
 
     public Date getLastSyncDate() {
         Synchronization synchronization = synchronizationRepository.findTopByOrderBySyncDateDesc();
-        return synchronization.getSyncDate();
+        return synchronization != null ? synchronization.getSyncDate() : new Date(0L);
+    }
+
+    public Synchronization addNewSyncDate(Synchronization synchronization){
+       return synchronizationRepository.save(synchronization);
     }
 
 }

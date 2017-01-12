@@ -23,4 +23,7 @@ public class ComponentRepositoryImpl {
         return componentRepository.findByOrderId(id);
     }
 
+    public Component save(Component component) {
+        return componentRepository.saveAndFlush(component);
+    }
 }

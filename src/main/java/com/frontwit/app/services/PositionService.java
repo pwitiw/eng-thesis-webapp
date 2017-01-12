@@ -35,6 +35,10 @@ public class PositionService {
         return getDtosForPositions(positionRepositoryImpl.getOrderPositions());
     }
 
+    public Position getPositionForId(long id) {
+        return positionRepositoryImpl.getPositionForId(id);
+    }
+
     private List<PositionDto> getDtosForPositions(List<Position> positions) {
         List<PositionDto> dtos = new ArrayList<>();
         for (Position p : positions) {

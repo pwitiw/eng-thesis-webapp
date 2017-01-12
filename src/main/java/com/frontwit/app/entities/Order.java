@@ -9,6 +9,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -142,5 +143,14 @@ public class Order implements Serializable {
 
     public void setComponents(List<Component> components) {
         this.components = components;
+    }
+
+    public void addToComponent(List<Component> components) {
+        if (this.components == null)
+            this.components = new ArrayList<>();
+        for (Component component : components) {
+            component.setOrder(this);
+            this.components.add(component);
+        }
     }
 }

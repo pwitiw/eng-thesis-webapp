@@ -18,10 +18,14 @@ public class TZamownieniaRepositorImpl {
     @Autowired
     TZamowieniaRepository tZamowieniaRepository;
 
-    public List<TZamowieniaEntity> getFromBistolDbForDateGreaterThan(Date date){
+    public List<TZamowieniaEntity> getFromBistolDbForDateGreaterThan(Date date) {
 
-       //return tZamowieniaRepository.findByDataZamAfter(date);
-        return tZamowieniaRepository.findAll();
+        return tZamowieniaRepository.findByDateAfter(date);
+        //  return tZamowieniaRepository.findAll();
+    }
+
+    public TZamowieniaEntity save(TZamowieniaEntity tZamowieniaEntity) {
+        return tZamowieniaRepository.saveAndFlush(tZamowieniaEntity);
     }
 
 }

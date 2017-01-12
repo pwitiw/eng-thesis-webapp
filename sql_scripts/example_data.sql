@@ -93,3 +93,44 @@ VALUES
  VALUES 
  ((select ID from webservice.orders where name = '001 TW' ), (select ID from webservice.workers where surname = 'Frezarz' and name = 'Jan' ), (select POSITION_ID from webservice.workers where name = 'Jan' and surname = 'Frezarz' ), CURRENT_TIMESTAMP, '0')
  ;
+ 
+ 
+ 
+ -- BISTOLB test data
+ INSERT INTO `bistolb`.`tzamowienia` (`NAME`, `COLOR`, `CUSTOMER_ID`, `POSITION_ID`, `EXPRESS`, `DATE`, `LAST_UPDATE`, `PARENT_ID`, `ACTIVE`) 
+VALUES
+ ('017 TW', 'RAL1111', 1, '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('018 TW', 'RAL1210', 2, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('019 TW', 'RAL0000', 3, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '0'),
+ ('020 TW', 'RAL2158', 4, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1'),
+ ('021 TW', 'RAL1344', 5, '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, '1')
+ ;
+ 
+INSERT INTO `bistolb`.`telementy` (`ORDER_ID`, `WIDTH`, `HEIGHT`, `AMOUNT`, `MISSING`, `COMMENT`, `PARENT_ID`) 
+ VALUES 
+ ((select ID from bistolb.tzamowienia where name = '017 TW' ), '340', '280', '3', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '017 TW' ), '300', '480', '2', '0', 'FREZ PO SZEROKOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '018 TW' ), '1200', '200', '1', '0', 'FREZ PO DLUGOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '018 TW' ), '340', '280', '5', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '018 TW' ), '340', '280', '3', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '019 TW' ), '300', '4180', '4', '0', 'FREZ PO DLUGOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '020 TW' ), '1200', '200', '1', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '020 TW' ), '340', '280', '2', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '1200', '2100', '3', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '3140', '280', '5', '0', '', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '340', '280', '5', '0', 'FREZ PO DLUGOSCI', NULL),
+ ((select ID from bistolb.tzamowienia where name = '021 TW' ), '1340', '280', '3', '0', '', NULL)
+ ;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

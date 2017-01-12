@@ -29,4 +29,6 @@ public class PositionRepositoryImpl {
     public List<Position> getOrderPositions() {
         return positionRepository.findAll();
     }
+
+    public Position getPositionForId(long id) {return positionRepository.findById(id);}
 }

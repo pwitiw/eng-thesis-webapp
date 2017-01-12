@@ -18,7 +18,7 @@ import java.util.List;
 public class ComponentService {
 
     @Autowired
-    ComponentRepositoryImpl componentRepositoryImpl;
+    private ComponentRepositoryImpl componentRepositoryImpl;
 
     @Transactional
     public List<ComponentDto> getComponentsForOrderId(long id) {
@@ -53,5 +53,9 @@ public class ComponentService {
             components.add(getComponentForDto(dto));
         }
         return components;
+    }
+
+    public Component save(Component component){
+        return componentRepositoryImpl.save(component);
     }
 }
