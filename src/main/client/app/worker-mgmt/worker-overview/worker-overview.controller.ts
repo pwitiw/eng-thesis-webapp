@@ -59,7 +59,7 @@ export class WorkerOverviewCtrl {
       function (result) {
         that.workerService.save(<Worker>result).then(function(response) {
           if(response.status == 200) {
-            that.worker.push(result);
+            that.worker.push(<Worker>response.data);
             that.toastService.showSimpleToast("success", "Pracownik został dodany");
           } else {
             that.toastService.showSimpleToast("error", "Wystąpił błąd podczas dodawania pracownika");

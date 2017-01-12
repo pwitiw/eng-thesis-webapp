@@ -57,7 +57,7 @@ export class OrderOverviewCtrl {
     var that = this;
     this.orderService.synchronize().then(function(response) {
       if(response.status == 200) {
-        that.orders = response.data;
+        that.findAll();
         that.toastService.showSimpleToast("success", "Poprawnie zsynchronizowano zamówienia, pobrano " + response.data.size() + " zamówień");
       } else {
         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas synchronizacji zamówień");
