@@ -23,6 +23,8 @@ export class OrderOverviewCtrl {
     this.orderService.findAll().then(function(response) {
       if(response.status == 200) {
         that.orders = response.data;
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania zamówień");
       }
     })
   }
@@ -32,6 +34,8 @@ export class OrderOverviewCtrl {
     this.orderService.findPositions().then(function(response) {
       if(response.status == 200) {
         that.positions = response.data;
+      } else {
+        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania pozycji");
       }
     });
   }
@@ -53,7 +57,8 @@ export class OrderOverviewCtrl {
     var that = this;
     this.orderService.synchronize().then(function(response) {
       if(response.status == 200) {
-        that.toastService.showSimpleToast("success", "Poprawnie zsynchronizowano zamówienia");
+        that.orders = response.data;
+        that.toastService.showSimpleToast("success", "Poprawnie zsynchronizowano zamówienia, pobrano " + response.data.size() + " zamówień");
       } else {
         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas synchronizacji zamówień");
       }
