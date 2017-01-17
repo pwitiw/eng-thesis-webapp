@@ -39,10 +39,12 @@ public class OrderRepositoryImpl {
         return orderRepository.findByPositionId(id);
     }
 
-    public List<Order> getOrdersForCustomerId(long id){
+    public List<Order> getOrdersForCustomerId(long id) {
         return orderRepository.findByCustomerId(id);
     }
 
-
+    public List<Order> getOrdersForPositionIdOrLess(long min, long id) {
+        return orderRepository.findByPositionIdBetween(min, id);
+    }
 
 }

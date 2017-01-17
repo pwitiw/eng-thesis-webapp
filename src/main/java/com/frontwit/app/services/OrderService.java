@@ -50,8 +50,8 @@ public class OrderService {
     @Transactional
     public Order add(Order order) {
 //todo Dodawanie zamowienia, validacje do tego
-      //  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
-     return orderRepositoryImpl.save(order);
+        //  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
+        return orderRepositoryImpl.save(order);
 
     }
 
@@ -87,7 +87,11 @@ public class OrderService {
     //todo aktywne i pozycja i dla 3 to brac 1 2 3
     @Transactional
     public List<OrderDto> getOrdersForPositionId(long posId) {
-        return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionId(posId));
+        if (posId <= 3)
+            return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionIdOrLess(0L, posId));
+        else
+            return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionId(posId));
+
     }
 
     private List<OrderDto> getDtosForOrders(List<Order> orders) {
@@ -98,7 +102,7 @@ public class OrderService {
         return orderDtos;
     }
 
-    public List<Order> getOrdersForCustomerId(long workerId){
+    public List<Order> getOrdersForCustomerId(long workerId) {
         return orderRepositoryImpl.getOrdersForCustomerId(workerId);
     }
 
@@ -132,7 +136,7 @@ public class OrderService {
         order1.setParentId(order2.getParentId());
         order1.setActive(order2.getActive());
         order1.setCustomer(order2.getCustomer());
-      //  order1.setComponents(order2.getComponents());
+        //  order1.setComponents(order2.getComponents());
         order1.getComponents().clear();
         order1.addToComponent(order2.getComponents());
     }

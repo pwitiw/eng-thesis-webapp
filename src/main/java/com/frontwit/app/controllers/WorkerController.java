@@ -46,6 +46,14 @@ public class WorkerController {
         return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/workers/code/{code}", method = RequestMethod.GET)
+    public ResponseEntity<?> getWorkerForCode(@PathVariable("code") short code)
+            throws ResourcesNotFoundException {
+
+        WorkerDto workerDto = workerService.getWorkerForCode(code);
+        return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/workers", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> addWorker(@RequestBody WorkerDto workerDto, BindingResult result)
             throws ResourcesBadFormatException, ResourcesDuplicationException {

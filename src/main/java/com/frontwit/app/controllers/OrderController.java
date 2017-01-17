@@ -1,9 +1,6 @@
 package com.frontwit.app.controllers;
 
-import com.frontwit.app.dto.ComponentDto;
-import com.frontwit.app.dto.OrderDto;
-import com.frontwit.app.dto.OrderComponentDto;
-import com.frontwit.app.dto.PositionDto;
+import com.frontwit.app.dto.*;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
@@ -103,11 +100,22 @@ public class OrderController {
     }
 
     //FOR MOBILE DEVICES
-    @RequestMapping(value = "/orders/position/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/orders/positions/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getOrdersForPositionId(@PathVariable("id") Integer id) {
 
         List<OrderDto> orders = orderService.getOrdersForPositionId(id);
         return new ResponseEntity(orders, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/orders/events", method = RequestMethod.PUT)
+    public ResponseEntity updateOrderAndEvents(@RequestBody OrderComponentWorkerDto order) {
+
+
+        System.out.println("WORKS");
+        //List<OrderDto> orders = orderService.getOrdersForPositionId(id);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+
 }
 

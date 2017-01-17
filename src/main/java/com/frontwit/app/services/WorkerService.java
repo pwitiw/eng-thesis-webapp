@@ -58,6 +58,15 @@ public class WorkerService {
     }
 
     @Transactional
+    public WorkerDto getWorkerForCode(short code) throws ResourcesNotFoundException {
+       Worker worker =  workerRepositoryImpl.getWorkerForCode(code);
+        if (worker == null)
+            throw new ResourcesNotFoundException();
+
+        return new WorkerDto(worker);
+    }
+
+    @Transactional
     public void deleteWorker(long id) throws ResourcesNotFoundException {
 
         Worker worker = workerRepositoryImpl.getWorkerForId(id);
