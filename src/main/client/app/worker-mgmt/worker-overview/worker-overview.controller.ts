@@ -84,7 +84,7 @@ export class WorkerOverviewCtrl {
               if (response.status == 200) {
                 var index = that.worker.findIndex(worker => worker.id === result.id);
                 that.updateArray(<Worker>result, index);
-                that.toastService.showSimpleToast("error", "Dane pracownika zostały zaktualizowane");
+                that.toastService.showSimpleToast("success", "Dane pracownika zostały zaktualizowane");
               } else {
                 that.toastService.showSimpleToast("error", "Wystąpił błąd podczas edycji pracownika");
               }
