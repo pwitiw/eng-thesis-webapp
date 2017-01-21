@@ -128,4 +128,5 @@ public class Worker implements Serializable {
         result = 31 * result + (int) active;
         return result;
     }
+
 }

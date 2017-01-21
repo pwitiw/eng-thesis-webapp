@@ -35,8 +35,8 @@ public class OrderRepositoryImpl {
         orderRepository.delete(order);
     }
 
-    public List<Order> getOrdersForPositionId(long id) {
-        return orderRepository.findByPositionId(id);
+    public List<Order> getOrdersForPositionIdAndActive(long id) {
+        return orderRepository.findByPositionIdAndActive(id, (short) 1);
     }
 
     public List<Order> getOrdersForCustomerId(long id) {
@@ -44,7 +44,7 @@ public class OrderRepositoryImpl {
     }
 
     public List<Order> getOrdersForPositionIdOrLess(long min, long id) {
-        return orderRepository.findByPositionIdBetween(min, id);
+        return orderRepository.findByActiveAndPositionIdBetween((short) 1, min, id);
     }
 
 }

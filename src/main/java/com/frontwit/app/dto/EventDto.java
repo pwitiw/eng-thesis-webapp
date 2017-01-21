@@ -5,6 +5,7 @@ import com.frontwit.app.entities.Event;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class EventDto implements Serializable {
     private String orderName;
     private String position;
     private String worker;
-    private Timestamp date;
+    private Date date;
     private int missing;
 
     public long getOrderId() {
@@ -60,11 +61,11 @@ public class EventDto implements Serializable {
         this.worker = worker;
     }
 
-    public Timestamp getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

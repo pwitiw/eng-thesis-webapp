@@ -1,6 +1,7 @@
 package com.frontwit.app.controllers;
 
 import com.frontwit.app.dto.*;
+import com.frontwit.app.entities.Order;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
@@ -88,7 +89,7 @@ public class OrderController {
     @RequestMapping(value = "/orders/{id}/components", method = RequestMethod.GET)
     public ResponseEntity<?> getComponentsForOrderId(@PathVariable("id") Long id) {
 
-        List<ComponentDto> components = componentService.getComponentsForOrderId(id);
+        List<ComponentDto> components = componentService.getComponentsDtoForOrderId(id);
         return new ResponseEntity(components, HttpStatus.OK);
     }
 
@@ -108,12 +109,12 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/orders/events", method = RequestMethod.PUT)
-    public ResponseEntity updateOrderAndEvents(@RequestBody OrderComponentWorkerDto order) {
+    public ResponseEntity updateOrderAndEvents(@RequestBody OrderComponentWorkerDto orderComponentWorkerDto)
+            throws ResourcesNotFoundException {
 
 
-        System.out.println("WORKS");
-        //List<OrderDto> orders = orderService.getOrdersForPositionId(id);
-        return new ResponseEntity(HttpStatus.OK);
+        OrderDto orderDto = orderService.upgradeOrder(orderComponentWorkerDto);
+        return new ResponseEntity<OrderDto>(orderDto, HttpStatus.OK);
     }
 
 

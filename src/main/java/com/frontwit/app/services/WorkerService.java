@@ -81,9 +81,16 @@ public class WorkerService {
     }
 
     @Transactional
-    public WorkerDto getWorkerForId(long id) throws ResourcesNotFoundException {
+    public WorkerDto getWorkerDtoForId(long id) throws ResourcesNotFoundException {
 
         return getDtoForWorker(workerRepositoryImpl.getWorkerForId(id));
+    }
+
+
+    @Transactional
+    public Worker getWorkerForId(long id) throws ResourcesNotFoundException {
+
+        return workerRepositoryImpl.getWorkerForId(id);
     }
 
     @Transactional
@@ -151,5 +158,11 @@ public class WorkerService {
 
         Worker w = workerRepositoryImpl.getWorkerForCode(worker.getCode());
         return w == null ? true : w.getId() == worker.getId() ? true : false;
+    }
+
+    public Worker getWorkerForDto(WorkerDto dto){
+        Worker worker = new Worker();
+        worker.setId(dto.getId());
+        return  worker;
     }
 }

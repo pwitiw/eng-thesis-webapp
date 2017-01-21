@@ -12,12 +12,12 @@ import java.io.Serializable;
 public class EventPrimaryKey implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "POSITION_ID")
+    @JoinColumn(name = "POSITION_ID", updatable = false)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     Position position;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ORDER_ID")
+    @JoinColumn(name = "ORDER_ID", updatable = false)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     Order order;
 

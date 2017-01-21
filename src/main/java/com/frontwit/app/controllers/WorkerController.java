@@ -42,7 +42,7 @@ public class WorkerController {
     public ResponseEntity<?> getWorkerForId(@PathVariable("id") long id)
             throws ResourcesNotFoundException {
 
-        WorkerDto workerDto = workerService.getWorkerForId(id);
+        WorkerDto workerDto = workerService.getWorkerDtoForId(id);
         return new ResponseEntity<WorkerDto>(workerDto, HttpStatus.OK);
     }
 

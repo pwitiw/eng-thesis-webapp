@@ -1,8 +1,12 @@
 package com.frontwit.app.services;
 
+import com.frontwit.app.dto.OrderComponentWorkerDto;
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.dto.OrderComponentDto;
+import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.entities.Component;
+import com.frontwit.app.entities.Event;
+import com.frontwit.app.entities.Worker;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
@@ -36,6 +40,9 @@ public class OrderService {
     @Autowired
     private ComponentService componentService;
 
+    @Autowired
+    private WorkerService workerService;
+
     @Transactional
     public List<OrderDto> getAllOrders() {
         return getDtosForOrders(orderRepositoryImpl.getAllOrders());
@@ -49,8 +56,6 @@ public class OrderService {
 
     @Transactional
     public Order add(Order order) {
-//todo Dodawanie zamowienia, validacje do tego
-        //  if ((!(order.getName().trim().equals("") || ((Integer) order.getCustomerId()).toString().trim().equals("")))) { //todo || order.getColor().trim().equals("")))) {
         return orderRepositoryImpl.save(order);
 
     }
@@ -66,13 +71,13 @@ public class OrderService {
     }
 
     @Transactional
-    public void updateOrder(OrderComponentDto orderComponentDto) {
+    public Order updateOrder(OrderComponentDto orderComponentDto) {
 
         Order updatedOrder = getOrderForOrderComponentDto(orderComponentDto);
         Order order = orderRepositoryImpl.getOrderForId(orderComponentDto.getId());
         copyOrder(order, updatedOrder);
 
-        orderRepositoryImpl.save(order);
+        return orderRepositoryImpl.save(order);
     }
 
     @Transactional
@@ -84,14 +89,27 @@ public class OrderService {
         return OrderComponentDto.parseOrderEventDto(order);
     }
 
-    //todo aktywne i pozycja i dla 3 to brac 1 2 3
     @Transactional
     public List<OrderDto> getOrdersForPositionId(long posId) {
-        if (posId <= 3)
+        if (posId > 0 && posId <= 3)
             return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionIdOrLess(0L, posId));
         else
-            return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionId(posId));
+            return getDtosForOrders(orderRepositoryImpl.getOrdersForPositionIdAndActive(posId));
 
+    }
+
+    @Transactional
+    public OrderDto upgradeOrder(OrderComponentWorkerDto orderComponentWorkerDto) throws ResourcesNotFoundException {
+
+        Order order = getOrderForOrderComponentDto(orderComponentWorkerDto.getOrderComponentDto());
+        Worker worker = workerService.getWorkerForId(orderComponentWorkerDto.getWorkerDto().getId());
+        order.setPosition(positionService.getPositionForId(worker.getPosition().getId() + 1));
+        if(order.getComponents() == null)
+            order.setComponents(componentService.getComponentsForOrderId(order.getId()));
+
+        Event event = new Event(order, worker);
+        eventService.save(event);
+        return OrderDto.parseOrderDto(orderRepositoryImpl.save(order));
     }
 
     private List<OrderDto> getDtosForOrders(List<Order> orders) {

@@ -39,4 +39,7 @@ public class EventRepositoryImpl {
         return eventRepository.countByWorkerId(workerId);
     }
 
+    public Event save(Event event) {
+        return eventRepository.saveAndFlush(event);
+    }
 }

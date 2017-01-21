@@ -153,4 +153,15 @@ public class Order implements Serializable {
             this.components.add(component);
         }
     }
+
+    public Integer getMissingAmount() {
+        int counter = 0;
+        if (components == null)
+            return 0;
+        for (Component component : components) {
+            counter += component.getMissing();
+        }
+        return counter;
+    }
+
 }

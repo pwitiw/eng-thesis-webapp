@@ -18,7 +18,9 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     public List<Order> findByPositionId(long posId);
 
+    public List<Order> findByPositionIdAndActive(long posId, short active);
+
     public List<Order> findByCustomerId(long id);
 
-    public List<Order> findByPositionIdBetween(long min,long max);
+    public List<Order> findByActiveAndPositionIdBetween(short active,long min,long max);
 }

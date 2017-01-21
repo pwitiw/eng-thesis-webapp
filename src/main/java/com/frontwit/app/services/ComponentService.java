@@ -21,7 +21,12 @@ public class ComponentService {
     private ComponentRepositoryImpl componentRepositoryImpl;
 
     @Transactional
-    public List<ComponentDto> getComponentsForOrderId(long id) {
+    public List<Component> getComponentsForOrderId(long id) {
+       return componentRepositoryImpl.getComponentsForOrderId(id);
+    }
+
+    @Transactional
+    public List<ComponentDto> getComponentsDtoForOrderId(long id) {
         List<Component> components = componentRepositoryImpl.getComponentsForOrderId(id);
         return getDtosForComponents(components);
     }
@@ -49,13 +54,16 @@ public class ComponentService {
     public List<Component> getComponentsForDtos(List<ComponentDto> dtos) {
 
         List<Component> components = new ArrayList<>();
-        for (ComponentDto dto : dtos) {
-            components.add(getComponentForDto(dto));
-        }
+        if (dtos == null)
+            return null;
+            for (ComponentDto dto : dtos) {
+                components.add(getComponentForDto(dto));
+            }
+
         return components;
     }
 
-    public Component save(Component component){
+    public Component save(Component component) {
         return componentRepositoryImpl.save(component);
     }
 }

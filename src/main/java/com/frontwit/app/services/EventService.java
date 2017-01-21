@@ -39,5 +39,9 @@ public class EventService {
         return eventRepositoryImpl.getCountForWorkerId(id);
     }
 
+    public Event save(Event event){
+        return eventRepositoryImpl.save(event);
+    }
+
 }
 
