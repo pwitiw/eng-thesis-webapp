@@ -1,10 +1,10 @@
 INSERT INTO `webservice`.`positions` (`ID`, `NAME`) VALUES
-(-1, 'WSTRZYMANE'),
+(-1, 'BRAKI'),
 (1, 'FREZOWANIE'),
 (2, 'CZYSZCZENIE'),
 (3, 'PODKLADOWANIE'),
 (4, 'SZLIFOWANIE'),
 (5, 'LAKIEROWANIE'),
-(6, 'POLEROWANIE'),
-(7, 'PAKOWANIE');
+(6, 'PAKOWANIE'),
+(7, 'SPAKOWANE');
 

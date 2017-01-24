@@ -3,7 +3,6 @@ package com.frontwit.app.dto;
 import com.frontwit.app.entities.Event;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

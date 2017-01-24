@@ -10,12 +10,14 @@ export class OrderOverviewCtrl {
   private itemsByPage: number;
   private paginationSizes: any;
   private positions: any;
+  private maxDate: Date;
 
   constructor(private orderService: OrderService, private $uibModal: any, private toastService: ToastService) {
     this.itemsByPage = 5;
     this.paginationSizes = [5, 10, 15, 20, 25];
     this.findAll();
     this.findPositions();
+    this.maxDate = new Date();
   }
 
   findAll(): void {

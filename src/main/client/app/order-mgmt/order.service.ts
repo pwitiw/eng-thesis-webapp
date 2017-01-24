@@ -5,7 +5,10 @@ import {Order} from "../general/interfaces/order.interface";
 
 export class OrderService {
 
-  constructor(private orderRestService: OrderRestService, private workerRestService: WorkerRestService, private customerRestService: CustomerRestService, private $uibModal: any) {
+  constructor(private orderRestService: OrderRestService,
+              private workerRestService: WorkerRestService,
+              private customerRestService: CustomerRestService,
+              private $uibModal: any) {
 
   }
 

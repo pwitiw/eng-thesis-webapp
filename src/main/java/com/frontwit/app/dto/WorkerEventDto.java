@@ -1,11 +1,7 @@
 package com.frontwit.app.dto;
-
-import com.frontwit.app.entities.Event;
 import com.frontwit.app.entities.Worker;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

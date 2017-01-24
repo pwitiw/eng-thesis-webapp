@@ -13,8 +13,8 @@ export class EventOverviewCtrl {
 
   constructor(private eventService: EventService, private toastService: ToastService, $stateParams) {
     this.id = $stateParams.id;
-    this.itemsByPage = 5;
-    this.paginationSizes = [5, 10, 15, 20, 25];
+    this.paginationSizes = [10, 10, 15, 20, 25];
+    this.itemsByPage = 10;//this.paginationSizes[0];
     if(this.id == "") {
       this.findAll();
     } else {

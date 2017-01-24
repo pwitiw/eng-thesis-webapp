@@ -50,6 +50,9 @@
         <th st-sort="date">
           Data nadejścia
         </th>
+        <th st-sort="lastUpdate">
+          Data modyfikacji
+        </th>
         <th>Opcje</th>
       </tr>
       </thead>
@@ -61,9 +64,10 @@
         <td>{{order.customer}}</td>
         <td>{{order.color}}</td>
         <td>{{order.position}}</td>
-        <td>{{order.express ? 'EXPRESS' : 'NORMALNY'}}</td>
+        <td>{{order.express ? 'EXPRESS' : '-'}}</td>
         <td>{{order.active ? 'Aktywny' : 'Nieaktywny'}}</td>
         <td>{{order.date | date: 'yyyy-MM-dd'}}</td>
+        <td>{{order.lastUpdate | date: 'yyyy-MM-dd HH:mm'}}</td>
         <td>
           <div class="dropdown btn-group inline" ng-hide="editing">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">

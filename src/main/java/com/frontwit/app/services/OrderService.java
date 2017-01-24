@@ -104,9 +104,16 @@ public class OrderService {
         Order order = getOrderForOrderComponentDto(orderComponentWorkerDto.getOrderComponentDto());
         Worker worker = workerService.getWorkerForId(orderComponentWorkerDto.getWorkerDto().getId());
         order.setPosition(positionService.getPositionForId(worker.getPosition().getId() + 1));
-        if(order.getComponents() == null)
+        if (order.getComponents() == null)
             order.setComponents(componentService.getComponentsForOrderId(order.getId()));
-
+        else {
+            List<Component> missings = getMissingComponentsForOrder(order);
+            if (missings.size() > 0) {
+                Order child = getChildOrderForOrder(order);
+                child.addToComponent(missings);
+                orderRepositoryImpl.save(child);
+            }
+        }
         Event event = new Event(order, worker);
         eventService.save(event);
         return OrderDto.parseOrderDto(orderRepositoryImpl.save(order));
@@ -154,9 +161,41 @@ public class OrderService {
         order1.setParentId(order2.getParentId());
         order1.setActive(order2.getActive());
         order1.setCustomer(order2.getCustomer());
-        //  order1.setComponents(order2.getComponents());
         order1.getComponents().clear();
         order1.addToComponent(order2.getComponents());
+    }
+
+    private Order getChildOrderForOrder(Order order) {
+
+        Order child = new Order();
+        child.setParentId(order.getId());
+        child.setName(order.getName());
+        child.setCustomer(order.getCustomer());
+        child.setPosition(positionService.getPositionForId(-1L));
+        child.setColor(order.getColor());
+        child.setDate(order.getDate());
+        child.setExpress(order.getExpress());
+        child.setLastUpdate(order.getLastUpdate());
+        child.setActive(order.getActive());
+
+        return child;
+    }
+
+    private List<Component> getMissingComponentsForOrder(Order order) {
+        List<Component> missings = new ArrayList<>();
+        if (order.getComponents() == null)
+            return missings;
+        for (Component component : order.getComponents()) {
+            if (component.getMissing() > 0) {
+                Component c = new Component();
+                c.setWidth(component.getWidth());
+                c.setComment(component.getComment());
+                c.setHeight(component.getHeight());
+                c.setAmount(component.getMissing());
+                missings.add(c);
+            }
+        }
+        return missings;
     }
 
 }
