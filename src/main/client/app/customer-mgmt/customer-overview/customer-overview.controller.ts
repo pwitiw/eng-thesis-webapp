@@ -28,16 +28,17 @@ export class CustomerOverviewCtrl {
 
   delete(id: number): void {
     var that = this;
-    this.customerService.delete(id).then(function(response){
-      if(response.status == 200) {
-        var index = that.customers.findIndex(customer => customer.id === id);
-        that.customers.splice(index, 1);
-        that.toastService.showSimpleToast("success", "Poprawnie usunięto klienta");
-      } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania klienta");
-      }
+    this.customerService.deleteModal().then(function (resultModal) {
+      that.customerService.delete(id).then(function (response) {
+        if (response.status == 200) {
+          var index = that.customers.findIndex(customer => customer.id === id);
+          that.customers.splice(index, 1);
+          that.toastService.showSimpleToast("success", "Poprawnie usunięto klienta");
+        } else {
+          that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania klienta");
+        }
+      });
     });
-
   }
 
   addCustomer(): void {

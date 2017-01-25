@@ -19,11 +19,6 @@
   box-shadow: 3px 3px 3px #888888;
   margin-top: 10px;
 }
-.event-overview .date-picker {
-  display: table;
-  width: 100%;
-  margin-bottom: 150px;
-}
 body {
   overflow-y: hidden !important;
 }
