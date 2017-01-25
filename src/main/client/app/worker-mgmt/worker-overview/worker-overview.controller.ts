@@ -41,14 +41,16 @@ export class WorkerOverviewCtrl {
 
   delete(id: number): void {
     var that = this;
-    this.workerService.delete(id).then(function(response){
-      if(response.status == 200) {
-        var index = that.worker.findIndex(worker => worker.id === id);
-        that.worker.splice(index, 1);
-        that.toastService.showSimpleToast("success", "Pracownik został usunięty");
-      } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania pracownika");
-      }
+    this.workerService.deleteModal().then(function(resultModal) {
+      that.workerService.delete(id).then(function(response){
+        if(response.status == 200) {
+          var index = that.worker.findIndex(worker => worker.id === id);
+          that.worker.splice(index, 1);
+          that.toastService.showSimpleToast("success", "Pracownik został usunięty");
+        } else {
+          that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania pracownika");
+        }
+      });
     });
   }
 

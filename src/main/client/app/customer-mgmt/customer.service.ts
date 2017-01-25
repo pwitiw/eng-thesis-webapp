@@ -15,6 +15,24 @@ export class CustomerService {
     return this.customerRestService.getCustomer(id);
   }
 
+  deleteModal(): any {
+    var that = this;
+
+    let modalObject = {
+      animation: true,
+      controller: 'DeleteModalCtrl',
+      controllerAs: 'deleteModalCtrl',
+      templateUrl: 'general/template/delete-modal.tpl.html',
+      size: 'sm',
+      backdrop: 'static',
+      resolve: {
+      }
+    };
+
+
+    return that.$uibModal.open(modalObject).result;
+  }
+
   delete(id:number): any {
     return this.customerRestService.deleteCustomer(id);
   }

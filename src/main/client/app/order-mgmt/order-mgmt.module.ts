@@ -7,6 +7,7 @@ import {OrderRestService} from "../general/rest-services/orderRestService.servic
 import {OrderOverviewCtrl} from "./order-overview/order-overview.controller";
 import {addOrderOverviewStateDef} from "./order-overview/order-overview.state-def";
 import {OrderModalCtrl} from "./components-modal/order-modal.controller";
+import {DeleteModalCtrl} from "../general/template/delete-modal.controller";
 import {ComponentsModalCtrl} from "./components-modal/components-modal.controller";
 import {ToastService} from "../general/toast/toast.service";
 
@@ -19,6 +20,7 @@ let orderMgmtModule: IModule = angular.module('order-mgmt', [
   .controller('OrderOverviewCtrl', OrderOverviewCtrl)
   .controller('OrderModalCtrl', OrderModalCtrl)
   .controller('ComponentsModalCtrl', ComponentsModalCtrl)
+  .controller('DeleteModalCtrl', DeleteModalCtrl)
   .service('orderService', OrderService)
   .service('orderRestService', OrderRestService)
   .service('toastService', ToastService);

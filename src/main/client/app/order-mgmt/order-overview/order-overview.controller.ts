@@ -44,14 +44,16 @@ export class OrderOverviewCtrl {
 
   delete(id: number): void {
     var that = this;
-    this.orderService.delete(id).then(function(response) {
-      if(response.status == 200) {
-        var index = that.orders.findIndex(order => order.id === id);
-        that.orders.splice(index, 1);
-        that.toastService.showSimpleToast("success", "Poprawnie usunięto zamówienie");
-      } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania zamówienia");
-      }
+    this.orderService.deleteModal().then(function (resultModal) {
+      that.orderService.delete(id).then(function (response) {
+        if (response.status == 200) {
+          var index = that.orders.findIndex(order => order.id === id);
+          that.orders.splice(index, 1);
+          that.toastService.showSimpleToast("success", "Poprawnie usunięto zamówienie");
+        } else {
+          that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania zamówienia");
+        }
+      })
     })
   }
 
