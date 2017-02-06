@@ -16,8 +16,8 @@
       "id": "defaultProxy",
       "servicesPath": "\/services\/",
       "websocketPath": "\/websocket\/",
-      "baseUrl": "http://localhost:8080",
-      "context": "/book-app"
+      "baseUrl": "http://localhost:8081",
+      "context": "/main-page"
     }
   ]
 }

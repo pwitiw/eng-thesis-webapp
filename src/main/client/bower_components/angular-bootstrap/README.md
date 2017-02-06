@@ -70,7 +70,7 @@ When you are done downloading all the dependencies and project files the only re
 angular.module('myModule', ['ui.bootstrap']);
 ```
 
-If you're a Browserify or Webpack person, you can do:
+If you're a Browserify or Webpack user, you can do:
 
 ```js
 var uibs = require('angular-ui-bootstrap');

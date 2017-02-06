@@ -35,6 +35,9 @@ export class WorkerService {
       size: 'sm',
       backdrop: 'static',
       resolve: {
+        text: function () {
+          return 'Jesteś pewien, że chcesz usunąć pracownika?';
+        }
       }
     };
 
@@ -61,23 +64,23 @@ export class WorkerService {
   openModal(worker, positions): any {
     var that = this;
 
-      let modalObject = {
-        animation: true,
-        controller: 'WorkerModalCtrl',
-        controllerAs: 'workerModalCtrl',
-        templateUrl: 'worker-mgmt/components-modal/worker-modal.tpl.html',
-        size: 'md',
-        backdrop: 'static',
-        resolve: {
-          user: function() {
-            return worker
-          },
-          positions: function(){
-            return positions;
-          }
+    let modalObject = {
+      animation: true,
+      controller: 'WorkerModalCtrl',
+      controllerAs: 'workerModalCtrl',
+      templateUrl: 'worker-mgmt/components-modal/worker-modal.tpl.html',
+      size: 'md',
+      backdrop: 'static',
+      resolve: {
+        user: function () {
+          return worker
+        },
+        positions: function () {
+          return positions;
         }
-      };
+      }
+    };
 
-      return that.$uibModal.open(modalObject).result;
+    return that.$uibModal.open(modalObject).result;
   }
 }

@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FrontWit Application</title>
   <!-- build:css css/app.css -->
-  <link href="/resources/favicon.ico" rel="icon" type="image/x-icon">
-  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+  <link href="/general/img/favicon.ico" rel="icon" type="image/x-icon">
+  <!--<link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">-->
   <link rel="stylesheet" href="../bower_components/angular-loading-bar/build/loading-bar.min.css">
   <link rel="stylesheet" href="css/app.css">
   <!-- endbuild -->
@@ -22,22 +22,11 @@
 <body class="app" layout="column">
 <md-content>
 <div class="frontwit-logo">
-   <img src="resources/logo.jpg"/>
+   <img src="general/img/logo.jpg"/>
 </div>
 <nav>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-     <!-- <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a data-ui-sref-active="active" class="navbar-brand  header-bigger-size" href
-           data-ui-sref="main-page">FRONTWIT<span class="sr-only">(current)</span>
-        </a>
-      </div>-->
       <div class="navbar-collapse collapse header-size">
         <ul class="nav navbar-nav">
           <li data-ui-sref-active="active"><a href data-ui-sref="main-page">FRONTWIT<span class="sr-only">(current)</span></a>
@@ -56,8 +45,9 @@
   </nav>
 </nav>
 <section class="container-fluid" data-ui-view></section>
-<!--<footer class="footer">-->
-  <!--<row>Copyright &copy; Patryk Witiw & Marek Pierzchała</row>-->
+<br><br><br><br>
+  <!--<footer class="footer">-->
+  <!--<row>Copyright &copy; Patryk Witiw</row>-->
 <!--</footer>-->
 
 <!-- process:remove:prod -->
@@ -72,7 +62,7 @@
 
 <!--EXTERNAL LIBRARIES-->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
 
 <!-- build:js app/app.module.js--><!-- endbuild -->

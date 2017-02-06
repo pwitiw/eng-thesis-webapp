@@ -9,7 +9,6 @@
         Synchronizuj
       </button>
     </div>
-
     <table st-table="orderOverviewCtrl.displayed" st-safe-src="orderOverviewCtrl.orders" class="table table-striped">
 
       <thead>
@@ -94,7 +93,7 @@
               </li>
               <li>
                 <a href="" data-target="#confirm-delete" ng-click="orderOverviewCtrl.delete(order.id)" data-toggle="modal">
-                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  <span class="fa fa-trash-o" aria-hidden="true"></span>
                   Usuń
                 </a>
               </li>
@@ -107,14 +106,11 @@
       <tfoot>
       <tr>
         <td colspan="9" class="text-right">
-          <div st-pagination="" st-items-by-page="orderOverviewCtrl.itemsByPage" st-template="../../general/template/pagination.html"></div>
+          <div st-pagination="" st-items-by-page="orderOverviewCtrl.itemsByPage" st-template="../../general/template/pagination.tpl.html"></div>
         </td>
       </tr>
       </tfoot>
-
-
     </table>
-
   </div>
   
 </section>

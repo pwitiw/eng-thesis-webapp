@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.frontwit.app.services.SyncService;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,8 +26,11 @@ public class SyncController {
     @RequestMapping(value = "/synchronize", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     ResponseEntity<?> synchronize() throws IOException {
-       List<String> orders = syncService.synchronize();
+        // List<String> orders = syncService.synchronize();
+        //
+        List<String> orders = new ArrayList();
         return new ResponseEntity<List<String>>(orders, HttpStatus.OK);
+
     }
 
 }

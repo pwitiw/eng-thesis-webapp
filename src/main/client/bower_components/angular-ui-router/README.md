@@ -130,12 +130,12 @@ The majority of UI-Router's power is in its ability to nest states & views.
 </ul>
 ```
 
-**(5)** Finally, we'll wire it all up with `$stateProvider`. Set up your states in the module org.webapp.config, as in the following:
+**(5)** Finally, we'll wire it all up with `$stateProvider`. Set up your states in the module config, as in the following:
 
 
 >
 ```javascript
-myApp.org.webapp.config(function($stateProvider, $urlRouterProvider) {
+myApp.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/state1");
@@ -196,10 +196,10 @@ interfaces more effectively by nesting your views, and pairing those views with 
 </body>
 ```
 
-**(3)** Set up your states in the module org.webapp.config:
+**(3)** Set up your states in the module config:
 >
 ```javascript
-myApp.org.webapp.config(function($stateProvider) {
+myApp.config(function($stateProvider) {
   $stateProvider
     .state('index', {
       url: "",

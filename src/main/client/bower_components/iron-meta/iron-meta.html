@@ -121,7 +121,7 @@ Or, in a Polymer element, you can include a meta in your template:
        *
        * @param {{type: (string|undefined), key: (string|undefined), value}=} config
        */
-      factoryImpl: function(org.webapp.config) {
+      factoryImpl: function(config) {
         if (config) {
           for (var n in config) {
             switch(n) {
@@ -287,7 +287,7 @@ Or, in a Polymer element, you can include a meta in your template:
        *
        * @param {{type: (string|undefined), key: (string|undefined)}=} config
        */
-      factoryImpl: function(org.webapp.config) {
+      factoryImpl: function(config) {
         if (config) {
           for (var n in config) {
             switch(n) {

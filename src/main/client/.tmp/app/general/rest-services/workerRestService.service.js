@@ -3,7 +3,7 @@ var WorkerRestService = (function () {
     function WorkerRestService($http, cfpLoadingBar) {
         this.$http = $http;
         this.cfpLoadingBar = cfpLoadingBar;
-        this.restServiceUrl = 'http://localhost:8080';
+        this.restServiceUrl = 'http://localhost:7777';
     }
     WorkerRestService.prototype.getPositions = function () {
         var _this = this;

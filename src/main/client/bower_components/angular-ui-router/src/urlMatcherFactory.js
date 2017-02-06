@@ -44,7 +44,7 @@ var $$UMFP; // reference to $UrlMatcherFactoryProvider
  *
  * @param {string} pattern  The pattern to compile into a matcher.
  * @param {Object} config  A configuration object hash:
- * @param {Object=} parentMatcher Used to concatenate the pattern/org.webapp.config onto
+ * @param {Object=} parentMatcher Used to concatenate the pattern/config onto
  *   an existing UrlMatcher
  *
  * * `caseInsensitive` - `true` if URL matching should be case insensitive, otherwise `false`, the default value (for backward compatibility) is `false`.
@@ -739,7 +739,7 @@ function $UrlMatcherFactory() {
    * Creates a {@link ui.router.util.type:UrlMatcher `UrlMatcher`} for the specified pattern.
    *
    * @param {string} pattern  The URL pattern.
-   * @param {Object} config  The org.webapp.config object hash.
+   * @param {Object} config  The config object hash.
    * @returns {UrlMatcher}  The UrlMatcher.
    */
   this.compile = function (pattern, config) {
@@ -862,7 +862,7 @@ function $UrlMatcherFactory() {
    *   };
    * });
    *
-   * // In a org.webapp.config() block, you can then attach URLs with
+   * // In a config() block, you can then attach URLs with
    * // type-annotated parameters:
    * $stateProvider.state('users', {
    *   url: "/users",
@@ -947,7 +947,7 @@ function $UrlMatcherFactory() {
       return new Type(config.type);
     }
 
-    // array org.webapp.config: param name (param[]) overrides default settings.  explicit org.webapp.config overrides param name.
+    // array config: param name (param[]) overrides default settings.  explicit config overrides param name.
     function getArrayMode() {
       var arrayDefaults = { array: (location === "search" ? "auto" : false) };
       var arrayParamNomenclature = id.match(/\[\]$/) ? { array: true } : {};

@@ -19,10 +19,10 @@ _[Demo and API docs](https://elements.polymer-project.org/elements/iron-validata
 
 ##Polymer.IronValidatableBehavior
 
-`Use Polymer.IronValidatableBehavior` to implement an element that validates person input.
+`Use Polymer.IronValidatableBehavior` to implement an element that validates user input.
 Use the related `Polymer.IronValidatorBehavior` to add custom validation logic to an iron-input.
 
-By default, an `<iron-form>` element validates its fields when the person presses the submit button.
+By default, an `<iron-form>` element validates its fields when the user presses the submit button.
 To validate a form imperatively, call the form's `validate()` method, which in turn will
 call `validate()` on all its children. By using `Polymer.IronValidatableBehavior`, your
 custom element will get a public `validate()`, which

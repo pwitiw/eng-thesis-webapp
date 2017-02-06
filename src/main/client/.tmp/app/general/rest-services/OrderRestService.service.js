@@ -3,7 +3,7 @@ var OrderRestService = (function () {
     function OrderRestService($http, cfpLoadingBar) {
         this.$http = $http;
         this.cfpLoadingBar = cfpLoadingBar;
-        this.restServiceUrl = 'http://localhost:8080';
+        this.restServiceUrl = 'http://localhost:7777';
     }
     OrderRestService.prototype.getOrders = function () {
         var _this = this;

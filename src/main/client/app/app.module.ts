@@ -1,18 +1,22 @@
 /// <reference path="../typings/index.d.ts" />
 
+
+
 import * as angular from 'angular';
-import '../bower_components/angular-smart-table/dist/smart-table.min.js';
-import '../bower_components/angular-aria/angular-aria.js';
-import '../bower_components/angular-animate/angular-animate.js';
-import '../bower_components/angular-material/angular-material.js';
-import '../bower_components/angular-loading-bar/build/loading-bar.min.js';
+
+import 'angular-smart-table';
+import 'angular-aria';
+import 'angular-animate';
+import 'angular-material';
+import 'angular-loading-bar';
 import 'angular-ui-router';
 import 'templates';
 import 'angular-ui-bootstrap';
+import 'bootstrap';
+
 
 import ILocationProvider = angular.ILocationProvider;
 import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
-
 import orderMgmtModuleName from './order-mgmt/order-mgmt.module'
 import workerMgmtModuleName from './worker-mgmt/worker-mgmt.module'
 import eventMgmtModuleName from './event-mgmt/event-mgmt.module'
@@ -34,6 +38,7 @@ angular.module('app', [
   'ngMaterial',
   'ngAnimate',
   'angular-loading-bar'
+
 ])
   .config(function ($urlRouterProvider: IUrlRouterProvider, $locationProvider: ILocationProvider) {
     //todo to import,$translateProvider : any

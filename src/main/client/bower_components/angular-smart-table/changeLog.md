@@ -138,7 +138,7 @@ function(tableState, tableController){
 
 * support nested search (thanks to @jansabbe)
 * fix #254
-* fix wrong path to default org.webapp.config for stSkipNatural (@phuvo)
+* fix wrong path to default config for stSkipNatural (@phuvo)
 * fix #406
 
 ## version 2.1.1

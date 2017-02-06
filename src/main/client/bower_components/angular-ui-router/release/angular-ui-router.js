@@ -715,7 +715,7 @@ var $$UMFP; // reference to $UrlMatcherFactoryProvider
  *
  * @param {string} pattern  The pattern to compile into a matcher.
  * @param {Object} config  A configuration object hash:
- * @param {Object=} parentMatcher Used to concatenate the pattern/org.webapp.config onto
+ * @param {Object=} parentMatcher Used to concatenate the pattern/config onto
  *   an existing UrlMatcher
  *
  * * `caseInsensitive` - `true` if URL matching should be case insensitive, otherwise `false`, the default value (for backward compatibility) is `false`.
@@ -1410,7 +1410,7 @@ function $UrlMatcherFactory() {
    * Creates a {@link ui.router.util.type:UrlMatcher `UrlMatcher`} for the specified pattern.
    *
    * @param {string} pattern  The URL pattern.
-   * @param {Object} config  The org.webapp.config object hash.
+   * @param {Object} config  The config object hash.
    * @returns {UrlMatcher}  The UrlMatcher.
    */
   this.compile = function (pattern, config) {
@@ -1533,7 +1533,7 @@ function $UrlMatcherFactory() {
    *   };
    * });
    *
-   * // In a org.webapp.config() block, you can then attach URLs with
+   * // In a config() block, you can then attach URLs with
    * // type-annotated parameters:
    * $stateProvider.state('users', {
    *   url: "/users",
@@ -1618,7 +1618,7 @@ function $UrlMatcherFactory() {
       return new Type(config.type);
     }
 
-    // array org.webapp.config: param name (param[]) overrides default settings.  explicit org.webapp.config overrides param name.
+    // array config: param name (param[]) overrides default settings.  explicit config overrides param name.
     function getArrayMode() {
       var arrayDefaults = { array: (location === "search" ? "auto" : false) };
       var arrayParamNomenclature = id.match(/\[\]$/) ? { array: true } : {};
@@ -1765,7 +1765,7 @@ angular.module('ui.router.util').run(['$urlMatcherFactory', function($urlMatcher
  * a url in a state configuration. All urls are compiled into a UrlMatcher object.
  *
  * There are several methods on `$urlRouterProvider` that make it useful to use directly
- * in your module org.webapp.config.
+ * in your module config.
  */
 $UrlRouterProvider.$inject = ['$locationProvider', '$urlMatcherFactoryProvider'];
 function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
@@ -1797,7 +1797,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * <pre>
    * var app = angular.module('app', ['ui.router.router']);
    *
-   * app.org.webapp.config(function ($urlRouterProvider) {
+   * app.config(function ($urlRouterProvider) {
    *   // Here's an example of how you might allow case insensitive urls
    *   $urlRouterProvider.rule(function ($injector, $location) {
    *     var path = $location.path(),
@@ -1833,7 +1833,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * <pre>
    * var app = angular.module('app', ['ui.router.router']);
    *
-   * app.org.webapp.config(function ($urlRouterProvider) {
+   * app.config(function ($urlRouterProvider) {
    *   // if the path doesn't match any of the urls you configured
    *   // otherwise will take care of routing the user to the
    *   // specified url
@@ -1895,7 +1895,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * <pre>
    * var app = angular.module('app', ['ui.router.router']);
    *
-   * app.org.webapp.config(function ($urlRouterProvider) {
+   * app.config(function ($urlRouterProvider) {
    *   $urlRouterProvider.when($state.url, function ($match, $stateParams) {
    *     if ($state.$current.navigable !== state ||
    *         !equalForKeys($match, $stateParams) {
@@ -1968,7 +1968,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * <pre>
    * var app = angular.module('app', ['ui.router.router']);
    *
-   * app.org.webapp.config(function ($urlRouterProvider) {
+   * app.config(function ($urlRouterProvider) {
    *
    *   // Prevent $urlRouter from automatically intercepting URL changes;
    *   // this allows you to configure custom behavior in between
@@ -2069,7 +2069,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
        * @description
        * Triggers an update; the same update that happens when the address bar url changes, aka `$locationChangeSuccess`.
        * This method is useful when you need to use `preventDefault()` on the `$locationChangeSuccess` event,
-       * perform some custom logic (route protection, auth, org.webapp.config, redirection, etc) and then finally proceed
+       * perform some custom logic (route protection, auth, config, redirection, etc) and then finally proceed
        * with the transition by calling `$urlRouter.sync()`.
        *
        * @example
@@ -2478,9 +2478,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * - **params** `{object}` - returns an array of state params that are ensured to 
    *   be a super-set of parent's params.
    * - **views** `{object}` - returns a views object where each key is an absolute view 
-   *   name (i.e. "viewName@stateName") and each value is the org.webapp.config object
+   *   name (i.e. "viewName@stateName") and each value is the config object 
    *   (template, controller) for the view. Even when you don't use the views object 
-   *   explicitly on a state org.webapp.config, one is still created for you internally.
+   *   explicitly on a state config, one is still created for you internally.
    *   So by decorating this builder function you have access to decorating template 
    *   and controller properties.
    * - **ownParams** `{object}` - returns an array of params that belong to the state, 
@@ -2498,10 +2498,10 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   var result = {},
    *       views = parent(state);
    *
-   *   angular.forEach(views, function (org.webapp.config, name) {
+   *   angular.forEach(views, function (config, name) {
    *     var autoName = (state.name + '.' + name).replace('.', '/');
-   *     org.webapp.config.templateUrl = org.webapp.config.templateUrl || '/partials/' + autoName + '.html';
-   *     result[name] = org.webapp.config;
+   *     config.templateUrl = config.templateUrl || '/partials/' + autoName + '.html';
+   *     result[name] = config;
    *   });
    *   return result;
    * });
@@ -2524,7 +2524,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * @param {object} func A function that is responsible for decorating the original 
    * builder function. The function receives two parameters:
    *
-   *   - `{object}` - state - The state org.webapp.config object.
+   *   - `{object}` - state - The state config object.
    *   - `{object}` - super - The original builder function.
    *
    * @return {object} $stateProvider - $stateProvider instance
@@ -2887,7 +2887,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *
    * @property {object} params A param object, e.g. {sectionId: section.id)}, that 
    * you'd like to test against the current active state.
-   * @property {object} current A reference to the state's org.webapp.config object. However
+   * @property {object} current A reference to the state's config object. However 
    * you passed it in. Useful for accessing custom data.
    * @property {object} transition Currently pending transition. A promise that'll 
    * resolve or reject.
@@ -3557,7 +3557,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * @description
      * Returns the state configuration object for any specific state or all states.
      *
-     * @param {string|object=} stateOrName (absolute or relative) If provided, will only get the org.webapp.config for
+     * @param {string|object=} stateOrName (absolute or relative) If provided, will only get the config for
      * the requested state. If not provided, returns an array of ALL state configs.
      * @param {string|object=} context When stateOrName is a relative state reference, the state will be retrieved relative to context.
      * @returns {Object|Array} State configuration object or array of all objects.
@@ -3812,7 +3812,7 @@ angular.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProvider)
  * </pre>
  *
  * The above is a convenient shortcut equivalent to specifying your view explicitly with the {@link ui.router.state.$stateProvider#methods_state `views`}
- * org.webapp.config property, by name, in this case an empty name:
+ * config property, by name, in this case an empty name:
  * <pre>
  * $stateProvider.state("home", {
  *   views: {

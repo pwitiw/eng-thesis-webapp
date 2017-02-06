@@ -7,7 +7,7 @@ export class WorkerRestService {
   private restServiceUrl: string;
 
   constructor(private $http: IHttpService, private cfpLoadingBar: any) {
-    this.restServiceUrl = 'http://localhost:8080';
+    this.restServiceUrl = 'http://localhost:7777';
   }
 
   getPositions(): IPromise<any> {

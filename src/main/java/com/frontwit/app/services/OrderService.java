@@ -20,6 +20,7 @@ import com.frontwit.app.entities.Order;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -56,6 +57,7 @@ public class OrderService {
 
     @Transactional
     public Order add(Order order) {
+        order.setLastUpdate(new Date());
         return orderRepositoryImpl.save(order);
 
     }

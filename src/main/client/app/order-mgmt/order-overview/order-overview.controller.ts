@@ -1,7 +1,6 @@
 import {Order} from "../../general/interfaces/order.interface";
 import {OrderService} from "../order.service";
 import {ComponentsModalCtrl} from "../components-modal/components-modal.controller";
-import {ComponentsModalService} from "../components-modal/components-modal.service";
 import {ToastService} from "../../general/toast/toast.service";
 
 export class OrderOverviewCtrl {

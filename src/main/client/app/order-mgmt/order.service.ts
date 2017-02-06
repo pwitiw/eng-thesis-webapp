@@ -31,6 +31,9 @@ export class OrderService {
       size: 'sm',
       backdrop: 'static',
       resolve: {
+        text: function () {
+          return 'Jesteś pewien, że chcesz usunąć zamówienie?';
+        }
       }
     };
 
@@ -58,7 +61,7 @@ export class OrderService {
     return this.orderRestService.getComponent(id);
   }
 
-  findPositions(): any{
+  findPositions(): any {
     return this.workerRestService.getPositions();
   }
 
@@ -73,17 +76,18 @@ export class OrderService {
       animation: true,
       controller: 'OrderModalCtrl',
       controllerAs: 'orderModalCtrl',
-      templateUrl: 'order-mgmt/components-modal/order-modal.tpl.html',
+      templateUrl: 'order-mgmt/order-modal/order-modal.tpl.html',
+      // template:'<order-modal></order-modal>',
       size: 'md',
       backdrop: 'static',
       resolve: {
-        order: function() {
+        order: function () {
           return order;
         },
-        positions: function(){
+        positions: function () {
           return positions;
         },
-        customers: function(){
+        customers: function () {
           return customers;
         }
       }
@@ -105,10 +109,10 @@ export class OrderService {
       size: 'lg',
       backdrop: 'static',
       resolve: {
-        order: function() {
+        order: function () {
           return order;
         },
-        orderName: function(){
+        orderName: function () {
           return orderName;
         }
       }
