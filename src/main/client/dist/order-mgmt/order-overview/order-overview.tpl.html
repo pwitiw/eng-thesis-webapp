@@ -1,0 +1,117 @@
+<section class="order-overview">
+
+  <div class="container">
+    <div class="table-options">
+      <span>
+        Lista Zamówień
+      </span>
+      <button class="btn btn-success" ng-click="orderOverviewCtrl.synchronize()">
+        Synchronizuj
+      </button>
+    </div>
+
+    <table st-table="orderOverviewCtrl.displayed" st-safe-src="orderOverviewCtrl.orders" class="table table-striped">
+
+      <thead>
+      <tr>
+        <td colspan="3">
+          <div class="text-left table-length">
+            <span>Pokaż</span>
+            <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="orderOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in orderOverviewCtrl.paginationSizes" ></select>
+            <span>pozycji</span>
+          </div>
+        </td>
+        <td colspan="7">
+          <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
+        </td>
+      </tr>
+      <tr>
+        <th st-sort="id">
+          L.p.
+        </th>
+        <th st-sort="name">
+          Zamówienie
+        </th>
+        <th st-sort="customer">
+          Nazwa klienta
+        </th>
+        <th st-sort="color">
+          Kolor
+        </th>
+        <th st-sort="position">
+          Etap produkcji
+        </th>
+        <th st-sort="express">
+          Rodzaj
+        </th>
+        <th st-sort="active">
+          Status
+        </th>
+        <th st-sort="date">
+          Data nadejścia
+        </th>
+        <th st-sort="lastUpdate">
+          Data modyfikacji
+        </th>
+        <th>Opcje</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr ng-repeat="order in orderOverviewCtrl.displayed">
+        <td>{{order.id}}</td>
+        <td>{{order.name}}</td>
+        <td>{{order.customer}}</td>
+        <td>{{order.color}}</td>
+        <td>{{order.position}}</td>
+        <td>{{order.express ? 'EXPRESS' : '-'}}</td>
+        <td>{{order.active ? 'Aktywny' : 'Nieaktywny'}}</td>
+        <td>{{order.date | date: 'yyyy-MM-dd'}}</td>
+        <td>{{order.lastUpdate | date: 'yyyy-MM-dd HH:mm'}}</td>
+        <td>
+          <div class="dropdown btn-group inline" ng-hide="editing">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="" ng-click="orderOverviewCtrl.openComponents(order.id, order.name)" >
+                  <i class="fa fa-list" aria-hidden="true" ></i>
+                  Elementy
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="orderOverviewCtrl.changeType(order.id)" >
+                  <i class="fa fa-exchange" aria-hidden="true" ></i>
+                  Zmień status
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="orderOverviewCtrl.editOrder(order.id)" >
+                  <i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
+                  Edytuj
+                </a>
+              </li>
+              <li>
+                <a href="" data-target="#confirm-delete" ng-click="orderOverviewCtrl.delete(order.id)" data-toggle="modal">
+                  <span class="fa fa-trash-o" aria-hidden="true"></span>
+                  Usuń
+                </a>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <td colspan="9" class="text-right">
+          <div st-pagination="" st-items-by-page="orderOverviewCtrl.itemsByPage" st-template="../../general/template/pagination.tpl.html"></div>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+  
+</section>

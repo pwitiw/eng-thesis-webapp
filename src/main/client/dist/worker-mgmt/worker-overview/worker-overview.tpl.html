@@ -1,0 +1,100 @@
+<section class="worker-overview">
+
+  <div class="container">
+    <div class="table-options">
+      <span>
+        Lista Pracowników
+      </span>
+      <button class="btn btn-success" ng-click="workerOverviewCtrl.addUser()">
+        Dodaj pracownika
+      </button>
+    </div>
+
+    <table st-table="workerOverviewCtrl.displayed" st-safe-src="workerOverviewCtrl.worker" class="table table-striped">
+
+      <thead>
+        <tr>
+          <td colspan="2">
+            <div class="text-left table-length">
+              <span>Pokaż</span>
+              <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="workerOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in workerOverviewCtrl.paginationSizes" ></select>
+              <span>pozycji</span>
+            </div>
+          </td>
+          <td colspan="4">
+            <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj" st-search="">
+          </td>
+        </tr>
+        <tr>
+          <th st-sort="id">
+            L.p.
+          </th>
+          <th st-sort="code">
+             Kod pracownika
+          </th>
+          <th st-sort="name">
+            Imię
+          </th>
+          <th st-sort="surname">
+            Nazwisko
+          </th>
+          <th st-sort="position">
+            Pozycja
+          </th>
+          <th>Opcje</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="worker in workerOverviewCtrl.displayed">
+          <td>{{worker.id}}</td>
+          <td>{{worker.code}}</td>
+          <td>{{worker.name}}</td>
+          <td>{{worker.surname}}</td>
+          <td>{{worker.position}}</td>
+          <td>
+            <div class="dropdown btn-group inline" ng-hide="editing">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="" data-ui-sref="event-overview({id: worker.id})">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    Wyświetl statystki
+                  </a>
+                </li>
+                <li>
+                  <a href="" ng-click="workerOverviewCtrl.editUser(worker.id)" >
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
+                    Edytuj
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="#confirm-delete" ng-click="workerOverviewCtrl.delete(worker.id)" data-toggle="modal">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Usuń
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <td colspan="6" class="text-right">
+          <div st-pagination="" st-items-by-page="workerOverviewCtrl.itemsByPage" st-template="../../general/template/pagination.tpl.html"></div>
+        </td>
+      </tr>
+      </tfoot>
+
+
+    </table>
+
+  </div>
+
+
+
+</section>

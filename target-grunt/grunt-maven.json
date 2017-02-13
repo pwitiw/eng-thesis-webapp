@@ -1,0 +1,10 @@
+{
+    "filesToWatch": "D:/Projects/EngineeringThesisWeb/src/main/webapp/static/**",
+    "directoryToWatch": "D:/Projects/EngineeringThesisWeb/src/main/webapp/static",
+    "projectRootPath": "D:/Projects/EngineeringThesisWeb",
+    "targetPath": "D:/Projects/EngineeringThesisWeb/target",
+    "sourceDirectory": "src/main/webapp",
+    "jsSourceDirectory": "static",
+    "warTargetDirectory": "static",
+    "filteredFiles": ["**/node_modules.tar"]
+}

@@ -1,0 +1,45 @@
+<div class="modal-header">
+  <span ng-show="workerModalCtrl.user.id">Edytuj dane pracownika</span>
+  <span ng-show="!workerModalCtrl.user.id">Dodaj nowego pracownika</span>
+  <a href="" ng-click="workerModalCtrl.cancel()">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </a>
+</div>
+<div class="modal-body">
+  <form name="newUserForm" novalidate>
+    <!-- CODE -->
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.code.$invalid && !newUserForm.code.$pristine }">
+      <label>Kod pracownika</label>
+      <input type="number" min="100" max="999" name="code" class="form-control" ng-maxlength="3" ng-minlength="3" ng-model="workerModalCtrl.user.code" required>
+      <p ng-show="newUserForm.name.$invalid && !newUserForm.name.$pristine" class="help-block">Kod jest wymagany. Kod musi składać się z 3 znaków.</p>
+    </div>
+
+    <!-- NAME -->
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.name.$invalid && !newUserForm.name.$pristine }">
+      <label>Imię</label>
+      <input type="text" name="name" class="form-control" ng-model="workerModalCtrl.user.name" required>
+      <p ng-show="newUserForm.name.$invalid && !newUserForm.name.$pristine" class="help-block">Imię jest wymagane.</p>
+    </div>
+
+    <!-- USERNAME -->
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.surname.$invalid && !newUserForm.surname.$pristine }">
+      <label>Nazwisko</label>
+      <input type="text" name="surname" class="form-control" ng-model="workerModalCtrl.user.surname" required>
+      <p ng-show="newUserForm.surname.$invalid && !newUserForm.surname.$pristine" class="help-block">Nazwisko jest wymagane.</p>
+    </div>
+
+    <!-- POSITION -->
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.position.$invalid && !newUserForm.position.$pristine }">
+      <label>Pozycja</label>
+      <select name="position" class="form-control" ng-model="workerModalCtrl.user.position" required>
+        <option ng-repeat="x in workerModalCtrl.positions" value="{{x.name}}">{{x.name}}</option>
+      </select>
+      <p ng-show="newUserForm.position.$invalid && !newUserForm.position.$pristine" class="help-block">Pozycja jest wymagana.</p>
+    </div>
+
+  </form>
+</div>
+</div>
+<div class="modal-footer">
+  <button type="submit" class="btn btn-primary" ng-click="workerModalCtrl.ok(workerModalCtrl.user)" ng-disabled="newUserForm.$invalid">Dodaj</button>
+</div>

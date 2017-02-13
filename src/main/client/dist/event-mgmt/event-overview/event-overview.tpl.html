@@ -1,0 +1,105 @@
+<section class="event-overview">
+
+  <div class="container">
+    <div class="table-options">
+      <span ng-show="!eventOverviewCtrl.id">
+        Statystyki
+      </span>
+      <span ng-show="eventOverviewCtrl.id">
+        Statystyki dla {{eventOverviewCtrl.name}}
+      </span>
+    </div>
+
+    <!--<div class="container date-picker">-->
+      <!--<div class="col-md-6">-->
+        <!--<div class="col-md-6" >-->
+          <!--<h4>Data początkowa:</h4>-->
+          <!--<md-datepicker ng-model="startDate" md-placeholder="Start" md-max-date="endDate"></md-datepicker>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+          <!--<h4>Data końcowa:</h4>-->
+          <!--<md-datepicker ng-model="endDate" md-placeholder="Koniec" md-min-date="startDate">></md-datepicker>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-1 centered">-->
+        <!--<button class="btn btn-primary" ng-click="eventOverviewCtrl.getEvents(startDate,endDate)">Szukaj</button>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <table st-table="eventOverviewCtrl.displayed" st-safe-src="eventOverviewCtrl.events" class="table table-striped">
+
+      <thead>
+      <tr>
+        <td colspan="2">
+          <div class="text-left table-length">
+            <span>Pokaż</span>
+            <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="eventOverviewCtrl.updatePagination(pagSize)"
+                    ng-options="x for x in eventOverviewCtrl.paginationSizes"></select>
+            <span>pozycji</span>
+          </div>
+        </td>
+        <td colspan="4">
+          <input type="text" class="pull-right form-control table-filter" placeholder="Szukaj">
+        </td>
+      </tr>
+      <tr>
+        <th st-sort="orderName">
+          Nazwa zamówienia
+        </th>
+        <th st-sort="position">
+          Pozycja
+        </th>
+        <th st-sort="worker">
+          Pracownik
+        </th>
+        <th st-sort="missing">
+          Brakujące elementy
+        </th>
+        <th st-sort="date">
+          Data utworzenia
+        </th>
+        <!--<th>Opcje</th>-->
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr ng-repeat="event in eventOverviewCtrl.displayed">
+        <td>{{event.orderName}}</td>
+        <td>{{event.position}}</td>
+        <td>{{event.worker}}</td>
+        <td>{{event.missing}}</td>
+        <td>{{event.date | date: 'yyyy-MM-dd HH:mm'}}</td>
+        <!--<td>-->
+        <!--<div class="dropdown btn-group inline" ng-hide="editing">-->
+        <!--<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">-->
+        <!--<i class="fa fa-cog" aria-hidden="true"></i>-->
+        <!--</button>-->
+        <!--<ul class="dropdown-menu">-->
+        <!--<li>-->
+        <!--<a href="" data-target="#confirm-delete" ng-click="eventOverviewCtrl.delete(event.orderId, event.positionId)" data-toggle="modal">-->
+        <!--<i uib-popover="sdds" popover-title="title" class="fa fa-trash-o" aria-hidden="true"></i>-->
+        <!--Usuń-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</td>-->
+      </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <td colspan="6" class="text-right">
+          <div st-pagination="" st-items-by-page="eventOverviewCtrl.itemsByPage"
+               st-template="../../general/template/pagination.tpl.html"></div>
+        </td>
+      </tr>
+      </tfoot>
+
+
+    </table>
+
+  </div>
+
+
+</section>
