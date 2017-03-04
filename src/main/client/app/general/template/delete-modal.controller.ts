@@ -6,10 +6,10 @@ export class DeleteModalCtrl {
   }
 
   cancel() {
-    this.$uibModalInstance.dismiss();
+    this.$uibModalInstance.close(false);
   }
 
-  yes() {
-    this.$uibModalInstance.close();
+  approve() {
+    this.$uibModalInstance.close(true);
   }
 }

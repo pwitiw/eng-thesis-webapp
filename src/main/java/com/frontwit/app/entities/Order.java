@@ -1,6 +1,7 @@
 package com.frontwit.app.entities;
 
 
+import com.frontwit.app.dto.OrderComponentDto;
 import com.frontwit.app.utils.Config;
 import org.hibernate.validator.constraints.Range;
 
@@ -52,6 +53,12 @@ public class Order implements Serializable {
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Component> components;
+
+    public Order(){}
+
+    public Order(long id){
+        this.id =id;
+    }
 
     public Long getId() {
         return id;

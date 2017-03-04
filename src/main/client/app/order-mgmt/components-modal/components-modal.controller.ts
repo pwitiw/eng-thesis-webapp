@@ -17,7 +17,7 @@ export class ComponentsModalCtrl {
   private displayed = [];
   private editMode = false;
 
-  constructor(private orderRestService: OrderRestService, private $uibModal:any, private $uibModalInstance:any, order, orderName, private toastService: ToastService) {
+  constructor(private orderRestService: OrderRestService, private $uibModalInstance:any, order, orderName, private toastService: ToastService) {
     this.order = order;
     this.components = order.components;
     this.orderName = orderName;
@@ -74,7 +74,7 @@ export class ComponentsModalCtrl {
     var that = this;
     this.orderRestService.edit(this.order.id, this.order).then(function(response){
       if(response.status == 200) {
-        that.$uibModalInstance.close();
+        that.$uibModalInstance.close(true);
         that.toastService.showSimpleToast("success", "Poprawnie zauktualizowano elementy");
       } else {
         that.$uibModalInstance.dismiss();

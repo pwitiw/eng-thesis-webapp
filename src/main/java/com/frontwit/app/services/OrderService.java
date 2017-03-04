@@ -11,6 +11,7 @@ import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
+import com.frontwit.app.utils.Consts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,14 @@ public class OrderService {
     @Autowired
     private WorkerService workerService;
 
+    public OrderService() {
+    }
+
+    public OrderService(OrderRepositoryImpl orderRepositoryImpl, EventService eventService) {
+        this.orderRepositoryImpl = orderRepositoryImpl;
+        this.eventService = eventService;
+    }
+
     @Transactional
     public List<OrderDto> getAllOrders() {
         return getDtosForOrders(orderRepositoryImpl.getAllOrders());
@@ -66,17 +75,19 @@ public class OrderService {
     public void deleteOrder(Long id) throws BadOperationOnResourcesException {
 
         if (eventService.getEventsForOrderId(id).size() > 0)
-            throw new BadOperationOnResourcesException();
+            throw new BadOperationOnResourcesException(Consts.ORDER_IN_PROGRES_MSG);
         Order order = orderRepositoryImpl.getOrderForId(id);
-
+        if (order == null)
+            throw new BadOperationOnResourcesException(Consts.ORDER_DOES_NOT_EXIST_MSG);
         orderRepositoryImpl.deleteOrder(order);
+
     }
 
     @Transactional
-    public Order updateOrder(OrderComponentDto orderComponentDto) {
+    public Order updateOrder(OrderComponentDto dto) {
 
-        Order updatedOrder = getOrderForOrderComponentDto(orderComponentDto);
-        Order order = orderRepositoryImpl.getOrderForId(orderComponentDto.getId());
+        Order updatedOrder = getOrderForOrderComponentDto(dto);
+        Order order = orderRepositoryImpl.getOrderForId(dto.getId());
         copyOrder(order, updatedOrder);
 
         return orderRepositoryImpl.save(order);
@@ -151,7 +162,7 @@ public class OrderService {
         return order;
     }
 
-    private static void copyOrder(Order order1, Order order2) {
+    private void copyOrder(Order order1, Order order2) {
 
         order1.setId(order2.getId());
         order1.setName(order2.getName());

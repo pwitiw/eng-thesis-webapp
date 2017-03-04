@@ -2,14 +2,22 @@ import {OrderRestService} from "../general/rest-services/orderRestService.servic
 import {WorkerRestService} from "../general/rest-services/workerRestService.service";
 import {CustomerRestService} from "../general/rest-services/customerRestService.service";
 import {Order} from "../general/interfaces/order.interface";
+import {ToastService} from "../general/toast/toast.service";
+import IPromise = angular.IPromise;
 
 export class OrderService {
+
+  private DELETE_ORDER_TEXT = 'Jesteś pewien, że chcesz usunąć zamówienie?';
+  private POSITIONS: string[];
 
   constructor(private orderRestService: OrderRestService,
               private workerRestService: WorkerRestService,
               private customerRestService: CustomerRestService,
-              private $uibModal: any) {
-
+              private $uibModal: any,
+              private toastService: ToastService) {
+    this.POSITIONS = this.findPositions().then(response=> {
+      return response.data
+    });
   }
 
   synchronize(): any {
@@ -20,28 +28,7 @@ export class OrderService {
     return this.orderRestService.edit(id, order);
   }
 
-  deleteModal(): any {
-    var that = this;
-
-    let modalObject = {
-      animation: true,
-      controller: 'DeleteModalCtrl',
-      controllerAs: 'deleteModalCtrl',
-      templateUrl: 'general/template/delete-modal.tpl.html',
-      size: 'sm',
-      backdrop: 'static',
-      resolve: {
-        text: function () {
-          return 'Jesteś pewien, że chcesz usunąć zamówienie?';
-        }
-      }
-    };
-
-
-    return that.$uibModal.open(modalObject).result;
-  }
-
-  delete(id: number): any {
+  private delete(id: number): any {
     return this.orderRestService.delete(id);
   }
 
@@ -69,9 +56,37 @@ export class OrderService {
     return this.customerRestService.getCustomers();
   }
 
-  openModal(order, positions, customers) {
-    var that = this;
+  performDeleteOrder(id: number, callbackFn: any): any {
+    let result = false,
+      modalObject = {
+        animation: true,
+        controller: 'DeleteModalCtrl',
+        controllerAs: 'deleteModalCtrl',
+        templateUrl: 'general/template/delete-modal.tpl.html',
+        size: 'md',
+        backdrop: 'static',
+        resolve: {
+          text: () => {
+            return this.DELETE_ORDER_TEXT;
+          }
+        }
+      };
 
+    this.$uibModal.open(modalObject).result.then(deleteAction => {
+      if (deleteAction) {
+        return this.delete(id).then(response=> {
+          if (response.status == 200) {
+            this.toastService.showSimpleToast("success", "Poprawnie usunięto zamówienie.");
+            callbackFn();
+          }
+          else
+            this.toastService.showSimpleToast("error", response.data.message);
+        })
+      }
+    });
+  }
+
+  editOrderModal(order, positions, customers) {
     let modalObject = {
       animation: true,
       controller: 'OrderModalCtrl',
@@ -92,14 +107,10 @@ export class OrderService {
         }
       }
     };
-
-
-    return that.$uibModal.open(modalObject).result;
+    return this.$uibModal.open(modalObject).result;
   }
 
-
-  openComponentModal(order, orderName) {
-    var that = this;
+  editComponentModal(order, orderName) {
 
     let modalObject = {
       animation: true,
@@ -123,11 +134,11 @@ export class OrderService {
     modalInstance.result.then(
       //close
       function (result) {
-
+        console.log(result);
       },
       //dismiss
       function (result) {
-
+        console.log(result);
       }
     )
   }

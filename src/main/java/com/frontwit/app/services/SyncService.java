@@ -6,8 +6,10 @@ import com.frontwit.app.repositories.TElementyRepository;
 import com.frontwit.app.repositories.daoImpl.*;
 import com.frontwit.app.utils.ComponentHelper;
 import com.frontwit.app.utils.Consts;
+import com.frontwit.app.utils.FrontWitConverter;
 import com.frontwit.app.utils.OrderHelper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
@@ -41,7 +43,9 @@ public class SyncService {
     CustomerService customerService;
     @Autowired
     PositionService positionService;
-
+    @Autowired
+    @Qualifier("BistolFrontWitOrderConverter")
+    FrontWitConverter orderConverter;
     @Autowired
     TElementyRepository tElementyRepository;
 

@@ -38,7 +38,6 @@ angular.module('app', [
   'ngMaterial',
   'ngAnimate',
   'angular-loading-bar'
-
 ])
   .config(function ($urlRouterProvider: IUrlRouterProvider, $locationProvider: ILocationProvider) {
     //todo to import,$translateProvider : any

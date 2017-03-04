@@ -22,21 +22,11 @@
         </td>
       </tr>
       <tr>
-        <th st-sort="width">
-          Szerokość
-        </th>
-        <th st-sort="height">
-          Wysokość
-        </th>
-        <th st-sort="amount">
-          Ilość elementów
-        </th>
-        <th st-sort="missing">
-          Ilość brakujących elementów
-        </th>
-        <th st-sort="comment">
-          Komentarz
-        </th>
+        <th st-sort="width">Szerokość</th>
+        <th st-sort="height">Wysokość</th>
+        <th st-sort="amount">Ilość elementów</th>
+        <th st-sort="missing">Ilość brakujących elementów</th>
+        <th st-sort="comment">Komentarz</th>
         <th></th>
       </tr>
       </thead>
@@ -75,7 +65,7 @@
       <tfoot>
       <tr>
         <td colspan="9" class="text-right">
-          <div st-pagination="" st-items-by-page="5" st-template="../../general/template/pagination.html"></div>
+          <div st-pagination="" st-items-by-page="5" st-template="../../general/template/pagination.tpl.html"></div>
         </td>
       </tr>
       </tfoot>
@@ -145,10 +135,10 @@
 <div class="modal-footer">
 
   <button ng-show="!componentsModalCtrl.editMode" class="btn btn-primary"
-          ng-click="componentsModalCtrl.ok()">Aktualizuj</button>
+          ng-click="componentsModalCtrl.ok()">Zatwierdź</button>
 
   <button ng-show="componentsModalCtrl.editMode" class="btn btn-warning"
-          ng-click="componentsModalCtrl.back()">Cofnij</button>
+          ng-click="componentsModalCtrl.back()">Anuluj</button>
 
   <button ng-show="componentsModalCtrl.editMode" type="submit" class="btn btn-primary"
           ng-click="componentsModalCtrl.save(componentsModalCtrl.component)">Zapisz</button>

@@ -16,7 +16,7 @@
         <td colspan="3">
           <div class="text-left table-length">
             <span>Pokaż</span>
-            <select ng-init="pagSize = 5" ng-model="pagSize" ng-change="orderOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in orderOverviewCtrl.paginationSizes" ></select>
+            <select ng-init="pagSize = orderOverviewCtrl.itemsByPage" ng-model="pagSize" ng-change="orderOverviewCtrl.updatePagination(pagSize)" ng-options="x for x in orderOverviewCtrl.paginationSizes" ></select>
             <span>pozycji</span>
           </div>
         </td>
@@ -25,33 +25,15 @@
         </td>
       </tr>
       <tr>
-        <th st-sort="id">
-          L.p.
-        </th>
-        <th st-sort="name">
-          Zamówienie
-        </th>
-        <th st-sort="customer">
-          Nazwa klienta
-        </th>
-        <th st-sort="color">
-          Kolor
-        </th>
-        <th st-sort="position">
-          Etap produkcji
-        </th>
-        <th st-sort="express">
-          Rodzaj
-        </th>
-        <th st-sort="active">
-          Status
-        </th>
-        <th st-sort="date">
-          Data nadejścia
-        </th>
-        <th st-sort="lastUpdate">
-          Data modyfikacji
-        </th>
+        <th st-sort="id">L.p.</th>
+        <th st-sort="name">Zamówienie</th>
+        <th st-sort="customer">Nazwa klienta</th>
+        <th st-sort="color">Kolor</th>
+        <th st-sort="position">Etap produkcji</th>
+        <th st-sort="express">Rodzaj</th>
+        <th st-sort="active">Status</th>
+        <th st-sort="date">Data nadejścia</th>
+        <th st-sort="lastUpdate">Data modyfikacji</th>
         <th>Opcje</th>
       </tr>
       </thead>

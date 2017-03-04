@@ -36,7 +36,7 @@ export class WorkerService {
       backdrop: 'static',
       resolve: {
         text: function () {
-          return 'Jesteś pewien, że chcesz usunąć pracownika?';
+          return 'Czy chcesz usunąć pracownika?';
         }
       }
     };
@@ -68,7 +68,7 @@ export class WorkerService {
       animation: true,
       controller: 'WorkerModalCtrl',
       controllerAs: 'workerModalCtrl',
-      templateUrl: 'worker-mgmt/components-modal/worker-modal.tpl.html',
+      templateUrl: 'worker-mgmt/worker-modal/worker-modal.tpl.html',
       size: 'md',
       backdrop: 'static',
       resolve: {

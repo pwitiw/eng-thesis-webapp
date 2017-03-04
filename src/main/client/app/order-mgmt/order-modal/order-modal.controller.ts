@@ -19,7 +19,7 @@ export class OrderModalCtrl {
     this.$uibModalInstance.dismiss();
   }
 
-  ok(order) {
+  approve(order) {
     this.$uibModalInstance.close(order);
   }
 }

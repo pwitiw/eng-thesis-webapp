@@ -7,13 +7,6 @@
 </div>
 <div class="modal-body">
   <form name="newUserForm" novalidate>
-    <!-- CODE -->
-    <div class="form-group" ng-class="{ 'has-error' : newUserForm.code.$invalid && !newUserForm.code.$pristine }">
-      <label>Kod pracownika</label>
-      <input type="number" min="100" max="999" name="code" class="form-control" ng-maxlength="3" ng-minlength="3" ng-model="workerModalCtrl.user.code" required>
-      <p ng-show="newUserForm.name.$invalid && !newUserForm.name.$pristine" class="help-block">Kod jest wymagany. Kod musi składać się z 3 znaków.</p>
-    </div>
-
     <!-- NAME -->
     <div class="form-group" ng-class="{ 'has-error' : newUserForm.name.$invalid && !newUserForm.name.$pristine }">
       <label>Imię</label>
@@ -37,9 +30,17 @@
       <p ng-show="newUserForm.position.$invalid && !newUserForm.position.$pristine" class="help-block">Pozycja jest wymagana.</p>
     </div>
 
+    <!-- CODE -->
+    <div class="form-group" ng-class="{ 'has-error' : newUserForm.code.$invalid && !newUserForm.code.$pristine }">
+      <label>Kod pracownika</label>
+      <input type="number" min="100" max="999" name="code" class="form-control" ng-maxlength="3" ng-minlength="3" ng-model="workerModalCtrl.user.code" required>
+      <p ng-show="newUserForm.code.$invalid && !newUserForm.name.$pristine" class="help-block">Kod jest wymagany. Kod musi składać się z 3 znaków.</p>
+    </div>
+
   </form>
 </div>
 </div>
 <div class="modal-footer">
-  <button type="submit" class="btn btn-primary" ng-click="workerModalCtrl.ok(workerModalCtrl.user)" ng-disabled="newUserForm.$invalid">Dodaj</button>
+  <button type="submit" class="btn btn-success" ng-click="workerModalCtrl.ok(workerModalCtrl.user)" ng-disabled="newUserForm.$invalid">Zatwierdź</button>
+  <button type="submit" class="btn btn-danger" ng-click="workerModalCtrl.cancel()">Anuluj</button>
 </div>

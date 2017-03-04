@@ -1,19 +1,15 @@
 import {Order} from "../../general/interfaces/order.interface";
 import {OrderService} from "../order.service";
-import {ComponentsModalCtrl} from "../components-modal/components-modal.controller";
-import {ToastService} from "../../general/toast/toast.service";
 
 export class OrderOverviewCtrl {
   private orders: Order[];
-  private displayed = [];
   private itemsByPage: number;
-  private paginationSizes: any;
+  private paginationSizes = [25, 50, 75, 100, 150];
   private positions: any;
   private maxDate: Date;
 
-  constructor(private orderService: OrderService, private $uibModal: any, private toastService: ToastService) {
-    this.itemsByPage = 5;
-    this.paginationSizes = [5, 10, 15, 20, 25];
+  constructor(private orderService: OrderService) {
+    this.itemsByPage = this.paginationSizes[0];
     this.findAll();
     this.findPositions();
     this.maxDate = new Date();
@@ -21,62 +17,71 @@ export class OrderOverviewCtrl {
 
   findAll(): void {
     var that = this;
-    this.orderService.findAll().then(function(response) {
-      if(response.status == 200) {
+    this.orderService.findAll().then(function (response) {
+      if (response.status == 200) {
         that.orders = response.data;
       } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania zamówień");
+//        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania zamówień");
       }
     })
   }
 
   findPositions() {
     var that = this;
-    this.orderService.findPositions().then(function(response) {
-      if(response.status == 200) {
+    this.orderService.findPositions().then(function (response) {
+      if (response.status == 200) {
         that.positions = response.data;
       } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania pozycji");
+        //       that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania pozycji");
       }
     });
   }
 
   delete(id: number): void {
-    var that = this;
-    this.orderService.deleteModal().then(function (resultModal) {
-      that.orderService.delete(id).then(function (response) {
-        if (response.status == 200) {
-          var index = that.orders.findIndex(order => order.id === id);
-          that.orders.splice(index, 1);
-          that.toastService.showSimpleToast("success", "Poprawnie usunięto zamówienie");
-        } else {
-          that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania zamówienia");
-        }
-      })
-    })
+    this.orderService.performDeleteOrder(id, this.deleteOrderFromList);
   }
 
-  synchronize():void {
+  private deleteOrderFromList(id: number) {
+    var index = this.orders.findIndex(order => order.id === id);
+    this.orders.splice(index, 1);
+  }
+
+  // delete(id: number): void {
+  //   var that = this;
+  //   this.orderService.deleteModal(id).then(function (resultModal) {
+  //     that.orderService.delete(id).then(function (response) {
+  //       if (response.status == 200) {
+  //         var index = that.orders.findIndex(order => order.id === id);
+  //         that.orders.splice(index, 1);
+  //         that.toastService.showSimpleToast("success", "Poprawnie usunięto zamówienie");
+  //       } else {
+  //         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas usuwania zamówienia");
+  //       }
+  //     })
+  //   })
+  // }
+
+  synchronize(): void {
     var that = this;
-    this.orderService.synchronize().then(function(response) {
-      if(response.status == 200) {
+    this.orderService.synchronize().then(function (response) {
+      if (response.status == 200) {
         that.findAll();
-        that.toastService.showSimpleToast("success", "Poprawnie zsynchronizowano zamówienia, pobrano " + response.data.length + " zamówień");
+        //  that.toastService.showSimpleToast("success", "Poprawnie zsynchronizowano zamówienia, pobrano " + response.data.length + " zamówień");
       } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas synchronizacji zamówień");
+        //   that.toastService.showSimpleToast("error", "Wystąpił błąd podczas synchronizacji zamówień");
       }
     })
   }
 
   changeType(id: number): void {
     var that = this;
-    this.orderService.changeType(id).then(function(response) {
-      if(response.status == 200) {
+    this.orderService.changeType(id).then(function (response) {
+      if (response.status == 200) {
         var index = that.orders.findIndex(order => order.id === id);
         that.orders[index].active ? that.orders[index].active = false : that.orders[index].active = true;
-        that.toastService.showSimpleToast("success", "Poprawnie zmieniono status zamówienia");
+        //   that.toastService.showSimpleToast("success", "Poprawnie zmieniono status zamówienia");
       } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas zmiany statusu zamówienia");
+        //     that.toastService.showSimpleToast("error", "Wystąpił błąd podczas zmiany statusu zamówienia");
       }
     })
   }
@@ -84,36 +89,36 @@ export class OrderOverviewCtrl {
 
   editOrder(id: number): void {
     var that = this;
-    this.orderService.findOne(id).then(function(findOneResponse){
-      if(findOneResponse.status == 200) {
-        that.orderService.findCustomers().then(function(customerResponse) {
-          if(customerResponse.status == 200) {
-            that.orderService.openModal(findOneResponse.data, that.positions, customerResponse.data).then(function (resultModal) {
+    this.orderService.findOne(id).then(function (findOneResponse) {
+      if (findOneResponse.status == 200) {
+        that.orderService.findCustomers().then(function (customerResponse) {
+          if (customerResponse.status == 200) {
+            that.orderService.editOrderModal(findOneResponse.data, that.positions, customerResponse.data).then(function (resultModal) {
               that.orderService.edit(resultModal.id, resultModal).then(function (editResponse) {
                 if (editResponse.status == 200) {
                   var index = that.orders.findIndex(order => order.id === resultModal.id);
                   that.updateArray(index, <Order> resultModal);
-                  that.toastService.showSimpleToast("success", "Zamówienie zostało zaktualizowane");
+                  //         that.toastService.showSimpleToast("success", "Zamówienie zostało zaktualizowane");
                 } else {
-                  that.toastService.showSimpleToast("error", "Wystąpił błąd podczas zapisywania zamówienia");
+                  //         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas zapisywania zamówienia");
                 }
               });
             });
           } else {
-            that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania klientów");
+            //    that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania klientów");
           }
         });
       } else {
-        that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania danych zamówienia");
+        //  that.toastService.showSimpleToast("error", "Wystąpił błąd podczas pobierania danych zamówienia");
       }
     });
   }
 
-  openComponents(id: number, orderName: string): void{
+  openComponents(id: number, orderName: string): void {
     var that = this;
-    this.orderService.findOne(id).then(function(response) {
-      if(response.status == 200) {
-        that.orderService.openComponentModal(response.data, orderName)
+    this.orderService.findOne(id).then(function (response) {
+      if (response.status == 200) {
+        that.orderService.editComponentModal(response.data, orderName)
       }
     })
   }

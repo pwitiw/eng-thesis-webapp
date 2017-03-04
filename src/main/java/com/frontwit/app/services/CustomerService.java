@@ -4,6 +4,7 @@ import com.frontwit.app.entities.Customer;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.repositories.daoImpl.CustomerRepositoryImpl;
+import com.frontwit.app.utils.Consts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,7 +39,7 @@ public class CustomerService {
     public void deleteCustomerForId(long id) throws BadOperationOnResourcesException {
         Customer customer = customerRepositoryImpl.getCustomerForId(id);
         if (customer == null)
-            throw new BadOperationOnResourcesException();
+            throw new BadOperationOnResourcesException(Consts.CUSTOMER_DOES_NOT_EXIST_MSG);
         if (orderService.getOrdersForCustomerId(id).size() > 0)
             setInactivateCustomer(customer);
         else
