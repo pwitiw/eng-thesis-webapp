@@ -26,11 +26,8 @@ public class SyncController {
     @RequestMapping(value = "/synchronize", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     ResponseEntity<?> synchronize() throws IOException {
-        // List<String> orders = syncService.synchronize();
-        //
-        List<String> orders = new ArrayList();
-        return new ResponseEntity<List<String>>(orders, HttpStatus.OK);
-
+        List<String> syncOrderNames = syncService.synchronize();
+        return new ResponseEntity<List<String>>(syncOrderNames, HttpStatus.OK);
     }
 
 }

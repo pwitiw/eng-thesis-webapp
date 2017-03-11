@@ -34,14 +34,17 @@ CREATE TABLE IF NOT EXISTS `webservice`.`orders` (
  `CUSTOMER_ID` integer(10) NOT NULL,
  `POSITION_ID` integer(10) NOT NULL DEFAULT '1',
  `EXPRESS` integer(1) NOT NULL DEFAULT '0',
- `DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
- `LAST_UPDATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ `DATE` timestamp NULL DEFAULT NULL,
+ `LAST_UPDATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  `PARENT_ID` integer(10),
  `ACTIVE` integer(1) DEFAULT '0',
+ `FRONTWIT_ID` integer(10),
+ `COMMENT` varchar(255) DEFAULT NULL,
  PRIMARY KEY (`ID`),
  FOREIGN KEY (`CUSTOMER_ID`) REFERENCES `webservice`.`customers` (`ID`),
  FOREIGN KEY (`POSITION_ID`) REFERENCES `webservice`.`positions` (`ID`)
 ); 
+
 
 CREATE TABLE IF NOT EXISTS `webservice`.`components` (
  `ID` integer(10) NOT NULL AUTO_INCREMENT,
@@ -61,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`events` (
  `ORDER_ID` integer(20) NOT NULL,
  `WORKER_ID` integer(10) NOT NULL,
  `POSITION_ID` integer(10) NOT NULL,
- `DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `DATE` datetime,
  `MISSING` int(10) unsigned NOT NULL DEFAULT '0',
  PRIMARY KEY (`ORDER_ID`,`POSITION_ID`),
  KEY `ID` (`ID`),
@@ -72,14 +75,28 @@ CREATE TABLE IF NOT EXISTS `webservice`.`events` (
 
 CREATE TABLE IF NOT EXISTS `webservice`.`synchronization` (
  `ID` integer(20) NOT NULL AUTO_INCREMENT,
- `SYNC_DATE` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `SYNC_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
  `AMOUNT` integer(20) NOT NULL DEFAULT '0',
  PRIMARY KEY (`ID`)
  ); 
 
+CREATE TRIGGER `webservice`.`TG_INITIALIZE_DATA` BEFORE INSERT ON `webservice`.`orders`
+ FOR EACH ROW UPDATE `webservice`.`orders` SET last_update=NOW()
 
 
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 /*BISTOL DATABASE*/
 DROP DATABASE IF EXISTS `bistolb`;
 CREATE DATABASE IF NOT EXISTS `bistolb`;

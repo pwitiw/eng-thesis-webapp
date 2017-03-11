@@ -13,5 +13,5 @@ import java.util.List;
 @Repository
 public interface TZamowieniaRepository extends JpaRepository<TZamowieniaEntity, Long>{
 
-    List<TZamowieniaEntity> findByDateAfter(Date date);
+    List<TZamowieniaEntity> findByDataZamAfter(Date dataZam);
 }

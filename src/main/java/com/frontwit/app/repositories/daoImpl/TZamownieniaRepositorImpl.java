@@ -20,7 +20,7 @@ public class TZamownieniaRepositorImpl {
 
     public List<TZamowieniaEntity> getFromBistolDbForDateGreaterThan(Date date) {
 
-        return tZamowieniaRepository.findByDateAfter(date);
+        return tZamowieniaRepository.findByDataZamAfter(date);
         //  return tZamowieniaRepository.findAll();
     }
 

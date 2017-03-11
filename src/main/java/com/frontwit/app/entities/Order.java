@@ -3,6 +3,7 @@ package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
 import org.hibernate.validator.constraints.Range;
+import org.json.JSONObject;
 
 import javax.persistence.*;
 import javax.persistence.CascadeType;
@@ -22,7 +23,7 @@ public class Order implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id=0;
+    private long id = 0;
 
     private String name;
 
@@ -46,12 +47,17 @@ public class Order implements Serializable {
     @Range(min = 0, max = 1)
     private short active;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "CUSTOMER_ID")
     private Customer customer;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Component> components;
+
+    @Column(name = "DB_ID")
+    private long dbId;
+
+    private String comment;
 
     public Long getId() {
         return id;
@@ -145,7 +151,25 @@ public class Order implements Serializable {
         this.components = components;
     }
 
+    public long getDbId() {
+        return dbId;
+    }
+
+    public void setDbId(long dbId) {
+        this.dbId = dbId;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     public void addToComponent(List<Component> components) {
+        if(components == null)
+            return;
         if (this.components == null)
             this.components = new ArrayList<>();
         for (Component component : components) {
@@ -162,6 +186,25 @@ public class Order implements Serializable {
             counter += component.getMissing();
         }
         return counter;
+    }
+
+    public Order() {
+    }
+
+    public Order(TZamowieniaEntity z) {
+
+        this.id = z.getId();
+        this.name = z.getNumer();
+        this.color = new JSONObject(z.getCechy()).getJSONObject("color").getString("n");
+        this.date = z.getData_z();
+        this.lastUpdate = new Date();
+        this.dbId = z.getId();
+        this.customer = new Customer();
+        this.customer.setId(z.getTklienci_id());
+        this.position = new Position();
+        this.position.setId(1L);
+        this.comment = z.getOpis();
+    
     }
 
 }

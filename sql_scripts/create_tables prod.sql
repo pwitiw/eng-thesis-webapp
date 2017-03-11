@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS `webservice`;
 
 
 CREATE TABLE IF NOT EXISTS `webservice`.`customers` (
- `ID` integer(10) NOT NULL AUTO_INCREMENT,
+ `ID` integer(10) NOT NULL,
  `NAME` varchar(255) NOT NULL,
  `FIRST_NAME` varchar(255),
  `LAST_NAME` varchar(255),
@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`orders` (
  `LAST_UPDATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  `PARENT_ID` integer(10),
  `ACTIVE` integer(1) DEFAULT '0',
+ 'DB_ID' integer(10)
  PRIMARY KEY (`ID`),
  FOREIGN KEY (`CUSTOMER_ID`) REFERENCES `webservice`.`customers` (`ID`),
  FOREIGN KEY (`POSITION_ID`) REFERENCES `webservice`.`positions` (`ID`)

@@ -1,6 +1,5 @@
 package com.frontwit.app.dto;
 
-import com.frontwit.app.entities.Component;
 import com.frontwit.app.entities.Order;
 
 import java.io.Serializable;
@@ -22,6 +21,7 @@ public class OrderComponentDto implements Serializable {
     private Date lastUpdate;
     private Long parentId;
     private short active;
+    private String comment;
     private List<ComponentDto> components;
 
     public long getId() {
@@ -112,6 +112,14 @@ public class OrderComponentDto implements Serializable {
         this.components = components;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     public static OrderComponentDto parseOrderEventDto(Order order) {
 
         OrderComponentDto orderComponentDto = new OrderComponentDto();
@@ -126,6 +134,7 @@ public class OrderComponentDto implements Serializable {
         orderComponentDto.setParentId(order.getParentId());
         orderComponentDto.setActive(order.getActive());
         orderComponentDto.setComponents(ComponentDto.parseComponentDtos(order.getComponents()));
+        orderComponentDto.setComment(order.getComment());
         return orderComponentDto;
     }
 }

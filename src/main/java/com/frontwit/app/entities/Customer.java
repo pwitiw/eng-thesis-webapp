@@ -3,7 +3,6 @@ package com.frontwit.app.entities;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Created by Patryk on 11.12.2016.
@@ -14,7 +13,6 @@ public class Customer implements Serializable {
 
     @NotNull
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @NotNull
@@ -33,6 +31,13 @@ public class Customer implements Serializable {
 //    @JoinColumn(name="idarea")
 //    private List<Order> orders;
 
+    public Customer() {
+    }
+
+    public Customer(TKlienciEntity k) {
+        this.id = k.getId();
+        this.name = k.getNazwa();
+    }
 
 
     public long getId() {

@@ -1,8 +1,5 @@
 package com.frontwit.app.utils;
 
-import com.frontwit.app.entities.TZamowieniaEntity;
-import com.frontwit.app.entities.Order;
-
 /**
  * Created by Patryk on 09.04.2016.
  */

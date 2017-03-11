@@ -3,22 +3,18 @@ package com.frontwit.app.services;
 import com.frontwit.app.dto.OrderComponentWorkerDto;
 import com.frontwit.app.dto.OrderDto;
 import com.frontwit.app.dto.OrderComponentDto;
-import com.frontwit.app.dto.WorkerDto;
 import com.frontwit.app.entities.Component;
 import com.frontwit.app.entities.Event;
 import com.frontwit.app.entities.Worker;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
-import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
 import com.frontwit.app.repositories.daoImpl.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
 import com.frontwit.app.entities.Order;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -78,7 +74,7 @@ public class OrderService {
         Order updatedOrder = getOrderForOrderComponentDto(orderComponentDto);
         Order order = orderRepositoryImpl.getOrderForId(orderComponentDto.getId());
         copyOrder(order, updatedOrder);
-
+        order.setLastUpdate(new Date());
         return orderRepositoryImpl.save(order);
     }
 
@@ -147,6 +143,7 @@ public class OrderService {
         order.setActive(dto.getActive());
         order.setCustomer(customerService.getCustomerForName(dto.getCustomer()));
         order.setComponents(componentService.getComponentsForDtos(dto.getComponents()));
+        order.setComment(dto.getComment());
 
         return order;
     }
@@ -179,6 +176,7 @@ public class OrderService {
         child.setExpress(order.getExpress());
         child.setLastUpdate(order.getLastUpdate());
         child.setActive(order.getActive());
+        child.setComment(order.getComment());
 
         return child;
     }

@@ -56,4 +56,5 @@ public class CustomerService {
         customer.setActive((short) 0);
     }
 
+
 }
