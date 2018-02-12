@@ -25,6 +25,8 @@ public class Event implements Serializable {
 
     private int missing;
 
+    private float meters;
+
     public Event() {
     }
 
@@ -36,6 +38,7 @@ public class Event implements Serializable {
         this.missing = order.getMissingAmount(); //todo tutaj jak np drugi raz jest missing to wywali sie
         this.prim.setOrder(order);
         this.prim.setPosition(worker.getPosition());
+        computeMeters(order);
     }
 
     public EventPrimaryKey getPrim() {
@@ -70,4 +73,15 @@ public class Event implements Serializable {
         this.missing = missing;
     }
 
+    public float getMeters() {
+        return meters;
+    }
+
+    public void setMeters(float meters) {
+        this.meters = meters;
+    }
+
+    private void computeMeters(Order o) {
+        o.getComponents().stream().forEach(c -> meters += (float)(c.getHeight() * c.getWidth() * (c.getAmount() - c.getMissing())) / 1000000);
+    }
 }

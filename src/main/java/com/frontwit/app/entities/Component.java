@@ -1,7 +1,6 @@
 package com.frontwit.app.entities;
 
 import com.frontwit.app.utils.Config;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;

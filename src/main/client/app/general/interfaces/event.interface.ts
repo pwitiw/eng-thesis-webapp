@@ -6,4 +6,6 @@ export interface Event{
   worker: string,
   date: string,
   missing: number
+  meters: number
+  chuj:number
 }

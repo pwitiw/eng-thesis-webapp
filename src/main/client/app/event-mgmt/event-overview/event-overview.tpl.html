@@ -7,6 +7,7 @@
       </span>
       <span ng-show="eventOverviewCtrl.id">
         Statystyki dla {{eventOverviewCtrl.name}}
+        <div class="meters">Ilość metrów: {{eventOverviewCtrl.allMeters}} [m]</div>
       </span>
     </div>
 
@@ -55,6 +56,9 @@
         <th st-sort="missing">
           Brakujące elementy
         </th>
+        <th st-sort="meters">
+          Metry
+        </th>
         <th st-sort="date">
           Data utworzenia
         </th>
@@ -68,6 +72,7 @@
         <td>{{event.position}}</td>
         <td>{{event.worker}}</td>
         <td>{{event.missing}}</td>
+        <td>{{event.meters}}</td>
         <td>{{event.date | date: 'yyyy-MM-dd HH:mm'}}</td>
         <!--<td>-->
         <!--<div class="dropdown btn-group inline" ng-hide="editing">-->

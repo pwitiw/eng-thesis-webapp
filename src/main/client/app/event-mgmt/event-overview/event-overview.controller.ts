@@ -8,14 +8,15 @@ export class EventOverviewCtrl {
   private displayed = [];
   private itemsByPage: number;
   private paginationSizes: any;
-  private id:number;
-  private name:string;
+  private id: number;
+  private name: string;
+  allMeters: number = 0;
 
   constructor(private eventService: EventService, private toastService: ToastService, $stateParams) {
     this.id = $stateParams.id;
     this.paginationSizes = [5, 10, 15, 20, 25];
     this.itemsByPage = 10;//this.paginationSizes[0];
-    if(this.id == "") {
+    if (this.id == "") {
       this.findAll();
     } else {
       this.findForId(this.id);
@@ -25,8 +26,8 @@ export class EventOverviewCtrl {
 
   findAll(): void {
     var that = this;
-    this.eventService.findAll().then(function(response){
-      if(response.status == 200) {
+    this.eventService.findAll().then(function (response) {
+      if (response.status == 200) {
         that.events = response.data;
       } else {
         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania danych")
@@ -36,10 +37,11 @@ export class EventOverviewCtrl {
 
   findForId(id: number): void {
     var that = this;
-    this.eventService.findForWorker(id).then(function(response){
-      if(response.status == 200) {
+    this.eventService.findForWorker(id).then(function (response) {
+      if (response.status == 200) {
         that.events = response.data.events;
         that.name = response.data.name + " " + response.data.surname;
+        that.sumMeters(that.events);
       } else {
         that.toastService.showSimpleToast("error", "Wystąpił błąd podczas wczytywania danych")
       }
@@ -48,8 +50,8 @@ export class EventOverviewCtrl {
 
   delete(orderId: number, positionId: number): void {
     var that = this;
-    this.eventService.delete(orderId, positionId).then(function(response){
-      if(response.status == 200) {
+    this.eventService.delete(orderId, positionId).then(function (response) {
+      if (response.status == 200) {
         var index = that.events.findIndex(event => (event.orderId === orderId) && (event.positionId === positionId));
         that.events.splice(index, 1);
         that.toastService.showSimpleToast("success", "Element zostal usunięty")
@@ -61,5 +63,13 @@ export class EventOverviewCtrl {
 
   updatePagination(size: number): void {
     this.itemsByPage = size;
+  }
+
+  private sumMeters(events: Event[]) {
+    events.forEach(item=> {
+      this.allMeters += item.meters;
+
+    })
+    this.allMeters  = Math.round(this.allMeters * 100) / 100
   }
 }

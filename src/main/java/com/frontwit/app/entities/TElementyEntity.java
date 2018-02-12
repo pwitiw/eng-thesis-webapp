@@ -89,8 +89,6 @@ public class TElementyEntity implements Serializable {
         this.comment = comment;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -104,7 +102,6 @@ public class TElementyEntity implements Serializable {
         if (amount != component.amount) return false;
         if (missing != component.missing) return false;
         return comment != null ? comment.equals(component.comment) : component.comment == null;
-
     }
 
     @Override
@@ -117,5 +114,4 @@ public class TElementyEntity implements Serializable {
         result = 31 * result + (comment != null ? comment.hashCode() : 0);
         return result;
     }
-
 }

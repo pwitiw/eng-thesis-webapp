@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS `webservice`;
 
 
 CREATE TABLE IF NOT EXISTS `webservice`.`customers` (
- `ID` integer(10) NOT NULL AUTO_INCREMENT,
+ `ID` integer(10) NOT NULL,
  `NAME` varchar(255) NOT NULL,
  `FIRST_NAME` varchar(255),
  `LAST_NAME` varchar(255),
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`orders` (
  `LAST_UPDATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  `PARENT_ID` integer(10),
  `ACTIVE` integer(1) DEFAULT '0',
- `FRONTWIT_ID` integer(10),
+ `DB_ID` integer(10),
  `COMMENT` varchar(255) DEFAULT NULL,
  PRIMARY KEY (`ID`),
  FOREIGN KEY (`CUSTOMER_ID`) REFERENCES `webservice`.`customers` (`ID`),
@@ -65,6 +65,7 @@ CREATE TABLE IF NOT EXISTS `webservice`.`events` (
  `WORKER_ID` integer(10) NOT NULL,
  `POSITION_ID` integer(10) NOT NULL,
  `DATE` datetime,
+ `METERS` float NOT NULL,
  `MISSING` int(10) unsigned NOT NULL DEFAULT '0',
  PRIMARY KEY (`ORDER_ID`,`POSITION_ID`),
  KEY `ID` (`ID`),
@@ -80,9 +81,6 @@ CREATE TABLE IF NOT EXISTS `webservice`.`synchronization` (
  PRIMARY KEY (`ID`)
  ); 
 
-CREATE TRIGGER `webservice`.`TG_INITIALIZE_DATA` BEFORE INSERT ON `webservice`.`orders`
- FOR EACH ROW UPDATE `webservice`.`orders` SET last_update=NOW()
-
 
  
  
@@ -95,10 +93,10 @@ CREATE TRIGGER `webservice`.`TG_INITIALIZE_DATA` BEFORE INSERT ON `webservice`.`
  
  
  
- 
+
  
 /*BISTOL DATABASE*/
-DROP DATABASE IF EXISTS `bistolb`;
+ /*DROP DATABASE IF EXISTS `bistolb`;
 CREATE DATABASE IF NOT EXISTS `bistolb`;
 
 CREATE TABLE IF NOT EXISTS `bistolb`.`tklienci` (
@@ -142,4 +140,4 @@ CREATE TABLE IF NOT EXISTS `bistolb`.`telementy` (
  FOREIGN KEY (`ORDER_ID`) REFERENCES `bistolb`.`tzamowienia` (`ID`)
 ); 
 
-
+*/

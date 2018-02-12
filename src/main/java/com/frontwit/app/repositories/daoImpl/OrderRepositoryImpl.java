@@ -7,6 +7,7 @@ import com.frontwit.app.repositories.OrderRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by Patryk on 2015-12-08.
@@ -47,4 +48,7 @@ public class OrderRepositoryImpl {
         return orderRepository.findByActiveAndPositionIdBetween((short) 1, min, id);
     }
 
+    public boolean exists(long dbId) {
+        return orderRepository.findByDbId(dbId) == null ? false : true;
+    }
 }

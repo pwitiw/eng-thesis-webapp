@@ -35,8 +35,12 @@ public class Customer implements Serializable {
     }
 
     public Customer(TKlienciEntity k) {
-        this.id = k.getId();
-        this.name = k.getNazwa();
+        try {
+            this.id = k.getId();
+            this.name = k.getNazwa();
+        }catch(NullPointerException e){
+            System.out.print("dupa");
+        }
     }
 
 

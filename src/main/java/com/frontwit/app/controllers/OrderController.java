@@ -1,7 +1,6 @@
 package com.frontwit.app.controllers;
 
 import com.frontwit.app.dto.*;
-import com.frontwit.app.entities.Order;
 import com.frontwit.app.exceptions.BadOperationOnResourcesException;
 import com.frontwit.app.exceptions.ResourcesBadFormatException;
 import com.frontwit.app.exceptions.ResourcesNotFoundException;
@@ -15,7 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import com.frontwit.app.services.SyncService;
+import com.frontwit.app.migration.SyncService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
@@ -116,6 +115,15 @@ public class OrderController {
         OrderDto orderDto = orderService.upgradeOrder(orderComponentWorkerDto);
         return new ResponseEntity<OrderDto>(orderDto, HttpStatus.OK);
     }
+
+//    @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
+//    public ResponseEntity updateOrderAndEvents(@PathVariable("id") Integer id)
+//            throws ResourcesNotFoundException {
+//
+//        orderService.test(id);
+//        return new ResponseEntity("Test", HttpStatus.OK);
+//    }
+
 
 
 }

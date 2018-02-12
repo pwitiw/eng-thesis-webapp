@@ -80,6 +80,9 @@ body {
 .app .pagination a {
   cursor: pointer;
 }
+.app .meters {
+  font-size: 20px;
+}
 .app .table-options {
   margin-bottom: 20px;
 }

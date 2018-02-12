@@ -14,4 +14,6 @@ import java.util.List;
 public interface TZamowieniaRepository extends JpaRepository<TZamowieniaEntity, Long>{
 
     List<TZamowieniaEntity> findByDataZamAfter(Date dataZam);
+
+    List<TZamowieniaEntity> findByDataZamBetween(Date dateStart,Date dateEnd);
 }

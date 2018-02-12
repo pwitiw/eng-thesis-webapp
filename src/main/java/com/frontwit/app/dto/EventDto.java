@@ -18,6 +18,7 @@ public class EventDto implements Serializable {
     private String position;
     private String worker;
     private Date date;
+    private float meters;
     private int missing;
 
     public long getOrderId() {
@@ -76,6 +77,14 @@ public class EventDto implements Serializable {
         this.missing = missing;
     }
 
+    public float getMeters() {
+        return meters;
+    }
+
+    public void setMeters(float meters) {
+        this.meters = meters;
+    }
+
     public static EventDto parseEventDto(Event event) {
         EventDto dto = new EventDto();
 
@@ -86,6 +95,7 @@ public class EventDto implements Serializable {
         dto.setWorker(event.getWorker().toString());
         dto.setMissing(event.getMissing());
         dto.setDate(event.getDate());
+        dto.setMeters(event.getMeters());
         return dto;
     }
 

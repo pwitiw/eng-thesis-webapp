@@ -55,7 +55,10 @@ public class OrderService {
     public Order add(Order order) {
         order.setLastUpdate(new Date());
         return orderRepositoryImpl.save(order);
+    }
 
+    public boolean orderExistsForDB(long dbId){
+        return orderRepositoryImpl.exists(dbId);
     }
 
     @Transactional
@@ -196,6 +199,13 @@ public class OrderService {
             }
         }
         return missings;
+    }
+
+    public void test(long id) throws ResourcesNotFoundException {
+        Order o = orderRepositoryImpl.getOrderForId(id);
+        Worker w = workerService.getWorkerForId(1);
+        Event event = new Event(o, w);
+        eventService.save(event);
     }
 
 }
